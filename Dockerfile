@@ -2,13 +2,14 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 
-ARG ENV_FILE=.env
-COPY $ENV_FILE ./.env
-
-COPY src ./src
 COPY package*.json ./
 
 RUN npm ci
+
+ARG ENV_FILE=.env
+
+COPY $ENV_FILE ./.env
+COPY src ./src
 
 RUN npm run build
 
