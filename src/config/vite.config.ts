@@ -10,15 +10,15 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      input: "src/index.html"
-    }
+      input: "src/index.html",
+    },
   },
   server: {
     port: 3000,
     host: true,
     strictPort: true,
     watch: {
-      usePolling: true
-    }
-  }
+      usePolling: true,
+    },
+  },
 })

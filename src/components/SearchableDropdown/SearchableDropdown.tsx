@@ -27,7 +27,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   initialValue,
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>(
-    initialValue?.name || "",
+    initialValue?.name || ""
   )
   const [filteredOptions, setFilteredOptions] = useState<Option[]>(options)
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -39,8 +39,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   useEffect(() => {
     setFilteredOptions(
       options.filter((option) =>
-        option.name.toLowerCase().includes(searchQuery.toLowerCase()),
-      ),
+        option.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
     )
     setHighlightedIndex(null)
   }, [searchQuery, options])
@@ -71,7 +71,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
         setHighlightedIndex((prevIndex) =>
           prevIndex === null
             ? 0
-            : Math.min(prevIndex + 1, filteredOptions.length - 1),
+            : Math.min(prevIndex + 1, filteredOptions.length - 1)
         )
       }
     } else if (event.key === "ArrowUp") {
@@ -80,7 +80,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
         setHighlightedIndex((prevIndex) =>
           prevIndex === null
             ? filteredOptions.length - 1
-            : Math.max(prevIndex - 1, 0),
+            : Math.max(prevIndex - 1, 0)
         )
       }
     } else if (event.key === "Enter") {

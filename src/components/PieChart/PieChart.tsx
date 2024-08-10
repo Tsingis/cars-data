@@ -46,12 +46,12 @@ const PieChart: React.FC<PieChartProps> = ({
         const values = Object.values(data)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
-          0,
+          0
         )
 
         const defaultColor = "rgba(0, 123, 255, 0.6)"
         const backgroundColors = Object.keys(data).map(
-          (key) => colorMap[key] || defaultColor,
+          (key) => colorMap[key] || defaultColor
         )
 
         const chartData: ChartData<"pie", number[], string> = {

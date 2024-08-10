@@ -9,7 +9,7 @@ test("Basic test", async ({ page }) => {
 
   const dropdown = page.locator(".dropdown-input")
   await expect(dropdown).toBeVisible()
- 
+
   const dropdownInput = dropdown.locator("input")
   await expect(dropdownInput).toBeEditable()
 })

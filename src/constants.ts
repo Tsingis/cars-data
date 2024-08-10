@@ -7,7 +7,7 @@ export const drivingForces: Mapping = {
   "4": "electricity",
   "5": "other",
 }
-  
+
 export const drivingForcesColors: Mapping = {
   "1": "rgba(0, 123, 255, 0.6)",
   "2": "rgba(220, 53, 69, 0.6)",
@@ -15,7 +15,7 @@ export const drivingForcesColors: Mapping = {
   "4": "rgba(40, 167, 69, 0.6)",
   "5": "rgba(93, 93, 93, 0.6)",
 }
-  
+
 export const colors: Mapping = {
   black: "rgba(0, 0, 0, 0.6)",
   blue: "rgba(0, 123, 255, 0.6)",

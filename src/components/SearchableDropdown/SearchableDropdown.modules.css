@@ -58,7 +58,7 @@ input {
 }
 
 .dropdown-menu button {
-  all: unset; 
+  all: unset;
   display: block;
   width: 100%;
   padding: 10px;

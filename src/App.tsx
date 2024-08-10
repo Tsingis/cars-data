@@ -40,7 +40,7 @@ function App() {
       .then((content) => {
         setData(content)
         const initialMunicipality = content.municipalities.find(
-          (m: { name: string }) => m.name === "Finland",
+          (m: { name: string }) => m.name === "Finland"
         )
         if (initialMunicipality) {
           setInitialValue({
@@ -69,11 +69,11 @@ function App() {
   const unknownMunicipality = municipalities.find((m) => m.name === "Unknown")
 
   const handleSelect = (
-    selectedOption: { code: string; name: string } | null,
+    selectedOption: { code: string; name: string } | null
   ) => {
     if (selectedOption) {
       const municipality = municipalities.find(
-        (m) => m.code === selectedOption.code,
+        (m) => m.code === selectedOption.code
       )
       if (municipality) {
         setSelectedMunicipality({
@@ -89,7 +89,7 @@ function App() {
   const totalCount = selectedMunicipality.drivingForce
     ? Object.values(selectedMunicipality.drivingForce).reduce(
         (sum, count) => (sum ?? 0) + (count ?? 0),
-        0,
+        0
       )
     : 0
 
@@ -99,7 +99,7 @@ function App() {
       .filter(
         (x) =>
           x !== municipalities.find((m) => m.name === "Finland") &&
-          x !== unknownMunicipality,
+          x !== unknownMunicipality
       )
       .map((m) => ({
         code: m.code,

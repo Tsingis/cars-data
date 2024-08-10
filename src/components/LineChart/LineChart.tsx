@@ -29,7 +29,7 @@ const LineChart: React.FC<LineChartProps> = ({
     if (chartRef.current) {
       const total = Object.values(data).reduce(
         (sum, value) => (sum ?? 0) + (value ?? 0),
-        0,
+        0
       )
 
       const config: ChartConfiguration<"line", number[]> = {

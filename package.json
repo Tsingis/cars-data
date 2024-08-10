@@ -10,6 +10,8 @@
     "type-check": "tsc -p src/config/tsconfig.json --noEmit --watch",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./src/config/.eslintrc.cjs",
     "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./src/config/.eslintrc.cjs --fix",
+    "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
+    "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
     "setup-test": "npx playwright install --with-deps",
     "build": "tsc -b ./src/config/tsconfig.json && vite --config ./src/config/vite.config.ts build"
   },
@@ -32,6 +34,7 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"
   }

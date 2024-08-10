@@ -22,7 +22,7 @@ ChartJS.register(
   LinearScale,
   Legend,
   Title,
-  Tooltip,
+  Tooltip
 )
 
 type BarChartProps = {
@@ -61,12 +61,12 @@ const BarChart: React.FC<BarChartProps> = ({
         const values = Object.values(data)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
-          0,
+          0
         )
 
         const defaultColor = "rgba(0, 123, 255, 0.6)"
         const backgroundColors = Object.keys(data).map(
-          (label) => colorMap[label] || defaultColor,
+          (label) => colorMap[label] || defaultColor
         )
 
         const chartData: ChartData<"bar", number[], string> = {
