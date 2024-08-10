@@ -12,6 +12,7 @@
     "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./src/config/.eslintrc.cjs --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
+    "cfn-lint": "cfn-lint --template", 
     "setup-test": "npx playwright install --with-deps",
     "build": "tsc -b ./src/config/tsconfig.json && vite --config ./src/config/vite.config.ts build"
   },
