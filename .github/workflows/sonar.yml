@@ -4,9 +4,22 @@ on:
     branches:
       - main
     paths:
-      - "data/**"
+      - "data/**/*.py"
+      - "data/package*.json"
       - "src/**"
       - "tests/**"
+      - "package*.json"
+      - "Dockerfile"
+      - ".github/workflows/sonar.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/**/*.py"
+      - "data/package*.json"
+      - "src/**"
+      - "tests/**"
+      - "package*.json"
       - "Dockerfile"
       - ".github/workflows/sonar.yml"
   workflow_dispatch:
