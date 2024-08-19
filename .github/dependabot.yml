@@ -15,6 +15,13 @@ updates:
       time: "21:00"
       timezone: "Europe/Helsinki"
     target-branch: "main"
+    groups:
+      react:
+        patterns:
+          - "react*"
+      eslint:
+        patterns:
+          - "@typescript-eslint/*"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
