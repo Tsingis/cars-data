@@ -6,7 +6,7 @@ import LineChart from "./components/LineChart/LineChart"
 import PieChart from "./components/PieChart/PieChart"
 import TopList from "./components/TopList/TopList"
 import { Count, Municipality } from "./types"
-import { colors, drivingForces, drivingForcesColors } from "./constants"
+import { colors, drivingForcesColors } from "./constants"
 import "./app.css"
 
 function App() {
