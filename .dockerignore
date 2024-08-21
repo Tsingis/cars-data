@@ -1,0 +1,13 @@
+.git/
+.github/
+cloudformation/
+data/
+tests/
+util/
+node_modules/
+README.md
+.gitignore
+Dockerfile
+.prettierc.json
+docker-compose.yml
+sonar-project.properties
