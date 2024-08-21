@@ -36,6 +36,7 @@ def clean(vehicles: pd.DataFrame, municipalities: dict):
     )
 
     # Driving force grouping
+    vehicles["is_hybrid"] = vehicles["is_hybrid"].str.lower()
     vehicles["is_hybrid"] = vehicles["is_hybrid"] == "true"
 
     driving_force_map = {

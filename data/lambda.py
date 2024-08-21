@@ -3,9 +3,9 @@ import json
 import logging
 import os
 from pydantic import ValidationError
-from util.data_import import get_municipalities, get_vehicles
-from util.data_cleaning import clean, generate
-from util.data_validation import validate
+from src.data_import import get_municipalities, get_vehicles
+from src.data_cleaning import clean, generate
+from src.data_validation import validate
 
 BUCKET = os.getenv("BUCKET")
 FILENAME = os.getenv("FILENAME", "data.json")

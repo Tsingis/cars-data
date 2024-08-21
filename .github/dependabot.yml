@@ -29,7 +29,7 @@ updates:
       time: "21:00"
       timezone: "Europe/Helsinki"
   - package-ecosystem: "pip"
-    directory: "/data"
+    directory: "/data/src"
     schedule:
       interval: "daily"
       time: "21:00"

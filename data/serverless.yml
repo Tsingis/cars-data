@@ -30,7 +30,7 @@ plugins:
 custom:
   pythonRequirements:
     dockerizePip: true
-    fileName: requirements.txt
+    fileName: src/requirements.txt
 
 package:
   patterns:

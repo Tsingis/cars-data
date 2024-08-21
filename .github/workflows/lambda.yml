@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - "data/lambda.py"
-      - "data/requirements.txt"
+      - "data/src/**"
       - "data/package*.json"
       - "data/serverless.yml"
       - ".github/workflows/lambda.yml"
@@ -14,7 +14,7 @@ on:
       - main
     paths:
       - "data/lambda.py"
-      - "data/requirements.txt"
+      - "data/src/**"
       - "data/package*.json"
       - "data/serverless.yml"
       - ".github/workflows/lambda.yml"
