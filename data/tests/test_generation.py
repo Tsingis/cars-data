@@ -10,7 +10,13 @@ class TestGenerateFunction(unittest.TestCase):
         self.municipalities = {"001": "Helsinki", "002": "Espoo"}
         self.df = pd.DataFrame(
             {
-                "driving_force": ["4", "1", "4", "1", "4"],
+                "driving_force": [
+                    "electricity",
+                    "petrol",
+                    "electricity",
+                    "petrol",
+                    "electricity",
+                ],
                 "color": ["red", "blue", "red", "blue", "green"],
                 "maker": ["Tesla", "BMW", "Tesla", "BMW", "Tesla"],
                 "registration_year": [2020, 2021, 2020, 2022, 2020],
@@ -23,7 +29,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "000",
                 "name": "Finland",
-                "countByDrivingForce": {"1": 2, "4": 3},
+                "countByDrivingForce": {"petrol": 2, "electricity": 3},
                 "countByColor": {"blue": 2, "green": 1, "red": 2},
                 "countByRegistrationYear": {"2020": 3, "2021": 1, "2022": 1},
                 "countByMaker": {"BMW": 2, "Tesla": 3},
@@ -31,7 +37,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "001",
                 "name": "Helsinki",
-                "countByDrivingForce": {"1": 0, "4": 3},
+                "countByDrivingForce": {"petrol": 0, "electricity": 3},
                 "countByColor": {"blue": 0, "green": 1, "red": 2},
                 "countByRegistrationYear": {"2020": 3},
                 "countByMaker": {"Tesla": 3},
@@ -39,7 +45,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "002",
                 "name": "Espoo",
-                "countByDrivingForce": {"1": 2, "4": 0},
+                "countByDrivingForce": {"petrol": 2, "electricity": 0},
                 "countByColor": {"blue": 2, "green": 0, "red": 0},
                 "countByRegistrationYear": {"2021": 1, "2022": 1},
                 "countByMaker": {"BMW": 2},

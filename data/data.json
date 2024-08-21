@@ -5,11 +5,11 @@
       "code": "020",
       "name": "Akaa",
       "countByDrivingForce": {
-        "1": 6000,
-        "2": 2682,
-        "3": 727,
-        "4": 283,
-        "5": 80
+        "diesel": 2682,
+        "electricity": 283,
+        "hybrid": 727,
+        "other": 80,
+        "petrol": 6000
       },
       "countByColor": {
         "black": 1378,
@@ -119,11 +119,11 @@
       "code": "005",
       "name": "Alajärvi",
       "countByDrivingForce": {
-        "1": 3142,
-        "2": 2029,
-        "3": 198,
-        "4": 71,
-        "5": 7
+        "diesel": 2029,
+        "electricity": 71,
+        "hybrid": 198,
+        "other": 7,
+        "petrol": 3142
       },
       "countByColor": {
         "black": 846,
@@ -232,11 +232,11 @@
       "code": "009",
       "name": "Alavieska",
       "countByDrivingForce": {
-        "1": 718,
-        "2": 594,
-        "3": 64,
-        "4": 19,
-        "5": 1
+        "diesel": 594,
+        "electricity": 19,
+        "hybrid": 64,
+        "other": 1,
+        "petrol": 718
       },
       "countByColor": {
         "black": 249,
@@ -339,11 +339,11 @@
       "code": "010",
       "name": "Alavus",
       "countByDrivingForce": {
-        "1": 4173,
-        "2": 1998,
-        "3": 307,
-        "4": 75,
-        "5": 20
+        "diesel": 1998,
+        "electricity": 75,
+        "hybrid": 307,
+        "other": 20,
+        "petrol": 4173
       },
       "countByColor": {
         "black": 902,
@@ -454,11 +454,11 @@
       "code": "016",
       "name": "Asikkala",
       "countByDrivingForce": {
-        "1": 2921,
-        "2": 1283,
-        "3": 406,
-        "4": 99,
-        "5": 37
+        "diesel": 1283,
+        "electricity": 99,
+        "hybrid": 406,
+        "other": 37,
+        "petrol": 2921
       },
       "countByColor": {
         "black": 704,
@@ -568,11 +568,11 @@
       "code": "018",
       "name": "Askola",
       "countByDrivingForce": {
-        "1": 1766,
-        "2": 840,
-        "3": 285,
-        "4": 92,
-        "5": 24
+        "diesel": 840,
+        "electricity": 92,
+        "hybrid": 285,
+        "other": 24,
+        "petrol": 1766
       },
       "countByColor": {
         "black": 461,
@@ -679,11 +679,11 @@
       "code": "019",
       "name": "Aura",
       "countByDrivingForce": {
-        "1": 1405,
-        "2": 728,
-        "3": 211,
-        "4": 67,
-        "5": 26
+        "diesel": 728,
+        "electricity": 67,
+        "hybrid": 211,
+        "other": 26,
+        "petrol": 1405
       },
       "countByColor": {
         "black": 357,
@@ -791,11 +791,11 @@
       "code": "035",
       "name": "Brändö",
       "countByDrivingForce": {
-        "1": 18,
-        "2": 15,
-        "3": 7,
-        "4": 0,
-        "5": 0
+        "diesel": 15,
+        "electricity": 0,
+        "hybrid": 7,
+        "other": 0,
+        "petrol": 18
       },
       "countByColor": {
         "black": 8,
@@ -850,11 +850,11 @@
       "code": "043",
       "name": "Eckerö",
       "countByDrivingForce": {
-        "1": 9,
-        "2": 1,
-        "3": 0,
-        "4": 1,
-        "5": 0
+        "diesel": 1,
+        "electricity": 1,
+        "hybrid": 0,
+        "other": 0,
+        "petrol": 9
       },
       "countByColor": {
         "black": 1,
@@ -894,11 +894,11 @@
       "code": "046",
       "name": "Enonkoski",
       "countByDrivingForce": {
-        "1": 510,
-        "2": 249,
-        "3": 39,
-        "4": 9,
-        "5": 2
+        "diesel": 249,
+        "electricity": 9,
+        "hybrid": 39,
+        "other": 2,
+        "petrol": 510
       },
       "countByColor": {
         "black": 121,
@@ -997,11 +997,11 @@
       "code": "047",
       "name": "Enontekiö",
       "countByDrivingForce": {
-        "1": 583,
-        "2": 372,
-        "3": 51,
-        "4": 9,
-        "5": 0
+        "diesel": 372,
+        "electricity": 9,
+        "hybrid": 51,
+        "other": 0,
+        "petrol": 583
       },
       "countByColor": {
         "black": 156,
@@ -1100,11 +1100,11 @@
       "code": "049",
       "name": "Espoo",
       "countByDrivingForce": {
-        "1": 65706,
-        "2": 23270,
-        "3": 26497,
-        "4": 10267,
-        "5": 1227
+        "diesel": 23270,
+        "electricity": 10267,
+        "hybrid": 26497,
+        "other": 1227,
+        "petrol": 65706
       },
       "countByColor": {
         "black": 22309,
@@ -1216,11 +1216,11 @@
       "code": "050",
       "name": "Eura",
       "countByDrivingForce": {
-        "1": 4475,
-        "2": 1991,
-        "3": 427,
-        "4": 109,
-        "5": 39
+        "diesel": 1991,
+        "electricity": 109,
+        "hybrid": 427,
+        "other": 39,
+        "petrol": 4475
       },
       "countByColor": {
         "black": 1040,
@@ -1330,11 +1330,11 @@
       "code": "051",
       "name": "Eurajoki",
       "countByDrivingForce": {
-        "1": 3521,
-        "2": 1722,
-        "3": 422,
-        "4": 151,
-        "5": 31
+        "diesel": 1722,
+        "electricity": 151,
+        "hybrid": 422,
+        "other": 31,
+        "petrol": 3521
       },
       "countByColor": {
         "black": 868,
@@ -1443,11 +1443,11 @@
       "code": "052",
       "name": "Evijärvi",
       "countByDrivingForce": {
-        "1": 745,
-        "2": 610,
-        "3": 72,
-        "4": 19,
-        "5": 3
+        "diesel": 610,
+        "electricity": 19,
+        "hybrid": 72,
+        "other": 3,
+        "petrol": 745
       },
       "countByColor": {
         "black": 259,
@@ -1552,11 +1552,11 @@
       "code": "000",
       "name": "Finland",
       "countByDrivingForce": {
-        "1": 1654463,
-        "2": 680354,
-        "3": 305639,
-        "4": 90850,
-        "5": 21146
+        "diesel": 680354,
+        "electricity": 90850,
+        "hybrid": 305639,
+        "other": 21146,
+        "petrol": 1654463
       },
       "countByColor": {
         "black": 429687,
@@ -1669,11 +1669,11 @@
       "code": "060",
       "name": "Finström",
       "countByDrivingForce": {
-        "1": 8,
-        "2": 3,
-        "3": 2,
-        "4": 1,
-        "5": 0
+        "diesel": 3,
+        "electricity": 1,
+        "hybrid": 2,
+        "other": 0,
+        "petrol": 8
       },
       "countByColor": {
         "black": 4,
@@ -1716,11 +1716,11 @@
       "code": "061",
       "name": "Forssa",
       "countByDrivingForce": {
-        "1": 6092,
-        "2": 2065,
-        "3": 732,
-        "4": 150,
-        "5": 82
+        "diesel": 2065,
+        "electricity": 150,
+        "hybrid": 732,
+        "other": 82,
+        "petrol": 6092
       },
       "countByColor": {
         "black": 1277,
@@ -1830,11 +1830,11 @@
       "code": "062",
       "name": "Föglö",
       "countByDrivingForce": {
-        "1": 3,
-        "2": 2,
-        "3": 1,
-        "4": 0,
-        "5": 0
+        "diesel": 2,
+        "electricity": 0,
+        "hybrid": 1,
+        "other": 0,
+        "petrol": 3
       },
       "countByColor": {
         "black": 0,
@@ -1867,11 +1867,11 @@
       "code": "065",
       "name": "Geta",
       "countByDrivingForce": {
-        "1": 4,
-        "2": 0,
-        "3": 0,
-        "4": 2,
-        "5": 0
+        "diesel": 0,
+        "electricity": 2,
+        "hybrid": 0,
+        "other": 0,
+        "petrol": 4
       },
       "countByColor": {
         "black": 1,
@@ -1904,11 +1904,11 @@
       "code": "069",
       "name": "Haapajärvi",
       "countByDrivingForce": {
-        "1": 1906,
-        "2": 1374,
-        "3": 181,
-        "4": 36,
-        "5": 9
+        "diesel": 1374,
+        "electricity": 36,
+        "hybrid": 181,
+        "other": 9,
+        "petrol": 1906
       },
       "countByColor": {
         "black": 586,
@@ -2017,11 +2017,11 @@
       "code": "071",
       "name": "Haapavesi",
       "countByDrivingForce": {
-        "1": 1733,
-        "2": 1446,
-        "3": 133,
-        "4": 35,
-        "5": 37
+        "diesel": 1446,
+        "electricity": 35,
+        "hybrid": 133,
+        "other": 37,
+        "petrol": 1733
       },
       "countByColor": {
         "black": 581,
@@ -2127,11 +2127,11 @@
       "code": "072",
       "name": "Hailuoto",
       "countByDrivingForce": {
-        "1": 319,
-        "2": 151,
-        "3": 40,
-        "4": 7,
-        "5": 3
+        "diesel": 151,
+        "electricity": 7,
+        "hybrid": 40,
+        "other": 3,
+        "petrol": 319
       },
       "countByColor": {
         "black": 65,
@@ -2226,11 +2226,11 @@
       "code": "074",
       "name": "Halsua",
       "countByDrivingForce": {
-        "1": 347,
-        "2": 264,
-        "3": 24,
-        "4": 8,
-        "5": 1
+        "diesel": 264,
+        "electricity": 8,
+        "hybrid": 24,
+        "other": 1,
+        "petrol": 347
       },
       "countByColor": {
         "black": 92,
@@ -2325,11 +2325,11 @@
       "code": "075",
       "name": "Hamina",
       "countByDrivingForce": {
-        "1": 8145,
-        "2": 2281,
-        "3": 1012,
-        "4": 167,
-        "5": 90
+        "diesel": 2281,
+        "electricity": 167,
+        "hybrid": 1012,
+        "other": 90,
+        "petrol": 8145
       },
       "countByColor": {
         "black": 1722,
@@ -2440,11 +2440,11 @@
       "code": "076",
       "name": "Hammarland",
       "countByDrivingForce": {
-        "1": 11,
-        "2": 1,
-        "3": 3,
-        "4": 2,
-        "5": 0
+        "diesel": 1,
+        "electricity": 2,
+        "hybrid": 3,
+        "other": 0,
+        "petrol": 11
       },
       "countByColor": {
         "black": 3,
@@ -2494,11 +2494,11 @@
       "code": "077",
       "name": "Hankasalmi",
       "countByDrivingForce": {
-        "1": 1665,
-        "2": 851,
-        "3": 130,
-        "4": 29,
-        "5": 25
+        "diesel": 851,
+        "electricity": 29,
+        "hybrid": 130,
+        "other": 25,
+        "petrol": 1665
       },
       "countByColor": {
         "black": 380,
@@ -2604,11 +2604,11 @@
       "code": "078",
       "name": "Hanko",
       "countByDrivingForce": {
-        "1": 2863,
-        "2": 773,
-        "3": 402,
-        "4": 99,
-        "5": 13
+        "diesel": 773,
+        "electricity": 99,
+        "hybrid": 402,
+        "other": 13,
+        "petrol": 2863
       },
       "countByColor": {
         "black": 556,
@@ -2718,11 +2718,11 @@
       "code": "079",
       "name": "Harjavalta",
       "countByDrivingForce": {
-        "1": 2913,
-        "2": 940,
-        "3": 235,
-        "4": 41,
-        "5": 16
+        "diesel": 940,
+        "electricity": 41,
+        "hybrid": 235,
+        "other": 16,
+        "petrol": 2913
       },
       "countByColor": {
         "black": 551,
@@ -2829,11 +2829,11 @@
       "code": "081",
       "name": "Hartola",
       "countByDrivingForce": {
-        "1": 946,
-        "2": 403,
-        "3": 80,
-        "4": 20,
-        "5": 4
+        "diesel": 403,
+        "electricity": 20,
+        "hybrid": 80,
+        "other": 4,
+        "petrol": 946
       },
       "countByColor": {
         "black": 222,
@@ -2940,11 +2940,11 @@
       "code": "082",
       "name": "Hattula",
       "countByDrivingForce": {
-        "1": 3565,
-        "2": 1592,
-        "3": 508,
-        "4": 136,
-        "5": 56
+        "diesel": 1592,
+        "electricity": 136,
+        "hybrid": 508,
+        "other": 56,
+        "petrol": 3565
       },
       "countByColor": {
         "black": 906,
@@ -3055,11 +3055,11 @@
       "code": "086",
       "name": "Hausjärvi",
       "countByDrivingForce": {
-        "1": 3105,
-        "2": 1249,
-        "3": 373,
-        "4": 128,
-        "5": 56
+        "diesel": 1249,
+        "electricity": 128,
+        "hybrid": 373,
+        "other": 56,
+        "petrol": 3105
       },
       "countByColor": {
         "black": 711,
@@ -3172,11 +3172,11 @@
       "code": "111",
       "name": "Heinola",
       "countByDrivingForce": {
-        "1": 6428,
-        "2": 2281,
-        "3": 757,
-        "4": 165,
-        "5": 47
+        "diesel": 2281,
+        "electricity": 165,
+        "hybrid": 757,
+        "other": 47,
+        "petrol": 6428
       },
       "countByColor": {
         "black": 1387,
@@ -3287,11 +3287,11 @@
       "code": "090",
       "name": "Heinävesi",
       "countByDrivingForce": {
-        "1": 1098,
-        "2": 546,
-        "3": 81,
-        "4": 13,
-        "5": 3
+        "diesel": 546,
+        "electricity": 13,
+        "hybrid": 81,
+        "other": 3,
+        "petrol": 1098
       },
       "countByColor": {
         "black": 219,
@@ -3393,11 +3393,11 @@
       "code": "091",
       "name": "Helsinki",
       "countByDrivingForce": {
-        "1": 117861,
-        "2": 38099,
-        "3": 38672,
-        "4": 12681,
-        "5": 2283
+        "diesel": 38099,
+        "electricity": 12681,
+        "hybrid": 38672,
+        "other": 2283,
+        "petrol": 117861
       },
       "countByColor": {
         "black": 35542,
@@ -3510,11 +3510,11 @@
       "code": "097",
       "name": "Hirvensalmi",
       "countByDrivingForce": {
-        "1": 794,
-        "2": 378,
-        "3": 66,
-        "4": 15,
-        "5": 10
+        "diesel": 378,
+        "electricity": 15,
+        "hybrid": 66,
+        "other": 10,
+        "petrol": 794
       },
       "countByColor": {
         "black": 172,
@@ -3618,11 +3618,11 @@
       "code": "098",
       "name": "Hollola",
       "countByDrivingForce": {
-        "1": 7946,
-        "2": 3246,
-        "3": 1346,
-        "4": 317,
-        "5": 120
+        "diesel": 3246,
+        "electricity": 317,
+        "hybrid": 1346,
+        "other": 120,
+        "petrol": 7946
       },
       "countByColor": {
         "black": 1950,
@@ -3732,11 +3732,11 @@
       "code": "102",
       "name": "Huittinen",
       "countByDrivingForce": {
-        "1": 3681,
-        "2": 1849,
-        "3": 354,
-        "4": 107,
-        "5": 15
+        "diesel": 1849,
+        "electricity": 107,
+        "hybrid": 354,
+        "other": 15,
+        "petrol": 3681
       },
       "countByColor": {
         "black": 828,
@@ -3846,11 +3846,11 @@
       "code": "103",
       "name": "Humppila",
       "countByDrivingForce": {
-        "1": 786,
-        "2": 411,
-        "3": 83,
-        "4": 26,
-        "5": 8
+        "diesel": 411,
+        "electricity": 26,
+        "hybrid": 83,
+        "other": 8,
+        "petrol": 786
       },
       "countByColor": {
         "black": 194,
@@ -3954,11 +3954,11 @@
       "code": "105",
       "name": "Hyrynsalmi",
       "countByDrivingForce": {
-        "1": 732,
-        "2": 451,
-        "3": 52,
-        "4": 8,
-        "5": 1
+        "diesel": 451,
+        "electricity": 8,
+        "hybrid": 52,
+        "other": 1,
+        "petrol": 732
       },
       "countByColor": {
         "black": 192,
@@ -4060,11 +4060,11 @@
       "code": "106",
       "name": "Hyvinkää",
       "countByDrivingForce": {
-        "1": 14730,
-        "2": 5171,
-        "3": 3000,
-        "4": 927,
-        "5": 268
+        "diesel": 5171,
+        "electricity": 927,
+        "hybrid": 3000,
+        "other": 268,
+        "petrol": 14730
       },
       "countByColor": {
         "black": 3758,
@@ -4174,11 +4174,11 @@
       "code": "108",
       "name": "Hämeenkyrö",
       "countByDrivingForce": {
-        "1": 3717,
-        "2": 1902,
-        "3": 426,
-        "4": 135,
-        "5": 55
+        "diesel": 1902,
+        "electricity": 135,
+        "hybrid": 426,
+        "other": 55,
+        "petrol": 3717
       },
       "countByColor": {
         "black": 919,
@@ -4289,11 +4289,11 @@
       "code": "109",
       "name": "Hämeenlinna",
       "countByDrivingForce": {
-        "1": 22616,
-        "2": 8320,
-        "3": 3520,
-        "4": 999,
-        "5": 349
+        "diesel": 8320,
+        "electricity": 999,
+        "hybrid": 3520,
+        "other": 349,
+        "petrol": 22616
       },
       "countByColor": {
         "black": 5153,
@@ -4403,11 +4403,11 @@
       "code": "139",
       "name": "Ii",
       "countByDrivingForce": {
-        "1": 2779,
-        "2": 1965,
-        "3": 306,
-        "4": 108,
-        "5": 25
+        "diesel": 1965,
+        "electricity": 108,
+        "hybrid": 306,
+        "other": 25,
+        "petrol": 2779
       },
       "countByColor": {
         "black": 861,
@@ -4514,11 +4514,11 @@
       "code": "140",
       "name": "Iisalmi",
       "countByDrivingForce": {
-        "1": 7060,
-        "2": 3210,
-        "3": 573,
-        "4": 149,
-        "5": 21
+        "diesel": 3210,
+        "electricity": 149,
+        "hybrid": 573,
+        "other": 21,
+        "petrol": 7060
       },
       "countByColor": {
         "black": 1639,
@@ -4628,11 +4628,11 @@
       "code": "142",
       "name": "Iitti",
       "countByDrivingForce": {
-        "1": 2575,
-        "2": 993,
-        "3": 268,
-        "4": 68,
-        "5": 22
+        "diesel": 993,
+        "electricity": 68,
+        "hybrid": 268,
+        "other": 22,
+        "petrol": 2575
       },
       "countByColor": {
         "black": 559,
@@ -4742,11 +4742,11 @@
       "code": "143",
       "name": "Ikaalinen",
       "countByDrivingForce": {
-        "1": 2275,
-        "2": 1322,
-        "3": 187,
-        "4": 62,
-        "5": 13
+        "diesel": 1322,
+        "electricity": 62,
+        "hybrid": 187,
+        "other": 13,
+        "petrol": 2275
       },
       "countByColor": {
         "black": 586,
@@ -4855,11 +4855,11 @@
       "code": "145",
       "name": "Ilmajoki",
       "countByDrivingForce": {
-        "1": 4516,
-        "2": 2483,
-        "3": 461,
-        "4": 147,
-        "5": 43
+        "diesel": 2483,
+        "electricity": 147,
+        "hybrid": 461,
+        "other": 43,
+        "petrol": 4516
       },
       "countByColor": {
         "black": 1157,
@@ -4969,11 +4969,11 @@
       "code": "146",
       "name": "Ilomantsi",
       "countByDrivingForce": {
-        "1": 1776,
-        "2": 744,
-        "3": 91,
-        "4": 20,
-        "5": 4
+        "diesel": 744,
+        "electricity": 20,
+        "hybrid": 91,
+        "other": 4,
+        "petrol": 1776
       },
       "countByColor": {
         "black": 351,
@@ -5079,11 +5079,11 @@
       "code": "153",
       "name": "Imatra",
       "countByDrivingForce": {
-        "1": 10629,
-        "2": 2373,
-        "3": 1251,
-        "4": 241,
-        "5": 192
+        "diesel": 2373,
+        "electricity": 241,
+        "hybrid": 1251,
+        "other": 192,
+        "petrol": 10629
       },
       "countByColor": {
         "black": 1910,
@@ -5193,11 +5193,11 @@
       "code": "148",
       "name": "Inari",
       "countByDrivingForce": {
-        "1": 2186,
-        "2": 1540,
-        "3": 224,
-        "4": 30,
-        "5": 9
+        "diesel": 1540,
+        "electricity": 30,
+        "hybrid": 224,
+        "other": 9,
+        "petrol": 2186
       },
       "countByColor": {
         "black": 671,
@@ -5302,11 +5302,11 @@
       "code": "149",
       "name": "Ingå",
       "countByDrivingForce": {
-        "1": 1857,
-        "2": 881,
-        "3": 416,
-        "4": 120,
-        "5": 31
+        "diesel": 881,
+        "electricity": 120,
+        "hybrid": 416,
+        "other": 31,
+        "petrol": 1857
       },
       "countByColor": {
         "black": 451,
@@ -5414,11 +5414,11 @@
       "code": "151",
       "name": "Isojoki",
       "countByDrivingForce": {
-        "1": 711,
-        "2": 403,
-        "3": 50,
-        "4": 7,
-        "5": 2
+        "diesel": 403,
+        "electricity": 7,
+        "hybrid": 50,
+        "other": 2,
+        "petrol": 711
       },
       "countByColor": {
         "black": 178,
@@ -5521,11 +5521,11 @@
       "code": "152",
       "name": "Isokyrö",
       "countByDrivingForce": {
-        "1": 1837,
-        "2": 964,
-        "3": 212,
-        "4": 55,
-        "5": 35
+        "diesel": 964,
+        "electricity": 55,
+        "hybrid": 212,
+        "other": 35,
+        "petrol": 1837
       },
       "countByColor": {
         "black": 442,
@@ -5634,11 +5634,11 @@
       "code": "598",
       "name": "Jakobstad",
       "countByDrivingForce": {
-        "1": 6955,
-        "2": 2357,
-        "3": 868,
-        "4": 189,
-        "5": 85
+        "diesel": 2357,
+        "electricity": 189,
+        "hybrid": 868,
+        "other": 85,
+        "petrol": 6955
       },
       "countByColor": {
         "black": 1443,
@@ -5747,11 +5747,11 @@
       "code": "165",
       "name": "Janakkala",
       "countByDrivingForce": {
-        "1": 6069,
-        "2": 2487,
-        "3": 812,
-        "4": 261,
-        "5": 77
+        "diesel": 2487,
+        "electricity": 261,
+        "hybrid": 812,
+        "other": 77,
+        "petrol": 6069
       },
       "countByColor": {
         "black": 1357,
@@ -5861,11 +5861,11 @@
       "code": "167",
       "name": "Joensuu",
       "countByDrivingForce": {
-        "1": 24530,
-        "2": 8111,
-        "3": 2821,
-        "4": 749,
-        "5": 136
+        "diesel": 8111,
+        "electricity": 749,
+        "hybrid": 2821,
+        "other": 136,
+        "petrol": 24530
       },
       "countByColor": {
         "black": 5392,
@@ -5976,11 +5976,11 @@
       "code": "169",
       "name": "Jokioinen",
       "countByDrivingForce": {
-        "1": 1985,
-        "2": 849,
-        "3": 234,
-        "4": 58,
-        "5": 29
+        "diesel": 849,
+        "electricity": 58,
+        "hybrid": 234,
+        "other": 29,
+        "petrol": 1985
       },
       "countByColor": {
         "black": 426,
@@ -6087,11 +6087,11 @@
       "code": "170",
       "name": "Jomala",
       "countByDrivingForce": {
-        "1": 34,
-        "2": 2,
-        "3": 17,
-        "4": 2,
-        "5": 0
+        "diesel": 2,
+        "electricity": 2,
+        "hybrid": 17,
+        "other": 0,
+        "petrol": 34
       },
       "countByColor": {
         "black": 9,
@@ -6154,11 +6154,11 @@
       "code": "171",
       "name": "Joroinen",
       "countByDrivingForce": {
-        "1": 1832,
-        "2": 798,
-        "3": 160,
-        "4": 46,
-        "5": 5
+        "diesel": 798,
+        "electricity": 46,
+        "hybrid": 160,
+        "other": 5,
+        "petrol": 1832
       },
       "countByColor": {
         "black": 446,
@@ -6261,11 +6261,11 @@
       "code": "172",
       "name": "Joutsa",
       "countByDrivingForce": {
-        "1": 1497,
-        "2": 636,
-        "3": 147,
-        "4": 26,
-        "5": 21
+        "diesel": 636,
+        "electricity": 26,
+        "hybrid": 147,
+        "other": 21,
+        "petrol": 1497
       },
       "countByColor": {
         "black": 300,
@@ -6372,11 +6372,11 @@
       "code": "176",
       "name": "Juuka",
       "countByDrivingForce": {
-        "1": 1603,
-        "2": 755,
-        "3": 103,
-        "4": 13,
-        "5": 2
+        "diesel": 755,
+        "electricity": 13,
+        "hybrid": 103,
+        "other": 2,
+        "petrol": 1603
       },
       "countByColor": {
         "black": 334,
@@ -6483,11 +6483,11 @@
       "code": "177",
       "name": "Juupajoki",
       "countByDrivingForce": {
-        "1": 603,
-        "2": 373,
-        "3": 56,
-        "4": 21,
-        "5": 2
+        "diesel": 373,
+        "electricity": 21,
+        "hybrid": 56,
+        "other": 2,
+        "petrol": 603
       },
       "countByColor": {
         "black": 179,
@@ -6589,11 +6589,11 @@
       "code": "178",
       "name": "Juva",
       "countByDrivingForce": {
-        "1": 2166,
-        "2": 989,
-        "3": 202,
-        "4": 62,
-        "5": 14
+        "diesel": 989,
+        "electricity": 62,
+        "hybrid": 202,
+        "other": 14,
+        "petrol": 2166
       },
       "countByColor": {
         "black": 498,
@@ -6700,11 +6700,11 @@
       "code": "179",
       "name": "Jyväskylä",
       "countByDrivingForce": {
-        "1": 39921,
-        "2": 15952,
-        "3": 6848,
-        "4": 1850,
-        "5": 1017
+        "diesel": 15952,
+        "electricity": 1850,
+        "hybrid": 6848,
+        "other": 1017,
+        "petrol": 39921
       },
       "countByColor": {
         "black": 10008,
@@ -6816,11 +6816,11 @@
       "code": "181",
       "name": "Jämijärvi",
       "countByDrivingForce": {
-        "1": 648,
-        "2": 416,
-        "3": 37,
-        "4": 14,
-        "5": 4
+        "diesel": 416,
+        "electricity": 14,
+        "hybrid": 37,
+        "other": 4,
+        "petrol": 648
       },
       "countByColor": {
         "black": 160,
@@ -6924,11 +6924,11 @@
       "code": "182",
       "name": "Jämsä",
       "countByDrivingForce": {
-        "1": 7764,
-        "2": 2794,
-        "3": 909,
-        "4": 151,
-        "5": 36
+        "diesel": 2794,
+        "electricity": 151,
+        "hybrid": 909,
+        "other": 36,
+        "petrol": 7764
       },
       "countByColor": {
         "black": 1548,
@@ -7037,11 +7037,11 @@
       "code": "186",
       "name": "Järvenpää",
       "countByDrivingForce": {
-        "1": 13045,
-        "2": 4537,
-        "3": 3624,
-        "4": 902,
-        "5": 219
+        "diesel": 4537,
+        "electricity": 902,
+        "hybrid": 3624,
+        "other": 219,
+        "petrol": 13045
       },
       "countByColor": {
         "black": 3596,
@@ -7151,11 +7151,11 @@
       "code": "202",
       "name": "Kaarina",
       "countByDrivingForce": {
-        "1": 12217,
-        "2": 3787,
-        "3": 3158,
-        "4": 1000,
-        "5": 123
+        "diesel": 3787,
+        "electricity": 1000,
+        "hybrid": 3158,
+        "other": 123,
+        "petrol": 12217
       },
       "countByColor": {
         "black": 3269,
@@ -7266,11 +7266,11 @@
       "code": "204",
       "name": "Kaavi",
       "countByDrivingForce": {
-        "1": 953,
-        "2": 484,
-        "3": 75,
-        "4": 7,
-        "5": 3
+        "diesel": 484,
+        "electricity": 7,
+        "hybrid": 75,
+        "other": 3,
+        "petrol": 953
       },
       "countByColor": {
         "black": 195,
@@ -7374,11 +7374,11 @@
       "code": "205",
       "name": "Kajaani",
       "countByDrivingForce": {
-        "1": 11458,
-        "2": 5504,
-        "3": 1338,
-        "4": 277,
-        "5": 39
+        "diesel": 5504,
+        "electricity": 277,
+        "hybrid": 1338,
+        "other": 39,
+        "petrol": 11458
       },
       "countByColor": {
         "black": 2914,
@@ -7488,11 +7488,11 @@
       "code": "208",
       "name": "Kalajoki",
       "countByDrivingForce": {
-        "1": 3632,
-        "2": 2806,
-        "3": 355,
-        "4": 138,
-        "5": 14
+        "diesel": 2806,
+        "electricity": 138,
+        "hybrid": 355,
+        "other": 14,
+        "petrol": 3632
       },
       "countByColor": {
         "black": 1200,
@@ -7601,11 +7601,11 @@
       "code": "211",
       "name": "Kangasala",
       "countByDrivingForce": {
-        "1": 10904,
-        "2": 4850,
-        "3": 2069,
-        "4": 659,
-        "5": 157
+        "diesel": 4850,
+        "electricity": 659,
+        "hybrid": 2069,
+        "other": 157,
+        "petrol": 10904
       },
       "countByColor": {
         "black": 2901,
@@ -7716,11 +7716,11 @@
       "code": "213",
       "name": "Kangasniemi",
       "countByDrivingForce": {
-        "1": 1895,
-        "2": 822,
-        "3": 166,
-        "4": 47,
-        "5": 16
+        "diesel": 822,
+        "electricity": 47,
+        "hybrid": 166,
+        "other": 16,
+        "petrol": 1895
       },
       "countByColor": {
         "black": 407,
@@ -7827,11 +7827,11 @@
       "code": "214",
       "name": "Kankaanpää",
       "countByDrivingForce": {
-        "1": 4531,
-        "2": 2160,
-        "3": 437,
-        "4": 95,
-        "5": 25
+        "diesel": 2160,
+        "electricity": 95,
+        "hybrid": 437,
+        "other": 25,
+        "petrol": 4531
       },
       "countByColor": {
         "black": 1124,
@@ -7941,11 +7941,11 @@
       "code": "216",
       "name": "Kannonkoski",
       "countByDrivingForce": {
-        "1": 424,
-        "2": 279,
-        "3": 41,
-        "4": 12,
-        "5": 0
+        "diesel": 279,
+        "electricity": 12,
+        "hybrid": 41,
+        "other": 0,
+        "petrol": 424
       },
       "countByColor": {
         "black": 115,
@@ -8045,11 +8045,11 @@
       "code": "217",
       "name": "Kannus",
       "countByDrivingForce": {
-        "1": 1503,
-        "2": 1205,
-        "3": 135,
-        "4": 35,
-        "5": 3
+        "diesel": 1205,
+        "electricity": 35,
+        "hybrid": 135,
+        "other": 3,
+        "petrol": 1503
       },
       "countByColor": {
         "black": 481,
@@ -8156,11 +8156,11 @@
       "code": "218",
       "name": "Karijoki",
       "countByDrivingForce": {
-        "1": 457,
-        "2": 262,
-        "3": 26,
-        "4": 7,
-        "5": 2
+        "diesel": 262,
+        "electricity": 7,
+        "hybrid": 26,
+        "other": 2,
+        "petrol": 457
       },
       "countByColor": {
         "black": 110,
@@ -8257,11 +8257,11 @@
       "code": "224",
       "name": "Karkkila",
       "countByDrivingForce": {
-        "1": 3123,
-        "2": 1154,
-        "3": 467,
-        "4": 145,
-        "5": 26
+        "diesel": 1154,
+        "electricity": 145,
+        "hybrid": 467,
+        "other": 26,
+        "petrol": 3123
       },
       "countByColor": {
         "black": 721,
@@ -8370,11 +8370,11 @@
       "code": "226",
       "name": "Karstula",
       "countByDrivingForce": {
-        "1": 1322,
-        "2": 762,
-        "3": 80,
-        "4": 14,
-        "5": 3
+        "diesel": 762,
+        "electricity": 14,
+        "hybrid": 80,
+        "other": 3,
+        "petrol": 1322
       },
       "countByColor": {
         "black": 323,
@@ -8480,11 +8480,11 @@
       "code": "230",
       "name": "Karvia",
       "countByDrivingForce": {
-        "1": 867,
-        "2": 497,
-        "3": 57,
-        "4": 18,
-        "5": 2
+        "diesel": 497,
+        "electricity": 18,
+        "hybrid": 57,
+        "other": 2,
+        "petrol": 867
       },
       "countByColor": {
         "black": 223,
@@ -8588,11 +8588,11 @@
       "code": "231",
       "name": "Kaskinen",
       "countByDrivingForce": {
-        "1": 425,
-        "2": 207,
-        "3": 38,
-        "4": 14,
-        "5": 1
+        "diesel": 207,
+        "electricity": 14,
+        "hybrid": 38,
+        "other": 1,
+        "petrol": 425
       },
       "countByColor": {
         "black": 96,
@@ -8691,11 +8691,11 @@
       "code": "232",
       "name": "Kauhajoki",
       "countByDrivingForce": {
-        "1": 4635,
-        "2": 2575,
-        "3": 467,
-        "4": 80,
-        "5": 19
+        "diesel": 2575,
+        "electricity": 80,
+        "hybrid": 467,
+        "other": 19,
+        "petrol": 4635
       },
       "countByColor": {
         "black": 1199,
@@ -8805,11 +8805,11 @@
       "code": "233",
       "name": "Kauhava",
       "countByDrivingForce": {
-        "1": 5704,
-        "2": 3116,
-        "3": 464,
-        "4": 106,
-        "5": 41
+        "diesel": 3116,
+        "electricity": 106,
+        "hybrid": 464,
+        "other": 41,
+        "petrol": 5704
       },
       "countByColor": {
         "black": 1468,
@@ -8918,11 +8918,11 @@
       "code": "235",
       "name": "Kauniainen",
       "countByDrivingForce": {
-        "1": 2188,
-        "2": 905,
-        "3": 1190,
-        "4": 542,
-        "5": 29
+        "diesel": 905,
+        "electricity": 542,
+        "hybrid": 1190,
+        "other": 29,
+        "petrol": 2188
       },
       "countByColor": {
         "black": 882,
@@ -9031,11 +9031,11 @@
       "code": "236",
       "name": "Kaustinen",
       "countByDrivingForce": {
-        "1": 1267,
-        "2": 1017,
-        "3": 128,
-        "4": 47,
-        "5": 10
+        "diesel": 1017,
+        "electricity": 47,
+        "hybrid": 128,
+        "other": 10,
+        "petrol": 1267
       },
       "countByColor": {
         "black": 444,
@@ -9143,11 +9143,11 @@
       "code": "239",
       "name": "Keitele",
       "countByDrivingForce": {
-        "1": 742,
-        "2": 315,
-        "3": 65,
-        "4": 7,
-        "5": 7
+        "diesel": 315,
+        "electricity": 7,
+        "hybrid": 65,
+        "other": 7,
+        "petrol": 742
       },
       "countByColor": {
         "black": 149,
@@ -9246,11 +9246,11 @@
       "code": "240",
       "name": "Kemi",
       "countByDrivingForce": {
-        "1": 6530,
-        "2": 2253,
-        "3": 701,
-        "4": 143,
-        "5": 22
+        "diesel": 2253,
+        "electricity": 143,
+        "hybrid": 701,
+        "other": 22,
+        "petrol": 6530
       },
       "countByColor": {
         "black": 1376,
@@ -9359,11 +9359,11 @@
       "code": "320",
       "name": "Kemijärvi",
       "countByDrivingForce": {
-        "1": 2579,
-        "2": 1028,
-        "3": 285,
-        "4": 35,
-        "5": 8
+        "diesel": 1028,
+        "electricity": 35,
+        "hybrid": 285,
+        "other": 8,
+        "petrol": 2579
       },
       "countByColor": {
         "black": 503,
@@ -9468,11 +9468,11 @@
       "code": "241",
       "name": "Keminmaa",
       "countByDrivingForce": {
-        "1": 2781,
-        "2": 1563,
-        "3": 343,
-        "4": 118,
-        "5": 7
+        "diesel": 1563,
+        "electricity": 118,
+        "hybrid": 343,
+        "other": 7,
+        "petrol": 2781
       },
       "countByColor": {
         "black": 809,
@@ -9583,11 +9583,11 @@
       "code": "244",
       "name": "Kempele",
       "countByDrivingForce": {
-        "1": 5578,
-        "2": 3393,
-        "3": 1116,
-        "4": 512,
-        "5": 81
+        "diesel": 3393,
+        "electricity": 512,
+        "hybrid": 1116,
+        "other": 81,
+        "petrol": 5578
       },
       "countByColor": {
         "black": 1964,
@@ -9697,11 +9697,11 @@
       "code": "245",
       "name": "Kerava",
       "countByDrivingForce": {
-        "1": 10127,
-        "2": 3465,
-        "3": 2382,
-        "4": 644,
-        "5": 152
+        "diesel": 3465,
+        "electricity": 644,
+        "hybrid": 2382,
+        "other": 152,
+        "petrol": 10127
       },
       "countByColor": {
         "black": 2620,
@@ -9811,11 +9811,11 @@
       "code": "249",
       "name": "Keuruu",
       "countByDrivingForce": {
-        "1": 3346,
-        "2": 1402,
-        "3": 329,
-        "4": 90,
-        "5": 19
+        "diesel": 1402,
+        "electricity": 90,
+        "hybrid": 329,
+        "other": 19,
+        "petrol": 3346
       },
       "countByColor": {
         "black": 708,
@@ -9923,11 +9923,11 @@
       "code": "250",
       "name": "Kihniö",
       "countByDrivingForce": {
-        "1": 621,
-        "2": 370,
-        "3": 45,
-        "4": 15,
-        "5": 3
+        "diesel": 370,
+        "electricity": 15,
+        "hybrid": 45,
+        "other": 3,
+        "petrol": 621
       },
       "countByColor": {
         "black": 145,
@@ -10027,11 +10027,11 @@
       "code": "322",
       "name": "Kimitoön",
       "countByDrivingForce": {
-        "1": 2450,
-        "2": 893,
-        "3": 326,
-        "4": 60,
-        "5": 26
+        "diesel": 893,
+        "electricity": 60,
+        "hybrid": 326,
+        "other": 26,
+        "petrol": 2450
       },
       "countByColor": {
         "black": 474,
@@ -10137,11 +10137,11 @@
       "code": "256",
       "name": "Kinnula",
       "countByDrivingForce": {
-        "1": 506,
-        "2": 329,
-        "3": 32,
-        "4": 6,
-        "5": 0
+        "diesel": 329,
+        "electricity": 6,
+        "hybrid": 32,
+        "other": 0,
+        "petrol": 506
       },
       "countByColor": {
         "black": 128,
@@ -10245,11 +10245,11 @@
       "code": "257",
       "name": "Kirkkonummi",
       "countByDrivingForce": {
-        "1": 11273,
-        "2": 4716,
-        "3": 3546,
-        "4": 1497,
-        "5": 189
+        "diesel": 4716,
+        "electricity": 1497,
+        "hybrid": 3546,
+        "other": 189,
+        "petrol": 11273
       },
       "countByColor": {
         "black": 3680,
@@ -10360,11 +10360,11 @@
       "code": "260",
       "name": "Kitee",
       "countByDrivingForce": {
-        "1": 3963,
-        "2": 1290,
-        "3": 261,
-        "4": 58,
-        "5": 46
+        "diesel": 1290,
+        "electricity": 58,
+        "hybrid": 261,
+        "other": 46,
+        "petrol": 3963
       },
       "countByColor": {
         "black": 750,
@@ -10472,11 +10472,11 @@
       "code": "261",
       "name": "Kittilä",
       "countByDrivingForce": {
-        "1": 2113,
-        "2": 1482,
-        "3": 256,
-        "4": 64,
-        "5": 3
+        "diesel": 1482,
+        "electricity": 64,
+        "hybrid": 256,
+        "other": 3,
+        "petrol": 2113
       },
       "countByColor": {
         "black": 684,
@@ -10584,11 +10584,11 @@
       "code": "263",
       "name": "Kiuruvesi",
       "countByDrivingForce": {
-        "1": 2279,
-        "2": 1621,
-        "3": 140,
-        "4": 33,
-        "5": 12
+        "diesel": 1621,
+        "electricity": 33,
+        "hybrid": 140,
+        "other": 12,
+        "petrol": 2279
       },
       "countByColor": {
         "black": 641,
@@ -10695,11 +10695,11 @@
       "code": "265",
       "name": "Kivijärvi",
       "countByDrivingForce": {
-        "1": 333,
-        "2": 239,
-        "3": 14,
-        "4": 4,
-        "5": 1
+        "diesel": 239,
+        "electricity": 4,
+        "hybrid": 14,
+        "other": 1,
+        "petrol": 333
       },
       "countByColor": {
         "black": 85,
@@ -10797,11 +10797,11 @@
       "code": "271",
       "name": "Kokemäki",
       "countByDrivingForce": {
-        "1": 2862,
-        "2": 1184,
-        "3": 223,
-        "4": 49,
-        "5": 7
+        "diesel": 1184,
+        "electricity": 49,
+        "hybrid": 223,
+        "other": 7,
+        "petrol": 2862
       },
       "countByColor": {
         "black": 640,
@@ -10908,11 +10908,11 @@
       "code": "272",
       "name": "Kokkola",
       "countByDrivingForce": {
-        "1": 15074,
-        "2": 7865,
-        "3": 2067,
-        "4": 519,
-        "5": 75
+        "diesel": 7865,
+        "electricity": 519,
+        "hybrid": 2067,
+        "other": 75,
+        "petrol": 15074
       },
       "countByColor": {
         "black": 4074,
@@ -11023,11 +11023,11 @@
       "code": "273",
       "name": "Kolari",
       "countByDrivingForce": {
-        "1": 1261,
-        "2": 868,
-        "3": 136,
-        "4": 40,
-        "5": 4
+        "diesel": 868,
+        "electricity": 40,
+        "hybrid": 136,
+        "other": 4,
+        "petrol": 1261
       },
       "countByColor": {
         "black": 353,
@@ -11134,11 +11134,11 @@
       "code": "275",
       "name": "Konnevesi",
       "countByDrivingForce": {
-        "1": 889,
-        "2": 478,
-        "3": 89,
-        "4": 20,
-        "5": 7
+        "diesel": 478,
+        "electricity": 20,
+        "hybrid": 89,
+        "other": 7,
+        "petrol": 889
       },
       "countByColor": {
         "black": 194,
@@ -11242,11 +11242,11 @@
       "code": "276",
       "name": "Kontiolahti",
       "countByDrivingForce": {
-        "1": 5407,
-        "2": 2458,
-        "3": 635,
-        "4": 229,
-        "5": 51
+        "diesel": 2458,
+        "electricity": 229,
+        "hybrid": 635,
+        "other": 51,
+        "petrol": 5407
       },
       "countByColor": {
         "black": 1341,
@@ -11356,11 +11356,11 @@
       "code": "499",
       "name": "Korsholm",
       "countByDrivingForce": {
-        "1": 7938,
-        "2": 3164,
-        "3": 799,
-        "4": 266,
-        "5": 218
+        "diesel": 3164,
+        "electricity": 266,
+        "hybrid": 799,
+        "other": 218,
+        "petrol": 7938
       },
       "countByColor": {
         "black": 1848,
@@ -11470,11 +11470,11 @@
       "code": "280",
       "name": "Korsnäs",
       "countByDrivingForce": {
-        "1": 714,
-        "2": 460,
-        "3": 58,
-        "4": 22,
-        "5": 6
+        "diesel": 460,
+        "electricity": 22,
+        "hybrid": 58,
+        "other": 6,
+        "petrol": 714
       },
       "countByColor": {
         "black": 183,
@@ -11576,11 +11576,11 @@
       "code": "284",
       "name": "Koski Tl",
       "countByDrivingForce": {
-        "1": 825,
-        "2": 399,
-        "3": 91,
-        "4": 20,
-        "5": 5
+        "diesel": 399,
+        "electricity": 20,
+        "hybrid": 91,
+        "other": 5,
+        "petrol": 825
       },
       "countByColor": {
         "black": 203,
@@ -11687,11 +11687,11 @@
       "code": "285",
       "name": "Kotka",
       "countByDrivingForce": {
-        "1": 17789,
-        "2": 4652,
-        "3": 2768,
-        "4": 514,
-        "5": 170
+        "diesel": 4652,
+        "electricity": 514,
+        "hybrid": 2768,
+        "other": 170,
+        "petrol": 17789
       },
       "countByColor": {
         "black": 3723,
@@ -11802,11 +11802,11 @@
       "code": "286",
       "name": "Kouvola",
       "countByDrivingForce": {
-        "1": 32420,
-        "2": 9196,
-        "3": 4119,
-        "4": 698,
-        "5": 397
+        "diesel": 9196,
+        "electricity": 698,
+        "hybrid": 4119,
+        "other": 397,
+        "petrol": 32420
       },
       "countByColor": {
         "black": 6745,
@@ -11916,11 +11916,11 @@
       "code": "287",
       "name": "Kristinestad",
       "countByDrivingForce": {
-        "1": 2287,
-        "2": 1226,
-        "3": 221,
-        "4": 37,
-        "5": 13
+        "diesel": 1226,
+        "electricity": 37,
+        "hybrid": 221,
+        "other": 13,
+        "petrol": 2287
       },
       "countByColor": {
         "black": 559,
@@ -12029,11 +12029,11 @@
       "code": "288",
       "name": "Kronoby",
       "countByDrivingForce": {
-        "1": 2111,
-        "2": 1401,
-        "3": 277,
-        "4": 59,
-        "5": 24
+        "diesel": 1401,
+        "electricity": 59,
+        "hybrid": 277,
+        "other": 24,
+        "petrol": 2111
       },
       "countByColor": {
         "black": 578,
@@ -12142,11 +12142,11 @@
       "code": "290",
       "name": "Kuhmo",
       "countByDrivingForce": {
-        "1": 2927,
-        "2": 1224,
-        "3": 229,
-        "4": 12,
-        "5": 5
+        "diesel": 1224,
+        "electricity": 12,
+        "hybrid": 229,
+        "other": 5,
+        "petrol": 2927
       },
       "countByColor": {
         "black": 592,
@@ -12252,11 +12252,11 @@
       "code": "291",
       "name": "Kuhmoinen",
       "countByDrivingForce": {
-        "1": 804,
-        "2": 306,
-        "3": 85,
-        "4": 16,
-        "5": 10
+        "diesel": 306,
+        "electricity": 16,
+        "hybrid": 85,
+        "other": 10,
+        "petrol": 804
       },
       "countByColor": {
         "black": 167,
@@ -12360,11 +12360,11 @@
       "code": "295",
       "name": "Kumlinge",
       "countByDrivingForce": {
-        "1": 2,
-        "2": 1,
-        "3": 1,
-        "4": 0,
-        "5": 0
+        "diesel": 1,
+        "electricity": 0,
+        "hybrid": 1,
+        "other": 0,
+        "petrol": 2
       },
       "countByColor": {
         "black": 0,
@@ -12393,11 +12393,11 @@
       "code": "297",
       "name": "Kuopio",
       "countByDrivingForce": {
-        "1": 33882,
-        "2": 15118,
-        "3": 5815,
-        "4": 1808,
-        "5": 278
+        "diesel": 15118,
+        "electricity": 1808,
+        "hybrid": 5815,
+        "other": 278,
+        "petrol": 33882
       },
       "countByColor": {
         "black": 9076,
@@ -12508,11 +12508,11 @@
       "code": "300",
       "name": "Kuortane",
       "countByDrivingForce": {
-        "1": 1238,
-        "2": 753,
-        "3": 117,
-        "4": 28,
-        "5": 13
+        "diesel": 753,
+        "electricity": 28,
+        "hybrid": 117,
+        "other": 13,
+        "petrol": 1238
       },
       "countByColor": {
         "black": 327,
@@ -12619,11 +12619,11 @@
       "code": "301",
       "name": "Kurikka",
       "countByDrivingForce": {
-        "1": 7218,
-        "2": 4105,
-        "3": 698,
-        "4": 208,
-        "5": 56
+        "diesel": 4105,
+        "electricity": 208,
+        "hybrid": 698,
+        "other": 56,
+        "petrol": 7218
       },
       "countByColor": {
         "black": 1793,
@@ -12733,11 +12733,11 @@
       "code": "304",
       "name": "Kustavi",
       "countByDrivingForce": {
-        "1": 333,
-        "2": 181,
-        "3": 65,
-        "4": 15,
-        "5": 2
+        "diesel": 181,
+        "electricity": 15,
+        "hybrid": 65,
+        "other": 2,
+        "petrol": 333
       },
       "countByColor": {
         "black": 74,
@@ -12832,11 +12832,11 @@
       "code": "305",
       "name": "Kuusamo",
       "countByDrivingForce": {
-        "1": 5118,
-        "2": 2679,
-        "3": 494,
-        "4": 74,
-        "5": 6
+        "diesel": 2679,
+        "electricity": 74,
+        "hybrid": 494,
+        "other": 6,
+        "petrol": 5118
       },
       "countByColor": {
         "black": 1362,
@@ -12945,11 +12945,11 @@
       "code": "312",
       "name": "Kyyjärvi",
       "countByDrivingForce": {
-        "1": 375,
-        "2": 260,
-        "3": 32,
-        "4": 5,
-        "5": 2
+        "diesel": 260,
+        "electricity": 5,
+        "hybrid": 32,
+        "other": 2,
+        "petrol": 375
       },
       "countByColor": {
         "black": 110,
@@ -13046,11 +13046,11 @@
       "code": "316",
       "name": "Kärkölä",
       "countByDrivingForce": {
-        "1": 1578,
-        "2": 696,
-        "3": 188,
-        "4": 48,
-        "5": 26
+        "diesel": 696,
+        "electricity": 48,
+        "hybrid": 188,
+        "other": 26,
+        "petrol": 1578
       },
       "countByColor": {
         "black": 351,
@@ -13160,11 +13160,11 @@
       "code": "317",
       "name": "Kärsämäki",
       "countByDrivingForce": {
-        "1": 691,
-        "2": 532,
-        "3": 50,
-        "4": 12,
-        "5": 4
+        "diesel": 532,
+        "electricity": 12,
+        "hybrid": 50,
+        "other": 4,
+        "petrol": 691
       },
       "countByColor": {
         "black": 213,
@@ -13264,11 +13264,11 @@
       "code": "318",
       "name": "Kökar",
       "countByDrivingForce": {
-        "1": 4,
-        "2": 1,
-        "3": 1,
-        "4": 2,
-        "5": 0
+        "diesel": 1,
+        "electricity": 2,
+        "hybrid": 1,
+        "other": 0,
+        "petrol": 4
       },
       "countByColor": {
         "black": 1,
@@ -13305,11 +13305,11 @@
       "code": "398",
       "name": "Lahti",
       "countByDrivingForce": {
-        "1": 35866,
-        "2": 11983,
-        "3": 6724,
-        "4": 1668,
-        "5": 496
+        "diesel": 11983,
+        "electricity": 1668,
+        "hybrid": 6724,
+        "other": 496,
+        "petrol": 35866
       },
       "countByColor": {
         "black": 8937,
@@ -13422,11 +13422,11 @@
       "code": "399",
       "name": "Laihia",
       "countByDrivingForce": {
-        "1": 2927,
-        "2": 1524,
-        "3": 318,
-        "4": 72,
-        "5": 39
+        "diesel": 1524,
+        "electricity": 72,
+        "hybrid": 318,
+        "other": 39,
+        "petrol": 2927
       },
       "countByColor": {
         "black": 777,
@@ -13535,11 +13535,11 @@
       "code": "400",
       "name": "Laitila",
       "countByDrivingForce": {
-        "1": 3153,
-        "2": 1442,
-        "3": 364,
-        "4": 83,
-        "5": 17
+        "diesel": 1442,
+        "electricity": 83,
+        "hybrid": 364,
+        "other": 17,
+        "petrol": 3153
       },
       "countByColor": {
         "black": 815,
@@ -13649,11 +13649,11 @@
       "code": "407",
       "name": "Lapinjärvi",
       "countByDrivingForce": {
-        "1": 942,
-        "2": 443,
-        "3": 128,
-        "4": 20,
-        "5": 8
+        "diesel": 443,
+        "electricity": 20,
+        "hybrid": 128,
+        "other": 8,
+        "petrol": 942
       },
       "countByColor": {
         "black": 216,
@@ -13759,11 +13759,11 @@
       "code": "402",
       "name": "Lapinlahti",
       "countByDrivingForce": {
-        "1": 2965,
-        "2": 1854,
-        "3": 221,
-        "4": 76,
-        "5": 14
+        "diesel": 1854,
+        "electricity": 76,
+        "hybrid": 221,
+        "other": 14,
+        "petrol": 2965
       },
       "countByColor": {
         "black": 771,
@@ -13871,11 +13871,11 @@
       "code": "403",
       "name": "Lappajärvi",
       "countByDrivingForce": {
-        "1": 957,
-        "2": 557,
-        "3": 84,
-        "4": 20,
-        "5": 4
+        "diesel": 557,
+        "electricity": 20,
+        "hybrid": 84,
+        "other": 4,
+        "petrol": 957
       },
       "countByColor": {
         "black": 230,
@@ -13979,11 +13979,11 @@
       "code": "405",
       "name": "Lappeenranta",
       "countByDrivingForce": {
-        "1": 25914,
-        "2": 6775,
-        "3": 3916,
-        "4": 904,
-        "5": 555
+        "diesel": 6775,
+        "electricity": 904,
+        "hybrid": 3916,
+        "other": 555,
+        "petrol": 25914
       },
       "countByColor": {
         "black": 5708,
@@ -14094,11 +14094,11 @@
       "code": "408",
       "name": "Lapua",
       "countByDrivingForce": {
-        "1": 5098,
-        "2": 2671,
-        "3": 538,
-        "4": 106,
-        "5": 29
+        "diesel": 2671,
+        "electricity": 106,
+        "hybrid": 538,
+        "other": 29,
+        "petrol": 5098
       },
       "countByColor": {
         "black": 1376,
@@ -14208,11 +14208,11 @@
       "code": "440",
       "name": "Larsmo",
       "countByDrivingForce": {
-        "1": 1609,
-        "2": 1144,
-        "3": 216,
-        "4": 47,
-        "5": 29
+        "diesel": 1144,
+        "electricity": 47,
+        "hybrid": 216,
+        "other": 29,
+        "petrol": 1609
       },
       "countByColor": {
         "black": 472,
@@ -14317,11 +14317,11 @@
       "code": "410",
       "name": "Laukaa",
       "countByDrivingForce": {
-        "1": 6011,
-        "2": 3233,
-        "3": 686,
-        "4": 275,
-        "5": 174
+        "diesel": 3233,
+        "electricity": 275,
+        "hybrid": 686,
+        "other": 174,
+        "petrol": 6011
       },
       "countByColor": {
         "black": 1636,
@@ -14431,11 +14431,11 @@
       "code": "416",
       "name": "Lemi",
       "countByDrivingForce": {
-        "1": 1219,
-        "2": 402,
-        "3": 130,
-        "4": 33,
-        "5": 25
+        "diesel": 402,
+        "electricity": 33,
+        "hybrid": 130,
+        "other": 25,
+        "petrol": 1219
       },
       "countByColor": {
         "black": 239,
@@ -14541,11 +14541,11 @@
       "code": "417",
       "name": "Lemland",
       "countByDrivingForce": {
-        "1": 15,
-        "2": 2,
-        "3": 2,
-        "4": 0,
-        "5": 0
+        "diesel": 2,
+        "electricity": 0,
+        "hybrid": 2,
+        "other": 0,
+        "petrol": 15
       },
       "countByColor": {
         "black": 4,
@@ -14596,11 +14596,11 @@
       "code": "418",
       "name": "Lempäälä",
       "countByDrivingForce": {
-        "1": 7663,
-        "2": 3770,
-        "3": 1748,
-        "4": 772,
-        "5": 159
+        "diesel": 3770,
+        "electricity": 772,
+        "hybrid": 1748,
+        "other": 159,
+        "petrol": 7663
       },
       "countByColor": {
         "black": 2396,
@@ -14712,11 +14712,11 @@
       "code": "420",
       "name": "Leppävirta",
       "countByDrivingForce": {
-        "1": 3085,
-        "2": 1760,
-        "3": 334,
-        "4": 106,
-        "5": 10
+        "diesel": 1760,
+        "electricity": 106,
+        "hybrid": 334,
+        "other": 10,
+        "petrol": 3085
       },
       "countByColor": {
         "black": 826,
@@ -14826,11 +14826,11 @@
       "code": "421",
       "name": "Lestijärvi",
       "countByDrivingForce": {
-        "1": 176,
-        "2": 183,
-        "3": 19,
-        "4": 1,
-        "5": 0
+        "diesel": 183,
+        "electricity": 1,
+        "hybrid": 19,
+        "other": 0,
+        "petrol": 176
       },
       "countByColor": {
         "black": 54,
@@ -14918,11 +14918,11 @@
       "code": "422",
       "name": "Lieksa",
       "countByDrivingForce": {
-        "1": 4021,
-        "2": 1387,
-        "3": 226,
-        "4": 44,
-        "5": 11
+        "diesel": 1387,
+        "electricity": 44,
+        "hybrid": 226,
+        "other": 11,
+        "petrol": 4021
       },
       "countByColor": {
         "black": 756,
@@ -15028,11 +15028,11 @@
       "code": "423",
       "name": "Lieto",
       "countByDrivingForce": {
-        "1": 7038,
-        "2": 2673,
-        "3": 1739,
-        "4": 546,
-        "5": 90
+        "diesel": 2673,
+        "electricity": 546,
+        "hybrid": 1739,
+        "other": 90,
+        "petrol": 7038
       },
       "countByColor": {
         "black": 1918,
@@ -15142,11 +15142,11 @@
       "code": "425",
       "name": "Liminka",
       "countByDrivingForce": {
-        "1": 2309,
-        "2": 2075,
-        "3": 373,
-        "4": 228,
-        "5": 49
+        "diesel": 2075,
+        "electricity": 228,
+        "hybrid": 373,
+        "other": 49,
+        "petrol": 2309
       },
       "countByColor": {
         "black": 925,
@@ -15255,11 +15255,11 @@
       "code": "426",
       "name": "Liperi",
       "countByDrivingForce": {
-        "1": 4555,
-        "2": 2014,
-        "3": 382,
-        "4": 137,
-        "5": 26
+        "diesel": 2014,
+        "electricity": 137,
+        "hybrid": 382,
+        "other": 26,
+        "petrol": 4555
       },
       "countByColor": {
         "black": 1049,
@@ -15368,11 +15368,11 @@
       "code": "444",
       "name": "Lohja",
       "countByDrivingForce": {
-        "1": 15802,
-        "2": 6087,
-        "3": 3160,
-        "4": 1003,
-        "5": 420
+        "diesel": 6087,
+        "electricity": 1003,
+        "hybrid": 3160,
+        "other": 420,
+        "petrol": 15802
       },
       "countByColor": {
         "black": 3934,
@@ -15483,11 +15483,11 @@
       "code": "430",
       "name": "Loimaa",
       "countByDrivingForce": {
-        "1": 5917,
-        "2": 2751,
-        "3": 656,
-        "4": 138,
-        "5": 54
+        "diesel": 2751,
+        "electricity": 138,
+        "hybrid": 656,
+        "other": 54,
+        "petrol": 5917
       },
       "countByColor": {
         "black": 1394,
@@ -15598,11 +15598,11 @@
       "code": "433",
       "name": "Loppi",
       "countByDrivingForce": {
-        "1": 2942,
-        "2": 1418,
-        "3": 410,
-        "4": 123,
-        "5": 65
+        "diesel": 1418,
+        "electricity": 123,
+        "hybrid": 410,
+        "other": 65,
+        "petrol": 2942
       },
       "countByColor": {
         "black": 725,
@@ -15712,11 +15712,11 @@
       "code": "434",
       "name": "Loviisa",
       "countByDrivingForce": {
-        "1": 5412,
-        "2": 2078,
-        "3": 919,
-        "4": 236,
-        "5": 68
+        "diesel": 2078,
+        "electricity": 236,
+        "hybrid": 919,
+        "other": 68,
+        "petrol": 5412
       },
       "countByColor": {
         "black": 1267,
@@ -15825,11 +15825,11 @@
       "code": "435",
       "name": "Luhanka",
       "countByDrivingForce": {
-        "1": 260,
-        "2": 166,
-        "3": 33,
-        "4": 8,
-        "5": 3
+        "diesel": 166,
+        "electricity": 8,
+        "hybrid": 33,
+        "other": 3,
+        "petrol": 260
       },
       "countByColor": {
         "black": 63,
@@ -15922,11 +15922,11 @@
       "code": "436",
       "name": "Lumijoki",
       "countByDrivingForce": {
-        "1": 449,
-        "2": 454,
-        "3": 41,
-        "4": 40,
-        "5": 7
+        "diesel": 454,
+        "electricity": 40,
+        "hybrid": 41,
+        "other": 7,
+        "petrol": 449
       },
       "countByColor": {
         "black": 207,
@@ -16027,11 +16027,11 @@
       "code": "438",
       "name": "Lumparland",
       "countByDrivingForce": {
-        "1": 1,
-        "2": 1,
-        "3": 1,
-        "4": 1,
-        "5": 0
+        "diesel": 1,
+        "electricity": 1,
+        "hybrid": 1,
+        "other": 0,
+        "petrol": 1
       },
       "countByColor": {
         "black": 0,
@@ -16060,11 +16060,11 @@
       "code": "441",
       "name": "Luumäki",
       "countByDrivingForce": {
-        "1": 1814,
-        "2": 629,
-        "3": 184,
-        "4": 43,
-        "5": 49
+        "diesel": 629,
+        "electricity": 43,
+        "hybrid": 184,
+        "other": 49,
+        "petrol": 1814
       },
       "countByColor": {
         "black": 389,
@@ -16172,11 +16172,11 @@
       "code": "475",
       "name": "Malax",
       "countByDrivingForce": {
-        "1": 2156,
-        "2": 963,
-        "3": 184,
-        "4": 49,
-        "5": 33
+        "diesel": 963,
+        "electricity": 49,
+        "hybrid": 184,
+        "other": 33,
+        "petrol": 2156
       },
       "countByColor": {
         "black": 461,
@@ -16284,11 +16284,11 @@
       "code": "478",
       "name": "Mariehamn",
       "countByDrivingForce": {
-        "1": 100,
-        "2": 39,
-        "3": 25,
-        "4": 8,
-        "5": 0
+        "diesel": 39,
+        "electricity": 8,
+        "hybrid": 25,
+        "other": 0,
+        "petrol": 100
       },
       "countByColor": {
         "black": 27,
@@ -16369,11 +16369,11 @@
       "code": "480",
       "name": "Marttila",
       "countByDrivingForce": {
-        "1": 718,
-        "2": 423,
-        "3": 70,
-        "4": 20,
-        "5": 5
+        "diesel": 423,
+        "electricity": 20,
+        "hybrid": 70,
+        "other": 5,
+        "petrol": 718
       },
       "countByColor": {
         "black": 166,
@@ -16478,11 +16478,11 @@
       "code": "481",
       "name": "Masku",
       "countByDrivingForce": {
-        "1": 3468,
-        "2": 1405,
-        "3": 852,
-        "4": 286,
-        "5": 37
+        "diesel": 1405,
+        "electricity": 286,
+        "hybrid": 852,
+        "other": 37,
+        "petrol": 3468
       },
       "countByColor": {
         "black": 938,
@@ -16592,11 +16592,11 @@
       "code": "483",
       "name": "Merijärvi",
       "countByDrivingForce": {
-        "1": 238,
-        "2": 264,
-        "3": 21,
-        "4": 6,
-        "5": 3
+        "diesel": 264,
+        "electricity": 6,
+        "hybrid": 21,
+        "other": 3,
+        "petrol": 238
       },
       "countByColor": {
         "black": 103,
@@ -16691,11 +16691,11 @@
       "code": "484",
       "name": "Merikarvia",
       "countByDrivingForce": {
-        "1": 962,
-        "2": 576,
-        "3": 74,
-        "4": 22,
-        "5": 6
+        "diesel": 576,
+        "electricity": 22,
+        "hybrid": 74,
+        "other": 6,
+        "petrol": 962
       },
       "countByColor": {
         "black": 251,
@@ -16801,11 +16801,11 @@
       "code": "489",
       "name": "Miehikkälä",
       "countByDrivingForce": {
-        "1": 832,
-        "2": 250,
-        "3": 69,
-        "4": 10,
-        "5": 4
+        "diesel": 250,
+        "electricity": 10,
+        "hybrid": 69,
+        "other": 4,
+        "petrol": 832
       },
       "countByColor": {
         "black": 145,
@@ -16910,11 +16910,11 @@
       "code": "491",
       "name": "Mikkeli",
       "countByDrivingForce": {
-        "1": 18065,
-        "2": 6414,
-        "3": 2322,
-        "4": 528,
-        "5": 257
+        "diesel": 6414,
+        "electricity": 528,
+        "hybrid": 2322,
+        "other": 257,
+        "petrol": 18065
       },
       "countByColor": {
         "black": 3925,
@@ -17025,11 +17025,11 @@
       "code": "494",
       "name": "Muhos",
       "countByDrivingForce": {
-        "1": 2438,
-        "2": 1818,
-        "3": 274,
-        "4": 119,
-        "5": 31
+        "diesel": 1818,
+        "electricity": 119,
+        "hybrid": 274,
+        "other": 31,
+        "petrol": 2438
       },
       "countByColor": {
         "black": 791,
@@ -17135,11 +17135,11 @@
       "code": "495",
       "name": "Multia",
       "countByDrivingForce": {
-        "1": 501,
-        "2": 270,
-        "3": 52,
-        "4": 9,
-        "5": 3
+        "diesel": 270,
+        "electricity": 9,
+        "hybrid": 52,
+        "other": 3,
+        "petrol": 501
       },
       "countByColor": {
         "black": 108,
@@ -17237,11 +17237,11 @@
       "code": "498",
       "name": "Muonio",
       "countByDrivingForce": {
-        "1": 749,
-        "2": 499,
-        "3": 69,
-        "4": 18,
-        "5": 3
+        "diesel": 499,
+        "electricity": 18,
+        "hybrid": 69,
+        "other": 3,
+        "petrol": 749
       },
       "countByColor": {
         "black": 221,
@@ -17345,11 +17345,11 @@
       "code": "500",
       "name": "Muurame",
       "countByDrivingForce": {
-        "1": 3278,
-        "2": 1581,
-        "3": 679,
-        "4": 271,
-        "5": 66
+        "diesel": 1581,
+        "electricity": 271,
+        "hybrid": 679,
+        "other": 66,
+        "petrol": 3278
       },
       "countByColor": {
         "black": 916,
@@ -17459,11 +17459,11 @@
       "code": "503",
       "name": "Mynämäki",
       "countByDrivingForce": {
-        "1": 3064,
-        "2": 1219,
-        "3": 401,
-        "4": 112,
-        "5": 26
+        "diesel": 1219,
+        "electricity": 112,
+        "hybrid": 401,
+        "other": 26,
+        "petrol": 3064
       },
       "countByColor": {
         "black": 670,
@@ -17572,11 +17572,11 @@
       "code": "504",
       "name": "Myrskylä",
       "countByDrivingForce": {
-        "1": 646,
-        "2": 340,
-        "3": 73,
-        "4": 22,
-        "5": 13
+        "diesel": 340,
+        "electricity": 22,
+        "hybrid": 73,
+        "other": 13,
+        "petrol": 646
       },
       "countByColor": {
         "black": 160,
@@ -17680,11 +17680,11 @@
       "code": "505",
       "name": "Mäntsälä",
       "countByDrivingForce": {
-        "1": 6766,
-        "2": 3519,
-        "3": 1234,
-        "4": 423,
-        "5": 192
+        "diesel": 3519,
+        "electricity": 423,
+        "hybrid": 1234,
+        "other": 192,
+        "petrol": 6766
       },
       "countByColor": {
         "black": 1867,
@@ -17794,11 +17794,11 @@
       "code": "508",
       "name": "Mänttä-Vilppula",
       "countByDrivingForce": {
-        "1": 3659,
-        "2": 1337,
-        "3": 358,
-        "4": 54,
-        "5": 20
+        "diesel": 1337,
+        "electricity": 54,
+        "hybrid": 358,
+        "other": 20,
+        "petrol": 3659
       },
       "countByColor": {
         "black": 775,
@@ -17908,11 +17908,11 @@
       "code": "507",
       "name": "Mäntyharju",
       "countByDrivingForce": {
-        "1": 2067,
-        "2": 923,
-        "3": 199,
-        "4": 28,
-        "5": 15
+        "diesel": 923,
+        "electricity": 28,
+        "hybrid": 199,
+        "other": 15,
+        "petrol": 2067
       },
       "countByColor": {
         "black": 420,
@@ -18021,11 +18021,11 @@
       "code": "529",
       "name": "Naantali",
       "countByDrivingForce": {
-        "1": 6777,
-        "2": 2329,
-        "3": 1831,
-        "4": 570,
-        "5": 65
+        "diesel": 2329,
+        "electricity": 570,
+        "hybrid": 1831,
+        "other": 65,
+        "petrol": 6777
       },
       "countByColor": {
         "black": 1858,
@@ -18135,11 +18135,11 @@
       "code": "531",
       "name": "Nakkila",
       "countByDrivingForce": {
-        "1": 2159,
-        "2": 840,
-        "3": 186,
-        "4": 43,
-        "5": 19
+        "diesel": 840,
+        "electricity": 43,
+        "hybrid": 186,
+        "other": 19,
+        "petrol": 2159
       },
       "countByColor": {
         "black": 473,
@@ -18249,11 +18249,11 @@
       "code": "535",
       "name": "Nivala",
       "countByDrivingForce": {
-        "1": 2987,
-        "2": 2308,
-        "3": 230,
-        "4": 89,
-        "5": 9
+        "diesel": 2308,
+        "electricity": 89,
+        "hybrid": 230,
+        "other": 9,
+        "petrol": 2987
       },
       "countByColor": {
         "black": 1002,
@@ -18362,11 +18362,11 @@
       "code": "536",
       "name": "Nokia",
       "countByDrivingForce": {
-        "1": 12073,
-        "2": 4707,
-        "3": 2075,
-        "4": 700,
-        "5": 236
+        "diesel": 4707,
+        "electricity": 700,
+        "hybrid": 2075,
+        "other": 236,
+        "petrol": 12073
       },
       "countByColor": {
         "black": 3071,
@@ -18477,11 +18477,11 @@
       "code": "538",
       "name": "Nousiainen",
       "countByDrivingForce": {
-        "1": 1785,
-        "2": 806,
-        "3": 306,
-        "4": 83,
-        "5": 21
+        "diesel": 806,
+        "electricity": 83,
+        "hybrid": 306,
+        "other": 21,
+        "petrol": 1785
       },
       "countByColor": {
         "black": 470,
@@ -18591,11 +18591,11 @@
       "code": "541",
       "name": "Nurmes",
       "countByDrivingForce": {
-        "1": 3310,
-        "2": 1546,
-        "3": 199,
-        "4": 51,
-        "5": 11
+        "diesel": 1546,
+        "electricity": 51,
+        "hybrid": 199,
+        "other": 11,
+        "petrol": 3310
       },
       "countByColor": {
         "black": 756,
@@ -18704,11 +18704,11 @@
       "code": "543",
       "name": "Nurmijärvi",
       "countByDrivingForce": {
-        "1": 14224,
-        "2": 6429,
-        "3": 3705,
-        "4": 1297,
-        "5": 180
+        "diesel": 6429,
+        "electricity": 1297,
+        "hybrid": 3705,
+        "other": 180,
+        "petrol": 14224
       },
       "countByColor": {
         "black": 4383,
@@ -18819,11 +18819,11 @@
       "code": "893",
       "name": "Nykarleby",
       "countByDrivingForce": {
-        "1": 2534,
-        "2": 1554,
-        "3": 265,
-        "4": 64,
-        "5": 97
+        "diesel": 1554,
+        "electricity": 64,
+        "hybrid": 265,
+        "other": 97,
+        "petrol": 2534
       },
       "countByColor": {
         "black": 665,
@@ -18932,11 +18932,11 @@
       "code": "545",
       "name": "Närpes",
       "countByDrivingForce": {
-        "1": 3550,
-        "2": 1851,
-        "3": 285,
-        "4": 61,
-        "5": 21
+        "diesel": 1851,
+        "electricity": 61,
+        "hybrid": 285,
+        "other": 21,
+        "petrol": 3550
       },
       "countByColor": {
         "black": 843,
@@ -19045,11 +19045,11 @@
       "code": "560",
       "name": "Orimattila",
       "countByDrivingForce": {
-        "1": 5928,
-        "2": 2677,
-        "3": 714,
-        "4": 199,
-        "5": 92
+        "diesel": 2677,
+        "electricity": 199,
+        "hybrid": 714,
+        "other": 92,
+        "petrol": 5928
       },
       "countByColor": {
         "black": 1459,
@@ -19160,11 +19160,11 @@
       "code": "561",
       "name": "Oripää",
       "countByDrivingForce": {
-        "1": 484,
-        "2": 292,
-        "3": 56,
-        "4": 10,
-        "5": 2
+        "diesel": 292,
+        "electricity": 10,
+        "hybrid": 56,
+        "other": 2,
+        "petrol": 484
       },
       "countByColor": {
         "black": 148,
@@ -19265,11 +19265,11 @@
       "code": "562",
       "name": "Orivesi",
       "countByDrivingForce": {
-        "1": 3105,
-        "2": 1507,
-        "3": 405,
-        "4": 113,
-        "5": 25
+        "diesel": 1507,
+        "electricity": 113,
+        "hybrid": 405,
+        "other": 25,
+        "petrol": 3105
       },
       "countByColor": {
         "black": 772,
@@ -19378,11 +19378,11 @@
       "code": "563",
       "name": "Oulainen",
       "countByDrivingForce": {
-        "1": 1904,
-        "2": 1390,
-        "3": 140,
-        "4": 78,
-        "5": 13
+        "diesel": 1390,
+        "electricity": 78,
+        "hybrid": 140,
+        "other": 13,
+        "petrol": 1904
       },
       "countByColor": {
         "black": 574,
@@ -19491,11 +19491,11 @@
       "code": "564",
       "name": "Oulu",
       "countByDrivingForce": {
-        "1": 54399,
-        "2": 27642,
-        "3": 10751,
-        "4": 3504,
-        "5": 790
+        "diesel": 27642,
+        "electricity": 3504,
+        "hybrid": 10751,
+        "other": 790,
+        "petrol": 54399
       },
       "countByColor": {
         "black": 17019,
@@ -19606,11 +19606,11 @@
       "code": "309",
       "name": "Outokumpu",
       "countByDrivingForce": {
-        "1": 2414,
-        "2": 867,
-        "3": 172,
-        "4": 41,
-        "5": 8
+        "diesel": 867,
+        "electricity": 41,
+        "hybrid": 172,
+        "other": 8,
+        "petrol": 2414
       },
       "countByColor": {
         "black": 496,
@@ -19719,11 +19719,11 @@
       "code": "576",
       "name": "Padasjoki",
       "countByDrivingForce": {
-        "1": 1039,
-        "2": 444,
-        "3": 103,
-        "4": 26,
-        "5": 8
+        "diesel": 444,
+        "electricity": 26,
+        "hybrid": 103,
+        "other": 8,
+        "petrol": 1039
       },
       "countByColor": {
         "black": 231,
@@ -19828,11 +19828,11 @@
       "code": "577",
       "name": "Paimio",
       "countByDrivingForce": {
-        "1": 3937,
-        "2": 1652,
-        "3": 936,
-        "4": 325,
-        "5": 65
+        "diesel": 1652,
+        "electricity": 325,
+        "hybrid": 936,
+        "other": 65,
+        "petrol": 3937
       },
       "countByColor": {
         "black": 1019,
@@ -19942,11 +19942,11 @@
       "code": "578",
       "name": "Paltamo",
       "countByDrivingForce": {
-        "1": 1030,
-        "2": 602,
-        "3": 85,
-        "4": 19,
-        "5": 2
+        "diesel": 602,
+        "electricity": 19,
+        "hybrid": 85,
+        "other": 2,
+        "petrol": 1030
       },
       "countByColor": {
         "black": 283,
@@ -20049,11 +20049,11 @@
       "code": "445",
       "name": "Pargas",
       "countByDrivingForce": {
-        "1": 5652,
-        "2": 1801,
-        "3": 957,
-        "4": 226,
-        "5": 61
+        "diesel": 1801,
+        "electricity": 226,
+        "hybrid": 957,
+        "other": 61,
+        "petrol": 5652
       },
       "countByColor": {
         "black": 1239,
@@ -20162,11 +20162,11 @@
       "code": "580",
       "name": "Parikkala",
       "countByDrivingForce": {
-        "1": 1820,
-        "2": 661,
-        "3": 124,
-        "4": 23,
-        "5": 35
+        "diesel": 661,
+        "electricity": 23,
+        "hybrid": 124,
+        "other": 35,
+        "petrol": 1820
       },
       "countByColor": {
         "black": 362,
@@ -20273,11 +20273,11 @@
       "code": "581",
       "name": "Parkano",
       "countByDrivingForce": {
-        "1": 2306,
-        "2": 1228,
-        "3": 173,
-        "4": 32,
-        "5": 8
+        "diesel": 1228,
+        "electricity": 32,
+        "hybrid": 173,
+        "other": 8,
+        "petrol": 2306
       },
       "countByColor": {
         "black": 603,
@@ -20386,11 +20386,11 @@
       "code": "599",
       "name": "Pedersöre",
       "countByDrivingForce": {
-        "1": 3749,
-        "2": 2329,
-        "3": 413,
-        "4": 94,
-        "5": 73
+        "diesel": 2329,
+        "electricity": 94,
+        "hybrid": 413,
+        "other": 73,
+        "petrol": 3749
       },
       "countByColor": {
         "black": 974,
@@ -20497,11 +20497,11 @@
       "code": "583",
       "name": "Pelkosenniemi",
       "countByDrivingForce": {
-        "1": 312,
-        "2": 162,
-        "3": 34,
-        "4": 3,
-        "5": 0
+        "diesel": 162,
+        "electricity": 3,
+        "hybrid": 34,
+        "other": 0,
+        "petrol": 312
       },
       "countByColor": {
         "black": 57,
@@ -20593,11 +20593,11 @@
       "code": "854",
       "name": "Pello",
       "countByDrivingForce": {
-        "1": 1053,
-        "2": 700,
-        "3": 87,
-        "4": 13,
-        "5": 6
+        "diesel": 700,
+        "electricity": 13,
+        "hybrid": 87,
+        "other": 6,
+        "petrol": 1053
       },
       "countByColor": {
         "black": 291,
@@ -20700,11 +20700,11 @@
       "code": "584",
       "name": "Perho",
       "countByDrivingForce": {
-        "1": 643,
-        "2": 647,
-        "3": 50,
-        "4": 14,
-        "5": 1
+        "diesel": 647,
+        "electricity": 14,
+        "hybrid": 50,
+        "other": 1,
+        "petrol": 643
       },
       "countByColor": {
         "black": 230,
@@ -20809,11 +20809,11 @@
       "code": "588",
       "name": "Pertunmaa",
       "countByDrivingForce": {
-        "1": 665,
-        "2": 277,
-        "3": 49,
-        "4": 7,
-        "5": 9
+        "diesel": 277,
+        "electricity": 7,
+        "hybrid": 49,
+        "other": 9,
+        "petrol": 665
       },
       "countByColor": {
         "black": 150,
@@ -20916,11 +20916,11 @@
       "code": "592",
       "name": "Petäjävesi",
       "countByDrivingForce": {
-        "1": 1190,
-        "2": 711,
-        "3": 130,
-        "4": 58,
-        "5": 20
+        "diesel": 711,
+        "electricity": 58,
+        "hybrid": 130,
+        "other": 20,
+        "petrol": 1190
       },
       "countByColor": {
         "black": 345,
@@ -21027,11 +21027,11 @@
       "code": "593",
       "name": "Pieksämäki",
       "countByDrivingForce": {
-        "1": 6433,
-        "2": 2224,
-        "3": 728,
-        "4": 92,
-        "5": 21
+        "diesel": 2224,
+        "electricity": 92,
+        "hybrid": 728,
+        "other": 21,
+        "petrol": 6433
       },
       "countByColor": {
         "black": 1322,
@@ -21141,11 +21141,11 @@
       "code": "595",
       "name": "Pielavesi",
       "countByDrivingForce": {
-        "1": 1406,
-        "2": 748,
-        "3": 96,
-        "4": 15,
-        "5": 4
+        "diesel": 748,
+        "electricity": 15,
+        "hybrid": 96,
+        "other": 4,
+        "petrol": 1406
       },
       "countByColor": {
         "black": 287,
@@ -21248,11 +21248,11 @@
       "code": "601",
       "name": "Pihtipudas",
       "countByDrivingForce": {
-        "1": 1155,
-        "2": 743,
-        "3": 86,
-        "4": 17,
-        "5": 4
+        "diesel": 743,
+        "electricity": 17,
+        "hybrid": 86,
+        "other": 4,
+        "petrol": 1155
       },
       "countByColor": {
         "black": 292,
@@ -21357,11 +21357,11 @@
       "code": "604",
       "name": "Pirkkala",
       "countByDrivingForce": {
-        "1": 6225,
-        "2": 2598,
-        "3": 1613,
-        "4": 614,
-        "5": 97
+        "diesel": 2598,
+        "electricity": 614,
+        "hybrid": 1613,
+        "other": 97,
+        "petrol": 6225
       },
       "countByColor": {
         "black": 1835,
@@ -21473,11 +21473,11 @@
       "code": "607",
       "name": "Polvijärvi",
       "countByDrivingForce": {
-        "1": 1570,
-        "2": 728,
-        "3": 89,
-        "4": 39,
-        "5": 5
+        "diesel": 728,
+        "electricity": 39,
+        "hybrid": 89,
+        "other": 5,
+        "petrol": 1570
       },
       "countByColor": {
         "black": 317,
@@ -21583,11 +21583,11 @@
       "code": "608",
       "name": "Pomarkku",
       "countByDrivingForce": {
-        "1": 740,
-        "2": 370,
-        "3": 48,
-        "4": 14,
-        "5": 7
+        "diesel": 370,
+        "electricity": 14,
+        "hybrid": 48,
+        "other": 7,
+        "petrol": 740
       },
       "countByColor": {
         "black": 157,
@@ -21692,11 +21692,11 @@
       "code": "609",
       "name": "Pori",
       "countByDrivingForce": {
-        "1": 30296,
-        "2": 10028,
-        "3": 3784,
-        "4": 957,
-        "5": 251
+        "diesel": 10028,
+        "electricity": 957,
+        "hybrid": 3784,
+        "other": 251,
+        "petrol": 30296
       },
       "countByColor": {
         "black": 6879,
@@ -21809,11 +21809,11 @@
       "code": "611",
       "name": "Pornainen",
       "countByDrivingForce": {
-        "1": 1762,
-        "2": 854,
-        "3": 326,
-        "4": 117,
-        "5": 38
+        "diesel": 854,
+        "electricity": 117,
+        "hybrid": 326,
+        "other": 38,
+        "petrol": 1762
       },
       "countByColor": {
         "black": 487,
@@ -21920,11 +21920,11 @@
       "code": "638",
       "name": "Porvoo",
       "countByDrivingForce": {
-        "1": 17167,
-        "2": 6608,
-        "3": 4066,
-        "4": 1547,
-        "5": 326
+        "diesel": 6608,
+        "electricity": 1547,
+        "hybrid": 4066,
+        "other": 326,
+        "petrol": 17167
       },
       "countByColor": {
         "black": 4584,
@@ -22037,11 +22037,11 @@
       "code": "614",
       "name": "Posio",
       "countByDrivingForce": {
-        "1": 973,
-        "2": 601,
-        "3": 76,
-        "4": 6,
-        "5": 2
+        "diesel": 601,
+        "electricity": 6,
+        "hybrid": 76,
+        "other": 2,
+        "petrol": 973
       },
       "countByColor": {
         "black": 208,
@@ -22142,11 +22142,11 @@
       "code": "615",
       "name": "Pudasjärvi",
       "countByDrivingForce": {
-        "1": 2186,
-        "2": 1464,
-        "3": 139,
-        "4": 33,
-        "5": 6
+        "diesel": 1464,
+        "electricity": 33,
+        "hybrid": 139,
+        "other": 6,
+        "petrol": 2186
       },
       "countByColor": {
         "black": 569,
@@ -22253,11 +22253,11 @@
       "code": "616",
       "name": "Pukkila",
       "countByDrivingForce": {
-        "1": 616,
-        "2": 398,
-        "3": 75,
-        "4": 21,
-        "5": 8
+        "diesel": 398,
+        "electricity": 21,
+        "hybrid": 75,
+        "other": 8,
+        "petrol": 616
       },
       "countByColor": {
         "black": 182,
@@ -22365,11 +22365,11 @@
       "code": "619",
       "name": "Punkalaidun",
       "countByDrivingForce": {
-        "1": 1071,
-        "2": 507,
-        "3": 73,
-        "4": 23,
-        "5": 9
+        "diesel": 507,
+        "electricity": 23,
+        "hybrid": 73,
+        "other": 9,
+        "petrol": 1071
       },
       "countByColor": {
         "black": 225,
@@ -22477,11 +22477,11 @@
       "code": "620",
       "name": "Puolanka",
       "countByDrivingForce": {
-        "1": 759,
-        "2": 445,
-        "3": 59,
-        "4": 4,
-        "5": 1
+        "diesel": 445,
+        "electricity": 4,
+        "hybrid": 59,
+        "other": 1,
+        "petrol": 759
       },
       "countByColor": {
         "black": 180,
@@ -22582,11 +22582,11 @@
       "code": "623",
       "name": "Puumala",
       "countByDrivingForce": {
-        "1": 746,
-        "2": 383,
-        "3": 106,
-        "4": 23,
-        "5": 8
+        "diesel": 383,
+        "electricity": 23,
+        "hybrid": 106,
+        "other": 8,
+        "petrol": 746
       },
       "countByColor": {
         "black": 191,
@@ -22686,11 +22686,11 @@
       "code": "624",
       "name": "Pyhtää",
       "countByDrivingForce": {
-        "1": 1981,
-        "2": 811,
-        "3": 315,
-        "4": 90,
-        "5": 27
+        "diesel": 811,
+        "electricity": 90,
+        "hybrid": 315,
+        "other": 27,
+        "petrol": 1981
       },
       "countByColor": {
         "black": 492,
@@ -22799,11 +22799,11 @@
       "code": "625",
       "name": "Pyhäjoki",
       "countByDrivingForce": {
-        "1": 862,
-        "2": 707,
-        "3": 79,
-        "4": 34,
-        "5": 3
+        "diesel": 707,
+        "electricity": 34,
+        "hybrid": 79,
+        "other": 3,
+        "petrol": 862
       },
       "countByColor": {
         "black": 286,
@@ -22904,11 +22904,11 @@
       "code": "626",
       "name": "Pyhäjärvi",
       "countByDrivingForce": {
-        "1": 1544,
-        "2": 894,
-        "3": 100,
-        "4": 22,
-        "5": 17
+        "diesel": 894,
+        "electricity": 22,
+        "hybrid": 100,
+        "other": 17,
+        "petrol": 1544
       },
       "countByColor": {
         "black": 402,
@@ -23011,11 +23011,11 @@
       "code": "630",
       "name": "Pyhäntä",
       "countByDrivingForce": {
-        "1": 383,
-        "2": 353,
-        "3": 28,
-        "4": 15,
-        "5": 2
+        "diesel": 353,
+        "electricity": 15,
+        "hybrid": 28,
+        "other": 2,
+        "petrol": 383
       },
       "countByColor": {
         "black": 116,
@@ -23111,11 +23111,11 @@
       "code": "631",
       "name": "Pyhäranta",
       "countByDrivingForce": {
-        "1": 829,
-        "2": 364,
-        "3": 71,
-        "4": 23,
-        "5": 3
+        "diesel": 364,
+        "electricity": 23,
+        "hybrid": 71,
+        "other": 3,
+        "petrol": 829
       },
       "countByColor": {
         "black": 187,
@@ -23219,11 +23219,11 @@
       "code": "635",
       "name": "Pälkäne",
       "countByDrivingForce": {
-        "1": 2345,
-        "2": 1213,
-        "3": 280,
-        "4": 85,
-        "5": 22
+        "diesel": 1213,
+        "electricity": 85,
+        "hybrid": 280,
+        "other": 22,
+        "petrol": 2345
       },
       "countByColor": {
         "black": 559,
@@ -23333,11 +23333,11 @@
       "code": "636",
       "name": "Pöytyä",
       "countByDrivingForce": {
-        "1": 2879,
-        "2": 1681,
-        "3": 315,
-        "4": 99,
-        "5": 25
+        "diesel": 1681,
+        "electricity": 99,
+        "hybrid": 315,
+        "other": 25,
+        "petrol": 2879
       },
       "countByColor": {
         "black": 724,
@@ -23447,11 +23447,11 @@
       "code": "678",
       "name": "Raahe",
       "countByDrivingForce": {
-        "1": 7319,
-        "2": 4145,
-        "3": 788,
-        "4": 186,
-        "5": 19
+        "diesel": 4145,
+        "electricity": 186,
+        "hybrid": 788,
+        "other": 19,
+        "petrol": 7319
       },
       "countByColor": {
         "black": 2022,
@@ -23561,11 +23561,11 @@
       "code": "680",
       "name": "Raisio",
       "countByDrivingForce": {
-        "1": 9144,
-        "2": 2575,
-        "3": 2312,
-        "4": 526,
-        "5": 98
+        "diesel": 2575,
+        "electricity": 526,
+        "hybrid": 2312,
+        "other": 98,
+        "petrol": 9144
       },
       "countByColor": {
         "black": 2279,
@@ -23675,11 +23675,11 @@
       "code": "681",
       "name": "Rantasalmi",
       "countByDrivingForce": {
-        "1": 1277,
-        "2": 608,
-        "3": 89,
-        "4": 24,
-        "5": 6
+        "diesel": 608,
+        "electricity": 24,
+        "hybrid": 89,
+        "other": 6,
+        "petrol": 1277
       },
       "countByColor": {
         "black": 277,
@@ -23784,11 +23784,11 @@
       "code": "683",
       "name": "Ranua",
       "countByDrivingForce": {
-        "1": 1007,
-        "2": 814,
-        "3": 53,
-        "4": 9,
-        "5": 2
+        "diesel": 814,
+        "electricity": 9,
+        "hybrid": 53,
+        "other": 2,
+        "petrol": 1007
       },
       "countByColor": {
         "black": 293,
@@ -23890,11 +23890,11 @@
       "code": "710",
       "name": "Raseborg",
       "countByDrivingForce": {
-        "1": 10103,
-        "2": 3229,
-        "3": 1617,
-        "4": 321,
-        "5": 53
+        "diesel": 3229,
+        "electricity": 321,
+        "hybrid": 1617,
+        "other": 53,
+        "petrol": 10103
       },
       "countByColor": {
         "black": 2027,
@@ -24005,11 +24005,11 @@
       "code": "684",
       "name": "Rauma",
       "countByDrivingForce": {
-        "1": 14396,
-        "2": 4704,
-        "3": 1903,
-        "4": 519,
-        "5": 60
+        "diesel": 4704,
+        "electricity": 519,
+        "hybrid": 1903,
+        "other": 60,
+        "petrol": 14396
       },
       "countByColor": {
         "black": 3192,
@@ -24120,11 +24120,11 @@
       "code": "686",
       "name": "Rautalampi",
       "countByDrivingForce": {
-        "1": 1082,
-        "2": 523,
-        "3": 81,
-        "4": 10,
-        "5": 9
+        "diesel": 523,
+        "electricity": 10,
+        "hybrid": 81,
+        "other": 9,
+        "petrol": 1082
       },
       "countByColor": {
         "black": 251,
@@ -24228,11 +24228,11 @@
       "code": "687",
       "name": "Rautavaara",
       "countByDrivingForce": {
-        "1": 522,
-        "2": 293,
-        "3": 32,
-        "4": 1,
-        "5": 2
+        "diesel": 293,
+        "electricity": 1,
+        "hybrid": 32,
+        "other": 2,
+        "petrol": 522
       },
       "countByColor": {
         "black": 120,
@@ -24330,11 +24330,11 @@
       "code": "689",
       "name": "Rautjärvi",
       "countByDrivingForce": {
-        "1": 1262,
-        "2": 398,
-        "3": 120,
-        "4": 23,
-        "5": 16
+        "diesel": 398,
+        "electricity": 23,
+        "hybrid": 120,
+        "other": 16,
+        "petrol": 1262
       },
       "countByColor": {
         "black": 253,
@@ -24439,11 +24439,11 @@
       "code": "691",
       "name": "Reisjärvi",
       "countByDrivingForce": {
-        "1": 728,
-        "2": 607,
-        "3": 57,
-        "4": 15,
-        "5": 3
+        "diesel": 607,
+        "electricity": 15,
+        "hybrid": 57,
+        "other": 3,
+        "petrol": 728
       },
       "countByColor": {
         "black": 218,
@@ -24537,11 +24537,11 @@
       "code": "694",
       "name": "Riihimäki",
       "countByDrivingForce": {
-        "1": 9494,
-        "2": 2799,
-        "3": 1426,
-        "4": 365,
-        "5": 185
+        "diesel": 2799,
+        "electricity": 365,
+        "hybrid": 1426,
+        "other": 185,
+        "petrol": 9494
       },
       "countByColor": {
         "black": 2119,
@@ -24651,11 +24651,11 @@
       "code": "697",
       "name": "Ristijärvi",
       "countByDrivingForce": {
-        "1": 403,
-        "2": 287,
-        "3": 26,
-        "4": 2,
-        "5": 1
+        "diesel": 287,
+        "electricity": 2,
+        "hybrid": 26,
+        "other": 1,
+        "petrol": 403
       },
       "countByColor": {
         "black": 114,
@@ -24750,11 +24750,11 @@
       "code": "698",
       "name": "Rovaniemi",
       "countByDrivingForce": {
-        "1": 19261,
-        "2": 10035,
-        "3": 3439,
-        "4": 711,
-        "5": 61
+        "diesel": 10035,
+        "electricity": 711,
+        "hybrid": 3439,
+        "other": 61,
+        "petrol": 19261
       },
       "countByColor": {
         "black": 5099,
@@ -24865,11 +24865,11 @@
       "code": "700",
       "name": "Ruokolahti",
       "countByDrivingForce": {
-        "1": 2008,
-        "2": 696,
-        "3": 262,
-        "4": 48,
-        "5": 52
+        "diesel": 696,
+        "electricity": 48,
+        "hybrid": 262,
+        "other": 52,
+        "petrol": 2008
       },
       "countByColor": {
         "black": 415,
@@ -24975,11 +24975,11 @@
       "code": "702",
       "name": "Ruovesi",
       "countByDrivingForce": {
-        "1": 1500,
-        "2": 725,
-        "3": 141,
-        "4": 25,
-        "5": 7
+        "diesel": 725,
+        "electricity": 25,
+        "hybrid": 141,
+        "other": 7,
+        "petrol": 1500
       },
       "countByColor": {
         "black": 316,
@@ -25088,11 +25088,11 @@
       "code": "704",
       "name": "Rusko",
       "countByDrivingForce": {
-        "1": 2313,
-        "2": 844,
-        "3": 590,
-        "4": 166,
-        "5": 22
+        "diesel": 844,
+        "electricity": 166,
+        "hybrid": 590,
+        "other": 22,
+        "petrol": 2313
       },
       "countByColor": {
         "black": 598,
@@ -25202,11 +25202,11 @@
       "code": "707",
       "name": "Rääkkylä",
       "countByDrivingForce": {
-        "1": 823,
-        "2": 323,
-        "3": 46,
-        "4": 17,
-        "5": 4
+        "diesel": 323,
+        "electricity": 17,
+        "hybrid": 46,
+        "other": 4,
+        "petrol": 823
       },
       "countByColor": {
         "black": 154,
@@ -25310,11 +25310,11 @@
       "code": "729",
       "name": "Saarijärvi",
       "countByDrivingForce": {
-        "1": 3365,
-        "2": 1555,
-        "3": 227,
-        "4": 64,
-        "5": 25
+        "diesel": 1555,
+        "electricity": 64,
+        "hybrid": 227,
+        "other": 25,
+        "petrol": 3365
       },
       "countByColor": {
         "black": 726,
@@ -25424,11 +25424,11 @@
       "code": "732",
       "name": "Salla",
       "countByDrivingForce": {
-        "1": 1095,
-        "2": 620,
-        "3": 113,
-        "4": 10,
-        "5": 0
+        "diesel": 620,
+        "electricity": 10,
+        "hybrid": 113,
+        "other": 0,
+        "petrol": 1095
       },
       "countByColor": {
         "black": 249,
@@ -25533,11 +25533,11 @@
       "code": "734",
       "name": "Salo",
       "countByDrivingForce": {
-        "1": 18664,
-        "2": 7169,
-        "3": 3196,
-        "4": 1000,
-        "5": 237
+        "diesel": 7169,
+        "electricity": 1000,
+        "hybrid": 3196,
+        "other": 237,
+        "petrol": 18664
       },
       "countByColor": {
         "black": 4242,
@@ -25648,11 +25648,11 @@
       "code": "736",
       "name": "Saltvik",
       "countByDrivingForce": {
-        "1": 6,
-        "2": 4,
-        "3": 1,
-        "4": 1,
-        "5": 0
+        "diesel": 4,
+        "electricity": 1,
+        "hybrid": 1,
+        "other": 0,
+        "petrol": 6
       },
       "countByColor": {
         "black": 2,
@@ -25693,11 +25693,11 @@
       "code": "790",
       "name": "Sastamala",
       "countByDrivingForce": {
-        "1": 9365,
-        "2": 4101,
-        "3": 844,
-        "4": 275,
-        "5": 60
+        "diesel": 4101,
+        "electricity": 275,
+        "hybrid": 844,
+        "other": 60,
+        "petrol": 9365
       },
       "countByColor": {
         "black": 1990,
@@ -25808,11 +25808,11 @@
       "code": "738",
       "name": "Sauvo",
       "countByDrivingForce": {
-        "1": 1049,
-        "2": 544,
-        "3": 159,
-        "4": 75,
-        "5": 19
+        "diesel": 544,
+        "electricity": 75,
+        "hybrid": 159,
+        "other": 19,
+        "petrol": 1049
       },
       "countByColor": {
         "black": 294,
@@ -25921,11 +25921,11 @@
       "code": "739",
       "name": "Savitaipale",
       "countByDrivingForce": {
-        "1": 1296,
-        "2": 481,
-        "3": 122,
-        "4": 21,
-        "5": 10
+        "diesel": 481,
+        "electricity": 21,
+        "hybrid": 122,
+        "other": 10,
+        "petrol": 1296
       },
       "countByColor": {
         "black": 249,
@@ -26033,11 +26033,11 @@
       "code": "740",
       "name": "Savonlinna",
       "countByDrivingForce": {
-        "1": 11798,
-        "2": 3832,
-        "3": 1318,
-        "4": 233,
-        "5": 61
+        "diesel": 3832,
+        "electricity": 233,
+        "hybrid": 1318,
+        "other": 61,
+        "petrol": 11798
       },
       "countByColor": {
         "black": 2537,
@@ -26148,11 +26148,11 @@
       "code": "742",
       "name": "Savukoski",
       "countByDrivingForce": {
-        "1": 279,
-        "2": 188,
-        "3": 29,
-        "4": 3,
-        "5": 0
+        "diesel": 188,
+        "electricity": 3,
+        "hybrid": 29,
+        "other": 0,
+        "petrol": 279
       },
       "countByColor": {
         "black": 61,
@@ -26245,11 +26245,11 @@
       "code": "743",
       "name": "Seinäjoki",
       "countByDrivingForce": {
-        "1": 24182,
-        "2": 10236,
-        "3": 3270,
-        "4": 1056,
-        "5": 221
+        "diesel": 10236,
+        "electricity": 1056,
+        "hybrid": 3270,
+        "other": 221,
+        "petrol": 24182
       },
       "countByColor": {
         "black": 6414,
@@ -26361,11 +26361,11 @@
       "code": "746",
       "name": "Sievi",
       "countByDrivingForce": {
-        "1": 1138,
-        "2": 1138,
-        "3": 85,
-        "4": 40,
-        "5": 3
+        "diesel": 1138,
+        "electricity": 40,
+        "hybrid": 85,
+        "other": 3,
+        "petrol": 1138
       },
       "countByColor": {
         "black": 409,
@@ -26470,11 +26470,11 @@
       "code": "747",
       "name": "Siikainen",
       "countByDrivingForce": {
-        "1": 544,
-        "2": 212,
-        "3": 38,
-        "4": 11,
-        "5": 4
+        "diesel": 212,
+        "electricity": 11,
+        "hybrid": 38,
+        "other": 4,
+        "petrol": 544
       },
       "countByColor": {
         "black": 109,
@@ -26573,11 +26573,11 @@
       "code": "748",
       "name": "Siikajoki",
       "countByDrivingForce": {
-        "1": 1259,
-        "2": 1197,
-        "3": 110,
-        "4": 53,
-        "5": 6
+        "diesel": 1197,
+        "electricity": 53,
+        "hybrid": 110,
+        "other": 6,
+        "petrol": 1259
       },
       "countByColor": {
         "black": 460,
@@ -26683,11 +26683,11 @@
       "code": "791",
       "name": "Siikalatva",
       "countByDrivingForce": {
-        "1": 1420,
-        "2": 1180,
-        "3": 120,
-        "4": 29,
-        "5": 7
+        "diesel": 1180,
+        "electricity": 29,
+        "hybrid": 120,
+        "other": 7,
+        "petrol": 1420
       },
       "countByColor": {
         "black": 453,
@@ -26793,11 +26793,11 @@
       "code": "749",
       "name": "Siilinjärvi",
       "countByDrivingForce": {
-        "1": 6297,
-        "2": 3887,
-        "3": 928,
-        "4": 325,
-        "5": 38
+        "diesel": 3887,
+        "electricity": 325,
+        "hybrid": 928,
+        "other": 38,
+        "petrol": 6297
       },
       "countByColor": {
         "black": 1922,
@@ -26907,11 +26907,11 @@
       "code": "751",
       "name": "Simo",
       "countByDrivingForce": {
-        "1": 931,
-        "2": 631,
-        "3": 97,
-        "4": 21,
-        "5": 3
+        "diesel": 631,
+        "electricity": 21,
+        "hybrid": 97,
+        "other": 3,
+        "petrol": 931
       },
       "countByColor": {
         "black": 236,
@@ -27016,11 +27016,11 @@
       "code": "753",
       "name": "Sipoo",
       "countByDrivingForce": {
-        "1": 7278,
-        "2": 3091,
-        "3": 1967,
-        "4": 749,
-        "5": 139
+        "diesel": 3091,
+        "electricity": 749,
+        "hybrid": 1967,
+        "other": 139,
+        "petrol": 7278
       },
       "countByColor": {
         "black": 2180,
@@ -27131,11 +27131,11 @@
       "code": "755",
       "name": "Siuntio",
       "countByDrivingForce": {
-        "1": 2010,
-        "2": 924,
-        "3": 545,
-        "4": 235,
-        "5": 41
+        "diesel": 924,
+        "electricity": 235,
+        "hybrid": 545,
+        "other": 41,
+        "petrol": 2010
       },
       "countByColor": {
         "black": 596,
@@ -27242,11 +27242,11 @@
       "code": "758",
       "name": "Sodankylä",
       "countByDrivingForce": {
-        "1": 2562,
-        "2": 1457,
-        "3": 412,
-        "4": 50,
-        "5": 3
+        "diesel": 1457,
+        "electricity": 50,
+        "hybrid": 412,
+        "other": 3,
+        "petrol": 2562
       },
       "countByColor": {
         "black": 663,
@@ -27352,11 +27352,11 @@
       "code": "759",
       "name": "Soini",
       "countByDrivingForce": {
-        "1": 595,
-        "2": 403,
-        "3": 58,
-        "4": 8,
-        "5": 0
+        "diesel": 403,
+        "electricity": 8,
+        "hybrid": 58,
+        "other": 0,
+        "petrol": 595
       },
       "countByColor": {
         "black": 172,
@@ -27460,11 +27460,11 @@
       "code": "761",
       "name": "Somero",
       "countByDrivingForce": {
-        "1": 3150,
-        "2": 1600,
-        "3": 363,
-        "4": 103,
-        "5": 32
+        "diesel": 1600,
+        "electricity": 103,
+        "hybrid": 363,
+        "other": 32,
+        "petrol": 3150
       },
       "countByColor": {
         "black": 742,
@@ -27574,11 +27574,11 @@
       "code": "762",
       "name": "Sonkajärvi",
       "countByDrivingForce": {
-        "1": 1290,
-        "2": 763,
-        "3": 64,
-        "4": 19,
-        "5": 4
+        "diesel": 763,
+        "electricity": 19,
+        "hybrid": 64,
+        "other": 4,
+        "petrol": 1290
       },
       "countByColor": {
         "black": 283,
@@ -27683,11 +27683,11 @@
       "code": "765",
       "name": "Sotkamo",
       "countByDrivingForce": {
-        "1": 3291,
-        "2": 2157,
-        "3": 360,
-        "4": 93,
-        "5": 6
+        "diesel": 2157,
+        "electricity": 93,
+        "hybrid": 360,
+        "other": 6,
+        "petrol": 3291
       },
       "countByColor": {
         "black": 986,
@@ -27794,11 +27794,11 @@
       "code": "766",
       "name": "Sottunga",
       "countByDrivingForce": {
-        "1": 3,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0
+        "diesel": 0,
+        "electricity": 0,
+        "hybrid": 0,
+        "other": 0,
+        "petrol": 3
       },
       "countByColor": {
         "black": 0,
@@ -27825,11 +27825,11 @@
       "code": "768",
       "name": "Sulkava",
       "countByDrivingForce": {
-        "1": 907,
-        "2": 419,
-        "3": 73,
-        "4": 13,
-        "5": 4
+        "diesel": 419,
+        "electricity": 13,
+        "hybrid": 73,
+        "other": 4,
+        "petrol": 907
       },
       "countByColor": {
         "black": 216,
@@ -27932,11 +27932,11 @@
       "code": "771",
       "name": "Sund",
       "countByDrivingForce": {
-        "1": 5,
-        "2": 4,
-        "3": 2,
-        "4": 0,
-        "5": 0
+        "diesel": 4,
+        "electricity": 0,
+        "hybrid": 2,
+        "other": 0,
+        "petrol": 5
       },
       "countByColor": {
         "black": 2,
@@ -27973,11 +27973,11 @@
       "code": "777",
       "name": "Suomussalmi",
       "countByDrivingForce": {
-        "1": 2625,
-        "2": 1305,
-        "3": 147,
-        "4": 15,
-        "5": 7
+        "diesel": 1305,
+        "electricity": 15,
+        "hybrid": 147,
+        "other": 7,
+        "petrol": 2625
       },
       "countByColor": {
         "black": 585,
@@ -28083,11 +28083,11 @@
       "code": "778",
       "name": "Suonenjoki",
       "countByDrivingForce": {
-        "1": 2317,
-        "2": 1090,
-        "3": 178,
-        "4": 53,
-        "5": 10
+        "diesel": 1090,
+        "electricity": 53,
+        "hybrid": 178,
+        "other": 10,
+        "petrol": 2317
       },
       "countByColor": {
         "black": 539,
@@ -28193,11 +28193,11 @@
       "code": "781",
       "name": "Sysmä",
       "countByDrivingForce": {
-        "1": 1337,
-        "2": 526,
-        "3": 150,
-        "4": 32,
-        "5": 6
+        "diesel": 526,
+        "electricity": 32,
+        "hybrid": 150,
+        "other": 6,
+        "petrol": 1337
       },
       "countByColor": {
         "black": 274,
@@ -28304,11 +28304,11 @@
       "code": "783",
       "name": "Säkylä",
       "countByDrivingForce": {
-        "1": 2584,
-        "2": 1381,
-        "3": 254,
-        "4": 55,
-        "5": 35
+        "diesel": 1381,
+        "electricity": 55,
+        "hybrid": 254,
+        "other": 35,
+        "petrol": 2584
       },
       "countByColor": {
         "black": 659,
@@ -28418,11 +28418,11 @@
       "code": "831",
       "name": "Taipalsaari",
       "countByDrivingForce": {
-        "1": 1823,
-        "2": 656,
-        "3": 287,
-        "4": 75,
-        "5": 32
+        "diesel": 656,
+        "electricity": 75,
+        "hybrid": 287,
+        "other": 32,
+        "petrol": 1823
       },
       "countByColor": {
         "black": 439,
@@ -28530,11 +28530,11 @@
       "code": "832",
       "name": "Taivalkoski",
       "countByDrivingForce": {
-        "1": 1177,
-        "2": 732,
-        "3": 69,
-        "4": 10,
-        "5": 1
+        "diesel": 732,
+        "electricity": 10,
+        "hybrid": 69,
+        "other": 1,
+        "petrol": 1177
       },
       "countByColor": {
         "black": 309,
@@ -28635,11 +28635,11 @@
       "code": "833",
       "name": "Taivassalo",
       "countByDrivingForce": {
-        "1": 637,
-        "2": 287,
-        "3": 78,
-        "4": 32,
-        "5": 7
+        "diesel": 287,
+        "electricity": 32,
+        "hybrid": 78,
+        "other": 7,
+        "petrol": 637
       },
       "countByColor": {
         "black": 146,
@@ -28740,11 +28740,11 @@
       "code": "834",
       "name": "Tammela",
       "countByDrivingForce": {
-        "1": 2298,
-        "2": 1073,
-        "3": 303,
-        "4": 54,
-        "5": 37
+        "diesel": 1073,
+        "electricity": 54,
+        "hybrid": 303,
+        "other": 37,
+        "petrol": 2298
       },
       "countByColor": {
         "black": 521,
@@ -28853,11 +28853,11 @@
       "code": "837",
       "name": "Tampere",
       "countByDrivingForce": {
-        "1": 59785,
-        "2": 21064,
-        "3": 13610,
-        "4": 3881,
-        "5": 1025
+        "diesel": 21064,
+        "electricity": 3881,
+        "hybrid": 13610,
+        "other": 1025,
+        "petrol": 59785
       },
       "countByColor": {
         "black": 15553,
@@ -28969,11 +28969,11 @@
       "code": "844",
       "name": "Tervo",
       "countByDrivingForce": {
-        "1": 560,
-        "2": 250,
-        "3": 38,
-        "4": 6,
-        "5": 1
+        "diesel": 250,
+        "electricity": 6,
+        "hybrid": 38,
+        "other": 1,
+        "petrol": 560
       },
       "countByColor": {
         "black": 120,
@@ -29071,11 +29071,11 @@
       "code": "845",
       "name": "Tervola",
       "countByDrivingForce": {
-        "1": 860,
-        "2": 640,
-        "3": 77,
-        "4": 21,
-        "5": 4
+        "diesel": 640,
+        "electricity": 21,
+        "hybrid": 77,
+        "other": 4,
+        "petrol": 860
       },
       "countByColor": {
         "black": 241,
@@ -29178,11 +29178,11 @@
       "code": "846",
       "name": "Teuva",
       "countByDrivingForce": {
-        "1": 1686,
-        "2": 969,
-        "3": 170,
-        "4": 30,
-        "5": 4
+        "diesel": 969,
+        "electricity": 30,
+        "hybrid": 170,
+        "other": 4,
+        "petrol": 1686
       },
       "countByColor": {
         "black": 419,
@@ -29289,11 +29289,11 @@
       "code": "848",
       "name": "Tohmajärvi",
       "countByDrivingForce": {
-        "1": 1705,
-        "2": 617,
-        "3": 123,
-        "4": 30,
-        "5": 10
+        "diesel": 617,
+        "electricity": 30,
+        "hybrid": 123,
+        "other": 10,
+        "petrol": 1705
       },
       "countByColor": {
         "black": 375,
@@ -29399,11 +29399,11 @@
       "code": "849",
       "name": "Toholampi",
       "countByDrivingForce": {
-        "1": 713,
-        "2": 748,
-        "3": 58,
-        "4": 18,
-        "5": 12
+        "diesel": 748,
+        "electricity": 18,
+        "hybrid": 58,
+        "other": 12,
+        "petrol": 713
       },
       "countByColor": {
         "black": 241,
@@ -29508,11 +29508,11 @@
       "code": "850",
       "name": "Toivakka",
       "countByDrivingForce": {
-        "1": 795,
-        "2": 424,
-        "3": 76,
-        "4": 45,
-        "5": 27
+        "diesel": 424,
+        "electricity": 45,
+        "hybrid": 76,
+        "other": 27,
+        "petrol": 795
       },
       "countByColor": {
         "black": 201,
@@ -29618,11 +29618,11 @@
       "code": "851",
       "name": "Tornio",
       "countByDrivingForce": {
-        "1": 6289,
-        "2": 3826,
-        "3": 829,
-        "4": 221,
-        "5": 11
+        "diesel": 3826,
+        "electricity": 221,
+        "hybrid": 829,
+        "other": 11,
+        "petrol": 6289
       },
       "countByColor": {
         "black": 1861,
@@ -29732,11 +29732,11 @@
       "code": "853",
       "name": "Turku",
       "countByDrivingForce": {
-        "1": 52115,
-        "2": 14491,
-        "3": 11600,
-        "4": 2938,
-        "5": 574
+        "diesel": 14491,
+        "electricity": 2938,
+        "hybrid": 11600,
+        "other": 574,
+        "petrol": 52115
       },
       "countByColor": {
         "black": 12402,
@@ -29849,11 +29849,11 @@
       "code": "857",
       "name": "Tuusniemi",
       "countByDrivingForce": {
-        "1": 863,
-        "2": 485,
-        "3": 53,
-        "4": 9,
-        "5": 3
+        "diesel": 485,
+        "electricity": 9,
+        "hybrid": 53,
+        "other": 3,
+        "petrol": 863
       },
       "countByColor": {
         "black": 181,
@@ -29958,11 +29958,11 @@
       "code": "858",
       "name": "Tuusula",
       "countByDrivingForce": {
-        "1": 13684,
-        "2": 5645,
-        "3": 3565,
-        "4": 1148,
-        "5": 238
+        "diesel": 5645,
+        "electricity": 1148,
+        "hybrid": 3565,
+        "other": 238,
+        "petrol": 13684
       },
       "countByColor": {
         "black": 4049,
@@ -30073,11 +30073,11 @@
       "code": "859",
       "name": "Tyrnävä",
       "countByDrivingForce": {
-        "1": 1566,
-        "2": 1411,
-        "3": 155,
-        "4": 99,
-        "5": 26
+        "diesel": 1411,
+        "electricity": 99,
+        "hybrid": 155,
+        "other": 26,
+        "petrol": 1566
       },
       "countByColor": {
         "black": 607,
@@ -30185,11 +30185,11 @@
       "code": "886",
       "name": "Ulvila",
       "countByDrivingForce": {
-        "1": 5106,
-        "2": 1920,
-        "3": 537,
-        "4": 136,
-        "5": 38
+        "diesel": 1920,
+        "electricity": 136,
+        "hybrid": 537,
+        "other": 38,
+        "petrol": 5106
       },
       "countByColor": {
         "black": 1110,
@@ -30299,11 +30299,11 @@
       "code": "999",
       "name": "Unknown",
       "countByDrivingForce": {
-        "1": 5509,
-        "2": 2668,
-        "3": 657,
-        "4": 161,
-        "5": 60
+        "diesel": 2668,
+        "electricity": 161,
+        "hybrid": 657,
+        "other": 60,
+        "petrol": 5509
       },
       "countByColor": {
         "black": 1551,
@@ -30416,11 +30416,11 @@
       "code": "887",
       "name": "Urjala",
       "countByDrivingForce": {
-        "1": 1747,
-        "2": 883,
-        "3": 163,
-        "4": 42,
-        "5": 21
+        "diesel": 883,
+        "electricity": 42,
+        "hybrid": 163,
+        "other": 21,
+        "petrol": 1747
       },
       "countByColor": {
         "black": 424,
@@ -30530,11 +30530,11 @@
       "code": "889",
       "name": "Utajärvi",
       "countByDrivingForce": {
-        "1": 771,
-        "2": 539,
-        "3": 60,
-        "4": 15,
-        "5": 3
+        "diesel": 539,
+        "electricity": 15,
+        "hybrid": 60,
+        "other": 3,
+        "petrol": 771
       },
       "countByColor": {
         "black": 208,
@@ -30638,11 +30638,11 @@
       "code": "890",
       "name": "Utsjoki",
       "countByDrivingForce": {
-        "1": 302,
-        "2": 292,
-        "3": 30,
-        "4": 7,
-        "5": 0
+        "diesel": 292,
+        "electricity": 7,
+        "hybrid": 30,
+        "other": 0,
+        "petrol": 302
       },
       "countByColor": {
         "black": 91,
@@ -30742,11 +30742,11 @@
       "code": "892",
       "name": "Uurainen",
       "countByDrivingForce": {
-        "1": 1153,
-        "2": 736,
-        "3": 113,
-        "4": 40,
-        "5": 17
+        "diesel": 736,
+        "electricity": 40,
+        "hybrid": 113,
+        "other": 17,
+        "petrol": 1153
       },
       "countByColor": {
         "black": 314,
@@ -30855,11 +30855,11 @@
       "code": "895",
       "name": "Uusikaupunki",
       "countByDrivingForce": {
-        "1": 5888,
-        "2": 1962,
-        "3": 586,
-        "4": 142,
-        "5": 21
+        "diesel": 1962,
+        "electricity": 142,
+        "hybrid": 586,
+        "other": 21,
+        "petrol": 5888
       },
       "countByColor": {
         "black": 1234,
@@ -30969,11 +30969,11 @@
       "code": "785",
       "name": "Vaala",
       "countByDrivingForce": {
-        "1": 858,
-        "2": 511,
-        "3": 66,
-        "4": 16,
-        "5": 3
+        "diesel": 511,
+        "electricity": 16,
+        "hybrid": 66,
+        "other": 3,
+        "petrol": 858
       },
       "countByColor": {
         "black": 214,
@@ -31077,11 +31077,11 @@
       "code": "905",
       "name": "Vaasa",
       "countByDrivingForce": {
-        "1": 22997,
-        "2": 7040,
-        "3": 2951,
-        "4": 811,
-        "5": 335
+        "diesel": 7040,
+        "electricity": 811,
+        "hybrid": 2951,
+        "other": 335,
+        "petrol": 22997
       },
       "countByColor": {
         "black": 5232,
@@ -31192,11 +31192,11 @@
       "code": "908",
       "name": "Valkeakoski",
       "countByDrivingForce": {
-        "1": 7255,
-        "2": 2761,
-        "3": 1044,
-        "4": 282,
-        "5": 63
+        "diesel": 2761,
+        "electricity": 282,
+        "hybrid": 1044,
+        "other": 63,
+        "petrol": 7255
       },
       "countByColor": {
         "black": 1645,
@@ -31307,11 +31307,11 @@
       "code": "092",
       "name": "Vantaa",
       "countByDrivingForce": {
-        "1": 58757,
-        "2": 21559,
-        "3": 22001,
-        "4": 6072,
-        "5": 883
+        "diesel": 21559,
+        "electricity": 6072,
+        "hybrid": 22001,
+        "other": 883,
+        "petrol": 58757
       },
       "countByColor": {
         "black": 18456,
@@ -31424,11 +31424,11 @@
       "code": "915",
       "name": "Varkaus",
       "countByDrivingForce": {
-        "1": 7440,
-        "2": 2451,
-        "3": 878,
-        "4": 145,
-        "5": 22
+        "diesel": 2451,
+        "electricity": 145,
+        "hybrid": 878,
+        "other": 22,
+        "petrol": 7440
       },
       "countByColor": {
         "black": 1547,
@@ -31539,11 +31539,11 @@
       "code": "918",
       "name": "Vehmaa",
       "countByDrivingForce": {
-        "1": 897,
-        "2": 401,
-        "3": 90,
-        "4": 22,
-        "5": 10
+        "diesel": 401,
+        "electricity": 22,
+        "hybrid": 90,
+        "other": 10,
+        "petrol": 897
       },
       "countByColor": {
         "black": 189,
@@ -31646,11 +31646,11 @@
       "code": "921",
       "name": "Vesanto",
       "countByDrivingForce": {
-        "1": 745,
-        "2": 332,
-        "3": 44,
-        "4": 7,
-        "5": 2
+        "diesel": 332,
+        "electricity": 7,
+        "hybrid": 44,
+        "other": 2,
+        "petrol": 745
       },
       "countByColor": {
         "black": 168,
@@ -31751,11 +31751,11 @@
       "code": "922",
       "name": "Vesilahti",
       "countByDrivingForce": {
-        "1": 1458,
-        "2": 890,
-        "3": 238,
-        "4": 125,
-        "5": 31
+        "diesel": 890,
+        "electricity": 125,
+        "hybrid": 238,
+        "other": 31,
+        "petrol": 1458
       },
       "countByColor": {
         "black": 441,
@@ -31863,11 +31863,11 @@
       "code": "924",
       "name": "Veteli",
       "countByDrivingForce": {
-        "1": 907,
-        "2": 778,
-        "3": 86,
-        "4": 18,
-        "5": 3
+        "diesel": 778,
+        "electricity": 18,
+        "hybrid": 86,
+        "other": 3,
+        "petrol": 907
       },
       "countByColor": {
         "black": 308,
@@ -31970,11 +31970,11 @@
       "code": "925",
       "name": "Vieremä",
       "countByDrivingForce": {
-        "1": 1066,
-        "2": 690,
-        "3": 76,
-        "4": 14,
-        "5": 8
+        "diesel": 690,
+        "electricity": 14,
+        "hybrid": 76,
+        "other": 8,
+        "petrol": 1066
       },
       "countByColor": {
         "black": 297,
@@ -32078,11 +32078,11 @@
       "code": "927",
       "name": "Vihti",
       "countByDrivingForce": {
-        "1": 9397,
-        "2": 4483,
-        "3": 2103,
-        "4": 787,
-        "5": 172
+        "diesel": 4483,
+        "electricity": 787,
+        "hybrid": 2103,
+        "other": 172,
+        "petrol": 9397
       },
       "countByColor": {
         "black": 2742,
@@ -32192,11 +32192,11 @@
       "code": "931",
       "name": "Viitasaari",
       "countByDrivingForce": {
-        "1": 1986,
-        "2": 976,
-        "3": 283,
-        "4": 42,
-        "5": 8
+        "diesel": 976,
+        "electricity": 42,
+        "hybrid": 283,
+        "other": 8,
+        "petrol": 1986
       },
       "countByColor": {
         "black": 466,
@@ -32302,11 +32302,11 @@
       "code": "934",
       "name": "Vimpeli",
       "countByDrivingForce": {
-        "1": 983,
-        "2": 587,
-        "3": 79,
-        "4": 40,
-        "5": 6
+        "diesel": 587,
+        "electricity": 40,
+        "hybrid": 79,
+        "other": 6,
+        "petrol": 983
       },
       "countByColor": {
         "black": 258,
@@ -32414,11 +32414,11 @@
       "code": "935",
       "name": "Virolahti",
       "countByDrivingForce": {
-        "1": 1284,
-        "2": 417,
-        "3": 144,
-        "4": 22,
-        "5": 15
+        "diesel": 417,
+        "electricity": 22,
+        "hybrid": 144,
+        "other": 15,
+        "petrol": 1284
       },
       "countByColor": {
         "black": 260,
@@ -32526,11 +32526,11 @@
       "code": "936",
       "name": "Virrat",
       "countByDrivingForce": {
-        "1": 2359,
-        "2": 1106,
-        "3": 241,
-        "4": 44,
-        "5": 11
+        "diesel": 1106,
+        "electricity": 44,
+        "hybrid": 241,
+        "other": 11,
+        "petrol": 2359
       },
       "countByColor": {
         "black": 536,
@@ -32640,11 +32640,11 @@
       "code": "941",
       "name": "Vårdö",
       "countByDrivingForce": {
-        "1": 4,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0
+        "diesel": 0,
+        "electricity": 0,
+        "hybrid": 0,
+        "other": 0,
+        "petrol": 4
       },
       "countByColor": {
         "black": 0,
@@ -32672,11 +32672,11 @@
       "code": "946",
       "name": "Vörå",
       "countByDrivingForce": {
-        "1": 2250,
-        "2": 1234,
-        "3": 203,
-        "4": 83,
-        "5": 129
+        "diesel": 1234,
+        "electricity": 83,
+        "hybrid": 203,
+        "other": 129,
+        "petrol": 2250
       },
       "countByColor": {
         "black": 564,
@@ -32783,11 +32783,11 @@
       "code": "976",
       "name": "Ylitornio",
       "countByDrivingForce": {
-        "1": 1179,
-        "2": 844,
-        "3": 87,
-        "4": 21,
-        "5": 2
+        "diesel": 844,
+        "electricity": 21,
+        "hybrid": 87,
+        "other": 2,
+        "petrol": 1179
       },
       "countByColor": {
         "black": 310,
@@ -32892,11 +32892,11 @@
       "code": "977",
       "name": "Ylivieska",
       "countByDrivingForce": {
-        "1": 4576,
-        "2": 3181,
-        "3": 518,
-        "4": 176,
-        "5": 27
+        "diesel": 3181,
+        "electricity": 176,
+        "hybrid": 518,
+        "other": 27,
+        "petrol": 4576
       },
       "countByColor": {
         "black": 1480,
@@ -33007,11 +33007,11 @@
       "code": "980",
       "name": "Ylöjärvi",
       "countByDrivingForce": {
-        "1": 10731,
-        "2": 5482,
-        "3": 1999,
-        "4": 707,
-        "5": 155
+        "diesel": 5482,
+        "electricity": 707,
+        "hybrid": 1999,
+        "other": 155,
+        "petrol": 10731
       },
       "countByColor": {
         "black": 3160,
@@ -33123,11 +33123,11 @@
       "code": "981",
       "name": "Ypäjä",
       "countByDrivingForce": {
-        "1": 881,
-        "2": 439,
-        "3": 82,
-        "4": 23,
-        "5": 8
+        "diesel": 439,
+        "electricity": 23,
+        "hybrid": 82,
+        "other": 8,
+        "petrol": 881
       },
       "countByColor": {
         "black": 195,
@@ -33232,11 +33232,11 @@
       "code": "989",
       "name": "Ähtäri",
       "countByDrivingForce": {
-        "1": 1924,
-        "2": 1026,
-        "3": 224,
-        "4": 35,
-        "5": 7
+        "diesel": 1026,
+        "electricity": 35,
+        "hybrid": 224,
+        "other": 7,
+        "petrol": 1924
       },
       "countByColor": {
         "black": 513,
@@ -33344,11 +33344,11 @@
       "code": "992",
       "name": "Äänekoski",
       "countByDrivingForce": {
-        "1": 6397,
-        "2": 2826,
-        "3": 639,
-        "4": 134,
-        "5": 55
+        "diesel": 2826,
+        "electricity": 134,
+        "hybrid": 639,
+        "other": 55,
+        "petrol": 6397
       },
       "countByColor": {
         "black": 1404,

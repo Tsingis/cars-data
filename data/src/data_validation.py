@@ -12,7 +12,7 @@ class Municipality(BaseModel):
 
     @field_validator("countByDrivingForce", mode="before")
     def check_keys_in_countByDrivingForce(cls, value):
-        required_keys = {"1", "2", "3", "4", "5"}
+        required_keys = {"petrol", "diesel", "hybrid", "electricity", "other"}
         if not required_keys.issubset(value.keys()):
             missing_keys = required_keys - set(value.keys())
             raise ValueError(f"Missing keys in 'countByDrivingForce': {missing_keys}")

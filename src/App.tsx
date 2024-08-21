@@ -139,7 +139,6 @@ function App() {
           <div className="chart-grid">
             <PieChart
               data={selectedMunicipality.drivingForce}
-              labelMap={drivingForces}
               colorMap={drivingForcesColors}
               title={"Driving forces"}
               style={{ gridArea: "a" }}

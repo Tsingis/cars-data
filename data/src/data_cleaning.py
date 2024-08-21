@@ -40,17 +40,17 @@ def clean(vehicles: pd.DataFrame, municipalities: dict):
     vehicles["is_hybrid"] = vehicles["is_hybrid"] == "true"
 
     driving_force_map = {
-        "01": "1",  # Petrol
-        "02": "2",  # Diesel
-        "04": "4",  # Electricity
+        "01": "petrol",
+        "02": "diesel",
+        "04": "electricity",
     }
 
     vehicles["driving_force"] = (
-        vehicles["driving_force"].map(driving_force_map).fillna("5")
-    )  # Other
+        vehicles["driving_force"].map(driving_force_map).fillna("other")
+    )
     vehicles["driving_force"] = np.where(
-        vehicles["is_hybrid"], "3", vehicles["driving_force"]
-    )  # Hybrid
+        vehicles["is_hybrid"], "hybrid", vehicles["driving_force"]
+    )
 
     # Color grouping
     color_map = {
