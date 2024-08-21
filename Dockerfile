@@ -9,6 +9,7 @@ RUN npm ci
 ARG ENV_FILE=.env
 
 COPY $ENV_FILE ./.env
+COPY config/ ./config
 COPY src ./src
 
 RUN npm run build

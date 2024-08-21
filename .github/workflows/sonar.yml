@@ -8,6 +8,7 @@ on:
       - "data/package*.json"
       - "src/**"
       - "tests/**"
+      - "config/**"
       - "package*.json"
       - "Dockerfile"
       - ".github/workflows/sonar.yml"

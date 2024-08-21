@@ -6,6 +6,7 @@ on:
     paths:
       - "src/**"
       - "tests/**"
+      - "config/**"
       - "package*.json"
       - ".env.*"
       - "util/http_server.py"
@@ -32,6 +33,6 @@ jobs:
       - name: Setup tests
         run: npm run setup-test
       - name: Run tests
-        run: npm run test
+        run: npm run test:e2e
         env:
           CI: true
