@@ -3,14 +3,17 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile
+      no_cache: false
       args:
         ENV_FILE: .env
-    image: trafi
-    container_name: trafi
+    image: cars
+    container_name: cars
     ports:
       - 3000:3000
+    user: nginx
     read_only: true
-    # volumes:
-    #   - /tmp
+    privileged: false
     tmpfs:
       - /tmp:rw
+    # volumes:
+    #   - /tmp
