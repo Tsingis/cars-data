@@ -2,6 +2,9 @@ Parameters:
   BucketName:
     Type: String
     Description: Name of the S3 bucket
+  CloudFrontDistributionId:
+    Type: String
+    Description: ID of the CloudFront distribution
 
 Resources:
   LambdaFunctionRole:
@@ -49,5 +52,19 @@ Resources:
               - logs:CreateLogStream
               - logs:PutLogEvents
             Resource: "*"
+      Roles:
+        - !Ref LambdaFunctionRole
+
+  LambdaFunctionCloudFrontPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: LambdaFunctionCloudFrontPolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - cloudfront:CreateInvalidation
+            Resource: !Sub arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistributionId}
       Roles:
         - !Ref LambdaFunctionRole
