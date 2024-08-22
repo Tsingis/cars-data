@@ -19,7 +19,7 @@ provider:
 
 functions:
   handler:
-    handler: lambda.handler
+    handler: src/lambda.handler
     role: arn:aws:iam::${aws:accountId}:role/CarsDataLambdaRole
     events:
       - schedule: cron(0 0 1 * ? *)
@@ -35,5 +35,4 @@ custom:
 package:
   patterns:
     - "!**"
-    - "util/**.py"
-    - lambda.py
+    - "src/**"
