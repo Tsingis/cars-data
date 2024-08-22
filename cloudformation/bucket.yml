@@ -104,6 +104,8 @@ Resources:
             OriginAccessControlId: !Ref OriginAccessControl
             S3OriginConfig: {}
         Enabled: true
+        PriceClass: PriceClass_All
+        HttpVersion: http2and3
         DefaultCacheBehavior:
           TargetOriginId: !Sub "${BucketName}-origin"
           ViewerProtocolPolicy: redirect-to-https
