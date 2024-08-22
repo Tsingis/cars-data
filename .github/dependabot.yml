@@ -8,7 +8,7 @@ updates:
       timezone: "Europe/Helsinki"
     target-branch: "main"
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/app"
     versioning-strategy: "increase"
     schedule:
       interval: "daily"
@@ -23,7 +23,7 @@ updates:
         patterns:
           - "@typescript-eslint/*"
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/app"
     schedule:
       interval: "daily"
       time: "21:00"

@@ -39,7 +39,7 @@ const LineChart: React.FC<LineChartProps> = ({
           datasets: [
             {
               label: title,
-              data: Object.values(data) as number[], // Ensure data is an array of numbers
+              data: Object.values(data).filter((x) => x !== undefined),
               borderColor: "rgba(0, 123, 255, 1)",
               backgroundColor: "rgba(0, 123, 255, 0.6)",
               fill: false,

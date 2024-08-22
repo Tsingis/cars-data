@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "http": "python ./util/http_server.py",
     "dev": "vite --config ./config/vite.config.ts --open",
+    "http": "python ../util/http_server.py",
+    "setup:e2e": "npx playwright install --with-deps",
     "test:e2e": "npx playwright test --config=config/playwright.config.ts",
     "test:components": "npx vitest --config config/vitest.config.ts",
     "type-check": "tsc -p config/tsconfig.json --noEmit --watch",
@@ -13,8 +14,6 @@
     "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/.eslintrc.cjs --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
-    "cfn-lint": "cfn-lint --template",
-    "setup-test": "npx playwright install --with-deps",
     "build": "tsc -b ./config/tsconfig.json && vite --config ./config/vite.config.ts build"
   },
   "dependencies": {

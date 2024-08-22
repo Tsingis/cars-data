@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - "Dockerfile"
+      - "app/Dockerfile"
       - ".github/workflows/scan.yml"
   workflow_call:
     inputs:
@@ -42,7 +42,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./app
           push: false
           load: true
           pull: false

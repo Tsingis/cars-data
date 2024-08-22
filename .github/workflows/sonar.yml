@@ -6,11 +6,11 @@ on:
     paths:
       - "data/**/*.py"
       - "data/package*.json"
-      - "src/**"
-      - "tests/**"
-      - "config/**"
-      - "package*.json"
-      - "Dockerfile"
+      - "app/src/**"
+      - "app/tests/**"
+      - "app/config/**"
+      - "app/package*.json"
+      - "app/Dockerfile"
       - ".github/workflows/sonar.yml"
   pull_request:
     branches:
@@ -18,10 +18,11 @@ on:
     paths:
       - "data/**/*.py"
       - "data/package*.json"
-      - "src/**"
-      - "tests/**"
-      - "package*.json"
-      - "Dockerfile"
+      - "app/src/**"
+      - "app/tests/**"
+      - "app/config/**"
+      - "app/package*.json"
+      - "app/Dockerfile"
       - ".github/workflows/sonar.yml"
   workflow_dispatch:
 jobs:

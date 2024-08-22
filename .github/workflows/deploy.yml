@@ -4,12 +4,12 @@ on:
     branches:
       - main
     paths:
-      - "src/**"
-      - "nginx/**"
-      - "config/**"
-      - "package*.json"
-      - ".env.*"
-      - "Dockerfile"
+      - "app/src/**"
+      - "app/nginx/**"
+      - "app/config/**"
+      - "app/package*.json"
+      - "app/.env.*"
+      - "app/Dockerfile"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 jobs:
