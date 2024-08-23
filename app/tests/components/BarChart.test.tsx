@@ -3,7 +3,7 @@ import { render } from "@testing-library/react"
 import BarChart from "../../src/components/BarChart/BarChart"
 
 describe("BarChart Component", () => {
-  it("renders a canvas element", () => {
+  test("renders a canvas element", () => {
     const data = { ItemA: 10, ItemB: 20, ItemC: 30 }
 
     render(

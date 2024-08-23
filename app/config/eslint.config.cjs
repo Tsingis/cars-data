@@ -8,30 +8,17 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: ["dist", "**/*.test.tsx"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2021,
+    ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "react-hooks",
-    "react-refresh",
-  ],
-  rules: {
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
-    "react/prop-types": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "react/react-in-jsx-scope": "off",
-  },
+  plugins: ["react", "@typescript-eslint", "react-hooks", "react-refresh"],
+  rules: {},
   settings: {
     react: {
       version: "detect",

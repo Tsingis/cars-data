@@ -10,8 +10,8 @@
     "test:e2e": "npx playwright test --config=config/playwright.config.ts",
     "test:components": "npx vitest --config config/vitest.config.ts",
     "type-check": "tsc -p config/tsconfig.json --noEmit --watch",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/.eslintrc.cjs",
-    "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/.eslintrc.cjs --fix",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/eslint.config.cjs",
+    "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/eslint.config.cjs --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
     "build": "tsc -b ./config/tsconfig.json && vite --config ./config/vite.config.ts build"
