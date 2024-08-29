@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import ErrorPage from "./components/ErrorPage/ErrorPage"
 import Loading from "./components/Loading/Loading"
 import SearchableDropdown from "./components/SearchableDropdown/SearchableDropdown"
 import BarChart from "./components/BarChart/BarChart"
@@ -13,6 +14,10 @@ function App() {
   const [data, setData] = useState<{
     date: string
     municipalities: Municipality[]
+  } | null>(null)
+
+  const [error, setError] = useState<{
+    message: string
   } | null>(null)
 
   const [selectedMunicipality, setSelectedMunicipality] = useState<{
@@ -35,6 +40,9 @@ function App() {
   useEffect(() => {
     fetch(import.meta.env.VITE_DATA_URL)
       .then((response) => {
+        if (!response.ok) {
+          throw new Error("My error")
+        }
         return response.json()
       })
       .then((content) => {
@@ -56,9 +64,14 @@ function App() {
         }
       })
       .catch((error) => {
-        console.error("Error loading data:", error)
+        console.error(error)
+        setError(error)
       })
   }, [])
+
+  if (error) {
+    return <ErrorPage message="Error fetching data" />
+  }
 
   if (!data) {
     return <Loading size="4x" />
