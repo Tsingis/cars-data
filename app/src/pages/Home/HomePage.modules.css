@@ -1,0 +1,45 @@
+.title {
+  margin-bottom: 5px;
+}
+
+.data-date {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.total-count-label {
+  margin-top: 15px;
+}
+
+.total-count {
+  font-weight: bold;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 850px;
+  grid-template-areas:
+    "a b"
+    "c d";
+}
+
+@media (max-width: 800px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+  }
+}
