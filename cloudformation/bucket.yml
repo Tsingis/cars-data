@@ -10,6 +10,14 @@ Parameters:
     Type: Number
     Default: 1
     Description: Expiration in in days for non current objects
+  AllowedCountries:
+    Description: List of allowed distribution countries
+    Type: CommaDelimitedList
+    Default: ""
+
+Conditions:
+  IsEmptyCountryList:
+    Fn::Equals: [!Join [",", !Ref AllowedCountries], ""]
 
 Resources:
   Bucket:
@@ -126,7 +134,14 @@ Resources:
         DefaultRootObject: "data.json"
         Restrictions:
           GeoRestriction:
-            RestrictionType: "none"
+            RestrictionType: !If
+              - IsEmptyCountryList
+              - none
+              - whitelist
+            Locations: !If
+              - IsEmptyCountryList
+              - !Ref "AWS::NoValue"
+              - !Ref AllowedCountries
 
 Outputs:
   CloudFrontDistributionDomainName:
