@@ -8,7 +8,7 @@ on:
       - "app/nginx/**"
       - "app/config/**"
       - "app/package*.json"
-      - "app/.env.*"
+      - "app/.env*"
       - "app/Dockerfile"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
