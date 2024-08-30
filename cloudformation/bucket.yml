@@ -5,19 +5,11 @@ Parameters:
   CurrentExpirationDays:
     Type: Number
     Default: 1
-    Description: Expiration in in days for current objects
+    Description: Expiration in days for current objects
   NonCurrentExpirationDays:
     Type: Number
     Default: 1
-    Description: Expiration in in days for non current objects
-  AllowedCountries:
-    Description: List of allowed distribution countries
-    Type: CommaDelimitedList
-    Default: ""
-
-Conditions:
-  IsEmptyCountryList:
-    Fn::Equals: [!Join [",", !Ref AllowedCountries], ""]
+    Description: Expiration in days for non-current objects
 
 Resources:
   Bucket:
@@ -68,82 +60,18 @@ Resources:
         SigningBehavior: "always"
         OriginAccessControlOriginType: "s3"
 
-  BucketPolicy:
-    Type: "AWS::S3::BucketPolicy"
-    Properties:
-      Bucket: !Ref BucketName
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: cloudfront.amazonaws.com
-            Action: "s3:GetObject"
-            Resource: !Sub "arn:aws:s3:::${BucketName}/*"
-            Condition:
-              StringEquals:
-                "AWS:SourceArn": !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}"
-
-  CachePolicy:
-    Type: "AWS::CloudFront::CachePolicy"
-    Properties:
-      CachePolicyConfig:
-        Name: !Sub "${BucketName}-cache-policy"
-        DefaultTTL: 86400
-        MaxTTL: 31536000
-        MinTTL: 0
-        ParametersInCacheKeyAndForwardedToOrigin:
-          QueryStringsConfig:
-            QueryStringBehavior: "none"
-          HeadersConfig:
-            HeaderBehavior: "none"
-          CookiesConfig:
-            CookieBehavior: "none"
-          EnableAcceptEncodingBrotli: true
-          EnableAcceptEncodingGzip: true
-
-  CloudFrontDistribution:
-    Type: "AWS::CloudFront::Distribution"
-    Properties:
-      DistributionConfig:
-        Origins:
-          - Id: !Sub "${BucketName}-origin"
-            DomainName: !GetAtt Bucket.DomainName
-            OriginAccessControlId: !Ref OriginAccessControl
-            S3OriginConfig: {}
-        Enabled: true
-        PriceClass: PriceClass_All
-        HttpVersion: http2and3
-        DefaultCacheBehavior:
-          TargetOriginId: !Sub "${BucketName}-origin"
-          ViewerProtocolPolicy: redirect-to-https
-          Compress: true
-          AllowedMethods:
-            - GET
-            - HEAD
-          CachedMethods:
-            - GET
-            - HEAD
-          ForwardedValues:
-            QueryString: false
-            Cookies:
-              Forward: none
-          CachePolicyId: !Ref CachePolicy
-        ViewerCertificate:
-          CloudFrontDefaultCertificate: true
-        DefaultRootObject: "data.json"
-        Restrictions:
-          GeoRestriction:
-            RestrictionType: !If
-              - IsEmptyCountryList
-              - none
-              - whitelist
-            Locations: !If
-              - IsEmptyCountryList
-              - !Ref "AWS::NoValue"
-              - !Ref AllowedCountries
-
 Outputs:
-  CloudFrontDistributionDomainName:
-    Description: Domain name of the CloudFront distribution
-    Value: !GetAtt CloudFrontDistribution.DomainName
+  BucketName:
+    Value: !Ref Bucket
+    Export:
+      Name: !Sub "${AWS::StackName}-BucketName"
+
+  BucketDomainName:
+    Value: !GetAtt Bucket.DomainName
+    Export:
+      Name: !Sub "${AWS::StackName}-BucketDomainName"
+
+  OriginAccessControlId:
+    Value: !Ref OriginAccessControl
+    Export:
+      Name: !Sub "${AWS::StackName}-OriginAccessControlId"
