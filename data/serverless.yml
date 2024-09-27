@@ -23,7 +23,7 @@ functions:
     handler: src/lambda.handler
     role: arn:aws:iam::${aws:accountId}:role/CarsDataLambdaRole
     events:
-      - schedule: cron(0 0 1 * ? *)
+      - schedule: cron(0 0 ? * 1 *)
 
 plugins:
   - serverless-python-requirements
