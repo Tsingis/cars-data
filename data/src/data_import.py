@@ -2,6 +2,7 @@ import io
 import pandas as pd
 import requests
 import zipfile
+from datetime import datetime
 
 
 def get_vehicles():
@@ -71,3 +72,7 @@ def get_municipalities():
         for item in response.json()
     }
     return municipalities
+
+
+def get_date():
+    return datetime.now().strftime("%Y-%m-%d")

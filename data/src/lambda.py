@@ -4,7 +4,7 @@ import logging
 import os
 import time
 from pydantic import ValidationError
-from .data_import import get_municipalities, get_vehicles
+from .data_import import get_municipalities, get_vehicles, get_date
 from .data_cleaning import clean, generate
 from .data_validation import validate
 
@@ -26,9 +26,7 @@ def handler(event: dict, context: dict):
         municipalities = get_municipalities()
         vehicles = get_vehicles()
         (vehicles, municipalities) = clean(vehicles, municipalities)
-        data = generate(
-            vehicles, municipalities, date="2024-03-31"
-        )  # TODO: dynamic date
+        data = generate(vehicles, municipalities, date=get_date())
         valid = validate(data, municipalities)
         if valid:
             logger.info("Creating new data")

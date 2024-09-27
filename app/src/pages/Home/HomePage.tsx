@@ -121,7 +121,7 @@ const HomePage = () => {
     <div>
       <h1 className="title">Registered passenger cars in Finland</h1>
       <div className="data-date">
-        Data from{" "}
+        Data updated on{" "}
         {date.toLocaleDateString("en-FI", {
           year: "numeric",
           month: "long",
