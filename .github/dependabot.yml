@@ -8,7 +8,9 @@ updates:
       timezone: "Europe/Helsinki"
     target-branch: "main"
   - package-ecosystem: "npm"
-    directory: "/app"
+    directories:
+      - "/app"
+      - "/data"
     versioning-strategy: "increase"
     schedule:
       interval: "daily"
@@ -34,11 +36,3 @@ updates:
       interval: "daily"
       time: "21:00"
       timezone: "Europe/Helsinki"
-  - package-ecosystem: "npm"
-    directory: "/data"
-    versioning-strategy: "increase"
-    schedule:
-      interval: "daily"
-      time: "21:00"
-      timezone: "Europe/Helsinki"
-    target-branch: "main"
