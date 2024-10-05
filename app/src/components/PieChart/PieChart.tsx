@@ -109,13 +109,13 @@ const PieChart: React.FC<PieChartProps> = ({
           data: chartData,
           options: chartOptions,
         })
+
+        chartInstanceRef.current?.update()
       }
     }
 
     return () => {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.destroy()
-      }
+      chartInstanceRef.current?.destroy()
     }
   }, [data, labelMap, colorMap, title])
 

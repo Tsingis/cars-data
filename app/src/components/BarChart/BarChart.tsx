@@ -140,13 +140,13 @@ const BarChart: React.FC<BarChartProps> = ({
           data: chartData,
           options: chartOptions,
         })
+
+        chartInstanceRef.current?.update()
       }
     }
 
     return () => {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.destroy()
-      }
+      chartInstanceRef.current?.destroy()
     }
   }, [data, xAxisTextMap, xAxisText, yAxisText, title, colorMap])
 

@@ -22,115 +22,122 @@ const LineChart: React.FC<LineChartProps> = ({
   className,
   style,
 }) => {
-  const chartRef = useRef<HTMLCanvasElement>(null)
-  const chartInstanceRef = useRef<ChartJS | null>(null) // Ref to store the Chart.js instance
+  const chartRef = useRef<HTMLCanvasElement | null>(null)
+  const chartInstanceRef = useRef<ChartJS | null>(null)
 
   useEffect(() => {
     if (chartRef.current) {
-      const total = Object.values(data).reduce(
-        (sum, value) => (sum ?? 0) + (value ?? 0),
-        0
-      )
+      const ctx = chartRef.current.getContext("2d")
+      if (ctx) {
+        if (chartInstanceRef.current) {
+          chartInstanceRef.current.destroy()
+        }
+        const total = Object.values(data).reduce(
+          (sum, value) => (sum ?? 0) + (value ?? 0),
+          0
+        )
 
-      const config: ChartConfiguration<"line", number[]> = {
-        type: "line",
-        data: {
-          labels: Object.keys(data),
-          datasets: [
-            {
-              label: title,
-              data: Object.values(data).filter((x) => x !== undefined),
-              borderColor: "rgba(0, 123, 255, 1)",
-              backgroundColor: "rgba(0, 123, 255, 0.6)",
-              fill: false,
-              pointRadius: 5,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            title: {
-              display: !!title,
-              text: title,
-              position: "top",
-              color: "grey",
-              font: {
-                family: "Arial, sans-serif",
-                weight: "bold",
+        const config: ChartConfiguration<"line", number[]> = {
+          type: "line",
+          data: {
+            labels: Object.keys(data),
+            datasets: [
+              {
+                label: title,
+                data: Object.values(data).filter((x) => x !== undefined),
+                borderColor: "rgba(0, 123, 255, 1)",
+                backgroundColor: "rgba(0, 123, 255, 0.6)",
+                fill: false,
+                pointRadius: 5,
               },
-            },
-            legend: {
-              display: false,
-              labels: {
-                filter: (item) => item.text === title,
-                generateLabels: function (chart) {
-                  return chart.data.datasets.map((dataset) => ({
-                    text: dataset.label as string,
-                    fontColor: "grey",
-                    fillStyle: "transparent",
-                    strokeStyle: "transparent",
-                    lineWidth: 0,
-                  }))
-                },
-              },
-            },
-            tooltip: {
-              callbacks: {
-                label: function (context) {
-                  const label = context.label || ""
-                  const value = context.raw as number
-                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
-                  return `${label}: ${value} (${percentage}%)`
-                },
-              },
-            },
+            ],
           },
-          scales: {
-            x: {
-              display: true,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
               title: {
-                display: !!xAxisText,
-                text: xAxisText,
+                display: !!title,
+                text: title,
+                position: "top",
+                color: "grey",
+                font: {
+                  family: "Arial, sans-serif",
+                  weight: "bold",
+                },
               },
-              ticks: {
-                autoSkip: true,
-                callback: function (value: string | number, index: number) {
-                  const labels = chartInstanceRef.current?.data
-                    .labels as string[]
-                  if (labels && labels.length > 0) {
-                    if (index === 0 && firstXAxisLabelText) {
-                      return firstXAxisLabelText
+              legend: {
+                display: false,
+                labels: {
+                  filter: (item) => item.text === title,
+                  generateLabels: function (chart) {
+                    return chart.data.datasets.map((dataset) => ({
+                      text: dataset.label as string,
+                      fontColor: "grey",
+                      fillStyle: "transparent",
+                      strokeStyle: "transparent",
+                      lineWidth: 0,
+                    }))
+                  },
+                },
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    const label = context.label || ""
+                    const value = context.raw as number
+                    const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
+                    return `${label}: ${value} (${percentage}%)`
+                  },
+                },
+              },
+            },
+            scales: {
+              x: {
+                display: true,
+                title: {
+                  display: !!xAxisText,
+                  text: xAxisText,
+                },
+                ticks: {
+                  autoSkip: true,
+                  callback: function (value: string | number, index: number) {
+                    const labels = chartInstanceRef.current?.data
+                      .labels as string[]
+                    if (labels && labels.length > 0) {
+                      if (index === 0 && firstXAxisLabelText) {
+                        return firstXAxisLabelText
+                      }
+                      return labels[index]
                     }
-                    return labels[index]
-                  }
-                  return value
+                    return value
+                  },
                 },
               },
-            },
-            y: {
-              display: true,
-              beginAtZero: true,
-              title: {
-                display: !!yAxisText,
-                text: yAxisText,
-              },
-              ticks: {
-                callback: function (tickValue: string | number) {
-                  return (
-                    typeof tickValue === "number"
-                      ? tickValue
-                      : Number(tickValue)
-                  ).toString()
+              y: {
+                display: true,
+                beginAtZero: true,
+                title: {
+                  display: !!yAxisText,
+                  text: yAxisText,
+                },
+                ticks: {
+                  callback: function (tickValue: string | number) {
+                    return (
+                      typeof tickValue === "number"
+                        ? tickValue
+                        : Number(tickValue)
+                    ).toString()
+                  },
                 },
               },
             },
           },
-        },
-      }
+        }
 
-      chartInstanceRef.current = new Chart(chartRef.current, config)
+        chartInstanceRef.current = new Chart(chartRef.current, config)
+        chartInstanceRef.current?.update()
+      }
 
       return () => {
         chartInstanceRef.current?.destroy()
