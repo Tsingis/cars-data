@@ -4,9 +4,9 @@ import PieChart from "../../src/components/PieChart/PieChart"
 import { Count } from "../../src/types"
 
 const data: Count = {
-  Apple: 30,
-  Banana: 20,
-  Cherry: 50,
+  ItemA: 30,
+  ItemB: 20,
+  ItemC: 50,
 }
 
 describe("PieChart Component", () => {
@@ -14,8 +14,8 @@ describe("PieChart Component", () => {
     render(
       <PieChart
         data={data}
-        labelMap={{ Apple: "ItemA", Banana: "ItemB", Cherry: "ItemC" }}
-        colorMap={{ Apple: "red", Banana: "yellow", Cherry: "pink" }}
+        labelMap={{ A: "ItemA", B: "ItemB", C: "ItemC" }}
+        colorMap={{ A: "red", B: "yellow", C: "pink" }}
         title="Test title"
       />
     )
