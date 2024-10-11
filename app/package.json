@@ -10,8 +10,8 @@
     "test:e2e": "npx playwright test --config=config/playwright.config.ts",
     "test:components": "npx vitest --config config/vitest.config.ts",
     "type-check": "tsc -p config/tsconfig.json --noEmit --watch",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/eslint.config.cjs",
-    "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --config ./config/eslint.config.cjs --fix",
+    "lint": "npx eslint . --config ./config/eslint.config.js",
+    "lint:fix": "npx eslint . --config ./config/eslint.config.js --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
     "build": "tsc -b ./config/tsconfig.json && vite --config ./config/vite.config.ts build"
@@ -25,6 +25,7 @@
     "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
     "@playwright/test": "^1.48.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
@@ -37,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^8.8.1",
     "@typescript-eslint/parser": "^8.8.1",
     "@vitejs/plugin-react": "^4.3.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.12.0",
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.12",
