@@ -23,6 +23,10 @@ updates:
           - "react*"
       eslint:
         patterns:
+          - "eslint"
+          - "@eslint/js"
+      ts-eslint:
+        patterns:
           - "@typescript-eslint/*"
   - package-ecosystem: "docker"
     directory: "/app"
