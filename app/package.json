@@ -14,6 +14,7 @@
     "lint:fix": "npx eslint . --config ./config/eslint.config.js --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
+    "typecheck": "tsc --noEmit -p ./config/tsconfig.json",
     "build": "tsc -b ./config/tsconfig.json && vite --config ./config/vite.config.ts build"
   },
   "dependencies": {
