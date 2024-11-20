@@ -25,6 +25,9 @@ updates:
         patterns:
           - "eslint"
           - "@eslint/js"
+      fontawesome:
+        patterns:
+          - "@fortawesome/*"
       ts-eslint:
         patterns:
           - "@typescript-eslint/*"
