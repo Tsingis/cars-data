@@ -4,7 +4,8 @@ on:
     branches:
       - main
     paths:
-      - "data/**/*.py"
+      - "data/src/*.py"
+      - "data/requirements.txt"
       - "data/package*.json"
       - "app/src/**"
       - "app/tests/**"
@@ -16,7 +17,8 @@ on:
     branches:
       - main
     paths:
-      - "data/**/*.py"
+      - "data/src/*.py"
+      - "data/requirements.txt"
       - "data/package*.json"
       - "app/src/**"
       - "app/tests/**"

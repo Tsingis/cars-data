@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - "data/src/**"
+      - "data/requirements.txt"
       - "data/package*.json"
       - "data/serverless.yml"
       - ".github/workflows/lambda.yml"
@@ -13,6 +14,7 @@ on:
       - main
     paths:
       - "data/src/**"
+      - "data/requirements.txt"
       - "data/package*.json"
       - "data/serverless.yml"
       - ".github/workflows/lambda.yml"
