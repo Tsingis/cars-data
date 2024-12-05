@@ -21,6 +21,7 @@ updates:
       react:
         patterns:
           - "react*"
+          - "@types/react*"
       eslint:
         patterns:
           - "eslint"
