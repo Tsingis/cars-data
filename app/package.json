@@ -10,7 +10,7 @@
     "test:e2e": "npx playwright test --config=config/playwright.config.ts",
     "test:components": "npx vitest --config config/vitest.config.ts",
     "type-check": "tsc -p config/tsconfig.json --noEmit --watch",
-    "audit": "npm audit --audit-level low",
+    "audit": "npm audit --audit-level high",
     "lint": "npx eslint . --config ./config/eslint.config.js",
     "lint:fix": "npx eslint . --config ./config/eslint.config.js --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
