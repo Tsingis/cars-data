@@ -25,7 +25,7 @@ def handler(event: dict, context: dict):
     try:
         municipalities = get_municipalities()
         vehicles = get_vehicles()
-        (vehicles, municipalities) = clean(vehicles, municipalities)
+        vehicles = clean(vehicles, municipalities)
         data = generate(vehicles, municipalities, date=get_date())
         valid = validate(data, municipalities)
         if valid:

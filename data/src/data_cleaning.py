@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-def clean(vehicles: pd.DataFrame, municipalities: dict):
+def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
     # Registration year
     vehicles["registration_date"] = pd.to_datetime(
         vehicles["registration_date"],
@@ -28,7 +28,6 @@ def clean(vehicles: pd.DataFrame, municipalities: dict):
     vehicles.loc[vehicles["registration_year"] < 1980, "registration_year"] = 1979
 
     # Municipalities, map unmatched to 999 Unknown
-    municipalities["999"] = "Unknown"
     vehicles["municipality"] = np.where(
         vehicles["municipality"].isin(municipalities.keys()),
         vehicles["municipality"],
@@ -139,7 +138,7 @@ def clean(vehicles: pd.DataFrame, municipalities: dict):
         inplace=True,
     )
 
-    return vehicles, municipalities
+    return vehicles
 
 
 def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:

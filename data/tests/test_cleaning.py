@@ -38,7 +38,7 @@ class TestCleaning(unittest.TestCase):
         }
 
     def test_clean_valid_data(self):
-        vehicles, municipalities = clean(self.vehicles, self.municipalities)
+        vehicles = clean(self.vehicles, self.municipalities)
 
         self.assertEqual(2022, vehicles["registration_year"][0])
         self.assertEqual("001", vehicles["municipality"][0])
@@ -81,11 +81,6 @@ class TestCleaning(unittest.TestCase):
         self.assertEqual("other", vehicles["driving_force"][5])
         self.assertEqual("Other", vehicles["maker"][5])
         self.assertEqual(80000, vehicles["odometer"][5])
-
-        self.assertEqual(3, len(municipalities.keys()))
-        self.assertIn("001", municipalities)
-        self.assertIn("002", municipalities)
-        self.assertIn("999", municipalities)
 
 
 if __name__ == "__main__":

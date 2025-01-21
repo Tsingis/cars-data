@@ -5,7 +5,7 @@ import zipfile
 from datetime import datetime
 
 
-def get_vehicles():
+def get_vehicles() -> pd.DataFrame:
     url = "https://opendata.traficom.fi/Content/Ajoneuvorekisteri.zip"
     response = requests.get(url)
     response.raise_for_status()
@@ -59,7 +59,7 @@ def get_vehicles():
     return df
 
 
-def get_municipalities():
+def get_municipalities() -> dict:
     url = (
         "https://data.stat.fi/api/classifications/v2/"
         "classifications/kunta_1_20240101/"
@@ -71,8 +71,9 @@ def get_municipalities():
         item["code"]: item["classificationItemNames"][0]["name"]
         for item in response.json()
     }
+    municipalities["999"] = "Unknown"  # Add unknown
     return municipalities
 
 
-def get_date():
+def get_date() -> str:
     return datetime.now().strftime("%Y-%m-%d")

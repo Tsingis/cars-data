@@ -77,7 +77,7 @@ class DataModel(BaseModel):
         return cls(**data)
 
 
-def validate(data: dict, municipalities: dict):
+def validate(data: dict, municipalities: dict) -> bool:
     try:
         expected_length = len(municipalities.keys()) + 1
         DataModel.create_with_expected_length(data, expected_length)
