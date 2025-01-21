@@ -12,13 +12,9 @@ BUCKET = os.getenv("BUCKET")
 DISTRIBUTION = os.getenv("DISTRIBUTION")
 FILENAME = os.getenv("FILENAME", "data.json")
 
-logger = logging.getLogger()
-if logger.handlers:
-    for handler in logger.handlers:
-        logger.removeHandler(handler)
-
-logFormat = "%(asctime)s %(name)s %(levelname)s: %(message)s"
-logging.basicConfig(level=logging.WARNING, format=logFormat)
+logger = logging.getLogger(__name__)
+logFormat = "%(asctime)s %(levelname)s: %(message)s"
+logging.basicConfig(level=logging.INFO, format=logFormat, force=True)
 
 
 def handler(event: dict, context: dict):
@@ -38,16 +34,16 @@ def handler(event: dict, context: dict):
             )
             tags = [{"Key": "AllowExpiration", "Value": "false"}]
             s3.put_object_tagging(Bucket=BUCKET, Key=FILENAME, Tagging={"TagSet": tags})
-            invalidate(FILENAME)
+            invalidate_cache(FILENAME)
     except ValidationError:
         logger.exception("Invalid data")
     except Exception:
         logger.exception("Error processing data")
 
 
-def invalidate(file: str):
+def invalidate_cache(file: str):
     try:
-        logger.info("Invalidating data")
+        logger.info("Invalidating distribution cache")
         cf = boto3.client("cloudfront")
         paths = [f"/{file}"]
         cf.create_invalidation(
@@ -61,4 +57,4 @@ def invalidate(file: str):
             },
         )
     except Exception:
-        logger.exception("Error invalidating data")
+        logger.exception("Error invalidating distribution cache")
