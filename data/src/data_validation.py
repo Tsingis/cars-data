@@ -5,21 +5,21 @@ from pydantic import BaseModel, field_validator, model_validator, ValidationErro
 class Municipality(BaseModel):
     code: str
     name: str
-    countByDrivingForce: dict[str, int]
-    countByColor: dict[str, int]
-    countByRegistrationYear: dict[str, int]
-    countByMaker: dict[str, int]
+    drivingForceCount: dict[str, int]
+    colorCount: dict[str, int]
+    registrationYearCount: dict[str, int]
+    makerCount: dict[str, int]
 
-    @field_validator("countByDrivingForce", mode="before")
-    def check_keys_in_countByDrivingForce(cls, value):
+    @field_validator("drivingForceCount", mode="before")
+    def check_keys_in_drivingForceCount(cls, value):
         required_keys = {"petrol", "diesel", "hybrid", "electricity", "other"}
         if not required_keys.issubset(value.keys()):
             missing_keys = required_keys - set(value.keys())
-            raise ValueError(f"Missing keys in 'countByDrivingForce': {missing_keys}")
+            raise ValueError(f"Missing keys in 'drivingForceCount': {missing_keys}")
         return value
 
-    @field_validator("countByColor", mode="before")
-    def check_keys_in_countByColor(cls, value):
+    @field_validator("colorCount", mode="before")
+    def check_keys_in_colorCount(cls, value):
         required_keys = {
             "black",
             "blue",
@@ -33,21 +33,21 @@ class Municipality(BaseModel):
         }
         if not required_keys.issubset(value.keys()):
             missing_keys = required_keys - set(value.keys())
-            raise ValueError(f"Missing keys in 'countByColor': {missing_keys}")
+            raise ValueError(f"Missing keys in 'colorCount': {missing_keys}")
         return value
 
-    @field_validator("countByRegistrationYear", mode="before")
+    @field_validator("registrationYearCount", mode="before")
     def check_keys_are_years(cls, value):
         if not all(key.isdigit() and len(key) == 4 for key in value.keys()):
             raise ValueError(
-                "All keys in 'countByRegistrationYear' must be four-digit years"
+                "All keys in 'registrationYearCount' must be four-digit years"
             )
         return value
 
-    @field_validator("countByMaker", mode="before")
+    @field_validator("makerCount", mode="before")
     def check_keys_are_strings(cls, value):
         if not all(isinstance(key, str) for key in value.keys()):
-            raise ValueError("All keys in 'countByMaker' must be strings")
+            raise ValueError("All keys in 'makerCount' must be strings")
         return value
 
 

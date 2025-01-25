@@ -158,7 +158,7 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         .reset_index(name="count")
     )
 
-    # Counts for municipalities
+    # Count for municipalities
     driving_forces = set(grouped_driving["driving_force"])
     colors = set(grouped_color["color"])
     years = set(grouped_year["registration_year"])
@@ -192,10 +192,10 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
             {
                 "code": municipality_code,
                 "name": municipalities[municipality_code],
-                "countByDrivingForce": driving_force_counts,
-                "countByColor": color_counts,
-                "countByRegistrationYear": year_counts_str,
-                "countByMaker": maker_counts,
+                "drivingForceCount": driving_force_counts,
+                "colorCount": color_counts,
+                "registrationYearCount": year_counts_str,
+                "makerCount": maker_counts,
             }
         )
 
@@ -206,42 +206,38 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     total_maker_counts = {maker: 0 for maker in makers}
 
     for municipality in final:
-        for driving_force, count in municipality["countByDrivingForce"].items():
+        for driving_force, count in municipality["drivingForceCount"].items():
             total_driving_force_counts[driving_force] += count
 
-        for color, count in municipality["countByColor"].items():
+        for color, count in municipality["colorCount"].items():
             total_color_counts[color] += count
 
-        for year, count in municipality["countByRegistrationYear"].items():
+        for year, count in municipality["registrationYearCount"].items():
             total_year_counts[year] += count
 
-        for maker, count in municipality["countByMaker"].items():
+        for maker, count in municipality["makerCount"].items():
             total_maker_counts[maker] += count
 
     final.append(
         {
             "code": "000",
             "name": "Finland",
-            "countByDrivingForce": total_driving_force_counts,
-            "countByColor": total_color_counts,
-            "countByRegistrationYear": total_year_counts,
-            "countByMaker": total_maker_counts,
+            "drivingForceCount": total_driving_force_counts,
+            "colorCount": total_color_counts,
+            "registrationYearCount": total_year_counts,
+            "makerCount": total_maker_counts,
         }
     )
 
     for municipality in final:
-        municipality["countByDrivingForce"] = dict(
-            sorted(municipality["countByDrivingForce"].items())
+        municipality["drivingForceCount"] = dict(
+            sorted(municipality["drivingForceCount"].items())
         )
-        municipality["countByColor"] = dict(
-            sorted(municipality["countByColor"].items())
+        municipality["colorCount"] = dict(sorted(municipality["colorCount"].items()))
+        municipality["registrationYearCount"] = dict(
+            sorted(municipality["registrationYearCount"].items())
         )
-        municipality["countByRegistrationYear"] = dict(
-            sorted(municipality["countByRegistrationYear"].items())
-        )
-        municipality["countByMaker"] = dict(
-            sorted(municipality["countByMaker"].items())
-        )
+        municipality["makerCount"] = dict(sorted(municipality["makerCount"].items()))
 
     final.sort(key=lambda x: x["name"])
 

@@ -54,10 +54,10 @@ const HomePage = () => {
             name: initialMunicipality.name,
           })
           setSelectedMunicipality({
-            drivingForce: initialMunicipality.countByDrivingForce,
-            color: initialMunicipality.countByColor,
-            registrationYear: initialMunicipality.countByRegistrationYear,
-            maker: initialMunicipality.countByMaker,
+            drivingForce: initialMunicipality.drivingForceCount,
+            color: initialMunicipality.colorCount,
+            registrationYear: initialMunicipality.registrationYearCount,
+            maker: initialMunicipality.makerCount,
           })
         }
       })
@@ -86,10 +86,10 @@ const HomePage = () => {
       )
       if (municipality) {
         setSelectedMunicipality({
-          drivingForce: municipality.countByDrivingForce,
-          color: municipality.countByColor,
-          registrationYear: municipality.countByRegistrationYear,
-          maker: municipality.countByMaker,
+          drivingForce: municipality.drivingForceCount,
+          color: municipality.colorCount,
+          registrationYear: municipality.registrationYearCount,
+          maker: municipality.makerCount,
         })
       }
     }
