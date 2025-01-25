@@ -16,6 +16,10 @@ logger = logging.getLogger(__name__)
 logFormat = "%(asctime)s %(levelname)s: %(message)s"
 logging.basicConfig(level=logging.INFO, format=logFormat, force=True)
 
+# Suppress some of boto logging
+logging.getLogger("boto3").setLevel(logging.WARNING)
+logging.getLogger("botocore").setLevel(logging.WARNING)
+
 
 def handler(event: dict, context: dict):
     try:
