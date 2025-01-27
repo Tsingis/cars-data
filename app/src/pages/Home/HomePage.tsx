@@ -28,6 +28,11 @@ const HomePage = () => {
     maker: null,
   })
 
+  const dataUrl =
+    import.meta.env.VITE_DATA_URL && import.meta.env.VITE_DATA_URL.trim()
+      ? import.meta.env.VITE_DATA_URL
+      : "http://localhost:8000/data/data.json"
+
   const navigate = useNavigate()
 
   const [initialValue, setInitialValue] = useState<{
@@ -36,7 +41,7 @@ const HomePage = () => {
   } | null>(null)
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_DATA_URL)
+    fetch(dataUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error("My error")

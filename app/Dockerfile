@@ -6,9 +6,10 @@ COPY package*.json ./
 
 RUN npm ci
 
-ARG ENV_FILE=.env
+ARG DATA_URL
 
-COPY $ENV_FILE ./.env
+ENV VITE_DATA_URL=${DATA_URL}
+
 COPY config/ ./config
 COPY src ./src
 
