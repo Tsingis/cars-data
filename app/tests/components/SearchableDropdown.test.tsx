@@ -25,4 +25,68 @@ describe("SearchableDropdown Component", () => {
     expect(screen.getByText("Option 2")).toBeInTheDocument()
     expect(screen.getByText("Option 3")).toBeInTheDocument()
   })
+
+  test("filters options based on search query", () => {
+    render(
+      <SearchableDropdown
+        options={options}
+        onSelect={() => {}}
+        initialValue={options[0]}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("textbox"))
+    fireEvent.change(screen.getByRole("textbox"), { target: { value: "Opt" } })
+
+    expect(screen.getByText("Option 1")).toBeInTheDocument()
+    expect(screen.getByText("Option 2")).toBeInTheDocument()
+    expect(screen.getByText("Option 3")).toBeInTheDocument()
+  })
+
+  test("filters options based on partial search query", () => {
+    render(
+      <SearchableDropdown
+        options={options}
+        onSelect={() => {}}
+        initialValue={options[0]}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("textbox"))
+    fireEvent.change(screen.getByRole("textbox"), { target: { value: "2" } })
+
+    expect(screen.queryByText("Option 1")).not.toBeInTheDocument()
+    expect(screen.getByText("Option 2")).toBeInTheDocument()
+    expect(screen.queryByText("Option 3")).not.toBeInTheDocument()
+  })
+
+  test("selects an option when clicked", () => {
+    render(
+      <SearchableDropdown
+        options={options}
+        onSelect={() => {}}
+        initialValue={options[0]}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("textbox"))
+    fireEvent.click(screen.getByText("Option 2"))
+
+    expect(screen.queryByRole("list")).not.toBeInTheDocument()
+  })
+
+  test("closes dropdown when clicking outside", () => {
+    render(
+      <SearchableDropdown
+        options={options}
+        onSelect={() => {}}
+        initialValue={options[0]}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("textbox"))
+    fireEvent.mouseDown(document)
+
+    expect(screen.queryByRole("list")).not.toBeInTheDocument()
+  })
 })
