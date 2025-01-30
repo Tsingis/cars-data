@@ -8,7 +8,6 @@ on:
       - "app/tests/**"
       - "app/config/**"
       - "app/package*.json"
-      - "app/.env.*"
       - "util/http_server.py"
       - "data/data.json"
       - ".github/workflows/test.yml"
