@@ -1,6 +1,5 @@
 import js from "@eslint/js"
 import parser from "@typescript-eslint/parser"
-import globals from "globals"
 import react from "eslint-plugin-react"
 import hooks from "eslint-plugin-react-hooks"
 import refresh from "eslint-plugin-react-refresh"
@@ -19,10 +18,18 @@ export default [
         },
         ecmaVersion: "latest",
         sourceType: "module",
-        globals: {
-          ...globals.browser,
-          ...globals.node,
-        },
+      },
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        process: "readonly",
+        HTMLCanvasElement: "readonly",
+        HTMLDivElement: "readonly",
+        HTMLInputElement: "readonly",
+        MouseEvent: "readonly",
+        Node: "readonly",
+        fetch: "readonly",
+        console: "readonly",
       },
     },
     plugins: {

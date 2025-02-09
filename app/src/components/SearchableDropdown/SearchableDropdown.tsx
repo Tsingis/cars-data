@@ -18,7 +18,7 @@ type Option = {
 
 type SearchableDropdownProps = {
   options: Option[]
-  onSelect: (selectedOption: Option | null) => void
+  onSelect: (option: Option | null) => void // eslint-disable-line no-unused-vars
   initialValue?: Option | null
 }
 
@@ -88,8 +88,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
     } else if (event.key === "Enter") {
       event.preventDefault()
       if (highlightedIndex !== null) {
-        const selectedOption = filteredOptions[highlightedIndex]
-        handleOptionClick(selectedOption)
+        handleOptionClick(filteredOptions[highlightedIndex])
       }
     }
   }
