@@ -74,9 +74,13 @@ const HomePage = () => {
       })
       .then((content) => {
         setData(content)
-        const initialMunicipality = content.municipalities.find(
-          (m: { name: string }) => m.name === "Finland"
+        const municipalities = content.municipalities
+        municipalities.sort((a: Municipality, b: Municipality) =>
+          a.code.localeCompare(b.code)
         )
+
+        const initialMunicipality = municipalities[0]
+
         if (initialMunicipality) {
           setInitialOption({
             code: initialMunicipality.code,
@@ -91,24 +95,14 @@ const HomePage = () => {
         }
 
         const options = [
-          content.municipalities.find(
-            (m: { name: string }) => m.name === "Finland"
-          ),
-          ...content.municipalities.filter(
-            (x: { name: string }) =>
-              x !==
-                content.municipalities.find(
-                  (m: { name: string }) => m.name === "Finland"
-                ) &&
-              x !==
-                content.municipalities.find(
-                  (m: { name: string }) => m.name === "Unknown"
-                )
-          ),
-          content.municipalities.find(
-            (m: { name: string }) => m.name === "Unknown"
-          ),
-        ].filter((x) => x !== undefined)
+          initialMunicipality,
+          ...municipalities
+            .slice(1, -1)
+            .sort((a: Municipality, b: Municipality) =>
+              a.name.localeCompare(b.name, "fi")
+            ),
+          municipalities[municipalities.length - 1],
+        ]
 
         setSearchOptions(options)
       })
