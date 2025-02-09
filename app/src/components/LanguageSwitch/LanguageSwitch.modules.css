@@ -1,13 +1,31 @@
-.language-switch {
-  padding: 10px 20px;
-  width: 60px;
-  border: none;
+.language-switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: inherit;
   border-radius: 4px;
+  border: 1px solid #ccc;
   background-color: rgb(216, 213, 213);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.language-switch:hover {
-  background-color: #e0e0e0;
+.language-switch-button {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.language-switch-button.active {
+  background-color: #0e0e0e7c;
+  font-weight: bold;
+}
+
+.language-switch-button:not(.active):hover {
+  background-color: #0e0e0e7c;
 }

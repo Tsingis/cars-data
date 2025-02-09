@@ -193,10 +193,7 @@ const HomePage = () => {
         })}
       </div>
       <div className="controls-container">
-        <div className="language-container">
-          <div>{t("Labels.Language")}:</div>
-          <LanguageSwitch />
-        </div>
+        <LanguageSwitch />
         <div className="search-container">
           <div>{t("Labels.Area")}:</div>
           <SearchableDropdown
@@ -205,13 +202,11 @@ const HomePage = () => {
             initialValue={translatedInitialOption}
           />
         </div>
-      </div>
-      {totalCount && (
         <div>
-          {t("Common.TotalCount")}:{" "}
-          <span className="total-count">{totalCount}</span>
+          <span className="total-count">{t("Common.TotalCount")}: </span>
+          {totalCount}
         </div>
-      )}
+      </div>
       {selectedMunicipality.drivingForce &&
         selectedMunicipality.color &&
         selectedMunicipality.registrationYear &&

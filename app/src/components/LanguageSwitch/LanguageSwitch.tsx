@@ -2,18 +2,28 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import "./LanguageSwitch.modules.css"
 
-const LanguageSwitch = () => {
+const LanguageSwitch: React.FC = () => {
   const { i18n } = useTranslation()
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "fi" : "en"
-    i18n.changeLanguage(newLang)
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng)
   }
 
   return (
-    <button onClick={toggleLanguage} className="language-switch">
-      {i18n.language === "en" ? "FI" : "EN"}
-    </button>
+    <div className="language-switch-container">
+      <button
+        className={`language-switch-button ${i18n.language === "en" ? "active" : ""}`}
+        onClick={() => changeLanguage("en")}
+      >
+        EN
+      </button>
+      <button
+        className={`language-switch-button ${i18n.language === "fi" ? "active" : ""}`}
+        onClick={() => changeLanguage("fi")}
+      >
+        FI
+      </button>
+    </div>
   )
 }
 

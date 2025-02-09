@@ -17,16 +17,6 @@
   margin-bottom: 20px;
 }
 
-.language-container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.language-container > div:first-child {
-  width: 80px;
-}
-
 .search-container {
   display: flex;
   align-items: center;
