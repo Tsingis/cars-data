@@ -40,7 +40,6 @@
     "Count": "Määrä",
     "DrivingForce": "Käyttövoima",
     "RegistrationYear": "Rekisteröintivuosi",
-    "TopNMakers": "Top {{count}} valmistajat",
-    "TotalCount": "Kokonaismäärä"
+    "TopNMakers": "Top {{count}} valmistajat"
   }
 }

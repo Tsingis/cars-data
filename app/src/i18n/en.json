@@ -40,7 +40,6 @@
     "Count": "Count",
     "DrivingForce": "Driving force",
     "RegistrationYear": "Registration year",
-    "TopNMakers": "Top {{count}} makers",
-    "TotalCount": "Total count"
+    "TopNMakers": "Top {{count}} makers"
   }
 }

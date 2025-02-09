@@ -203,7 +203,7 @@ const HomePage = () => {
           />
         </div>
         <div>
-          <span className="total-count">{t("Labels.TotalCount")}: </span>
+          <span className="total-count">{t("Labels.Count")}: </span>
           {totalCount}
         </div>
       </div>
