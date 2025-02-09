@@ -1,0 +1,13 @@
+.language-switch {
+  padding: 10px 20px;
+  width: 60px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(216, 213, 213);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-switch:hover {
+  background-color: #e0e0e0;
+}

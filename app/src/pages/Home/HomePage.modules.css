@@ -10,14 +10,31 @@
   margin-bottom: 10px;
 }
 
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.language-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.language-container > div:first-child {
+  width: 80px;
+}
+
 .search-container {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.total-count-label {
-  margin-top: 15px;
+.search-container > div:first-child {
+  width: 50px;
 }
 
 .total-count {

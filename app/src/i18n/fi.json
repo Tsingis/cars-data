@@ -1,0 +1,39 @@
+{
+  "Common": {
+    "DataUpdatedOn": "Data päivitetty",
+    "Title": "Rekisteröidyt henkilöautot Suomessa",
+    "TotalCount": "Kokonaismäärä",
+    "Search": "Hae"
+  },
+  "Labels": {
+    "Amount": "Määrä",
+    "Area": "Alue",
+    "Color": "Väri",
+    "DrivingForce": "Käyttövoima",
+    "Language": "Kieli",
+    "RegistrationYear": "Rekisteröintivuosi",
+    "TopNMakers": "Top {{amount}} valmistajat"
+  },
+  "Areas": {
+    "Finland": "Suomi",
+    "Unknown": "Tuntematon"
+  },
+  "DrivingForces": {
+    "Electricity": "Sähkö",
+    "Diesel": "Diesel",
+    "Hybrid": "Hybridi",
+    "Other": "Muu",
+    "Petrol": "Bensiini"
+  },
+  "Colors": {
+    "Black": "Musta",
+    "Blue": "Sininen",
+    "Brown": "Ruskea",
+    "Green": "Vihreä",
+    "Grey": "Harmaa",
+    "Other": "Muu",
+    "Red": "Punainen",
+    "Silver": "Hopea",
+    "White": "Valkoinen"
+  }
+}

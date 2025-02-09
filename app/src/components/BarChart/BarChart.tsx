@@ -27,7 +27,7 @@ ChartJS.register(
 
 type BarChartProps = {
   data: Count
-  xAxisTextMap?: { [key: string]: string }
+  xAxisLabelMap?: { [key: string]: string }
   colorMap?: { [key: string]: string }
   xAxisText?: string
   yAxisText?: string
@@ -38,7 +38,7 @@ type BarChartProps = {
 
 const BarChart: React.FC<BarChartProps> = ({
   data,
-  xAxisTextMap = {},
+  xAxisLabelMap = {},
   colorMap = {},
   xAxisText = "",
   yAxisText = "Amount",
@@ -57,7 +57,7 @@ const BarChart: React.FC<BarChartProps> = ({
           chartInstanceRef.current.destroy()
         }
 
-        const labels = Object.keys(data).map((key) => xAxisTextMap[key] || key)
+        const labels = Object.keys(data).map((key) => xAxisLabelMap[key] || key)
         const values = Object.values(data)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
@@ -148,7 +148,7 @@ const BarChart: React.FC<BarChartProps> = ({
     return () => {
       chartInstanceRef.current?.destroy()
     }
-  }, [data, xAxisTextMap, xAxisText, yAxisText, title, colorMap])
+  }, [data, xAxisLabelMap, xAxisText, yAxisText, title, colorMap])
 
   return (
     <div className={`barchart-container ${className}`} style={style}>

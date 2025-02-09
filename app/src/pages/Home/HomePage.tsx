@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 import Loading from "../../components/Loading/Loading"
 import PieChart from "../../components/PieChart/PieChart"
@@ -6,11 +7,19 @@ import BarChart from "../../components/BarChart/BarChart"
 import LineChart from "../../components/LineChart/LineChart"
 import TopList from "../../components/TopList/TopList"
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown"
+import LanguageSwitch from "../../components/LanguageSwitch/LanguageSwitch"
 import { Count, Municipality } from "../../types"
-import { colors, drivingForcesColors } from "../../constants"
+import {
+  colors,
+  drivingForceColors,
+  drivingForceLabels,
+  colorLabels,
+} from "../../constants"
+import { getLocale } from "../../i18n"
 import "./HomePage.modules.css"
 
 const HomePage = () => {
+  const { t, i18n } = useTranslation()
   const [data, setData] = useState<{
     date: string
     municipalities: Municipality[]
@@ -28,17 +37,32 @@ const HomePage = () => {
     maker: null,
   })
 
+  const [initialOption, setInitialOption] = useState<{
+    code: string
+    name: string
+  } | null>(null)
+
+  const [translatedInitialOption, setTranslatedInitialOption] = useState<{
+    code: string
+    name: string
+  } | null>(null)
+
+  const [searchOptions, setSearchOptions] = useState<
+    { code: string; name: string }[]
+  >([])
+
+  const [translatedSearchOptions, setTranslatedSearchOptions] = useState<
+    { code: string; name: string }[]
+  >([])
+
+  const navigate = useNavigate()
+
+  const locale = getLocale(i18n.language)
+
   const dataUrl =
     import.meta.env.VITE_DATA_URL && import.meta.env.VITE_DATA_URL.trim()
       ? import.meta.env.VITE_DATA_URL
       : "http://localhost:8000/data/data.json"
-
-  const navigate = useNavigate()
-
-  const [initialValue, setInitialValue] = useState<{
-    code: string
-    name: string
-  } | null>(null)
 
   useEffect(() => {
     fetch(dataUrl)
@@ -54,7 +78,7 @@ const HomePage = () => {
           (m: { name: string }) => m.name === "Finland"
         )
         if (initialMunicipality) {
-          setInitialValue({
+          setInitialOption({
             code: initialMunicipality.code,
             name: initialMunicipality.name,
           })
@@ -65,6 +89,28 @@ const HomePage = () => {
             maker: initialMunicipality.makerCount,
           })
         }
+
+        const options = [
+          content.municipalities.find(
+            (m: { name: string }) => m.name === "Finland"
+          ),
+          ...content.municipalities.filter(
+            (x: { name: string }) =>
+              x !==
+                content.municipalities.find(
+                  (m: { name: string }) => m.name === "Finland"
+                ) &&
+              x !==
+                content.municipalities.find(
+                  (m: { name: string }) => m.name === "Unknown"
+                )
+          ),
+          content.municipalities.find(
+            (m: { name: string }) => m.name === "Unknown"
+          ),
+        ].filter((x) => x !== undefined)
+
+        setSearchOptions(options)
       })
       .catch((error) => {
         console.error(error)
@@ -72,7 +118,28 @@ const HomePage = () => {
           state: { message: "Failed to fetch data" },
         })
       })
-  }, [navigate])
+  }, [navigate, dataUrl])
+
+  useEffect(() => {
+    if (initialOption) {
+      setTranslatedInitialOption({
+        code: initialOption.code,
+        name: t(`Areas.${initialOption.name}`),
+      })
+    }
+  }, [i18n.language, t, initialOption])
+
+  useEffect(() => {
+    setTranslatedSearchOptions(
+      searchOptions.map((option) => ({
+        code: option.code,
+        name:
+          option.name === "Finland" || option.name === "Unknown"
+            ? t(`Areas.${option.name}`)
+            : option.name,
+      }))
+    )
+  }, [i18n.language, t, searchOptions])
 
   if (!data) {
     return <Loading size="4x" />
@@ -80,7 +147,6 @@ const HomePage = () => {
 
   const date: Date = new Date(data.date)
   const municipalities: Municipality[] = data.municipalities
-  const unknownMunicipality = municipalities.find((m) => m.name === "Unknown")
 
   const handleSelect = (
     selectedOption: { code: string; name: string } | null
@@ -107,43 +173,51 @@ const HomePage = () => {
       )
     : 0
 
-  const searchOptions = [
-    municipalities.find((m) => m.name === "Finland"),
-    ...municipalities
-      .filter(
-        (x) =>
-          x !== municipalities.find((m) => m.name === "Finland") &&
-          x !== unknownMunicipality
-      )
-      .map((m) => ({
-        code: m.code,
-        name: m.name,
-      })),
-    unknownMunicipality,
-  ].filter((x) => x !== undefined)
+  const dfLabels = Object.keys(drivingForceLabels).reduce(
+    (acc, key) => {
+      acc[key] = t(drivingForceLabels[key])
+      return acc
+    },
+    {} as { [key: string]: string }
+  )
+
+  const colLabels = Object.keys(colorLabels).reduce(
+    (acc, key) => {
+      acc[key] = t(colorLabels[key])
+      return acc
+    },
+    {} as { [key: string]: string }
+  )
 
   return (
     <div>
-      <h1 className="title">Registered passenger cars in Finland</h1>
+      <h1 className="title">{t("Common.Title")}</h1>
       <div className="data-date">
-        Data updated on{" "}
-        {date.toLocaleDateString("en-FI", {
+        {t("Common.DataUpdatedOn")}{" "}
+        {date.toLocaleDateString(locale, {
           year: "numeric",
           month: "long",
           day: "numeric",
         })}
       </div>
-      <div className="search-container">
-        <div>Choose municipality:</div>
-        <SearchableDropdown
-          options={searchOptions}
-          onSelect={handleSelect}
-          initialValue={initialValue}
-        />
+      <div className="controls-container">
+        <div className="language-container">
+          <div>{t("Labels.Language")}:</div>
+          <LanguageSwitch />
+        </div>
+        <div className="search-container">
+          <div>{t("Labels.Area")}:</div>
+          <SearchableDropdown
+            options={translatedSearchOptions}
+            onSelect={handleSelect}
+            initialValue={translatedInitialOption}
+          />
+        </div>
       </div>
       {totalCount && (
-        <div className="total-count-label">
-          Total car count: <span className="total-count">{totalCount}</span>
+        <div>
+          {t("Common.TotalCount")}:{" "}
+          <span className="total-count">{totalCount}</span>
         </div>
       )}
       {selectedMunicipality.drivingForce &&
@@ -153,26 +227,30 @@ const HomePage = () => {
           <div className="chart-grid">
             <PieChart
               data={selectedMunicipality.drivingForce}
-              colorMap={drivingForcesColors}
-              title={"Driving forces"}
+              colorMap={drivingForceColors}
+              labelMap={dfLabels}
+              title={t("Labels.DrivingForce")}
               style={{ gridArea: "a" }}
             />
             <BarChart
               data={selectedMunicipality.color}
               colorMap={colors}
-              title={"Colors"}
+              xAxisLabelMap={colLabels}
+              title={t("Labels.Color")}
+              yAxisText={t("Labels.Amount")}
               style={{ gridArea: "b" }}
             />
             <LineChart
               data={selectedMunicipality.registrationYear}
-              title={"Registration years"}
+              title={t("Labels.RegistrationYear")}
+              yAxisText={t("Labels.Amount")}
               firstXAxisLabelText="<1980"
               style={{ gridArea: "c" }}
             />
             <TopList
               data={selectedMunicipality.maker}
               topX={15}
-              title="Top 15 makers"
+              title={t("Labels.TopNMakers", { amount: 15 })}
               style={{ gridArea: "d" }}
             />
           </div>

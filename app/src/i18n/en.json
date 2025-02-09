@@ -1,0 +1,39 @@
+{
+  "Common": {
+    "DataUpdatedOn": "Data updated on",
+    "Title": "Registered passenger cars in Finland",
+    "TotalCount": "Total count",
+    "Search": "Search"
+  },
+  "Labels": {
+    "Amount": "Amount",
+    "Area": "Area",
+    "Color": "Color",
+    "DrivingForce": "Driving force",
+    "Language": "Language",
+    "RegistrationYear": "Registration year",
+    "TopNMakers": "Top {{amount}} makers"
+  },
+  "Areas": {
+    "Finland": "Finland",
+    "Unknown": "Unknown"
+  },
+  "DrivingForces": {
+    "Electricity": "Electricity",
+    "Diesel": "Diesel",
+    "Hybrid": "Hybrid",
+    "Other": "Other",
+    "Petrol": "Petrol"
+  },
+  "Colors": {
+    "Black": "Black",
+    "Blue": "Blue",
+    "Brown": "Brown",
+    "Green": "Green",
+    "Grey": "Grey",
+    "Other": "Other",
+    "Red": "Red",
+    "Silver": "Silver",
+    "White": "White"
+  }
+}

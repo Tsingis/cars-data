@@ -6,6 +6,7 @@ import React, {
   useRef,
   useCallback,
 } from "react"
+import { useTranslation } from "react-i18next"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import "./SearchableDropdown.modules.css"
@@ -26,6 +27,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   onSelect,
   initialValue,
 }) => {
+  const { t } = useTranslation()
   const [searchQuery, setSearchQuery] = useState<string>(
     initialValue?.name || ""
   )
@@ -113,7 +115,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
       <div className="dropdown-input">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder={`${t("Common.Search")}...`}
           value={searchQuery}
           onChange={handleSearchChange}
           onKeyDown={handleKeyDown}
