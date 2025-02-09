@@ -30,6 +30,7 @@ export default [
         Node: "readonly",
         fetch: "readonly",
         console: "readonly",
+        localStorage: "readonly",
       },
     },
     plugins: {
