@@ -1,9 +1,11 @@
 {
   "Common": {
     "DataUpdatedOn": "Data päivitetty",
+    "Error": "Virhe",
     "Title": "Rekisteröidyt henkilöautot Suomessa",
     "TotalCount": "Kokonaismäärä",
-    "Search": "Hae"
+    "Search": "Hae",
+    "NoOptions": "Ei vaihtoehtoja"
   },
   "Labels": {
     "Amount": "Määrä",

@@ -1,9 +1,11 @@
 {
   "Common": {
     "DataUpdatedOn": "Data updated on",
+    "Error": "Error",
     "Title": "Registered passenger cars in Finland",
     "TotalCount": "Total count",
-    "Search": "Search"
+    "Search": "Search",
+    "NoOptions": "No options"
   },
   "Labels": {
     "Amount": "Amount",

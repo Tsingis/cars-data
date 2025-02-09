@@ -147,7 +147,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
               </li>
             ))
           ) : (
-            <li>No options found</li>
+            <li>{t("NoOptions")}</li>
           )}
         </ul>
       )}
