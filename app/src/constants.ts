@@ -1,5 +1,10 @@
 import { Mapping } from "./types"
 
+export const locales: Mapping = {
+  en: "en-FI",
+  fi: "fi-FI",
+}
+
 export const drivingForceColors: Mapping = {
   petrol: "rgba(0, 123, 255, 0.6)",
   diesel: "rgba(220, 53, 69, 0.6)",

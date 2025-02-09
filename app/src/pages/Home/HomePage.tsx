@@ -14,8 +14,8 @@ import {
   drivingForceColors,
   drivingForceLabels,
   colorLabels,
+  locales,
 } from "../../constants"
-import { getLocale } from "../../i18n"
 import "./HomePage.modules.css"
 
 const HomePage = () => {
@@ -57,8 +57,6 @@ const HomePage = () => {
 
   const navigate = useNavigate()
 
-  const locale = getLocale(i18n.language)
-
   const dataUrl =
     import.meta.env.VITE_DATA_URL && import.meta.env.VITE_DATA_URL.trim()
       ? import.meta.env.VITE_DATA_URL
@@ -99,7 +97,7 @@ const HomePage = () => {
           ...municipalities
             .slice(1, -1)
             .sort((a: Municipality, b: Municipality) =>
-              a.name.localeCompare(b.name, "fi")
+              a.name.localeCompare(b.name, locales.fi)
             ),
           municipalities[municipalities.length - 1],
         ]
@@ -188,7 +186,7 @@ const HomePage = () => {
       <h1 className="title">{t("Common.Title")}</h1>
       <div className="data-date">
         {t("Common.DataUpdatedOn")}{" "}
-        {date.toLocaleDateString(locale, {
+        {date.toLocaleDateString(locales[i18n.language], {
           year: "numeric",
           month: "long",
           day: "numeric",
