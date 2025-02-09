@@ -107,10 +107,10 @@ const HomePage = () => {
       .catch((error) => {
         console.error(error)
         navigate("/error", {
-          state: { message: "Failed to fetch data" },
+          state: { message: t("Error.Fetch") },
         })
       })
-  }, [navigate, dataUrl])
+  }, [navigate, t, dataUrl])
 
   useEffect(() => {
     if (initialOption) {

@@ -8,17 +8,15 @@ type LocationState = {
 }
 
 const ErrorPage: React.FC = () => {
-  const location = useLocation()
   const { t } = useTranslation()
-  const { state } = location
-  const message =
-    (state as LocationState)?.message ?? "An unexpected error occurred"
+  const { state } = useLocation()
+  const message = (state as LocationState)?.message
 
   return (
     <div className="error-container">
       <div className="error-text">
-        <h1>{t("Common.Error")}</h1>
-        <p>{message}</p>
+        <h1>{t("Error.Title")}</h1>
+        <p>{message ?? t("Error.General")}</p>
       </div>
     </div>
   )
