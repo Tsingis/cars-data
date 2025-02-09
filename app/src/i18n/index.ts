@@ -1,9 +1,10 @@
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
+import { Mapping } from "../types"
 import en from "./en.json"
 import fi from "./fi.json"
 
-const locales = {
+const locales: Mapping = {
   en: "en-FI",
   fi: "fi-FI",
 }
