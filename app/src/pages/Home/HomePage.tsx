@@ -203,7 +203,7 @@ const HomePage = () => {
           />
         </div>
         <div>
-          <span className="total-count">{t("Common.TotalCount")}: </span>
+          <span className="total-count">{t("Labels.TotalCount")}: </span>
           {totalCount}
         </div>
       </div>
@@ -224,20 +224,20 @@ const HomePage = () => {
               colorMap={colors}
               xAxisLabelMap={colLabels}
               title={t("Labels.Color")}
-              yAxisText={t("Labels.Amount")}
+              yAxisText={t("Labels.Count")}
               style={{ gridArea: "b" }}
             />
             <LineChart
               data={selectedMunicipality.registrationYear}
               title={t("Labels.RegistrationYear")}
-              yAxisText={t("Labels.Amount")}
+              yAxisText={t("Labels.Count")}
               firstXAxisLabelText="<1980"
               style={{ gridArea: "c" }}
             />
             <TopList
               data={selectedMunicipality.maker}
               topX={15}
-              title={t("Labels.TopNMakers", { amount: 15 })}
+              title={t("Labels.TopNMakers", { count: 15 })}
               style={{ gridArea: "d" }}
             />
           </div>

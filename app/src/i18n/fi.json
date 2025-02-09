@@ -1,31 +1,7 @@
 {
-  "Common": {
-    "DataUpdatedOn": "Data päivitetty",
-    "Error": "Virhe",
-    "Title": "Rekisteröidyt henkilöautot Suomessa",
-    "TotalCount": "Kokonaismäärä",
-    "Search": "Hae",
-    "NoOptions": "Ei vaihtoehtoja"
-  },
-  "Labels": {
-    "Amount": "Määrä",
-    "Area": "Alue",
-    "Color": "Väri",
-    "DrivingForce": "Käyttövoima",
-    "Language": "Kieli",
-    "RegistrationYear": "Rekisteröintivuosi",
-    "TopNMakers": "Top {{amount}} valmistajat"
-  },
   "Areas": {
     "Finland": "Suomi",
     "Unknown": "Tuntematon"
-  },
-  "DrivingForces": {
-    "Electricity": "Sähkö",
-    "Diesel": "Diesel",
-    "Hybrid": "Hybridi",
-    "Other": "Muu",
-    "Petrol": "Bensiini"
   },
   "Colors": {
     "Black": "Musta",
@@ -37,5 +13,30 @@
     "Red": "Punainen",
     "Silver": "Hopea",
     "White": "Valkoinen"
+  },
+  "Common": {
+    "DataUpdatedOn": "Data päivitetty",
+    "Error": "Virhe",
+    "Title": "Rekisteröidyt henkilöautot Suomessa"
+  },
+  "DrivingForces": {
+    "Electricity": "Sähkö",
+    "Diesel": "Diesel",
+    "Hybrid": "Hybridi",
+    "Other": "Muu",
+    "Petrol": "Bensiini"
+  },
+  "Dropdown": {
+    "NoOptions": "Ei vaihtoehtoja",
+    "Search": "Hae"
+  },
+  "Labels": {
+    "Area": "Alue",
+    "Color": "Väri",
+    "Count": "Määrä",
+    "DrivingForce": "Käyttövoima",
+    "RegistrationYear": "Rekisteröintivuosi",
+    "TopNMakers": "Top {{count}} valmistajat",
+    "TotalCount": "Kokonaismäärä"
   }
 }

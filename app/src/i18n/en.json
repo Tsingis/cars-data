@@ -1,31 +1,7 @@
 {
-  "Common": {
-    "DataUpdatedOn": "Data updated on",
-    "Error": "Error",
-    "Title": "Registered passenger cars in Finland",
-    "TotalCount": "Total count",
-    "Search": "Search",
-    "NoOptions": "No options"
-  },
-  "Labels": {
-    "Amount": "Amount",
-    "Area": "Area",
-    "Color": "Color",
-    "DrivingForce": "Driving force",
-    "Language": "Language",
-    "RegistrationYear": "Registration year",
-    "TopNMakers": "Top {{amount}} makers"
-  },
   "Areas": {
     "Finland": "Finland",
     "Unknown": "Unknown"
-  },
-  "DrivingForces": {
-    "Electricity": "Electricity",
-    "Diesel": "Diesel",
-    "Hybrid": "Hybrid",
-    "Other": "Other",
-    "Petrol": "Petrol"
   },
   "Colors": {
     "Black": "Black",
@@ -37,5 +13,30 @@
     "Red": "Red",
     "Silver": "Silver",
     "White": "White"
+  },
+  "Common": {
+    "DataUpdatedOn": "Data updated on",
+    "Error": "Error",
+    "Title": "Registered passenger cars in Finland"
+  },
+  "DrivingForces": {
+    "Electricity": "Electricity",
+    "Diesel": "Diesel",
+    "Hybrid": "Hybrid",
+    "Other": "Other",
+    "Petrol": "Petrol"
+  },
+  "Dropdown": {
+    "NoOptions": "No options",
+    "Search": "Search"
+  },
+  "Labels": {
+    "Area": "Area",
+    "Color": "Color",
+    "Count": "Count",
+    "DrivingForce": "Driving force",
+    "RegistrationYear": "Registration year",
+    "TopNMakers": "Top {{count}} makers",
+    "TotalCount": "Total count"
   }
 }
