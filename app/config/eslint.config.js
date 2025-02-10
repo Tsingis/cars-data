@@ -31,6 +31,7 @@ export default [
         fetch: "readonly",
         console: "readonly",
         localStorage: "readonly",
+        URL: "readonly",
       },
     },
     plugins: {

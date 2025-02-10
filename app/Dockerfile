@@ -13,6 +13,8 @@ ENV VITE_DATA_URL=${DATA_URL}
 COPY config/ ./config
 COPY src ./src
 
+RUN sed -i "s|__DATA_URL__|${DATA_URL}|g" src/public/insert-links.js
+
 RUN npm run build
 
 FROM nginxinc/nginx-unprivileged:1.27-alpine-slim
