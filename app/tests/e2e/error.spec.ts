@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test"
 
-test("Error", async ({ page }) => {
+test("Error page loads correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/error")
   await expect(page).toHaveTitle("Passenger cars in Finland")
 
