@@ -55,6 +55,8 @@ const HomePage = () => {
     { code: string; name: string }[]
   >([])
 
+  const [errorMessage, setErrorMessage] = useState<string>("")
+
   const navigate = useNavigate()
 
   const dataUrl =
@@ -106,11 +108,17 @@ const HomePage = () => {
       })
       .catch((error) => {
         console.error(error)
-        navigate("/error", {
-          state: { message: t("Error.Fetch") },
-        })
+        setErrorMessage("Error.Fetch")
       })
-  }, [navigate, t, dataUrl])
+  }, [navigate, dataUrl])
+
+  useEffect(() => {
+    if (errorMessage) {
+      navigate("/error", {
+        state: { message: t(errorMessage) },
+      })
+    }
+  }, [errorMessage, navigate, t])
 
   useEffect(() => {
     if (initialOption) {
@@ -121,6 +129,7 @@ const HomePage = () => {
     }
   }, [i18n.language, t, initialOption])
 
+  // Translate search options when language changes
   useEffect(() => {
     setTranslatedSearchOptions(
       searchOptions.map((option) => ({
