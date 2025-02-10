@@ -1,9 +1,9 @@
 ;(function () {
-  const isLocalhost = window.location.hostname === "localhost"
+  const dataUrlString = "__DATA_URL__"
 
-  if (!isLocalhost) {
+  if (dataUrlString.trim()) {
+    const dataUrl = new URL(dataUrlString)
     const head = document.head
-    const dataUrl = new URL("__DATA_URL__")
 
     const preconnectLink = document.createElement("link")
     preconnectLink.rel = "preconnect"
