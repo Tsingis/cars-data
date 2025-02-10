@@ -5,10 +5,10 @@
     const dataUrl = new URL(dataUrlString)
     const head = document.head
 
-    const preconnectLink = document.createElement("link")
-    preconnectLink.rel = "preconnect"
-    preconnectLink.href = dataUrl.origin
-    head.appendChild(preconnectLink)
+    const dnsPrefectLink = document.createElement("link")
+    dnsPrefectLink.rel = "dns-prefetch"
+    dnsPrefectLink.href = dataUrl.origin
+    head.appendChild(dnsPrefectLink)
 
     const preloadLink = document.createElement("link")
     preloadLink.rel = "preload"
