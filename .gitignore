@@ -1,6 +1,7 @@
 __pycache__
 .serverless
 node_modules
+dist
 test-results
 vite.config.*.timestamp-*
 vitest.config.*.timestamp-*
