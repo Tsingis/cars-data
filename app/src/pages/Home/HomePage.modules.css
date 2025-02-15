@@ -17,20 +17,6 @@
   margin-bottom: 20px;
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.search-container > div:first-child {
-  width: 40px;
-}
-
-.total-count {
-  font-weight: bold;
-}
-
 .chart-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

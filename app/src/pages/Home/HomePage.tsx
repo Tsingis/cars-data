@@ -126,9 +126,8 @@ const HomePage = () => {
         name: t(`Areas.${initialOption.name}`),
       })
     }
-  }, [i18n.language, t, initialOption])
+  }, [t, initialOption])
 
-  // Translate search options when language changes
   useEffect(() => {
     setTranslatedSearchOptions(
       searchOptions.map((option) => ({
@@ -139,7 +138,7 @@ const HomePage = () => {
             : option.name,
       }))
     )
-  }, [i18n.language, t, searchOptions])
+  }, [t, searchOptions])
 
   if (!data) {
     return <Loading size="4x" />
@@ -202,17 +201,13 @@ const HomePage = () => {
       </div>
       <div className="controls-container">
         <LanguageSwitch />
-        <div className="search-container">
-          <div>{t("Labels.Area")}:</div>
-          <SearchableDropdown
-            options={translatedSearchOptions}
-            onSelect={handleSelect}
-            initialValue={translatedInitialOption}
-          />
-        </div>
+        <SearchableDropdown
+          options={translatedSearchOptions}
+          onSelect={handleSelect}
+          initialValue={translatedInitialOption}
+        />
         <div>
-          <span className="total-count">{t("Labels.Count")}: </span>
-          {totalCount}
+          {t("Labels.Count")}: {totalCount}
         </div>
       </div>
       {selectedMunicipality.drivingForce &&
