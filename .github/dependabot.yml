@@ -14,7 +14,8 @@ updates:
       - "/data"
     versioning-strategy: "increase"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
     target-branch: "main"
@@ -43,6 +44,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/data"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
