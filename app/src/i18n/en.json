@@ -38,6 +38,7 @@
     "Color": "Color",
     "Count": "Count",
     "DrivingForce": "Driving force",
+    "Mileage": "Mileage",
     "RegistrationYear": "Registration year",
     "TopNMakers": "Top {{count}} makers"
   }

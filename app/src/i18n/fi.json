@@ -38,6 +38,7 @@
     "Color": "Väri",
     "Count": "Määrä",
     "DrivingForce": "Käyttövoima",
+    "Mileage": "Mittarilukema",
     "RegistrationYear": "Rekisteröintivuosi",
     "TopNMakers": "Top {{count}} valmistajat"
   }

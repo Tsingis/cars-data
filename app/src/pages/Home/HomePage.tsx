@@ -5,6 +5,7 @@ import Loading from "../../components/Loading/Loading"
 import PieChart from "../../components/PieChart/PieChart"
 import BarChart from "../../components/BarChart/BarChart"
 import LineChart from "../../components/LineChart/LineChart"
+import TreeMapChart from "../../components/TreeMapChart/TreeMapChart"
 import TopList from "../../components/TopList/TopList"
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown"
 import LanguageSwitch from "../../components/LanguageSwitch/LanguageSwitch"
@@ -26,11 +27,13 @@ const HomePage = () => {
   } | null>(null)
 
   const [selectedMunicipality, setSelectedMunicipality] = useState<{
+    mileageCount: Count | null
     drivingForce: Count | null
     color: Count | null
     registrationYear: Count | null
     maker: Count | null
   }>({
+    mileageCount: null,
     drivingForce: null,
     color: null,
     registrationYear: null,
@@ -86,6 +89,7 @@ const HomePage = () => {
             name: initialMunicipality.name,
           })
           setSelectedMunicipality({
+            mileageCount: initialMunicipality.mileageCount,
             drivingForce: initialMunicipality.drivingForceCount,
             color: initialMunicipality.colorCount,
             registrationYear: initialMunicipality.registrationYearCount,
@@ -156,6 +160,7 @@ const HomePage = () => {
       )
       if (municipality) {
         setSelectedMunicipality({
+          mileageCount: municipality.mileageCount,
           drivingForce: municipality.drivingForceCount,
           color: municipality.colorCount,
           registrationYear: municipality.registrationYearCount,
@@ -210,7 +215,8 @@ const HomePage = () => {
           {t("Labels.Count")}: {totalCount}
         </div>
       </div>
-      {selectedMunicipality.drivingForce &&
+      {selectedMunicipality.mileageCount &&
+        selectedMunicipality.drivingForce &&
         selectedMunicipality.color &&
         selectedMunicipality.registrationYear &&
         selectedMunicipality.maker && (
@@ -237,11 +243,16 @@ const HomePage = () => {
               firstXAxisLabelText="<1980"
               style={{ gridArea: "c" }}
             />
+            <TreeMapChart
+              data={selectedMunicipality.mileageCount}
+              title={t("Labels.Mileage")}
+              style={{ gridArea: "d" }}
+            />
             <TopList
               data={selectedMunicipality.maker}
               topX={15}
               title={t("Labels.TopNMakers", { count: 15 })}
-              style={{ gridArea: "d" }}
+              style={{ gridArea: "e" }}
             />
           </div>
         )}

@@ -1,0 +1,14 @@
+.treemapchart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 300px;
+  padding: 5px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

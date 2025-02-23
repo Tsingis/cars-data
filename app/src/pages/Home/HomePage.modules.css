@@ -23,7 +23,8 @@
   max-width: 850px;
   grid-template-areas:
     "a b"
-    "c d";
+    "c d"
+    "e f";
 }
 
 @media (max-width: 800px) {
@@ -33,6 +34,8 @@
       "a"
       "b"
       "c"
-      "d";
+      "d"
+      "e"
+      "f";
   }
 }
