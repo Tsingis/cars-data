@@ -11,7 +11,7 @@ describe("LanguageSwitch component", () => {
     localStorage.setItem("language", "en")
   })
 
-  it("renders the language switch buttons", () => {
+  test("renders the language switch buttons", () => {
     render(
       <I18nextProvider i18n={i18n}>
         <LanguageSwitch />
@@ -22,7 +22,7 @@ describe("LanguageSwitch component", () => {
     expect(screen.getByText("FI")).toBeInTheDocument()
   })
 
-  it("changes the language to 'fi' when the FI button is clicked", () => {
+  test("changes the language to 'fi' when the FI button is clicked", () => {
     render(
       <I18nextProvider i18n={i18n}>
         <LanguageSwitch />
@@ -35,7 +35,7 @@ describe("LanguageSwitch component", () => {
     expect(localStorage.getItem("language")).toBe("fi")
   })
 
-  it("changes the language to 'en' when the EN button is clicked", () => {
+  test("changes the language to 'en' when the EN button is clicked", () => {
     // Set initial language to 'fi'
     i18n.changeLanguage("fi")
     localStorage.setItem("language", "fi")
