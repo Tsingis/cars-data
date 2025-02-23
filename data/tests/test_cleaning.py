@@ -59,7 +59,7 @@ class TestCleaning(unittest.TestCase):
         self.assertEqual("red", vehicles["color"][2])
         self.assertEqual("hybrid", vehicles["driving_force"][2])
         self.assertEqual("Volkswagen", vehicles["maker"][2])
-        self.assertEqual(0, vehicles["mileage"][2])
+        self.assertEqual(-1, vehicles["mileage"][2])
 
         self.assertEqual(2018, vehicles["registration_year"][3])
         self.assertEqual("002", vehicles["municipality"][3])
