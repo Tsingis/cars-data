@@ -253,8 +253,8 @@ const HomePage = () => {
             />
             <TopList
               data={selectedMunicipality.maker}
-              topX={15}
-              title={t("Labels.TopNMakers", { count: 15 })}
+              topX={25}
+              title={t("Labels.TopNMakers", { count: 25 })}
               style={{ gridArea: "e" }}
             />
           </div>
