@@ -1,8 +1,22 @@
+:root {
+  --main-bg-alpha: 0.1;
+  --main-bg-color: 240, 240, 240;
+  --main-border-color: 210, 210, 210;
+  --main-text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --main-bg-color: 100, 100, 100;
+  --main-border-color: 80, 80, 80;
+  --main-text-color: : #000000;
+}
+
 html,
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
-  background-color: rgb(223, 220, 220);
+  background-color: rgba(var(--main-bg-color), var(--main-bg-alpha));
+  color: var(--main-text-color);
   margin: 0;
   padding: 0;
   width: 100%;
