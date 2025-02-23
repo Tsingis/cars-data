@@ -20,14 +20,13 @@
 .chart-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 850px;
+  max-width: 1200px;
   grid-template-areas:
-    "a b"
-    "c d"
-    "e f";
+    "a b e"
+    "c d e";
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .chart-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
