@@ -8,7 +8,6 @@ import LineChart from "../../components/LineChart/LineChart"
 import TreeMapChart from "../../components/TreeMapChart/TreeMapChart"
 import TopList from "../../components/TopList/TopList"
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown"
-import LanguageSwitch from "../../components/LanguageSwitch/LanguageSwitch"
 import { Count, Municipality } from "../../types"
 import {
   colors,
@@ -196,7 +195,7 @@ const HomePage = () => {
     : {}
 
   return (
-    <div>
+    <div className="home-container">
       <h1 className="title">{t("Common.Title")}</h1>
       <div className="data-date">
         {t("Common.DataUpdatedOn")}{" "}
@@ -207,7 +206,6 @@ const HomePage = () => {
         })}
       </div>
       <div className="controls-container">
-        <LanguageSwitch />
         <SearchableDropdown
           options={translatedSearchOptions}
           onSelect={handleSelect}
