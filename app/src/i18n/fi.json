@@ -16,7 +16,7 @@
   },
   "Common": {
     "DataUpdatedOn": "Data päivitetty",
-    "Title": "Rekisteröidyt henkilöautot Suomessa"
+    "Title": "Rekisteröityjen henkilöautojen määrä Suomessa"
   },
   "Error": {
     "Fetch": "Datan haussa tapahtui virhe",
