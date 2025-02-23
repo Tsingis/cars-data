@@ -83,7 +83,7 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
                   const value = raw.v
                   return value.toString()
                 },
-                color: "black",
+                color: "rgb(0, 0, 0, 0.6)",
                 font: {
                   size: 12,
                 },

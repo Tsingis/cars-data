@@ -18,6 +18,7 @@ import {
   locales,
 } from "../../constants"
 import "./HomePage.modules.css"
+import { formatMileageLabel } from "../../utility"
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
@@ -185,13 +186,15 @@ const HomePage = () => {
     {} as { [key: string]: string }
   )
 
-  const colLabels = Object.keys(colorLabels).reduce(
-    (acc, key) => {
-      acc[key] = t(colorLabels[key])
-      return acc
-    },
-    {} as { [key: string]: string }
-  )
+  const mileageLabels = selectedMunicipality.mileageCount
+    ? Object.keys(selectedMunicipality.mileageCount).reduce(
+        (acc, key) => {
+          acc[key] = formatMileageLabel(key)
+          return acc
+        },
+        {} as { [key: string]: string }
+      )
+    : {}
 
   return (
     <div>
@@ -230,7 +233,7 @@ const HomePage = () => {
             />
             <BarChart
               data={selectedMunicipality.mileageCount}
-              xAxisLabelMap={dfLabels}
+              xAxisLabelMap={mileageLabels}
               title={t("Labels.Mileage")}
               yAxisText={t("Labels.Count")}
               style={{ gridArea: "b" }}
