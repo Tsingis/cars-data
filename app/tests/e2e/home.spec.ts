@@ -28,8 +28,12 @@ test("Language switch works correctly", async ({ page }) => {
   const titleElement = page.locator(".title")
 
   await fiButton.click()
-  await expect(titleElement).toHaveText("Rekisteröidyt henkilöautot Suomessa")
+  await expect(titleElement).toHaveText(
+    "Rekisteröityjen henkilöautojen määrä Suomessa"
+  )
 
   await enButton.click()
-  await expect(titleElement).toHaveText("Registered passenger cars in Finland")
+  await expect(titleElement).toHaveText(
+    "Registered passenger car counts in Finland"
+  )
 })
