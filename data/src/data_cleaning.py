@@ -148,7 +148,11 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     # Groupings
     bin_size = 50_000
     bins = [0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
-    labels = [str(i) for i in bins[1:-1]] + [f"{bins[-2] + 1}"]
+    labels = (
+        [f"under{bin_size // 1000}k"]
+        + [f"{i // 1000}kto{j // 1000}k" for i, j in zip(bins[1:-2], bins[2:-1])]
+        + [f"over{bins[-2] // 1000}k"]
+    )
     df["mileage_group"] = pd.cut(
         df["mileage"], bins=bins, labels=labels, right=False, include_lowest=True
     )
@@ -192,13 +196,9 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         mileage_group = grouped_mileage[
             grouped_mileage["municipality"] == municipality_code
         ]
-        mileage_counts = {
-            str(int(k)): v
-            for k, v in sorted(
-                zip(mileage_group["mileage_group"], mileage_group["count"]),
-                key=lambda x: int(x[0]),
-            )
-        }
+        mileage_counts = dict(
+            zip(mileage_group["mileage_group"], mileage_group["count"])
+        )
 
         # Driving forces
         driving_force_counts = dict(zip(group["driving_force"], group["count"]))
@@ -274,7 +274,10 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
 
     for municipality in final:
         municipality["mileageCount"] = dict(
-            sorted(municipality["mileageCount"].items(), key=lambda x: int(x[0]))
+            sorted(
+                municipality["mileageCount"].items(),
+                key=lambda item: _sort_mileage_keys(item[0]),
+            )
         )
         municipality["drivingForceCount"] = dict(
             sorted(municipality["drivingForceCount"].items())
@@ -288,3 +291,12 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     final.sort(key=lambda x: x["name"])
 
     return {"date": date, "municipalities": final}
+
+
+def _sort_mileage_keys(key):
+    if key.startswith("over"):
+        return float("inf")
+    if key.startswith("under"):
+        return 0
+    start, end = key.split("kto")
+    return int(start) * 1000
