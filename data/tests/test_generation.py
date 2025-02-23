@@ -20,6 +20,7 @@ class TestGenerateFunction(unittest.TestCase):
                 "color": ["red", "blue", "red", "blue", "green"],
                 "maker": ["Tesla", "BMW", "Tesla", "BMW", "Tesla"],
                 "registration_year": [2020, 2021, 2020, 2022, 2020],
+                "mileage": [20_000, 45_000, 125_000, 245_000, 615_000],
                 "municipality": ["001", "002", "001", "002", "001"],
             }
         )
@@ -29,6 +30,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "000",
                 "name": "Finland",
+                "mileageCount": {"50000": 2, "150000": 1, "250000": 1, "600001": 1},
                 "drivingForceCount": {"petrol": 2, "electricity": 3},
                 "colorCount": {"blue": 2, "green": 1, "red": 2},
                 "registrationYearCount": {"2020": 3, "2021": 1, "2022": 1},
@@ -37,6 +39,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "001",
                 "name": "Helsinki",
+                "mileageCount": {"50000": 1, "150000": 1, "600001": 1},
                 "drivingForceCount": {"petrol": 0, "electricity": 3},
                 "colorCount": {"blue": 0, "green": 1, "red": 2},
                 "registrationYearCount": {"2020": 3},
@@ -45,6 +48,7 @@ class TestGenerateFunction(unittest.TestCase):
             {
                 "code": "002",
                 "name": "Espoo",
+                "mileageCount": {"50000": 1, "250000": 1},
                 "drivingForceCount": {"petrol": 2, "electricity": 0},
                 "colorCount": {"blue": 2, "green": 0, "red": 0},
                 "registrationYearCount": {"2021": 1, "2022": 1},

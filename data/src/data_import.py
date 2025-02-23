@@ -29,7 +29,7 @@ def get_vehicles() -> pd.DataFrame:
         "sahkohybridi": "is_hybrid",
         "merkkiSelvakielinen": "maker_text",
         "kunta": "municipality",
-        "matkamittarilukema": "odometer",
+        "matkamittarilukema": "mileage",
     }
 
     df = pd.read_csv(

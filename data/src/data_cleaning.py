@@ -65,9 +65,12 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
 
     vehicles["color"] = vehicles["color"].map(color_map).fillna("other")
 
-    # Odometer
-    vehicles["odometer"] = (
-        pd.to_numeric(vehicles["odometer"], errors="coerce").fillna(0).astype("Int32")
+    # Mileage
+    vehicles["mileage"] = (
+        pd.to_numeric(vehicles["mileage"], errors="coerce")
+        .fillna(0)
+        .clip(upper=5_000_000)
+        .astype("Int32")
     )
 
     # Makers more unique
@@ -143,17 +146,36 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
 
 def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     # Groupings
+    bin_size = 50_000
+    bins = [0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
+    labels = [str(i) for i in bins[1:-1]] + [f"{bins[-2] + 1}"]
+    df["mileage_group"] = pd.cut(
+        df["mileage"], bins=bins, labels=labels, right=False, include_lowest=True
+    )
+
+    grouped_mileage = (
+        df.groupby(["mileage_group", "municipality"], observed=True)
+        .size()
+        .reset_index(name="count")
+    )
+
     grouped_driving = (
-        df.groupby(["driving_force", "municipality"]).size().reset_index(name="count")
+        df.groupby(["driving_force", "municipality"], observed=True)
+        .size()
+        .reset_index(name="count")
     )
     grouped_color = (
-        df.groupby(["color", "municipality"]).size().reset_index(name="count")
+        df.groupby(["color", "municipality"], observed=True)
+        .size()
+        .reset_index(name="count")
     )
     grouped_maker = (
-        df.groupby(["maker", "municipality"]).size().reset_index(name="count")
+        df.groupby(["maker", "municipality"], observed=True)
+        .size()
+        .reset_index(name="count")
     )
     grouped_year = (
-        df.groupby(["registration_year", "municipality"])
+        df.groupby(["registration_year", "municipality"], observed=True)
         .size()
         .reset_index(name="count")
     )
@@ -166,6 +188,18 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
 
     final = []
     for municipality_code, group in grouped_driving.groupby("municipality"):
+        # Mileages
+        mileage_group = grouped_mileage[
+            grouped_mileage["municipality"] == municipality_code
+        ]
+        mileage_counts = {
+            str(int(k)): v
+            for k, v in sorted(
+                zip(mileage_group["mileage_group"], mileage_group["count"]),
+                key=lambda x: int(x[0]),
+            )
+        }
+
         # Driving forces
         driving_force_counts = dict(zip(group["driving_force"], group["count"]))
         for driving_force in driving_forces:
@@ -192,6 +226,7 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
             {
                 "code": municipality_code,
                 "name": municipalities[municipality_code],
+                "mileageCount": mileage_counts,
                 "drivingForceCount": driving_force_counts,
                 "colorCount": color_counts,
                 "registrationYearCount": year_counts_str,
@@ -200,12 +235,19 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         )
 
     # Totals
+    total_mileage_counts = {}
     total_driving_force_counts = {driving_force: 0 for driving_force in driving_forces}
     total_color_counts = {color: 0 for color in colors}
     total_year_counts = {str(year): 0 for year in years}
     total_maker_counts = {maker: 0 for maker in makers}
 
     for municipality in final:
+        for mileage, count in municipality["mileageCount"].items():
+            if mileage in total_mileage_counts:
+                total_mileage_counts[mileage] += count
+            else:
+                total_mileage_counts[mileage] = count
+
         for driving_force, count in municipality["drivingForceCount"].items():
             total_driving_force_counts[driving_force] += count
 
@@ -222,6 +264,7 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         {
             "code": "000",
             "name": "Finland",
+            "mileageCount": total_mileage_counts,
             "drivingForceCount": total_driving_force_counts,
             "colorCount": total_color_counts,
             "registrationYearCount": total_year_counts,
@@ -230,6 +273,9 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     )
 
     for municipality in final:
+        municipality["mileageCount"] = dict(
+            sorted(municipality["mileageCount"].items(), key=lambda x: int(x[0]))
+        )
         municipality["drivingForceCount"] = dict(
             sorted(municipality["drivingForceCount"].items())
         )
