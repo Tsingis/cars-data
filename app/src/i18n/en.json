@@ -39,6 +39,7 @@
     "Count": "Count",
     "DrivingForce": "Driving force",
     "Mileage": "Mileage",
+    "NotAvailableAbbreviation": "N/A",
     "RegistrationYear": "Registration year",
     "TopNMakers": "Top {{count}} makers"
   }

@@ -1,4 +1,9 @@
+import { t } from "i18next"
+
 export const formatMileageLabel = (label: string): string => {
+  if (label === "na") {
+    return t("Labels.NotAvailableAbbreviation")
+  }
   if (label.startsWith("under")) {
     return `<${label.replace("under", "")}`
   }

@@ -5,7 +5,8 @@
       "code": "020",
       "name": "Akaa",
       "mileageCount": {
-        "under50k": 1714,
+        "na": 1147,
+        "under50k": 567,
         "50kto100k": 1165,
         "100kto150k": 1257,
         "150kto200k": 1344,
@@ -135,7 +136,8 @@
       "code": "005",
       "name": "Alajärvi",
       "mileageCount": {
-        "under50k": 664,
+        "na": 400,
+        "under50k": 264,
         "50kto100k": 540,
         "100kto150k": 626,
         "150kto200k": 780,
@@ -264,7 +266,8 @@
       "code": "009",
       "name": "Alavieska",
       "mileageCount": {
-        "under50k": 177,
+        "na": 110,
+        "under50k": 67,
         "50kto100k": 90,
         "100kto150k": 125,
         "150kto200k": 167,
@@ -388,7 +391,8 @@
       "code": "010",
       "name": "Alavus",
       "mileageCount": {
-        "under50k": 841,
+        "na": 535,
+        "under50k": 306,
         "50kto100k": 658,
         "100kto150k": 773,
         "150kto200k": 860,
@@ -517,7 +521,8 @@
       "code": "016",
       "name": "Asikkala",
       "mileageCount": {
-        "under50k": 884,
+        "na": 540,
+        "under50k": 344,
         "50kto100k": 635,
         "100kto150k": 650,
         "150kto200k": 705,
@@ -645,7 +650,8 @@
       "code": "018",
       "name": "Askola",
       "mileageCount": {
-        "under50k": 503,
+        "na": 309,
+        "under50k": 194,
         "50kto100k": 448,
         "100kto150k": 444,
         "150kto200k": 436,
@@ -773,7 +779,8 @@
       "code": "019",
       "name": "Aura",
       "mileageCount": {
-        "under50k": 381,
+        "na": 244,
+        "under50k": 137,
         "50kto100k": 342,
         "100kto150k": 376,
         "150kto200k": 380,
@@ -901,7 +908,8 @@
       "code": "035",
       "name": "Brändö",
       "mileageCount": {
-        "under50k": 11,
+        "na": 8,
+        "under50k": 3,
         "50kto100k": 9,
         "100kto150k": 8,
         "150kto200k": 7,
@@ -983,7 +991,7 @@
       "code": "043",
       "name": "Eckerö",
       "mileageCount": {
-        "under50k": 2,
+        "na": 2,
         "50kto100k": 1,
         "100kto150k": 3,
         "200kto250k": 2,
@@ -1031,7 +1039,8 @@
       "code": "046",
       "name": "Enonkoski",
       "mileageCount": {
-        "under50k": 110,
+        "na": 68,
+        "under50k": 42,
         "50kto100k": 94,
         "100kto150k": 88,
         "150kto200k": 100,
@@ -1149,7 +1158,8 @@
       "code": "047",
       "name": "Enontekiö",
       "mileageCount": {
-        "under50k": 98,
+        "na": 61,
+        "under50k": 37,
         "50kto100k": 86,
         "100kto150k": 138,
         "150kto200k": 141,
@@ -1269,7 +1279,8 @@
       "code": "049",
       "name": "Espoo",
       "mileageCount": {
-        "under50k": 45923,
+        "na": 31650,
+        "under50k": 14273,
         "50kto100k": 26180,
         "100kto150k": 20465,
         "150kto200k": 14744,
@@ -1400,7 +1411,8 @@
       "code": "050",
       "name": "Eura",
       "mileageCount": {
-        "under50k": 1127,
+        "na": 674,
+        "under50k": 453,
         "50kto100k": 894,
         "100kto150k": 978,
         "150kto200k": 1009,
@@ -1529,7 +1541,8 @@
       "code": "051",
       "name": "Eurajoki",
       "mileageCount": {
-        "under50k": 992,
+        "na": 617,
+        "under50k": 375,
         "50kto100k": 689,
         "100kto150k": 796,
         "150kto200k": 874,
@@ -1658,7 +1671,8 @@
       "code": "052",
       "name": "Evijärvi",
       "mileageCount": {
-        "under50k": 166,
+        "na": 92,
+        "under50k": 74,
         "50kto100k": 137,
         "100kto150k": 145,
         "150kto200k": 167,
@@ -1784,7 +1798,8 @@
       "code": "000",
       "name": "Finland",
       "mileageCount": {
-        "under50k": 588360,
+        "na": 388050,
+        "under50k": 200310,
         "50kto100k": 406868,
         "100kto150k": 400288,
         "150kto200k": 382980,
@@ -1967,7 +1982,8 @@
       "code": "061",
       "name": "Forssa",
       "mileageCount": {
-        "under50k": 1733,
+        "na": 1040,
+        "under50k": 693,
         "50kto100k": 1342,
         "100kto150k": 1316,
         "150kto200k": 1298,
@@ -2135,7 +2151,8 @@
       "code": "065",
       "name": "Geta",
       "mileageCount": {
-        "under50k": 3,
+        "na": 2,
+        "under50k": 1,
         "100kto150k": 1,
         "150kto200k": 1,
         "200kto250k": 2
@@ -2180,7 +2197,8 @@
       "code": "069",
       "name": "Haapajärvi",
       "mileageCount": {
-        "under50k": 391,
+        "na": 247,
+        "under50k": 144,
         "50kto100k": 283,
         "100kto150k": 356,
         "150kto200k": 422,
@@ -2307,7 +2325,8 @@
       "code": "071",
       "name": "Haapavesi",
       "mileageCount": {
-        "under50k": 311,
+        "na": 184,
+        "under50k": 127,
         "50kto100k": 252,
         "100kto150k": 264,
         "150kto200k": 380,
@@ -2433,7 +2452,8 @@
       "code": "072",
       "name": "Hailuoto",
       "mileageCount": {
-        "under50k": 89,
+        "na": 38,
+        "under50k": 51,
         "50kto100k": 64,
         "100kto150k": 69,
         "150kto200k": 79,
@@ -2547,7 +2567,8 @@
       "code": "074",
       "name": "Halsua",
       "mileageCount": {
-        "under50k": 60,
+        "na": 37,
+        "under50k": 23,
         "50kto100k": 54,
         "100kto150k": 63,
         "150kto200k": 74,
@@ -2660,7 +2681,8 @@
       "code": "075",
       "name": "Hamina",
       "mileageCount": {
-        "under50k": 2276,
+        "na": 1376,
+        "under50k": 900,
         "50kto100k": 1754,
         "100kto150k": 1754,
         "150kto200k": 1730,
@@ -2790,7 +2812,8 @@
       "code": "076",
       "name": "Hammarland",
       "mileageCount": {
-        "under50k": 4,
+        "na": 3,
+        "under50k": 1,
         "50kto100k": 4,
         "100kto150k": 3,
         "150kto200k": 4,
@@ -2856,7 +2879,8 @@
       "code": "077",
       "name": "Hankasalmi",
       "mileageCount": {
-        "under50k": 278,
+        "na": 162,
+        "under50k": 116,
         "50kto100k": 264,
         "100kto150k": 339,
         "150kto200k": 356,
@@ -2982,7 +3006,8 @@
       "code": "078",
       "name": "Hanko",
       "mileageCount": {
-        "under50k": 831,
+        "na": 492,
+        "under50k": 339,
         "50kto100k": 710,
         "100kto150k": 701,
         "150kto200k": 708,
@@ -3111,7 +3136,8 @@
       "code": "079",
       "name": "Harjavalta",
       "mileageCount": {
-        "under50k": 743,
+        "na": 489,
+        "under50k": 254,
         "50kto100k": 517,
         "100kto150k": 538,
         "150kto200k": 601,
@@ -3240,7 +3266,8 @@
       "code": "081",
       "name": "Hartola",
       "mileageCount": {
-        "under50k": 195,
+        "na": 138,
+        "under50k": 57,
         "50kto100k": 170,
         "100kto150k": 188,
         "150kto200k": 228,
@@ -3366,7 +3393,8 @@
       "code": "082",
       "name": "Hattula",
       "mileageCount": {
-        "under50k": 910,
+        "na": 536,
+        "under50k": 374,
         "50kto100k": 859,
         "100kto150k": 888,
         "150kto200k": 984,
@@ -3495,7 +3523,8 @@
       "code": "086",
       "name": "Hausjärvi",
       "mileageCount": {
-        "under50k": 803,
+        "na": 510,
+        "under50k": 293,
         "50kto100k": 604,
         "100kto150k": 680,
         "150kto200k": 747,
@@ -3626,7 +3655,8 @@
       "code": "111",
       "name": "Heinola",
       "mileageCount": {
-        "under50k": 1851,
+        "na": 1161,
+        "under50k": 690,
         "50kto100k": 1370,
         "100kto150k": 1435,
         "150kto200k": 1467,
@@ -3756,7 +3786,8 @@
       "code": "090",
       "name": "Heinävesi",
       "mileageCount": {
-        "under50k": 225,
+        "na": 143,
+        "under50k": 82,
         "50kto100k": 183,
         "100kto150k": 215,
         "150kto200k": 251,
@@ -3877,7 +3908,8 @@
       "code": "091",
       "name": "Helsinki",
       "mileageCount": {
-        "under50k": 78588,
+        "na": 56861,
+        "under50k": 21727,
         "50kto100k": 40970,
         "100kto150k": 32840,
         "150kto200k": 25363,
@@ -4009,7 +4041,8 @@
       "code": "097",
       "name": "Hirvensalmi",
       "mileageCount": {
-        "under50k": 197,
+        "na": 121,
+        "under50k": 76,
         "50kto100k": 157,
         "100kto150k": 175,
         "150kto200k": 199,
@@ -4133,7 +4166,8 @@
       "code": "098",
       "name": "Hollola",
       "mileageCount": {
-        "under50k": 2416,
+        "na": 1513,
+        "under50k": 903,
         "50kto100k": 2041,
         "100kto150k": 2067,
         "150kto200k": 1884,
@@ -4262,7 +4296,8 @@
       "code": "102",
       "name": "Huittinen",
       "mileageCount": {
-        "under50k": 943,
+        "na": 586,
+        "under50k": 357,
         "50kto100k": 693,
         "100kto150k": 763,
         "150kto200k": 877,
@@ -4390,7 +4425,8 @@
       "code": "103",
       "name": "Humppila",
       "mileageCount": {
-        "under50k": 183,
+        "na": 119,
+        "under50k": 64,
         "50kto100k": 165,
         "100kto150k": 152,
         "150kto200k": 207,
@@ -4513,7 +4549,8 @@
       "code": "105",
       "name": "Hyrynsalmi",
       "mileageCount": {
-        "under50k": 113,
+        "na": 58,
+        "under50k": 55,
         "50kto100k": 106,
         "100kto150k": 143,
         "150kto200k": 171,
@@ -4637,7 +4674,8 @@
       "code": "106",
       "name": "Hyvinkää",
       "mileageCount": {
-        "under50k": 6034,
+        "na": 3873,
+        "under50k": 2161,
         "50kto100k": 3913,
         "100kto150k": 3811,
         "150kto200k": 3535,
@@ -4769,7 +4807,8 @@
       "code": "108",
       "name": "Hämeenkyrö",
       "mileageCount": {
-        "under50k": 891,
+        "na": 529,
+        "under50k": 362,
         "50kto100k": 714,
         "100kto150k": 763,
         "150kto200k": 912,
@@ -4897,7 +4936,8 @@
       "code": "109",
       "name": "Hämeenlinna",
       "mileageCount": {
-        "under50k": 7345,
+        "na": 4695,
+        "under50k": 2650,
         "50kto100k": 5597,
         "100kto150k": 5691,
         "150kto200k": 5311,
@@ -5027,7 +5067,8 @@
       "code": "139",
       "name": "Ii",
       "mileageCount": {
-        "under50k": 620,
+        "na": 410,
+        "under50k": 210,
         "50kto100k": 495,
         "100kto150k": 558,
         "150kto200k": 640,
@@ -5154,7 +5195,8 @@
       "code": "140",
       "name": "Iisalmi",
       "mileageCount": {
-        "under50k": 1446,
+        "na": 839,
+        "under50k": 607,
         "50kto100k": 1141,
         "100kto150k": 1347,
         "150kto200k": 1487,
@@ -5284,7 +5326,8 @@
       "code": "142",
       "name": "Iitti",
       "mileageCount": {
-        "under50k": 650,
+        "na": 425,
+        "under50k": 225,
         "50kto100k": 520,
         "100kto150k": 574,
         "150kto200k": 602,
@@ -5413,7 +5456,8 @@
       "code": "143",
       "name": "Ikaalinen",
       "mileageCount": {
-        "under50k": 505,
+        "na": 320,
+        "under50k": 185,
         "50kto100k": 400,
         "100kto150k": 476,
         "150kto200k": 526,
@@ -5541,7 +5585,8 @@
       "code": "145",
       "name": "Ilmajoki",
       "mileageCount": {
-        "under50k": 971,
+        "na": 614,
+        "under50k": 357,
         "50kto100k": 856,
         "100kto150k": 927,
         "150kto200k": 1086,
@@ -5670,7 +5715,8 @@
       "code": "146",
       "name": "Ilomantsi",
       "mileageCount": {
-        "under50k": 320,
+        "na": 197,
+        "under50k": 123,
         "50kto100k": 266,
         "100kto150k": 307,
         "150kto200k": 343,
@@ -5795,7 +5841,8 @@
       "code": "153",
       "name": "Imatra",
       "mileageCount": {
-        "under50k": 2775,
+        "na": 1821,
+        "under50k": 954,
         "50kto100k": 2051,
         "100kto150k": 2171,
         "150kto200k": 2109,
@@ -5924,7 +5971,8 @@
       "code": "148",
       "name": "Inari",
       "mileageCount": {
-        "under50k": 440,
+        "na": 256,
+        "under50k": 184,
         "50kto100k": 407,
         "100kto150k": 527,
         "150kto200k": 584,
@@ -6051,7 +6099,8 @@
       "code": "149",
       "name": "Ingå",
       "mileageCount": {
-        "under50k": 667,
+        "na": 409,
+        "under50k": 258,
         "50kto100k": 560,
         "100kto150k": 579,
         "150kto200k": 492,
@@ -6180,7 +6229,8 @@
       "code": "151",
       "name": "Isojoki",
       "mileageCount": {
-        "under50k": 148,
+        "na": 91,
+        "under50k": 57,
         "50kto100k": 132,
         "100kto150k": 132,
         "150kto200k": 154,
@@ -6304,7 +6354,8 @@
       "code": "152",
       "name": "Isokyrö",
       "mileageCount": {
-        "under50k": 519,
+        "na": 362,
+        "under50k": 157,
         "50kto100k": 340,
         "100kto150k": 386,
         "150kto200k": 367,
@@ -6431,7 +6482,8 @@
       "code": "598",
       "name": "Jakobstad",
       "mileageCount": {
-        "under50k": 1612,
+        "na": 875,
+        "under50k": 737,
         "50kto100k": 1534,
         "100kto150k": 1718,
         "150kto200k": 1738,
@@ -6559,7 +6611,8 @@
       "code": "165",
       "name": "Janakkala",
       "mileageCount": {
-        "under50k": 1695,
+        "na": 1076,
+        "under50k": 619,
         "50kto100k": 1369,
         "100kto150k": 1433,
         "150kto200k": 1500,
@@ -6688,7 +6741,8 @@
       "code": "167",
       "name": "Joensuu",
       "mileageCount": {
-        "under50k": 6072,
+        "na": 4013,
+        "under50k": 2059,
         "50kto100k": 4415,
         "100kto150k": 4815,
         "150kto200k": 5199,
@@ -6819,7 +6873,8 @@
       "code": "169",
       "name": "Jokioinen",
       "mileageCount": {
-        "under50k": 519,
+        "na": 341,
+        "under50k": 178,
         "50kto100k": 396,
         "100kto150k": 461,
         "150kto200k": 428,
@@ -6947,7 +7002,8 @@
       "code": "170",
       "name": "Jomala",
       "mileageCount": {
-        "under50k": 15,
+        "na": 8,
+        "under50k": 7,
         "50kto100k": 9,
         "100kto150k": 8,
         "150kto200k": 11,
@@ -7026,7 +7082,8 @@
       "code": "171",
       "name": "Joroinen",
       "mileageCount": {
-        "under50k": 420,
+        "na": 266,
+        "under50k": 154,
         "50kto100k": 351,
         "100kto150k": 328,
         "150kto200k": 377,
@@ -7149,7 +7206,8 @@
       "code": "172",
       "name": "Joutsa",
       "mileageCount": {
-        "under50k": 386,
+        "na": 236,
+        "under50k": 150,
         "50kto100k": 270,
         "100kto150k": 284,
         "150kto200k": 343,
@@ -7274,7 +7332,8 @@
       "code": "176",
       "name": "Juuka",
       "mileageCount": {
-        "under50k": 262,
+        "na": 162,
+        "under50k": 100,
         "50kto100k": 220,
         "100kto150k": 227,
         "150kto200k": 344,
@@ -7399,7 +7458,8 @@
       "code": "177",
       "name": "Juupajoki",
       "mileageCount": {
-        "under50k": 184,
+        "na": 136,
+        "under50k": 48,
         "50kto100k": 107,
         "100kto150k": 133,
         "150kto200k": 157,
@@ -7519,7 +7579,8 @@
       "code": "178",
       "name": "Juva",
       "mileageCount": {
-        "under50k": 443,
+        "na": 293,
+        "under50k": 150,
         "50kto100k": 418,
         "100kto150k": 470,
         "150kto200k": 481,
@@ -7646,7 +7707,8 @@
       "code": "179",
       "name": "Jyväskylä",
       "mileageCount": {
-        "under50k": 12536,
+        "na": 8099,
+        "under50k": 4437,
         "50kto100k": 9265,
         "100kto150k": 9890,
         "150kto200k": 9672,
@@ -7777,7 +7839,8 @@
       "code": "181",
       "name": "Jämijärvi",
       "mileageCount": {
-        "under50k": 148,
+        "na": 95,
+        "under50k": 53,
         "50kto100k": 86,
         "100kto150k": 122,
         "150kto200k": 156,
@@ -7900,7 +7963,8 @@
       "code": "182",
       "name": "Jämsä",
       "mileageCount": {
-        "under50k": 1986,
+        "na": 1167,
+        "under50k": 819,
         "50kto100k": 1535,
         "100kto150k": 1626,
         "150kto200k": 1644,
@@ -8029,7 +8093,8 @@
       "code": "186",
       "name": "Järvenpää",
       "mileageCount": {
-        "under50k": 5174,
+        "na": 3342,
+        "under50k": 1832,
         "50kto100k": 4048,
         "100kto150k": 3718,
         "150kto200k": 3067,
@@ -8160,7 +8225,8 @@
       "code": "202",
       "name": "Kaarina",
       "mileageCount": {
-        "under50k": 5010,
+        "na": 3067,
+        "under50k": 1943,
         "50kto100k": 3825,
         "100kto150k": 3468,
         "150kto200k": 2854,
@@ -8290,7 +8356,8 @@
       "code": "204",
       "name": "Kaavi",
       "mileageCount": {
-        "under50k": 212,
+        "na": 151,
+        "under50k": 61,
         "50kto100k": 150,
         "100kto150k": 164,
         "150kto200k": 193,
@@ -8413,7 +8480,8 @@
       "code": "205",
       "name": "Kajaani",
       "mileageCount": {
-        "under50k": 2675,
+        "na": 1700,
+        "under50k": 975,
         "50kto100k": 2074,
         "100kto150k": 2348,
         "150kto200k": 2535,
@@ -8542,7 +8610,8 @@
       "code": "208",
       "name": "Kalajoki",
       "mileageCount": {
-        "under50k": 811,
+        "na": 480,
+        "under50k": 331,
         "50kto100k": 629,
         "100kto150k": 781,
         "150kto200k": 956,
@@ -8671,7 +8740,8 @@
       "code": "211",
       "name": "Kangasala",
       "mileageCount": {
-        "under50k": 3176,
+        "na": 1992,
+        "under50k": 1184,
         "50kto100k": 2759,
         "100kto150k": 2797,
         "150kto200k": 2830,
@@ -8801,7 +8871,8 @@
       "code": "213",
       "name": "Kangasniemi",
       "mileageCount": {
-        "under50k": 397,
+        "na": 223,
+        "under50k": 174,
         "50kto100k": 334,
         "100kto150k": 405,
         "150kto200k": 436,
@@ -8925,7 +8996,8 @@
       "code": "214",
       "name": "Kankaanpää",
       "mileageCount": {
-        "under50k": 1009,
+        "na": 622,
+        "under50k": 387,
         "50kto100k": 774,
         "100kto150k": 961,
         "150kto200k": 1086,
@@ -9054,7 +9126,8 @@
       "code": "216",
       "name": "Kannonkoski",
       "mileageCount": {
-        "under50k": 105,
+        "na": 64,
+        "under50k": 41,
         "50kto100k": 54,
         "100kto150k": 60,
         "150kto200k": 74,
@@ -9175,7 +9248,8 @@
       "code": "217",
       "name": "Kannus",
       "mileageCount": {
-        "under50k": 306,
+        "na": 189,
+        "under50k": 117,
         "50kto100k": 243,
         "100kto150k": 332,
         "150kto200k": 365,
@@ -9301,7 +9375,8 @@
       "code": "218",
       "name": "Karijoki",
       "mileageCount": {
-        "under50k": 65,
+        "na": 47,
+        "under50k": 18,
         "50kto100k": 76,
         "100kto150k": 90,
         "150kto200k": 110,
@@ -9420,7 +9495,8 @@
       "code": "224",
       "name": "Karkkila",
       "mileageCount": {
-        "under50k": 1002,
+        "na": 669,
+        "under50k": 333,
         "50kto100k": 737,
         "100kto150k": 729,
         "150kto200k": 694,
@@ -9549,7 +9625,8 @@
       "code": "226",
       "name": "Karstula",
       "mileageCount": {
-        "under50k": 255,
+        "na": 153,
+        "under50k": 102,
         "50kto100k": 200,
         "100kto150k": 240,
         "150kto200k": 281,
@@ -9674,7 +9751,8 @@
       "code": "230",
       "name": "Karvia",
       "mileageCount": {
-        "under50k": 176,
+        "na": 114,
+        "under50k": 62,
         "50kto100k": 158,
         "100kto150k": 139,
         "150kto200k": 189,
@@ -9798,7 +9876,8 @@
       "code": "231",
       "name": "Kaskinen",
       "mileageCount": {
-        "under50k": 99,
+        "na": 59,
+        "under50k": 40,
         "50kto100k": 92,
         "100kto150k": 115,
         "150kto200k": 108,
@@ -9918,7 +9997,8 @@
       "code": "232",
       "name": "Kauhajoki",
       "mileageCount": {
-        "under50k": 1072,
+        "na": 719,
+        "under50k": 353,
         "50kto100k": 722,
         "100kto150k": 832,
         "150kto200k": 979,
@@ -10047,7 +10127,8 @@
       "code": "233",
       "name": "Kauhava",
       "mileageCount": {
-        "under50k": 1230,
+        "na": 730,
+        "under50k": 500,
         "50kto100k": 1055,
         "100kto150k": 1189,
         "150kto200k": 1327,
@@ -10175,7 +10256,8 @@
       "code": "235",
       "name": "Kauniainen",
       "mileageCount": {
-        "under50k": 1633,
+        "na": 996,
+        "under50k": 637,
         "50kto100k": 1065,
         "100kto150k": 749,
         "150kto200k": 476,
@@ -10302,7 +10384,8 @@
       "code": "236",
       "name": "Kaustinen",
       "mileageCount": {
-        "under50k": 273,
+        "na": 154,
+        "under50k": 119,
         "50kto100k": 231,
         "100kto150k": 255,
         "150kto200k": 335,
@@ -10429,7 +10512,8 @@
       "code": "239",
       "name": "Keitele",
       "mileageCount": {
-        "under50k": 165,
+        "na": 102,
+        "under50k": 63,
         "50kto100k": 104,
         "100kto150k": 138,
         "150kto200k": 162,
@@ -10551,7 +10635,8 @@
       "code": "240",
       "name": "Kemi",
       "mileageCount": {
-        "under50k": 1862,
+        "na": 1174,
+        "under50k": 688,
         "50kto100k": 1238,
         "100kto150k": 1288,
         "150kto200k": 1289,
@@ -10680,7 +10765,8 @@
       "code": "320",
       "name": "Kemijärvi",
       "mileageCount": {
-        "under50k": 509,
+        "na": 326,
+        "under50k": 183,
         "50kto100k": 437,
         "100kto150k": 483,
         "150kto200k": 547,
@@ -10804,7 +10890,8 @@
       "code": "241",
       "name": "Keminmaa",
       "mileageCount": {
-        "under50k": 818,
+        "na": 542,
+        "under50k": 276,
         "50kto100k": 522,
         "100kto150k": 578,
         "150kto200k": 676,
@@ -10933,7 +11020,8 @@
       "code": "244",
       "name": "Kempele",
       "mileageCount": {
-        "under50k": 1718,
+        "na": 1078,
+        "under50k": 640,
         "50kto100k": 1373,
         "100kto150k": 1484,
         "150kto200k": 1456,
@@ -11062,7 +11150,8 @@
       "code": "245",
       "name": "Kerava",
       "mileageCount": {
-        "under50k": 4173,
+        "na": 2797,
+        "under50k": 1376,
         "50kto100k": 3028,
         "100kto150k": 2775,
         "150kto200k": 2432,
@@ -11191,7 +11280,8 @@
       "code": "249",
       "name": "Keuruu",
       "mileageCount": {
-        "under50k": 822,
+        "na": 494,
+        "under50k": 328,
         "50kto100k": 676,
         "100kto150k": 700,
         "150kto200k": 743,
@@ -11319,7 +11409,8 @@
       "code": "250",
       "name": "Kihniö",
       "mileageCount": {
-        "under50k": 147,
+        "na": 83,
+        "under50k": 64,
         "50kto100k": 113,
         "100kto150k": 123,
         "150kto200k": 138,
@@ -11438,7 +11529,8 @@
       "code": "322",
       "name": "Kimitoön",
       "mileageCount": {
-        "under50k": 638,
+        "na": 366,
+        "under50k": 272,
         "50kto100k": 588,
         "100kto150k": 641,
         "150kto200k": 592,
@@ -11564,7 +11656,8 @@
       "code": "256",
       "name": "Kinnula",
       "mileageCount": {
-        "under50k": 99,
+        "na": 64,
+        "under50k": 35,
         "50kto100k": 67,
         "100kto150k": 81,
         "150kto200k": 109,
@@ -11687,7 +11780,8 @@
       "code": "257",
       "name": "Kirkkonummi",
       "mileageCount": {
-        "under50k": 5435,
+        "na": 3560,
+        "under50k": 1875,
         "50kto100k": 3961,
         "100kto150k": 3410,
         "150kto200k": 2815,
@@ -11817,7 +11911,8 @@
       "code": "260",
       "name": "Kitee",
       "mileageCount": {
-        "under50k": 695,
+        "na": 419,
+        "under50k": 276,
         "50kto100k": 635,
         "100kto150k": 620,
         "150kto200k": 715,
@@ -11944,7 +12039,8 @@
       "code": "261",
       "name": "Kittilä",
       "mileageCount": {
-        "under50k": 453,
+        "na": 282,
+        "under50k": 171,
         "50kto100k": 371,
         "100kto150k": 469,
         "150kto200k": 494,
@@ -12072,7 +12168,8 @@
       "code": "263",
       "name": "Kiuruvesi",
       "mileageCount": {
-        "under50k": 375,
+        "na": 239,
+        "under50k": 136,
         "50kto100k": 331,
         "100kto150k": 383,
         "150kto200k": 491,
@@ -12198,7 +12295,8 @@
       "code": "265",
       "name": "Kivijärvi",
       "mileageCount": {
-        "under50k": 44,
+        "na": 30,
+        "under50k": 14,
         "50kto100k": 50,
         "100kto150k": 41,
         "150kto200k": 78,
@@ -12315,7 +12413,8 @@
       "code": "271",
       "name": "Kokemäki",
       "mileageCount": {
-        "under50k": 600,
+        "na": 386,
+        "under50k": 214,
         "50kto100k": 462,
         "100kto150k": 532,
         "150kto200k": 601,
@@ -12441,7 +12540,8 @@
       "code": "272",
       "name": "Kokkola",
       "mileageCount": {
-        "under50k": 4041,
+        "na": 2238,
+        "under50k": 1803,
         "50kto100k": 3262,
         "100kto150k": 3499,
         "150kto200k": 3747,
@@ -12571,7 +12671,8 @@
       "code": "273",
       "name": "Kolari",
       "mileageCount": {
-        "under50k": 263,
+        "na": 185,
+        "under50k": 78,
         "50kto100k": 225,
         "100kto150k": 281,
         "150kto200k": 279,
@@ -12698,7 +12799,8 @@
       "code": "275",
       "name": "Konnevesi",
       "mileageCount": {
-        "under50k": 198,
+        "na": 132,
+        "under50k": 66,
         "50kto100k": 156,
         "100kto150k": 187,
         "150kto200k": 185,
@@ -12821,7 +12923,8 @@
       "code": "276",
       "name": "Kontiolahti",
       "mileageCount": {
-        "under50k": 1216,
+        "na": 770,
+        "under50k": 446,
         "50kto100k": 903,
         "100kto150k": 1154,
         "150kto200k": 1205,
@@ -12950,7 +13053,8 @@
       "code": "499",
       "name": "Korsholm",
       "mileageCount": {
-        "under50k": 1764,
+        "na": 911,
+        "under50k": 853,
         "50kto100k": 1786,
         "100kto150k": 1945,
         "150kto200k": 1928,
@@ -13079,7 +13183,8 @@
       "code": "280",
       "name": "Korsnäs",
       "mileageCount": {
-        "under50k": 135,
+        "na": 63,
+        "under50k": 72,
         "50kto100k": 160,
         "100kto150k": 176,
         "150kto200k": 191,
@@ -13200,7 +13305,8 @@
       "code": "284",
       "name": "Koski Tl",
       "mileageCount": {
-        "under50k": 214,
+        "na": 116,
+        "under50k": 98,
         "50kto100k": 189,
         "100kto150k": 198,
         "150kto200k": 197,
@@ -13327,7 +13433,8 @@
       "code": "285",
       "name": "Kotka",
       "mileageCount": {
-        "under50k": 5968,
+        "na": 3800,
+        "under50k": 2168,
         "50kto100k": 4364,
         "100kto150k": 4137,
         "150kto200k": 3637,
@@ -13457,7 +13564,8 @@
       "code": "286",
       "name": "Kouvola",
       "mileageCount": {
-        "under50k": 9374,
+        "na": 6048,
+        "under50k": 3326,
         "50kto100k": 6972,
         "100kto150k": 7114,
         "150kto200k": 6872,
@@ -13587,7 +13695,8 @@
       "code": "287",
       "name": "Kristinestad",
       "mileageCount": {
-        "under50k": 493,
+        "na": 299,
+        "under50k": 194,
         "50kto100k": 518,
         "100kto150k": 529,
         "150kto200k": 574,
@@ -13715,7 +13824,8 @@
       "code": "288",
       "name": "Kronoby",
       "mileageCount": {
-        "under50k": 466,
+        "na": 243,
+        "under50k": 223,
         "50kto100k": 459,
         "100kto150k": 518,
         "150kto200k": 565,
@@ -13842,7 +13952,8 @@
       "code": "290",
       "name": "Kuhmo",
       "mileageCount": {
-        "under50k": 389,
+        "na": 217,
+        "under50k": 172,
         "50kto100k": 393,
         "100kto150k": 487,
         "150kto200k": 597,
@@ -13967,7 +14078,8 @@
       "code": "291",
       "name": "Kuhmoinen",
       "mileageCount": {
-        "under50k": 224,
+        "na": 129,
+        "under50k": 95,
         "50kto100k": 162,
         "100kto150k": 187,
         "150kto200k": 205,
@@ -14128,7 +14240,8 @@
       "code": "297",
       "name": "Kuopio",
       "mileageCount": {
-        "under50k": 11126,
+        "na": 7574,
+        "under50k": 3552,
         "50kto100k": 7497,
         "100kto150k": 8016,
         "150kto200k": 7906,
@@ -14259,7 +14372,8 @@
       "code": "300",
       "name": "Kuortane",
       "mileageCount": {
-        "under50k": 280,
+        "na": 195,
+        "under50k": 85,
         "50kto100k": 206,
         "100kto150k": 254,
         "150kto200k": 293,
@@ -14385,7 +14499,8 @@
       "code": "301",
       "name": "Kurikka",
       "mileageCount": {
-        "under50k": 1737,
+        "na": 1082,
+        "under50k": 655,
         "50kto100k": 1316,
         "100kto150k": 1404,
         "150kto200k": 1545,
@@ -14514,7 +14629,8 @@
       "code": "304",
       "name": "Kustavi",
       "mileageCount": {
-        "under50k": 123,
+        "na": 79,
+        "under50k": 44,
         "50kto100k": 85,
         "100kto150k": 83,
         "150kto200k": 92,
@@ -14631,7 +14747,8 @@
       "code": "305",
       "name": "Kuusamo",
       "mileageCount": {
-        "under50k": 889,
+        "na": 541,
+        "under50k": 348,
         "50kto100k": 810,
         "100kto150k": 976,
         "150kto200k": 1161,
@@ -14759,7 +14876,8 @@
       "code": "312",
       "name": "Kyyjärvi",
       "mileageCount": {
-        "under50k": 98,
+        "na": 71,
+        "under50k": 27,
         "50kto100k": 55,
         "100kto150k": 61,
         "150kto200k": 101,
@@ -14879,7 +14997,8 @@
       "code": "316",
       "name": "Kärkölä",
       "mileageCount": {
-        "under50k": 470,
+        "na": 327,
+        "under50k": 143,
         "50kto100k": 313,
         "100kto150k": 318,
         "150kto200k": 363,
@@ -15008,7 +15127,8 @@
       "code": "317",
       "name": "Kärsämäki",
       "mileageCount": {
-        "under50k": 140,
+        "na": 79,
+        "under50k": 61,
         "50kto100k": 115,
         "100kto150k": 120,
         "150kto200k": 155,
@@ -15129,7 +15249,8 @@
       "code": "318",
       "name": "Kökar",
       "mileageCount": {
-        "under50k": 3,
+        "na": 1,
+        "under50k": 2,
         "50kto100k": 1,
         "100kto150k": 1,
         "150kto200k": 2,
@@ -15180,7 +15301,8 @@
       "code": "398",
       "name": "Lahti",
       "mileageCount": {
-        "under50k": 13103,
+        "na": 8627,
+        "under50k": 4476,
         "50kto100k": 9209,
         "100kto150k": 8799,
         "150kto200k": 8243,
@@ -15312,7 +15434,8 @@
       "code": "399",
       "name": "Laihia",
       "mileageCount": {
-        "under50k": 691,
+        "na": 409,
+        "under50k": 282,
         "50kto100k": 609,
         "100kto150k": 641,
         "150kto200k": 706,
@@ -15441,7 +15564,8 @@
       "code": "400",
       "name": "Laitila",
       "mileageCount": {
-        "under50k": 780,
+        "na": 469,
+        "under50k": 311,
         "50kto100k": 598,
         "100kto150k": 715,
         "150kto200k": 808,
@@ -15570,7 +15694,8 @@
       "code": "407",
       "name": "Lapinjärvi",
       "mileageCount": {
-        "under50k": 252,
+        "na": 175,
+        "under50k": 77,
         "50kto100k": 172,
         "100kto150k": 219,
         "150kto200k": 236,
@@ -15695,7 +15820,8 @@
       "code": "402",
       "name": "Lapinlahti",
       "mileageCount": {
-        "under50k": 556,
+        "na": 362,
+        "under50k": 194,
         "50kto100k": 435,
         "100kto150k": 571,
         "150kto200k": 645,
@@ -15823,7 +15949,8 @@
       "code": "403",
       "name": "Lappajärvi",
       "mileageCount": {
-        "under50k": 156,
+        "na": 99,
+        "under50k": 57,
         "50kto100k": 179,
         "100kto150k": 200,
         "150kto200k": 221,
@@ -15947,7 +16074,8 @@
       "code": "405",
       "name": "Lappeenranta",
       "mileageCount": {
-        "under50k": 7842,
+        "na": 5018,
+        "under50k": 2824,
         "50kto100k": 6054,
         "100kto150k": 5964,
         "150kto200k": 5714,
@@ -16077,7 +16205,8 @@
       "code": "408",
       "name": "Lapua",
       "mileageCount": {
-        "under50k": 1127,
+        "na": 679,
+        "under50k": 448,
         "50kto100k": 947,
         "100kto150k": 1163,
         "150kto200k": 1210,
@@ -16206,7 +16335,8 @@
       "code": "440",
       "name": "Larsmo",
       "mileageCount": {
-        "under50k": 301,
+        "na": 155,
+        "under50k": 146,
         "50kto100k": 362,
         "100kto150k": 388,
         "150kto200k": 507,
@@ -16332,7 +16462,8 @@
       "code": "410",
       "name": "Laukaa",
       "mileageCount": {
-        "under50k": 1461,
+        "na": 913,
+        "under50k": 548,
         "50kto100k": 1174,
         "100kto150k": 1330,
         "150kto200k": 1428,
@@ -16461,7 +16592,8 @@
       "code": "416",
       "name": "Lemi",
       "mileageCount": {
-        "under50k": 308,
+        "na": 214,
+        "under50k": 94,
         "50kto100k": 224,
         "100kto150k": 227,
         "150kto200k": 277,
@@ -16588,7 +16720,7 @@
       "code": "417",
       "name": "Lemland",
       "mileageCount": {
-        "under50k": 9,
+        "na": 9,
         "50kto100k": 4,
         "100kto150k": 2,
         "150kto200k": 5,
@@ -16655,7 +16787,8 @@
       "code": "418",
       "name": "Lempäälä",
       "mileageCount": {
-        "under50k": 2748,
+        "na": 1661,
+        "under50k": 1087,
         "50kto100k": 2075,
         "100kto150k": 2108,
         "150kto200k": 2077,
@@ -16785,7 +16918,8 @@
       "code": "420",
       "name": "Leppävirta",
       "mileageCount": {
-        "under50k": 751,
+        "na": 518,
+        "under50k": 233,
         "50kto100k": 597,
         "100kto150k": 679,
         "150kto200k": 719,
@@ -16913,7 +17047,8 @@
       "code": "421",
       "name": "Lestijärvi",
       "mileageCount": {
-        "under50k": 29,
+        "na": 19,
+        "under50k": 10,
         "50kto100k": 35,
         "100kto150k": 37,
         "150kto200k": 44,
@@ -17024,7 +17159,8 @@
       "code": "422",
       "name": "Lieksa",
       "mileageCount": {
-        "under50k": 634,
+        "na": 379,
+        "under50k": 255,
         "50kto100k": 609,
         "100kto150k": 667,
         "150kto200k": 802,
@@ -17151,7 +17287,8 @@
       "code": "423",
       "name": "Lieto",
       "mileageCount": {
-        "under50k": 2748,
+        "na": 1735,
+        "under50k": 1013,
         "50kto100k": 2144,
         "100kto150k": 1953,
         "150kto200k": 1713,
@@ -17280,7 +17417,8 @@
       "code": "425",
       "name": "Liminka",
       "mileageCount": {
-        "under50k": 599,
+        "na": 375,
+        "under50k": 224,
         "50kto100k": 524,
         "100kto150k": 575,
         "150kto200k": 672,
@@ -17408,7 +17546,8 @@
       "code": "426",
       "name": "Liperi",
       "mileageCount": {
-        "under50k": 996,
+        "na": 672,
+        "under50k": 324,
         "50kto100k": 711,
         "100kto150k": 729,
         "150kto200k": 920,
@@ -17536,7 +17675,8 @@
       "code": "444",
       "name": "Lohja",
       "mileageCount": {
-        "under50k": 5980,
+        "na": 3855,
+        "under50k": 2125,
         "50kto100k": 4248,
         "100kto150k": 4047,
         "150kto200k": 3743,
@@ -17666,7 +17806,8 @@
       "code": "430",
       "name": "Loimaa",
       "mileageCount": {
-        "under50k": 1603,
+        "na": 999,
+        "under50k": 604,
         "50kto100k": 1162,
         "100kto150k": 1244,
         "150kto200k": 1350,
@@ -17796,7 +17937,8 @@
       "code": "433",
       "name": "Loppi",
       "mileageCount": {
-        "under50k": 828,
+        "na": 527,
+        "under50k": 301,
         "50kto100k": 651,
         "100kto150k": 662,
         "150kto200k": 736,
@@ -17925,7 +18067,8 @@
       "code": "434",
       "name": "Loviisa",
       "mileageCount": {
-        "under50k": 1719,
+        "na": 1064,
+        "under50k": 655,
         "50kto100k": 1256,
         "100kto150k": 1269,
         "150kto200k": 1296,
@@ -18054,7 +18197,8 @@
       "code": "435",
       "name": "Luhanka",
       "mileageCount": {
-        "under50k": 72,
+        "na": 51,
+        "under50k": 21,
         "50kto100k": 53,
         "100kto150k": 55,
         "150kto200k": 54,
@@ -18167,7 +18311,8 @@
       "code": "436",
       "name": "Lumijoki",
       "mileageCount": {
-        "under50k": 104,
+        "na": 68,
+        "under50k": 36,
         "50kto100k": 82,
         "100kto150k": 88,
         "150kto200k": 111,
@@ -18287,7 +18432,7 @@
       "code": "438",
       "name": "Lumparland",
       "mileageCount": {
-        "under50k": 2,
+        "na": 2,
         "50kto100k": 1,
         "100kto150k": 1,
         "250kto300k": 1
@@ -18328,7 +18473,8 @@
       "code": "441",
       "name": "Luumäki",
       "mileageCount": {
-        "under50k": 425,
+        "na": 280,
+        "under50k": 145,
         "50kto100k": 364,
         "100kto150k": 358,
         "150kto200k": 367,
@@ -18454,7 +18600,8 @@
       "code": "475",
       "name": "Malax",
       "mileageCount": {
-        "under50k": 369,
+        "na": 187,
+        "under50k": 182,
         "50kto100k": 433,
         "100kto150k": 478,
         "150kto200k": 563,
@@ -18582,7 +18729,8 @@
       "code": "478",
       "name": "Mariehamn",
       "mileageCount": {
-        "under50k": 58,
+        "na": 41,
+        "under50k": 17,
         "50kto100k": 23,
         "100kto150k": 25,
         "150kto200k": 26,
@@ -18680,7 +18828,8 @@
       "code": "480",
       "name": "Marttila",
       "mileageCount": {
-        "under50k": 175,
+        "na": 104,
+        "under50k": 71,
         "50kto100k": 151,
         "100kto150k": 156,
         "150kto200k": 201,
@@ -18804,7 +18953,8 @@
       "code": "481",
       "name": "Masku",
       "mileageCount": {
-        "under50k": 1254,
+        "na": 781,
+        "under50k": 473,
         "50kto100k": 1006,
         "100kto150k": 983,
         "150kto200k": 929,
@@ -18934,7 +19084,8 @@
       "code": "483",
       "name": "Merijärvi",
       "mileageCount": {
-        "under50k": 49,
+        "na": 27,
+        "under50k": 22,
         "50kto100k": 29,
         "100kto150k": 44,
         "150kto200k": 64,
@@ -19050,7 +19201,8 @@
       "code": "484",
       "name": "Merikarvia",
       "mileageCount": {
-        "under50k": 191,
+        "na": 120,
+        "under50k": 71,
         "50kto100k": 176,
         "100kto150k": 201,
         "150kto200k": 219,
@@ -19177,7 +19329,8 @@
       "code": "489",
       "name": "Miehikkälä",
       "mileageCount": {
-        "under50k": 178,
+        "na": 112,
+        "under50k": 66,
         "50kto100k": 156,
         "100kto150k": 148,
         "150kto200k": 155,
@@ -19301,7 +19454,8 @@
       "code": "491",
       "name": "Mikkeli",
       "mileageCount": {
-        "under50k": 4956,
+        "na": 3077,
+        "under50k": 1879,
         "50kto100k": 4055,
         "100kto150k": 4191,
         "150kto200k": 4140,
@@ -19431,7 +19585,8 @@
       "code": "494",
       "name": "Muhos",
       "mileageCount": {
-        "under50k": 554,
+        "na": 342,
+        "under50k": 212,
         "50kto100k": 452,
         "100kto150k": 515,
         "150kto200k": 596,
@@ -19557,7 +19712,8 @@
       "code": "495",
       "name": "Multia",
       "mileageCount": {
-        "under50k": 111,
+        "na": 70,
+        "under50k": 41,
         "50kto100k": 87,
         "100kto150k": 95,
         "150kto200k": 128,
@@ -19675,7 +19831,8 @@
       "code": "498",
       "name": "Muonio",
       "mileageCount": {
-        "under50k": 116,
+        "na": 62,
+        "under50k": 54,
         "50kto100k": 117,
         "100kto150k": 178,
         "150kto200k": 216,
@@ -19799,7 +19956,8 @@
       "code": "500",
       "name": "Muurame",
       "mileageCount": {
-        "under50k": 1126,
+        "na": 739,
+        "under50k": 387,
         "50kto100k": 824,
         "100kto150k": 854,
         "150kto200k": 859,
@@ -19928,7 +20086,8 @@
       "code": "503",
       "name": "Mynämäki",
       "mileageCount": {
-        "under50k": 819,
+        "na": 507,
+        "under50k": 312,
         "50kto100k": 598,
         "100kto150k": 682,
         "150kto200k": 746,
@@ -20057,7 +20216,8 @@
       "code": "504",
       "name": "Myrskylä",
       "mileageCount": {
-        "under50k": 185,
+        "na": 110,
+        "under50k": 75,
         "50kto100k": 129,
         "100kto150k": 131,
         "150kto200k": 157,
@@ -20181,7 +20341,8 @@
       "code": "505",
       "name": "Mäntsälä",
       "mileageCount": {
-        "under50k": 2248,
+        "na": 1390,
+        "under50k": 858,
         "50kto100k": 1700,
         "100kto150k": 1787,
         "150kto200k": 1689,
@@ -20310,7 +20471,8 @@
       "code": "508",
       "name": "Mänttä-Vilppula",
       "mileageCount": {
-        "under50k": 894,
+        "na": 576,
+        "under50k": 318,
         "50kto100k": 612,
         "100kto150k": 770,
         "150kto200k": 800,
@@ -20439,7 +20601,8 @@
       "code": "507",
       "name": "Mäntyharju",
       "mileageCount": {
-        "under50k": 547,
+        "na": 336,
+        "under50k": 211,
         "50kto100k": 441,
         "100kto150k": 454,
         "150kto200k": 457,
@@ -20567,7 +20730,8 @@
       "code": "529",
       "name": "Naantali",
       "mileageCount": {
-        "under50k": 3022,
+        "na": 1927,
+        "under50k": 1095,
         "50kto100k": 2172,
         "100kto150k": 1876,
         "150kto200k": 1583,
@@ -20696,7 +20860,8 @@
       "code": "531",
       "name": "Nakkila",
       "mileageCount": {
-        "under50k": 533,
+        "na": 329,
+        "under50k": 204,
         "50kto100k": 383,
         "100kto150k": 433,
         "150kto200k": 469,
@@ -20824,7 +20989,8 @@
       "code": "535",
       "name": "Nivala",
       "mileageCount": {
-        "under50k": 545,
+        "na": 294,
+        "under50k": 251,
         "50kto100k": 430,
         "100kto150k": 511,
         "150kto200k": 613,
@@ -20951,7 +21117,8 @@
       "code": "536",
       "name": "Nokia",
       "mileageCount": {
-        "under50k": 3864,
+        "na": 2523,
+        "under50k": 1341,
         "50kto100k": 2853,
         "100kto150k": 2978,
         "150kto200k": 2900,
@@ -21081,7 +21248,8 @@
       "code": "538",
       "name": "Nousiainen",
       "mileageCount": {
-        "under50k": 509,
+        "na": 306,
+        "under50k": 203,
         "50kto100k": 410,
         "100kto150k": 466,
         "150kto200k": 456,
@@ -21209,7 +21377,8 @@
       "code": "541",
       "name": "Nurmes",
       "mileageCount": {
-        "under50k": 584,
+        "na": 352,
+        "under50k": 232,
         "50kto100k": 473,
         "100kto150k": 571,
         "150kto200k": 673,
@@ -21337,7 +21506,8 @@
       "code": "543",
       "name": "Nurmijärvi",
       "mileageCount": {
-        "under50k": 5766,
+        "na": 3688,
+        "under50k": 2078,
         "50kto100k": 4158,
         "100kto150k": 4003,
         "150kto200k": 3527,
@@ -21467,7 +21637,8 @@
       "code": "893",
       "name": "Nykarleby",
       "mileageCount": {
-        "under50k": 534,
+        "na": 273,
+        "under50k": 261,
         "50kto100k": 545,
         "100kto150k": 668,
         "150kto200k": 749,
@@ -21595,7 +21766,8 @@
       "code": "545",
       "name": "Närpes",
       "mileageCount": {
-        "under50k": 646,
+        "na": 293,
+        "under50k": 353,
         "50kto100k": 704,
         "100kto150k": 857,
         "150kto200k": 975,
@@ -21723,7 +21895,8 @@
       "code": "560",
       "name": "Orimattila",
       "mileageCount": {
-        "under50k": 1764,
+        "na": 1157,
+        "under50k": 607,
         "50kto100k": 1210,
         "100kto150k": 1301,
         "150kto200k": 1325,
@@ -21853,7 +22026,8 @@
       "code": "561",
       "name": "Oripää",
       "mileageCount": {
-        "under50k": 127,
+        "na": 71,
+        "under50k": 56,
         "50kto100k": 82,
         "100kto150k": 109,
         "150kto200k": 111,
@@ -21974,7 +22148,8 @@
       "code": "562",
       "name": "Orivesi",
       "mileageCount": {
-        "under50k": 869,
+        "na": 566,
+        "under50k": 303,
         "50kto100k": 665,
         "100kto150k": 661,
         "150kto200k": 723,
@@ -22102,7 +22277,8 @@
       "code": "563",
       "name": "Oulainen",
       "mileageCount": {
-        "under50k": 406,
+        "na": 240,
+        "under50k": 166,
         "50kto100k": 324,
         "100kto150k": 387,
         "150kto200k": 436,
@@ -22229,7 +22405,8 @@
       "code": "564",
       "name": "Oulu",
       "mileageCount": {
-        "under50k": 17892,
+        "na": 11670,
+        "under50k": 6222,
         "50kto100k": 13204,
         "100kto150k": 13781,
         "150kto200k": 13610,
@@ -22359,7 +22536,8 @@
       "code": "309",
       "name": "Outokumpu",
       "mileageCount": {
-        "under50k": 488,
+        "na": 313,
+        "under50k": 175,
         "50kto100k": 341,
         "100kto150k": 367,
         "150kto200k": 407,
@@ -22486,7 +22664,8 @@
       "code": "576",
       "name": "Padasjoki",
       "mileageCount": {
-        "under50k": 295,
+        "na": 183,
+        "under50k": 112,
         "50kto100k": 204,
         "100kto150k": 211,
         "150kto200k": 234,
@@ -22611,7 +22790,8 @@
       "code": "577",
       "name": "Paimio",
       "mileageCount": {
-        "under50k": 1737,
+        "na": 1228,
+        "under50k": 509,
         "50kto100k": 1016,
         "100kto150k": 1055,
         "150kto200k": 961,
@@ -22739,7 +22919,8 @@
       "code": "578",
       "name": "Paltamo",
       "mileageCount": {
-        "under50k": 191,
+        "na": 120,
+        "under50k": 71,
         "50kto100k": 165,
         "100kto150k": 195,
         "150kto200k": 221,
@@ -22861,7 +23042,8 @@
       "code": "445",
       "name": "Pargas",
       "mileageCount": {
-        "under50k": 1653,
+        "na": 973,
+        "under50k": 680,
         "50kto100k": 1567,
         "100kto150k": 1482,
         "150kto200k": 1348,
@@ -22992,7 +23174,8 @@
       "code": "580",
       "name": "Parikkala",
       "mileageCount": {
-        "under50k": 367,
+        "na": 188,
+        "under50k": 179,
         "50kto100k": 347,
         "100kto150k": 373,
         "150kto200k": 390,
@@ -23118,7 +23301,8 @@
       "code": "581",
       "name": "Parkano",
       "mileageCount": {
-        "under50k": 523,
+        "na": 330,
+        "under50k": 193,
         "50kto100k": 393,
         "100kto150k": 461,
         "150kto200k": 504,
@@ -23246,7 +23430,8 @@
       "code": "599",
       "name": "Pedersöre",
       "mileageCount": {
-        "under50k": 704,
+        "na": 375,
+        "under50k": 329,
         "50kto100k": 724,
         "100kto150k": 938,
         "150kto200k": 1086,
@@ -23374,7 +23559,8 @@
       "code": "583",
       "name": "Pelkosenniemi",
       "mileageCount": {
-        "under50k": 47,
+        "na": 27,
+        "under50k": 20,
         "50kto100k": 59,
         "100kto150k": 57,
         "150kto200k": 65,
@@ -23486,7 +23672,8 @@
       "code": "854",
       "name": "Pello",
       "mileageCount": {
-        "under50k": 232,
+        "na": 146,
+        "under50k": 86,
         "50kto100k": 171,
         "100kto150k": 228,
         "150kto200k": 245,
@@ -23608,7 +23795,8 @@
       "code": "584",
       "name": "Perho",
       "mileageCount": {
-        "under50k": 128,
+        "na": 87,
+        "under50k": 41,
         "50kto100k": 96,
         "100kto150k": 99,
         "150kto200k": 148,
@@ -23730,7 +23918,8 @@
       "code": "588",
       "name": "Pertunmaa",
       "mileageCount": {
-        "under50k": 146,
+        "na": 96,
+        "under50k": 50,
         "50kto100k": 113,
         "100kto150k": 121,
         "150kto200k": 154,
@@ -23852,7 +24041,8 @@
       "code": "592",
       "name": "Petäjävesi",
       "mileageCount": {
-        "under50k": 289,
+        "na": 167,
+        "under50k": 122,
         "50kto100k": 238,
         "100kto150k": 252,
         "150kto200k": 284,
@@ -23978,7 +24168,8 @@
       "code": "593",
       "name": "Pieksämäki",
       "mileageCount": {
-        "under50k": 1395,
+        "na": 897,
+        "under50k": 498,
         "50kto100k": 1130,
         "100kto150k": 1313,
         "150kto200k": 1390,
@@ -24107,7 +24298,8 @@
       "code": "595",
       "name": "Pielavesi",
       "mileageCount": {
-        "under50k": 230,
+        "na": 135,
+        "under50k": 95,
         "50kto100k": 217,
         "100kto150k": 219,
         "150kto200k": 290,
@@ -24229,7 +24421,8 @@
       "code": "601",
       "name": "Pihtipudas",
       "mileageCount": {
-        "under50k": 208,
+        "na": 130,
+        "under50k": 78,
         "50kto100k": 199,
         "100kto150k": 226,
         "150kto200k": 251,
@@ -24355,7 +24548,8 @@
       "code": "604",
       "name": "Pirkkala",
       "mileageCount": {
-        "under50k": 2625,
+        "na": 1698,
+        "under50k": 927,
         "50kto100k": 1955,
         "100kto150k": 1758,
         "150kto200k": 1553,
@@ -24485,7 +24679,8 @@
       "code": "607",
       "name": "Polvijärvi",
       "mileageCount": {
-        "under50k": 265,
+        "na": 173,
+        "under50k": 92,
         "50kto100k": 211,
         "100kto150k": 254,
         "150kto200k": 295,
@@ -24611,7 +24806,8 @@
       "code": "608",
       "name": "Pomarkku",
       "mileageCount": {
-        "under50k": 158,
+        "na": 93,
+        "under50k": 65,
         "50kto100k": 124,
         "100kto150k": 149,
         "150kto200k": 147,
@@ -24736,7 +24932,8 @@
       "code": "609",
       "name": "Pori",
       "mileageCount": {
-        "under50k": 8503,
+        "na": 5238,
+        "under50k": 3265,
         "50kto100k": 6708,
         "100kto150k": 6851,
         "150kto200k": 6823,
@@ -24866,7 +25063,8 @@
       "code": "611",
       "name": "Pornainen",
       "mileageCount": {
-        "under50k": 546,
+        "na": 318,
+        "under50k": 228,
         "50kto100k": 414,
         "100kto150k": 459,
         "150kto200k": 465,
@@ -24993,7 +25191,8 @@
       "code": "638",
       "name": "Porvoo",
       "mileageCount": {
-        "under50k": 6563,
+        "na": 4011,
+        "under50k": 2552,
         "50kto100k": 5042,
         "100kto150k": 4729,
         "150kto200k": 4233,
@@ -25125,7 +25324,8 @@
       "code": "614",
       "name": "Posio",
       "mileageCount": {
-        "under50k": 129,
+        "na": 72,
+        "under50k": 57,
         "50kto100k": 144,
         "100kto150k": 192,
         "150kto200k": 187,
@@ -25247,7 +25447,8 @@
       "code": "615",
       "name": "Pudasjärvi",
       "mileageCount": {
-        "under50k": 364,
+        "na": 209,
+        "under50k": 155,
         "50kto100k": 319,
         "100kto150k": 379,
         "150kto200k": 447,
@@ -25374,7 +25575,8 @@
       "code": "616",
       "name": "Pukkila",
       "mileageCount": {
-        "under50k": 172,
+        "na": 98,
+        "under50k": 74,
         "50kto100k": 144,
         "100kto150k": 133,
         "150kto200k": 152,
@@ -25500,7 +25702,8 @@
       "code": "619",
       "name": "Punkalaidun",
       "mileageCount": {
-        "under50k": 272,
+        "na": 179,
+        "under50k": 93,
         "50kto100k": 192,
         "100kto150k": 207,
         "150kto200k": 206,
@@ -25626,7 +25829,8 @@
       "code": "620",
       "name": "Puolanka",
       "mileageCount": {
-        "under50k": 130,
+        "na": 79,
+        "under50k": 51,
         "50kto100k": 115,
         "100kto150k": 130,
         "150kto200k": 163,
@@ -25748,7 +25952,8 @@
       "code": "623",
       "name": "Puumala",
       "mileageCount": {
-        "under50k": 201,
+        "na": 143,
+        "under50k": 58,
         "50kto100k": 178,
         "100kto150k": 196,
         "150kto200k": 209,
@@ -25870,7 +26075,8 @@
       "code": "624",
       "name": "Pyhtää",
       "mileageCount": {
-        "under50k": 582,
+        "na": 376,
+        "under50k": 206,
         "50kto100k": 487,
         "100kto150k": 486,
         "150kto200k": 462,
@@ -25998,7 +26204,8 @@
       "code": "625",
       "name": "Pyhäjoki",
       "mileageCount": {
-        "under50k": 174,
+        "na": 91,
+        "under50k": 83,
         "50kto100k": 177,
         "100kto150k": 144,
         "150kto200k": 215,
@@ -26122,7 +26329,8 @@
       "code": "626",
       "name": "Pyhäjärvi",
       "mileageCount": {
-        "under50k": 258,
+        "na": 169,
+        "under50k": 89,
         "50kto100k": 245,
         "100kto150k": 255,
         "150kto200k": 338,
@@ -26246,7 +26454,8 @@
       "code": "630",
       "name": "Pyhäntä",
       "mileageCount": {
-        "under50k": 83,
+        "na": 51,
+        "under50k": 32,
         "50kto100k": 77,
         "100kto150k": 85,
         "150kto200k": 80,
@@ -26363,7 +26572,8 @@
       "code": "631",
       "name": "Pyhäranta",
       "mileageCount": {
-        "under50k": 159,
+        "na": 91,
+        "under50k": 68,
         "50kto100k": 141,
         "100kto150k": 168,
         "150kto200k": 196,
@@ -26486,7 +26696,8 @@
       "code": "635",
       "name": "Pälkäne",
       "mileageCount": {
-        "under50k": 611,
+        "na": 386,
+        "under50k": 225,
         "50kto100k": 476,
         "100kto150k": 531,
         "150kto200k": 540,
@@ -26614,7 +26825,8 @@
       "code": "636",
       "name": "Pöytyä",
       "mileageCount": {
-        "under50k": 747,
+        "na": 478,
+        "under50k": 269,
         "50kto100k": 555,
         "100kto150k": 633,
         "150kto200k": 749,
@@ -26742,7 +26954,8 @@
       "code": "678",
       "name": "Raahe",
       "mileageCount": {
-        "under50k": 1556,
+        "na": 923,
+        "under50k": 633,
         "50kto100k": 1311,
         "100kto150k": 1452,
         "150kto200k": 1651,
@@ -26872,7 +27085,8 @@
       "code": "680",
       "name": "Raisio",
       "mileageCount": {
-        "under50k": 3801,
+        "na": 2359,
+        "under50k": 1442,
         "50kto100k": 2695,
         "100kto150k": 2447,
         "150kto200k": 1929,
@@ -27002,7 +27216,8 @@
       "code": "681",
       "name": "Rantasalmi",
       "mileageCount": {
-        "under50k": 271,
+        "na": 178,
+        "under50k": 93,
         "50kto100k": 218,
         "100kto150k": 237,
         "150kto200k": 294,
@@ -27124,7 +27339,8 @@
       "code": "683",
       "name": "Ranua",
       "mileageCount": {
-        "under50k": 160,
+        "na": 103,
+        "under50k": 57,
         "50kto100k": 112,
         "100kto150k": 188,
         "150kto200k": 233,
@@ -27245,7 +27461,8 @@
       "code": "710",
       "name": "Raseborg",
       "mileageCount": {
-        "under50k": 2938,
+        "na": 1807,
+        "under50k": 1131,
         "50kto100k": 2456,
         "100kto150k": 2635,
         "150kto200k": 2454,
@@ -27375,7 +27592,8 @@
       "code": "684",
       "name": "Rauma",
       "mileageCount": {
-        "under50k": 3951,
+        "na": 2294,
+        "under50k": 1657,
         "50kto100k": 3380,
         "100kto150k": 3445,
         "150kto200k": 3349,
@@ -27506,7 +27724,8 @@
       "code": "686",
       "name": "Rautalampi",
       "mileageCount": {
-        "under50k": 212,
+        "na": 151,
+        "under50k": 61,
         "50kto100k": 168,
         "100kto150k": 192,
         "150kto200k": 208,
@@ -27630,7 +27849,8 @@
       "code": "687",
       "name": "Rautavaara",
       "mileageCount": {
-        "under50k": 92,
+        "na": 58,
+        "under50k": 34,
         "50kto100k": 77,
         "100kto150k": 85,
         "150kto200k": 104,
@@ -27749,7 +27969,8 @@
       "code": "689",
       "name": "Rautjärvi",
       "mileageCount": {
-        "under50k": 299,
+        "na": 188,
+        "under50k": 111,
         "50kto100k": 260,
         "100kto150k": 270,
         "150kto200k": 249,
@@ -27873,7 +28094,8 @@
       "code": "691",
       "name": "Reisjärvi",
       "mileageCount": {
-        "under50k": 125,
+        "na": 72,
+        "under50k": 53,
         "50kto100k": 118,
         "100kto150k": 145,
         "150kto200k": 181,
@@ -27990,7 +28212,8 @@
       "code": "694",
       "name": "Riihimäki",
       "mileageCount": {
-        "under50k": 3217,
+        "na": 2111,
+        "under50k": 1106,
         "50kto100k": 2374,
         "100kto150k": 2312,
         "150kto200k": 2278,
@@ -28119,7 +28342,8 @@
       "code": "697",
       "name": "Ristijärvi",
       "mileageCount": {
-        "under50k": 72,
+        "na": 50,
+        "under50k": 22,
         "50kto100k": 62,
         "100kto150k": 74,
         "150kto200k": 104,
@@ -28233,7 +28457,8 @@
       "code": "698",
       "name": "Rovaniemi",
       "mileageCount": {
-        "under50k": 6210,
+        "na": 4336,
+        "under50k": 1874,
         "50kto100k": 3947,
         "100kto150k": 4287,
         "150kto200k": 4708,
@@ -28362,7 +28587,8 @@
       "code": "700",
       "name": "Ruokolahti",
       "mileageCount": {
-        "under50k": 571,
+        "na": 359,
+        "under50k": 212,
         "50kto100k": 398,
         "100kto150k": 417,
         "150kto200k": 443,
@@ -28488,7 +28714,8 @@
       "code": "702",
       "name": "Ruovesi",
       "mileageCount": {
-        "under50k": 335,
+        "na": 202,
+        "under50k": 133,
         "50kto100k": 296,
         "100kto150k": 307,
         "150kto200k": 346,
@@ -28616,7 +28843,8 @@
       "code": "704",
       "name": "Rusko",
       "mileageCount": {
-        "under50k": 892,
+        "na": 557,
+        "under50k": 335,
         "50kto100k": 666,
         "100kto150k": 617,
         "150kto200k": 614,
@@ -28744,7 +28972,8 @@
       "code": "707",
       "name": "Rääkkylä",
       "mileageCount": {
-        "under50k": 161,
+        "na": 100,
+        "under50k": 61,
         "50kto100k": 102,
         "100kto150k": 125,
         "150kto200k": 186,
@@ -28866,7 +29095,8 @@
       "code": "729",
       "name": "Saarijärvi",
       "mileageCount": {
-        "under50k": 659,
+        "na": 395,
+        "under50k": 264,
         "50kto100k": 526,
         "100kto150k": 582,
         "150kto200k": 683,
@@ -28995,7 +29225,8 @@
       "code": "732",
       "name": "Salla",
       "mileageCount": {
-        "under50k": 191,
+        "na": 113,
+        "under50k": 78,
         "50kto100k": 155,
         "100kto150k": 197,
         "150kto200k": 234,
@@ -29118,7 +29349,8 @@
       "code": "734",
       "name": "Salo",
       "mileageCount": {
-        "under50k": 6442,
+        "na": 4056,
+        "under50k": 2386,
         "50kto100k": 4757,
         "100kto150k": 4806,
         "150kto200k": 4472,
@@ -29301,7 +29533,8 @@
       "code": "790",
       "name": "Sastamala",
       "mileageCount": {
-        "under50k": 2447,
+        "na": 1492,
+        "under50k": 955,
         "50kto100k": 1893,
         "100kto150k": 1965,
         "150kto200k": 1970,
@@ -29432,7 +29665,8 @@
       "code": "738",
       "name": "Sauvo",
       "mileageCount": {
-        "under50k": 348,
+        "na": 221,
+        "under50k": 127,
         "50kto100k": 248,
         "100kto150k": 251,
         "150kto200k": 271,
@@ -29558,7 +29792,8 @@
       "code": "739",
       "name": "Savitaipale",
       "mileageCount": {
-        "under50k": 308,
+        "na": 187,
+        "under50k": 121,
         "50kto100k": 256,
         "100kto150k": 273,
         "150kto200k": 284,
@@ -29684,7 +29919,8 @@
       "code": "740",
       "name": "Savonlinna",
       "mileageCount": {
-        "under50k": 2714,
+        "na": 1708,
+        "under50k": 1006,
         "50kto100k": 2214,
         "100kto150k": 2473,
         "150kto200k": 2626,
@@ -29813,7 +30049,8 @@
       "code": "742",
       "name": "Savukoski",
       "mileageCount": {
-        "under50k": 47,
+        "na": 30,
+        "under50k": 17,
         "50kto100k": 47,
         "100kto150k": 61,
         "150kto200k": 65,
@@ -29926,7 +30163,8 @@
       "code": "743",
       "name": "Seinäjoki",
       "mileageCount": {
-        "under50k": 6758,
+        "na": 4232,
+        "under50k": 2526,
         "50kto100k": 5159,
         "100kto150k": 5660,
         "150kto200k": 5857,
@@ -30057,7 +30295,8 @@
       "code": "746",
       "name": "Sievi",
       "mileageCount": {
-        "under50k": 216,
+        "na": 125,
+        "under50k": 91,
         "50kto100k": 185,
         "100kto150k": 231,
         "150kto200k": 281,
@@ -30181,7 +30420,8 @@
       "code": "747",
       "name": "Siikainen",
       "mileageCount": {
-        "under50k": 133,
+        "na": 92,
+        "under50k": 41,
         "50kto100k": 60,
         "100kto150k": 79,
         "150kto200k": 105,
@@ -30300,7 +30540,8 @@
       "code": "748",
       "name": "Siikajoki",
       "mileageCount": {
-        "under50k": 281,
+        "na": 175,
+        "under50k": 106,
         "50kto100k": 207,
         "100kto150k": 241,
         "150kto200k": 326,
@@ -30426,7 +30667,8 @@
       "code": "791",
       "name": "Siikalatva",
       "mileageCount": {
-        "under50k": 278,
+        "na": 176,
+        "under50k": 102,
         "50kto100k": 217,
         "100kto150k": 271,
         "150kto200k": 364,
@@ -30552,7 +30794,8 @@
       "code": "749",
       "name": "Siilinjärvi",
       "mileageCount": {
-        "under50k": 1701,
+        "na": 1105,
+        "under50k": 596,
         "50kto100k": 1289,
         "100kto150k": 1525,
         "150kto200k": 1588,
@@ -30681,7 +30924,8 @@
       "code": "751",
       "name": "Simo",
       "mileageCount": {
-        "under50k": 249,
+        "na": 162,
+        "under50k": 87,
         "50kto100k": 191,
         "100kto150k": 221,
         "150kto200k": 198,
@@ -30804,7 +31048,8 @@
       "code": "753",
       "name": "Sipoo",
       "mileageCount": {
-        "under50k": 3152,
+        "na": 2028,
+        "under50k": 1124,
         "50kto100k": 2373,
         "100kto150k": 2150,
         "150kto200k": 1796,
@@ -30933,7 +31178,8 @@
       "code": "755",
       "name": "Siuntio",
       "mileageCount": {
-        "under50k": 898,
+        "na": 591,
+        "under50k": 307,
         "50kto100k": 624,
         "100kto150k": 600,
         "150kto200k": 516,
@@ -31059,7 +31305,8 @@
       "code": "758",
       "name": "Sodankylä",
       "mileageCount": {
-        "under50k": 544,
+        "na": 352,
+        "under50k": 192,
         "50kto100k": 453,
         "100kto150k": 568,
         "150kto200k": 632,
@@ -31186,7 +31433,8 @@
       "code": "759",
       "name": "Soini",
       "mileageCount": {
-        "under50k": 107,
+        "na": 67,
+        "under50k": 40,
         "50kto100k": 111,
         "100kto150k": 129,
         "150kto200k": 143,
@@ -31309,7 +31557,8 @@
       "code": "761",
       "name": "Somero",
       "mileageCount": {
-        "under50k": 862,
+        "na": 517,
+        "under50k": 345,
         "50kto100k": 695,
         "100kto150k": 714,
         "150kto200k": 779,
@@ -31438,7 +31687,8 @@
       "code": "762",
       "name": "Sonkajärvi",
       "mileageCount": {
-        "under50k": 209,
+        "na": 135,
+        "under50k": 74,
         "50kto100k": 177,
         "100kto150k": 212,
         "150kto200k": 265,
@@ -31563,7 +31813,8 @@
       "code": "765",
       "name": "Sotkamo",
       "mileageCount": {
-        "under50k": 701,
+        "na": 439,
+        "under50k": 262,
         "50kto100k": 564,
         "100kto150k": 711,
         "150kto200k": 805,
@@ -31724,7 +31975,8 @@
       "code": "768",
       "name": "Sulkava",
       "mileageCount": {
-        "under50k": 173,
+        "na": 98,
+        "under50k": 75,
         "50kto100k": 155,
         "100kto150k": 186,
         "150kto200k": 218,
@@ -31847,7 +32099,7 @@
       "code": "771",
       "name": "Sund",
       "mileageCount": {
-        "under50k": 1,
+        "na": 1,
         "50kto100k": 1,
         "100kto150k": 3,
         "150kto200k": 2,
@@ -31901,7 +32153,8 @@
       "code": "777",
       "name": "Suomussalmi",
       "mileageCount": {
-        "under50k": 348,
+        "na": 210,
+        "under50k": 138,
         "50kto100k": 362,
         "100kto150k": 453,
         "150kto200k": 551,
@@ -32027,7 +32280,8 @@
       "code": "778",
       "name": "Suonenjoki",
       "mileageCount": {
-        "under50k": 473,
+        "na": 295,
+        "under50k": 178,
         "50kto100k": 379,
         "100kto150k": 399,
         "150kto200k": 494,
@@ -32152,7 +32406,8 @@
       "code": "781",
       "name": "Sysmä",
       "mileageCount": {
-        "under50k": 343,
+        "na": 208,
+        "under50k": 135,
         "50kto100k": 287,
         "100kto150k": 317,
         "150kto200k": 288,
@@ -32279,7 +32534,8 @@
       "code": "783",
       "name": "Säkylä",
       "mileageCount": {
-        "under50k": 675,
+        "na": 428,
+        "under50k": 247,
         "50kto100k": 564,
         "100kto150k": 636,
         "150kto200k": 635,
@@ -32408,7 +32664,8 @@
       "code": "831",
       "name": "Taipalsaari",
       "mileageCount": {
-        "under50k": 518,
+        "na": 334,
+        "under50k": 184,
         "50kto100k": 425,
         "100kto150k": 418,
         "150kto200k": 446,
@@ -32534,7 +32791,8 @@
       "code": "832",
       "name": "Taivalkoski",
       "mileageCount": {
-        "under50k": 177,
+        "na": 115,
+        "under50k": 62,
         "50kto100k": 171,
         "100kto150k": 217,
         "150kto200k": 221,
@@ -32655,7 +32913,8 @@
       "code": "833",
       "name": "Taivassalo",
       "mileageCount": {
-        "under50k": 170,
+        "na": 111,
+        "under50k": 59,
         "50kto100k": 130,
         "100kto150k": 137,
         "150kto200k": 188,
@@ -32777,7 +33036,8 @@
       "code": "834",
       "name": "Tammela",
       "mileageCount": {
-        "under50k": 560,
+        "na": 318,
+        "under50k": 242,
         "50kto100k": 512,
         "100kto150k": 492,
         "150kto200k": 567,
@@ -32906,7 +33166,8 @@
       "code": "837",
       "name": "Tampere",
       "mileageCount": {
-        "under50k": 23492,
+        "na": 15624,
+        "under50k": 7868,
         "50kto100k": 16313,
         "100kto150k": 15919,
         "150kto200k": 14313,
@@ -33038,7 +33299,8 @@
       "code": "844",
       "name": "Tervo",
       "mileageCount": {
-        "under50k": 86,
+        "na": 56,
+        "under50k": 30,
         "50kto100k": 73,
         "100kto150k": 116,
         "150kto200k": 104,
@@ -33158,7 +33420,8 @@
       "code": "845",
       "name": "Tervola",
       "mileageCount": {
-        "under50k": 189,
+        "na": 122,
+        "under50k": 67,
         "50kto100k": 144,
         "100kto150k": 148,
         "150kto200k": 207,
@@ -33281,7 +33544,8 @@
       "code": "846",
       "name": "Teuva",
       "mileageCount": {
-        "under50k": 387,
+        "na": 239,
+        "under50k": 148,
         "50kto100k": 317,
         "100kto150k": 353,
         "150kto200k": 343,
@@ -33408,7 +33672,8 @@
       "code": "848",
       "name": "Tohmajärvi",
       "mileageCount": {
-        "under50k": 284,
+        "na": 208,
+        "under50k": 76,
         "50kto100k": 202,
         "100kto150k": 249,
         "150kto200k": 330,
@@ -33532,7 +33797,8 @@
       "code": "849",
       "name": "Toholampi",
       "mileageCount": {
-        "under50k": 135,
+        "na": 76,
+        "under50k": 59,
         "50kto100k": 126,
         "100kto150k": 147,
         "150kto200k": 206,
@@ -33654,7 +33920,8 @@
       "code": "850",
       "name": "Toivakka",
       "mileageCount": {
-        "under50k": 196,
+        "na": 143,
+        "under50k": 53,
         "50kto100k": 144,
         "100kto150k": 188,
         "150kto200k": 172,
@@ -33780,7 +34047,8 @@
       "code": "851",
       "name": "Tornio",
       "mileageCount": {
-        "under50k": 1664,
+        "na": 1060,
+        "under50k": 604,
         "50kto100k": 1230,
         "100kto150k": 1416,
         "150kto200k": 1520,
@@ -33909,7 +34177,8 @@
       "code": "853",
       "name": "Turku",
       "mileageCount": {
-        "under50k": 20809,
+        "na": 13202,
+        "under50k": 7607,
         "50kto100k": 14917,
         "100kto150k": 13715,
         "150kto200k": 11987,
@@ -34041,7 +34310,8 @@
       "code": "857",
       "name": "Tuusniemi",
       "mileageCount": {
-        "under50k": 176,
+        "na": 124,
+        "under50k": 52,
         "50kto100k": 120,
         "100kto150k": 135,
         "150kto200k": 164,
@@ -34166,7 +34436,8 @@
       "code": "858",
       "name": "Tuusula",
       "mileageCount": {
-        "under50k": 5835,
+        "na": 3814,
+        "under50k": 2021,
         "50kto100k": 4214,
         "100kto150k": 3797,
         "150kto200k": 3409,
@@ -34297,7 +34568,8 @@
       "code": "859",
       "name": "Tyrnävä",
       "mileageCount": {
-        "under50k": 349,
+        "na": 223,
+        "under50k": 126,
         "50kto100k": 241,
         "100kto150k": 310,
         "150kto200k": 412,
@@ -34424,7 +34696,8 @@
       "code": "886",
       "name": "Ulvila",
       "mileageCount": {
-        "under50k": 1221,
+        "na": 740,
+        "under50k": 481,
         "50kto100k": 1071,
         "100kto150k": 1081,
         "150kto200k": 1110,
@@ -34553,7 +34826,8 @@
       "code": "999",
       "name": "Unknown",
       "mileageCount": {
-        "under50k": 3608,
+        "na": 3056,
+        "under50k": 552,
         "50kto100k": 900,
         "100kto150k": 742,
         "150kto200k": 769,
@@ -34685,7 +34959,8 @@
       "code": "887",
       "name": "Urjala",
       "mileageCount": {
-        "under50k": 423,
+        "na": 284,
+        "under50k": 139,
         "50kto100k": 299,
         "100kto150k": 335,
         "150kto200k": 375,
@@ -34813,7 +35088,8 @@
       "code": "889",
       "name": "Utajärvi",
       "mileageCount": {
-        "under50k": 154,
+        "na": 98,
+        "under50k": 56,
         "50kto100k": 149,
         "100kto150k": 136,
         "150kto200k": 164,
@@ -34938,7 +35214,8 @@
       "code": "890",
       "name": "Utsjoki",
       "mileageCount": {
-        "under50k": 46,
+        "na": 29,
+        "under50k": 17,
         "50kto100k": 67,
         "100kto150k": 68,
         "150kto200k": 100,
@@ -35055,7 +35332,8 @@
       "code": "892",
       "name": "Uurainen",
       "mileageCount": {
-        "under50k": 259,
+        "na": 169,
+        "under50k": 90,
         "50kto100k": 173,
         "100kto150k": 233,
         "150kto200k": 287,
@@ -35181,7 +35459,8 @@
       "code": "895",
       "name": "Uusikaupunki",
       "mileageCount": {
-        "under50k": 1453,
+        "na": 881,
+        "under50k": 572,
         "50kto100k": 1210,
         "100kto150k": 1310,
         "150kto200k": 1305,
@@ -35310,7 +35589,8 @@
       "code": "785",
       "name": "Vaala",
       "mileageCount": {
-        "under50k": 170,
+        "na": 108,
+        "under50k": 62,
         "50kto100k": 145,
         "100kto150k": 143,
         "150kto200k": 179,
@@ -35435,7 +35715,8 @@
       "code": "905",
       "name": "Vaasa",
       "mileageCount": {
-        "under50k": 6280,
+        "na": 3579,
+        "under50k": 2701,
         "50kto100k": 5332,
         "100kto150k": 5573,
         "150kto200k": 5391,
@@ -35565,7 +35846,8 @@
       "code": "908",
       "name": "Valkeakoski",
       "mileageCount": {
-        "under50k": 2034,
+        "na": 1257,
+        "under50k": 777,
         "50kto100k": 1603,
         "100kto150k": 1724,
         "150kto200k": 1651,
@@ -35695,7 +35977,8 @@
       "code": "092",
       "name": "Vantaa",
       "mileageCount": {
-        "under50k": 38964,
+        "na": 29351,
+        "under50k": 9613,
         "50kto100k": 19238,
         "100kto150k": 16567,
         "150kto200k": 13775,
@@ -35827,7 +36110,8 @@
       "code": "915",
       "name": "Varkaus",
       "mileageCount": {
-        "under50k": 1968,
+        "na": 1272,
+        "under50k": 696,
         "50kto100k": 1435,
         "100kto150k": 1611,
         "150kto200k": 1573,
@@ -35957,7 +36241,8 @@
       "code": "918",
       "name": "Vehmaa",
       "mileageCount": {
-        "under50k": 193,
+        "na": 115,
+        "under50k": 78,
         "50kto100k": 176,
         "100kto150k": 187,
         "150kto200k": 241,
@@ -36082,7 +36367,8 @@
       "code": "921",
       "name": "Vesanto",
       "mileageCount": {
-        "under50k": 117,
+        "na": 85,
+        "under50k": 32,
         "50kto100k": 96,
         "100kto150k": 109,
         "150kto200k": 126,
@@ -36203,7 +36489,8 @@
       "code": "922",
       "name": "Vesilahti",
       "mileageCount": {
-        "under50k": 436,
+        "na": 275,
+        "under50k": 161,
         "50kto100k": 328,
         "100kto150k": 345,
         "150kto200k": 380,
@@ -36330,7 +36617,8 @@
       "code": "924",
       "name": "Veteli",
       "mileageCount": {
-        "under50k": 180,
+        "na": 110,
+        "under50k": 70,
         "50kto100k": 154,
         "100kto150k": 228,
         "150kto200k": 232,
@@ -36452,7 +36740,8 @@
       "code": "925",
       "name": "Vieremä",
       "mileageCount": {
-        "under50k": 167,
+        "na": 111,
+        "under50k": 56,
         "50kto100k": 144,
         "100kto150k": 220,
         "150kto200k": 256,
@@ -36574,7 +36863,8 @@
       "code": "927",
       "name": "Vihti",
       "mileageCount": {
-        "under50k": 3729,
+        "na": 2527,
+        "under50k": 1202,
         "50kto100k": 2634,
         "100kto150k": 2547,
         "150kto200k": 2325,
@@ -36704,7 +36994,8 @@
       "code": "931",
       "name": "Viitasaari",
       "mileageCount": {
-        "under50k": 463,
+        "na": 292,
+        "under50k": 171,
         "50kto100k": 335,
         "100kto150k": 417,
         "150kto200k": 447,
@@ -36829,7 +37120,8 @@
       "code": "934",
       "name": "Vimpeli",
       "mileageCount": {
-        "under50k": 219,
+        "na": 131,
+        "under50k": 88,
         "50kto100k": 163,
         "100kto150k": 194,
         "150kto200k": 224,
@@ -36955,7 +37247,8 @@
       "code": "935",
       "name": "Virolahti",
       "mileageCount": {
-        "under50k": 317,
+        "na": 189,
+        "under50k": 128,
         "50kto100k": 273,
         "100kto150k": 264,
         "150kto200k": 286,
@@ -37081,7 +37374,8 @@
       "code": "936",
       "name": "Virrat",
       "mileageCount": {
-        "under50k": 577,
+        "na": 335,
+        "under50k": 242,
         "50kto100k": 429,
         "100kto150k": 455,
         "150kto200k": 506,
@@ -37210,7 +37504,7 @@
       "code": "941",
       "name": "Vårdö",
       "mileageCount": {
-        "under50k": 1,
+        "na": 1,
         "200kto250k": 1
       },
       "drivingForceCount": {
@@ -37244,7 +37538,8 @@
       "code": "946",
       "name": "Vörå",
       "mileageCount": {
-        "under50k": 523,
+        "na": 281,
+        "under50k": 242,
         "50kto100k": 510,
         "100kto150k": 570,
         "150kto200k": 593,
@@ -37371,7 +37666,8 @@
       "code": "976",
       "name": "Ylitornio",
       "mileageCount": {
-        "under50k": 227,
+        "na": 136,
+        "under50k": 91,
         "50kto100k": 210,
         "100kto150k": 257,
         "150kto200k": 305,
@@ -37496,7 +37792,8 @@
       "code": "977",
       "name": "Ylivieska",
       "mileageCount": {
-        "under50k": 963,
+        "na": 566,
+        "under50k": 397,
         "50kto100k": 741,
         "100kto150k": 895,
         "150kto200k": 1180,
@@ -37626,7 +37923,8 @@
       "code": "980",
       "name": "Ylöjärvi",
       "mileageCount": {
-        "under50k": 3296,
+        "na": 2058,
+        "under50k": 1238,
         "50kto100k": 2759,
         "100kto150k": 2752,
         "150kto200k": 2743,
@@ -37758,7 +38056,8 @@
       "code": "981",
       "name": "Ypäjä",
       "mileageCount": {
-        "under50k": 225,
+        "na": 141,
+        "under50k": 84,
         "50kto100k": 140,
         "100kto150k": 168,
         "150kto200k": 203,
@@ -37885,7 +38184,8 @@
       "code": "989",
       "name": "Ähtäri",
       "mileageCount": {
-        "under50k": 502,
+        "na": 350,
+        "under50k": 152,
         "50kto100k": 296,
         "100kto150k": 394,
         "150kto200k": 443,
@@ -38013,7 +38313,8 @@
       "code": "992",
       "name": "Äänekoski",
       "mileageCount": {
-        "under50k": 1413,
+        "na": 922,
+        "under50k": 491,
         "50kto100k": 993,
         "100kto150k": 1182,
         "150kto200k": 1323,

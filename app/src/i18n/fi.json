@@ -39,6 +39,7 @@
     "Count": "Määrä",
     "DrivingForce": "Käyttövoima",
     "Mileage": "Mittarilukema",
+    "NotAvailableAbbreviation": "N/A",
     "RegistrationYear": "Rekisteröintivuosi",
     "TopNMakers": "Top {{count}} valmistajat"
   }

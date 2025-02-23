@@ -68,8 +68,8 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
     # Mileage
     vehicles["mileage"] = (
         pd.to_numeric(vehicles["mileage"], errors="coerce")
-        .fillna(0)
-        .clip(upper=5_000_000)
+        .fillna(-1)  # If not available
+        .clip(upper=5_000_000)  # To cap ridiculous amounts
         .astype("Int32")
     )
 
@@ -147,10 +147,13 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
 def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     # Groupings
     bin_size = 50_000
-    bins = [0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
+    bins = (
+        [-1, 0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
+    )
     labels = (
-        [f"under{bin_size // 1000}k"]
-        + [f"{i // 1000}kto{j // 1000}k" for i, j in zip(bins[1:-2], bins[2:-1])]
+        ["na"]
+        + [f"under{bin_size // 1000}k"]
+        + [f"{i // 1000}kto{j // 1000}k" for i, j in zip(bins[2:-2], bins[3:-1])]
         + [f"over{bins[-2] // 1000}k"]
     )
     df["mileage_group"] = pd.cut(
@@ -294,6 +297,8 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
 
 
 def _sort_mileage_keys(key):
+    if key == "na":
+        return -1
     if key.startswith("over"):
         return float("inf")
     if key.startswith("under"):
