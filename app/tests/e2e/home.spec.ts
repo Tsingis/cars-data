@@ -37,3 +37,41 @@ test("Language switch works correctly", async ({ page }) => {
     "Registered passenger car counts in Finland"
   )
 })
+
+test("Theme switch works correctly", async ({ page }) => {
+  await page.goto("http://localhost:3000")
+
+  const themeSwitch = page.locator(".theme-switch-container")
+  await expect(themeSwitch).toBeVisible()
+
+  const lightButton = themeSwitch
+    .locator("button svg[data-icon='sun']")
+    .locator("..")
+  const darkButton = themeSwitch
+    .locator("button svg[data-icon='moon']")
+    .locator("..")
+  await expect(lightButton).toBeVisible()
+  await expect(darkButton).toBeVisible()
+
+  const initialBgColor = await page.evaluate(() => {
+    return window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--main-bg-color")
+  })
+
+  await darkButton.click()
+  const darkBgColor = await page.evaluate(() => {
+    return window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--main-bg-color")
+  })
+  await expect(darkBgColor).not.toBe(initialBgColor)
+
+  await lightButton.click()
+  const lightBgColor = await page.evaluate(() => {
+    return window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--main-bg-color")
+  })
+  await expect(lightBgColor).toBe(initialBgColor)
+})
