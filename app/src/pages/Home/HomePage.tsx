@@ -229,10 +229,9 @@ const HomePage = () => {
               style={{ gridArea: "a" }}
             />
             <BarChart
-              data={selectedMunicipality.color}
-              colorMap={colors}
-              xAxisLabelMap={colLabels}
-              title={t("Labels.Color")}
+              data={selectedMunicipality.mileageCount}
+              xAxisLabelMap={dfLabels}
+              title={t("Labels.Mileage")}
               yAxisText={t("Labels.Count")}
               style={{ gridArea: "b" }}
             />
@@ -244,8 +243,9 @@ const HomePage = () => {
               style={{ gridArea: "c" }}
             />
             <TreeMapChart
-              data={selectedMunicipality.mileageCount}
-              title={t("Labels.Mileage")}
+              data={selectedMunicipality.color}
+              colorMap={colors}
+              title={t("Labels.Color")}
               style={{ gridArea: "d" }}
             />
             <TopList
