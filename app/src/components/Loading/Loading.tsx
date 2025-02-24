@@ -8,7 +8,7 @@ type LoadingProps = {
 }
 
 const Loading: React.FC<LoadingProps> = ({ size = "1x" }) => (
-  <div className="spinner-container">
+  <div className="spinner-container" aria-label="loading">
     <FontAwesomeIcon icon={faSpinner} spin size={size} />
   </div>
 )

@@ -15,12 +15,14 @@ const LanguageSwitch: React.FC = () => {
       <button
         className={`language-switch-button ${i18n.language === "en" ? "active" : ""}`}
         onClick={() => changeLanguage("en")}
+        aria-label="Change language to English"
       >
         EN
       </button>
       <button
         className={`language-switch-button ${i18n.language === "fi" ? "active" : ""}`}
         onClick={() => changeLanguage("fi")}
+        aria-label="Change language to Finnish"
       >
         FI
       </button>

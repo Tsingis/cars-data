@@ -123,14 +123,19 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
             setSearchQuery("")
           }}
           ref={inputRef}
+          aria-label="Dropdown search"
         />
         <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
       </div>
       {isOpen && (
-        <ul className="dropdown-menu show">
+        <ul id="dropdown-menu" className="dropdown-menu show" role="listbox">
           {filteredOptions.length > 0 ? (
             filteredOptions.map((option, index) => (
-              <li key={option.code}>
+              <li
+                key={option.code}
+                role="option"
+                aria-selected={highlightedIndex === index}
+              >
                 <button
                   type="button"
                   onClick={() => handleOptionClick(option)}

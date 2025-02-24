@@ -13,7 +13,7 @@ const ErrorPage: React.FC = () => {
   const message = (state as LocationState)?.message
 
   return (
-    <div className="error-container">
+    <div className="error-container" aria-label="Error Page">
       <div className="error-text">
         <h1>{t("Error.Title")}</h1>
         <p>{message ?? t("Error.General")}</p>

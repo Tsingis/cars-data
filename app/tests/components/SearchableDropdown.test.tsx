@@ -20,7 +20,7 @@ describe("SearchableDropdown Component", () => {
 
     fireEvent.click(screen.getByRole("textbox"))
 
-    expect(screen.getByRole("list")).toBeInTheDocument()
+    expect(screen.getByRole("listbox")).toBeInTheDocument()
     expect(screen.getByText("Option 1")).toBeInTheDocument()
     expect(screen.getByText("Option 2")).toBeInTheDocument()
     expect(screen.getByText("Option 3")).toBeInTheDocument()
@@ -72,7 +72,7 @@ describe("SearchableDropdown Component", () => {
     fireEvent.click(screen.getByRole("textbox"))
     fireEvent.click(screen.getByText("Option 2"))
 
-    expect(screen.queryByRole("list")).not.toBeInTheDocument()
+    expect(screen.queryByRole("option")).not.toBeInTheDocument()
   })
 
   test("closes dropdown when clicking outside", () => {
@@ -87,6 +87,6 @@ describe("SearchableDropdown Component", () => {
     fireEvent.click(screen.getByRole("textbox"))
     fireEvent.mouseDown(document)
 
-    expect(screen.queryByRole("list")).not.toBeInTheDocument()
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument()
   })
 })

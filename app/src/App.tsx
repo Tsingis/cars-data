@@ -14,7 +14,7 @@ const App = () => {
     <I18nextProvider i18n={i18n}>
       <Router>
         <NavBar />
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading size="6x" />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/error" element={<ErrorPage />} />

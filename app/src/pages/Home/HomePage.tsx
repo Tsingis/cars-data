@@ -144,7 +144,7 @@ const HomePage = () => {
   }, [t, searchOptions])
 
   if (!data) {
-    return <Loading size="4x" />
+    return <Loading size="6x" />
   }
 
   const date: Date = new Date(data.date)
@@ -195,7 +195,7 @@ const HomePage = () => {
     : {}
 
   return (
-    <div className="home-container">
+    <div className="home-container" aria-label="Home Page">
       <h1 className="title">{t("Common.Title")}</h1>
       <div className="data-date">
         {t("Common.DataUpdatedOn")}{" "}
