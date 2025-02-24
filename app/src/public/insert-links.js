@@ -8,6 +8,12 @@
 
   const head = document.head
 
+  const preconnectLink = document.createElement("link")
+  preconnectLink.rel = "preconnect"
+  preconnectLink.href = dataUrl.origin
+  preconnectLink.crossOrigin = "anonymous"
+  head.appendChild(preconnectLink)
+
   const dnsPrefetchLink = document.createElement("link")
   dnsPrefetchLink.rel = "dns-prefetch"
   dnsPrefetchLink.href = dataUrl.origin
