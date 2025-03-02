@@ -170,17 +170,15 @@ const HomePage = () => {
 
   return (
     <div className="home-container" aria-label="Home Page">
-      <h1 className="title">
-        {t("Common.Title")}
-        <span className="data-date">
-          {t("Common.DataUpdatedOn")}{" "}
-          {date.toLocaleDateString(locales[i18n.language], {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-        </span>
-      </h1>
+      <h1 className="title">{t("Common.Title")}</h1>
+      <div className="data-date">
+        {t("Common.DataUpdatedOn")}{" "}
+        {date.toLocaleDateString(locales[i18n.language], {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </div>
       <div className="controls-container">
         <SearchableDropdown
           options={translatedSearchOptions}
