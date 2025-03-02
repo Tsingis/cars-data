@@ -22,28 +22,3 @@
   gap: 10px;
   margin-bottom: 20px;
 }
-
-.chart-grid {
-  display: grid;
-  max-width: 1200px;
-  row-gap: 10px;
-  column-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "a b e"
-    "c d e";
-}
-
-@media (max-width: 900px) {
-  .chart-grid {
-    row-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "a"
-      "b"
-      "c"
-      "d"
-      "e"
-      "f";
-  }
-}

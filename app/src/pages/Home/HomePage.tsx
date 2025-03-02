@@ -17,6 +17,9 @@ import {
 } from "../../constants"
 import "./HomePage.modules.css"
 import { formatMileageLabel } from "../../utility"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
@@ -194,6 +197,15 @@ const HomePage = () => {
       )
     : {}
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  }
+
   return (
     <div className="home-container" aria-label="Home Page">
       <h1 className="title">{t("Common.Title")}</h1>
@@ -220,41 +232,46 @@ const HomePage = () => {
         selectedMunicipality.color &&
         selectedMunicipality.registrationYear &&
         selectedMunicipality.maker && (
-          <div className="chart-grid">
-            <PieChart
-              data={selectedMunicipality.drivingForce}
-              colorMap={drivingForceColors}
-              labelMap={dfLabels}
-              title={t("Labels.DrivingForce")}
-              style={{ gridArea: "a" }}
-            />
-            <BarChart
-              data={selectedMunicipality.mileageCount}
-              xAxisLabelMap={mileageLabels}
-              title={t("Labels.Mileage")}
-              yAxisText={t("Labels.Count")}
-              style={{ gridArea: "b" }}
-            />
-            <LineChart
-              data={selectedMunicipality.registrationYear}
-              title={t("Labels.RegistrationYear")}
-              yAxisText={t("Labels.Count")}
-              firstXAxisLabelText="<1980"
-              style={{ gridArea: "c" }}
-            />
-            <TreeMapChart
-              data={selectedMunicipality.color}
-              colorMap={colors}
-              title={t("Labels.Color")}
-              style={{ gridArea: "d" }}
-            />
-            <TopList
-              data={selectedMunicipality.maker}
-              topX={25}
-              title={t("Labels.TopNMakers", { count: 25 })}
-              style={{ gridArea: "e" }}
-            />
-          </div>
+          <Slider {...settings}>
+            <div>
+              <PieChart
+                data={selectedMunicipality.drivingForce}
+                colorMap={drivingForceColors}
+                labelMap={dfLabels}
+                title={t("Labels.DrivingForce")}
+              />
+            </div>
+            <div>
+              <BarChart
+                data={selectedMunicipality.mileageCount}
+                xAxisLabelMap={mileageLabels}
+                title={t("Labels.Mileage")}
+                yAxisText={t("Labels.Count")}
+              />
+            </div>
+            <div>
+              <LineChart
+                data={selectedMunicipality.registrationYear}
+                title={t("Labels.RegistrationYear")}
+                yAxisText={t("Labels.Count")}
+                firstXAxisLabelText="<1980"
+              />
+            </div>
+            <div>
+              <TreeMapChart
+                data={selectedMunicipality.color}
+                colorMap={colors}
+                title={t("Labels.Color")}
+              />
+            </div>
+            <div>
+              <TopList
+                data={selectedMunicipality.maker}
+                topX={25}
+                title={t("Labels.TopNMakers", { count: 25 })}
+              />
+            </div>
+          </Slider>
         )}
     </div>
   )

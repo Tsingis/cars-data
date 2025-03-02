@@ -19,6 +19,7 @@ type PieChartProps = {
   labelMap?: { [key: string]: string }
   colorMap?: { [key: string]: string }
   title?: string
+  legendPosition?: "top" | "bottom" | "left" | "right"
   className?: string
   style?: React.CSSProperties
 }
@@ -28,6 +29,7 @@ const PieChart: React.FC<PieChartProps> = ({
   labelMap = {},
   colorMap = {},
   title,
+  legendPosition = "bottom",
   className,
   style,
 }) => {
@@ -85,7 +87,7 @@ const PieChart: React.FC<PieChartProps> = ({
             },
             legend: {
               display: true,
-              position: "right",
+              position: legendPosition,
               align: "center",
               labels: {
                 usePointStyle: true,
