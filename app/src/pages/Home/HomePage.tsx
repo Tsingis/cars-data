@@ -2,24 +2,13 @@ import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 import Loading from "../../components/Loading/Loading"
-import PieChart from "../../components/PieChart/PieChart"
-import BarChart from "../../components/BarChart/BarChart"
-import LineChart from "../../components/LineChart/LineChart"
-import TreeMapChart from "../../components/TreeMapChart/TreeMapChart"
-import TopList from "../../components/TopList/TopList"
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown"
+import ChartsContainer from "../../components/ChartsContainer/ChartsContainer"
 import { Count, Municipality } from "../../types"
-import {
-  colors,
-  drivingForceColors,
-  drivingForceLabels,
-  locales,
-} from "../../constants"
-import "./HomePage.modules.css"
-import { formatMileageLabel } from "../../utility"
-import Slider from "react-slick"
+import { locales } from "../../constants"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import "./HomePage.modules.css"
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
@@ -179,35 +168,6 @@ const HomePage = () => {
       )
     : 0
 
-  const dfLabels = Object.keys(drivingForceLabels).reduce(
-    (acc, key) => {
-      acc[key] = t(drivingForceLabels[key])
-      return acc
-    },
-    {} as { [key: string]: string }
-  )
-
-  const mileageLabels = selectedMunicipality.mileageCount
-    ? Object.keys(selectedMunicipality.mileageCount).reduce(
-        (acc, key) => {
-          acc[key] = formatMileageLabel(key)
-          return acc
-        },
-        {} as { [key: string]: string }
-      )
-    : {}
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    adaptiveHeight: true, // Adjust the height of each slide dynamically
-    swipeToSlide: true, // Allow users to swipe directly to a slide
-  }
-
   return (
     <div className="home-container" aria-label="Home Page">
       <h1 className="title">
@@ -236,46 +196,7 @@ const HomePage = () => {
         selectedMunicipality.color &&
         selectedMunicipality.registrationYear &&
         selectedMunicipality.maker && (
-          <Slider {...settings}>
-            <div>
-              <PieChart
-                data={selectedMunicipality.drivingForce}
-                colorMap={drivingForceColors}
-                labelMap={dfLabels}
-                title={t("Labels.DrivingForce")}
-              />
-            </div>
-            <div>
-              <BarChart
-                data={selectedMunicipality.mileageCount}
-                xAxisLabelMap={mileageLabels}
-                title={t("Labels.Mileage")}
-                yAxisText={t("Labels.Count")}
-              />
-            </div>
-            <div>
-              <LineChart
-                data={selectedMunicipality.registrationYear}
-                title={t("Labels.RegistrationYear")}
-                yAxisText={t("Labels.Count")}
-                firstXAxisLabelText="<1980"
-              />
-            </div>
-            <div>
-              <TreeMapChart
-                data={selectedMunicipality.color}
-                colorMap={colors}
-                title={t("Labels.Color")}
-              />
-            </div>
-            <div>
-              <TopList
-                data={selectedMunicipality.maker}
-                topX={30}
-                title={t("Labels.TopNMakers", { count: 30 })}
-              />
-            </div>
-          </Slider>
+          <ChartsContainer selectedMunicipality={selectedMunicipality} />
         )}
     </div>
   )
