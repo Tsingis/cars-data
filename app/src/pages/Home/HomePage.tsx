@@ -204,19 +204,23 @@ const HomePage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    adaptiveHeight: true, // Adjust the height of each slide dynamically
+    swipeToSlide: true, // Allow users to swipe directly to a slide
   }
 
   return (
     <div className="home-container" aria-label="Home Page">
-      <h1 className="title">{t("Common.Title")}</h1>
-      <div className="data-date">
-        {t("Common.DataUpdatedOn")}{" "}
-        {date.toLocaleDateString(locales[i18n.language], {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </div>
+      <h1 className="title">
+        {t("Common.Title")}
+        <span className="data-date">
+          {t("Common.DataUpdatedOn")}{" "}
+          {date.toLocaleDateString(locales[i18n.language], {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+      </h1>
       <div className="controls-container">
         <SearchableDropdown
           options={translatedSearchOptions}
@@ -267,8 +271,8 @@ const HomePage = () => {
             <div>
               <TopList
                 data={selectedMunicipality.maker}
-                topX={25}
-                title={t("Labels.TopNMakers", { count: 25 })}
+                topX={30}
+                title={t("Labels.TopNMakers", { count: 30 })}
               />
             </div>
           </Slider>
