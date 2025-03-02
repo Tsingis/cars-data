@@ -1,3 +1,31 @@
+.chart-container {
+  min-width: 200px;
+  max-width: 1000px;
+  min-height: 1000px;
+  max-height: 1200px;
+}
+
+@media (max-width: 800px) {
+  .chart-container {
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    min-height: 60vh;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .chart-container {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+}
+
 .slick-slider {
   width: 100%;
   max-width: 800px;

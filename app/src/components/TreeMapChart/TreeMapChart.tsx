@@ -146,7 +146,10 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
   }, [data, labelMap, colorMap, title])
 
   return (
-    <div className={`treemapchart-container ${className}`} style={style}>
+    <div
+      className={`chart-container treemapchart-container ${className}`}
+      style={style}
+    >
       <canvas ref={chartRef} />
     </div>
   )
