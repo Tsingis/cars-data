@@ -6,6 +6,10 @@ services:
       no_cache: false
       args:
         DATA_URL: ''
+    depends_on:
+      server:
+        condition: service_started
+        restart: true
     image: cars
     container_name: cars
     ports:
@@ -15,5 +19,16 @@ services:
     privileged: false
     tmpfs:
       - /tmp:rw
-    # volumes:
-    #   - /tmp
+  server:
+    image: python:3.13-alpine
+    container_name: cars-server
+    volumes:
+      - ./util:/scripts
+      - ./data:/data
+    ports:
+      - 8000:8000
+    read_only: true
+    privileged: false
+    tmpfs:
+      - /tmp:rw
+    command: ["python", "/scripts/http_server.py"]
