@@ -5,7 +5,7 @@ import "./ThemeSwitch.modules.css"
 
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
+    () => localStorage.getItem("theme") ?? "light"
   )
 
   useEffect(() => {

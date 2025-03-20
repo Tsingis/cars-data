@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import Chart, { Chart as ChartJS, ChartConfiguration } from "chart.js/auto"
 import { Count } from "../../types"
-import "./LineChart.modules.css"
 
 type LineChartProps = {
   data: Count

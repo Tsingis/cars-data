@@ -12,7 +12,6 @@ import {
   TreemapDataPoint,
 } from "chartjs-chart-treemap"
 import { Count } from "../../types"
-import "./TreeMapChart.modules.css"
 
 // Register necessary Chart.js components
 ChartJS.register(TreemapController, TreemapElement, Tooltip, Legend)

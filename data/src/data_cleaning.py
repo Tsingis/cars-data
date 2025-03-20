@@ -303,5 +303,5 @@ def _sort_mileage_keys(key):
         return float("inf")
     if key.startswith("under"):
         return 0
-    start, end = key.split("kto")
+    start = key.split("kto")[0]
     return int(start) * 1000

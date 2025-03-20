@@ -12,7 +12,6 @@ import {
   ChartOptions,
 } from "chart.js"
 import { Count } from "../../types"
-import "./BarChart.modules.css"
 
 // Register necessary Chart.js components
 ChartJS.register(

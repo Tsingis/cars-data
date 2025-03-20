@@ -9,7 +9,6 @@ import {
   ChartOptions,
 } from "chart.js"
 import { Count } from "../../types"
-import "./PieChart.modules.css"
 
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend, PieController)
@@ -119,7 +118,7 @@ const PieChart: React.FC<PieChartProps> = ({
     return () => {
       chartInstanceRef.current?.destroy()
     }
-  }, [data, labelMap, colorMap, title])
+  }, [data, labelMap, colorMap, title, legendPosition])
 
   return (
     <div

@@ -20,7 +20,7 @@ describe("SearchableDropdown Component", () => {
 
     fireEvent.click(screen.getByRole("textbox"))
 
-    expect(screen.getByRole("listbox")).toBeInTheDocument()
+    expect(document.querySelector("#dropdown-menu")).toBeInTheDocument()
     expect(screen.getByText("Option 1")).toBeInTheDocument()
     expect(screen.getByText("Option 2")).toBeInTheDocument()
     expect(screen.getByText("Option 3")).toBeInTheDocument()
@@ -87,6 +87,6 @@ describe("SearchableDropdown Component", () => {
     fireEvent.click(screen.getByRole("textbox"))
     fireEvent.mouseDown(document)
 
-    expect(screen.queryByRole("listbox")).not.toBeInTheDocument()
+    expect(document.querySelector("#dropdown-menu")).not.toBeInTheDocument()
   })
 })
