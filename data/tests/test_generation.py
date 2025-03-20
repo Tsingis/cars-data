@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from data.src.data_cleaning import generate
+from src.data_cleaning import generate
 
 
 class TestGenerateFunction(unittest.TestCase):

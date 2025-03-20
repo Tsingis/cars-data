@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from data.src.data_cleaning import clean
+from src.data_cleaning import clean
 
 
 class TestCleaning(unittest.TestCase):
