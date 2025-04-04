@@ -13,5 +13,5 @@
     "editor.formatOnSave": true
   },
   "black-formatter.args": ["--line-length", "100"],
-  "vitest.rootConfig": "./app/config/vitest.config.ts",
+  "vitest.rootConfig": "./app/vitest.config.ts",
 }

@@ -9,7 +9,11 @@ on:
       - "data/requirements.txt"
       - "app/src/**"
       - "app/tests/**"
-      - "app/config/**"
+      - "app/vite.config.ts"
+      - "app/vitest.config.ts"
+      - "app/playwright.config.ts"
+      - "app/tsconfig.json"
+      - "app/eslint.config.js"
       - "app/package*.json"
       - ".github/workflows/codeql.yml"
   schedule:

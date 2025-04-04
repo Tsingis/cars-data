@@ -8,7 +8,7 @@ export default [
   js.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-    ignores: ["dist", "**/*.test.tsx", "**/eslint.config.js"],
+    ignores: ["../dist", "**/*.test.tsx", "**/eslint.config.js"],
     languageOptions: {
       ...react.configs.flat.recommended.languageOptions,
       parser: parser,

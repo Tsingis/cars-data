@@ -3,6 +3,7 @@ __pycache__
 node_modules
 dist
 test-results
+tsconfig.tsbuildinfo
 vite.config.*.timestamp-*
 vitest.config.*.timestamp-*
 *.csv

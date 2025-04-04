@@ -10,8 +10,9 @@ ARG DATA_URL
 
 ENV VITE_DATA_URL=${DATA_URL}
 
-COPY config/ ./config
 COPY src ./src
+COPY tsconfig.json ./tsconfig.json
+COPY vite.config.ts ./vite.config.ts
 
 RUN sed -i "s|__DATA_URL__|${DATA_URL}|g" src/public/insert-links.js
 

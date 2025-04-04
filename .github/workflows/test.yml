@@ -6,7 +6,11 @@ on:
     paths:
       - "app/src/**"
       - "app/tests/**"
-      - "app/config/**"
+      - "app/vite.config.ts"
+      - "app/vitest.config.ts"
+      - "app/playwright.config.ts"
+      - "app/tsconfig.json"
+      - "app/eslint.config.js"
       - "app/package*.json"
       - "util/http_server.py"
       - "data/data.json"

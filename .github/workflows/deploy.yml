@@ -6,9 +6,9 @@ on:
     paths:
       - "app/src/**"
       - "app/nginx/**"
-      - "app/config/**"
+      - "app/vite.config.ts"
+      - "app/tsconfig.json"
       - "app/package*.json"
-      - "app/.env*"
       - "app/Dockerfile"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
