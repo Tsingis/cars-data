@@ -7,8 +7,7 @@ import refresh from "eslint-plugin-react-refresh"
 export default [
   js.configs.recommended,
   {
-    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-    ignores: ["../dist", "**/*.test.tsx", "**/eslint.config.js"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       ...react.configs.flat.recommended.languageOptions,
       parser: parser,
@@ -52,5 +51,8 @@ export default [
         version: "detect",
       },
     },
+  },
+  {
+    ignores: ["dist", "**/*test.tsx"],
   },
 ]
