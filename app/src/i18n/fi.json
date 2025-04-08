@@ -18,14 +18,9 @@
     "DataUpdatedOn": "Data päivitetty",
     "Title": "Henkilöautomäärät Suomessa"
   },
-  "Error": {
-    "Fetch": "Datan haussa tapahtui virhe",
-    "General": "Odottamaton virhe tapahtui",
-    "Title": "Virhe"
-  },
   "DrivingForces": {
-    "Electricity": "Sähkö",
     "Diesel": "Diesel",
+    "Electricity": "Sähkö",
     "Hybrid": "Hybridi",
     "Other": "Muu",
     "Petrol": "Bensiini"
@@ -33,6 +28,11 @@
   "Dropdown": {
     "NoOptions": "Ei vaihtoehtoja",
     "Search": "Hae"
+  },
+  "Error": {
+    "Fetch": "Datan haussa tapahtui virhe",
+    "General": "Odottamaton virhe tapahtui",
+    "Title": "Virhe"
   },
   "Labels": {
     "Color": "Väri",

@@ -18,14 +18,9 @@
     "DataUpdatedOn": "Data updated on",
     "Title": "Passenger car counts in Finland"
   },
-  "Error": {
-    "Fetch": "Error in fetching data",
-    "General": "An unexpected error occurred",
-    "Title": "Error"
-  },
   "DrivingForces": {
-    "Electricity": "Electricity",
     "Diesel": "Diesel",
+    "Electricity": "Electricity",
     "Hybrid": "Hybrid",
     "Other": "Other",
     "Petrol": "Petrol"
@@ -33,6 +28,11 @@
   "Dropdown": {
     "NoOptions": "No options",
     "Search": "Search"
+  },
+  "Error": {
+    "Fetch": "Error in fetching data",
+    "General": "An unexpected error occurred",
+    "Title": "Error"
   },
   "Labels": {
     "Color": "Color",
