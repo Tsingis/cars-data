@@ -3,9 +3,11 @@ import parser from "@typescript-eslint/parser"
 import react from "eslint-plugin-react"
 import hooks from "eslint-plugin-react-hooks"
 import refresh from "eslint-plugin-react-refresh"
+import i18next from "eslint-plugin-i18next"
 
 export default [
   js.configs.recommended,
+  i18next.configs["flat/recommended"],
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
