@@ -11,13 +11,12 @@ export default defineConfig({
     useChecker &&
       checker({
         typescript: {
-          tsconfigPath: "./config/tsconfig.json",
+          tsconfigPath: "./tsconfig.json",
         },
-        //TODO: Test once eslint v9 flatfile config is supported
-        // eslint: {
-        //   lintCommand: "eslint . --config ./config/eslint.config.js",
-        //   useFlatConfig: true,
-        // },
+        eslint: {
+          lintCommand: "eslint . --config ./eslint.config.js",
+          useFlatConfig: true,
+        },
       }),
   ],
   root: "src",
