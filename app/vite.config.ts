@@ -1,6 +1,6 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
-import checker from "vite-plugin-checker"
+import { checker } from "vite-plugin-checker"
 
 const args = process.argv.slice(3)
 const useChecker = args.includes("--use-checker")

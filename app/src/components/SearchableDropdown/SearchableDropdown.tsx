@@ -1,8 +1,8 @@
 import React, {
   useState,
   useEffect,
-  ChangeEvent,
-  KeyboardEvent,
+  type ChangeEvent,
+  type KeyboardEvent,
   useRef,
   useCallback,
 } from "react"

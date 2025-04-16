@@ -7,6 +7,7 @@ import hooksPlugin from "eslint-plugin-react-hooks"
 import refreshPlugin from "eslint-plugin-react-refresh"
 import i18nextPlugin from "eslint-plugin-i18next"
 import i18nJsonPlugin from "eslint-plugin-i18n-json"
+import importPlugin from "eslint-plugin-import"
 
 export default [
   js.configs.recommended,
@@ -62,12 +63,20 @@ export default [
       react: reactPlugin,
       "react-hooks": hooksPlugin,
       "react-refresh": refreshPlugin,
+      import: importPlugin,
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
       ...reactPlugin.configs.recommended.rules,
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
+      ...importPlugin.configs.recommended.rules,
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { prefer: "type-imports" },
+      ],
+
+      "import/no-unresolved": "off",
       semi: ["error", "never"],
       "no-undef": "warn",
       "no-unused-vars": "off",

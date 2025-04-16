@@ -5,10 +5,10 @@ import {
   Tooltip,
   Legend,
   PieController,
-  ChartData,
-  ChartOptions,
+  type ChartData,
+  type ChartOptions,
 } from "chart.js"
-import { Count } from "../../types"
+import { type Count } from "../../types"
 
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend, PieController)

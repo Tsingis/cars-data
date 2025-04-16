@@ -1,5 +1,5 @@
 import React from "react"
-import { Count } from "../../types"
+import { type Count } from "../../types"
 import "./TopList.modules.css"
 
 type TopListProps = {

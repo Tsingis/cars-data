@@ -3,15 +3,15 @@ import {
   Chart as ChartJS,
   Tooltip,
   Legend,
-  ChartData,
-  ChartOptions,
+  type ChartData,
+  type ChartOptions,
 } from "chart.js"
 import {
   TreemapController,
   TreemapElement,
-  TreemapDataPoint,
+  type TreemapDataPoint,
 } from "chartjs-chart-treemap"
-import { Count } from "../../types"
+import { type Count } from "../../types"
 
 // Register necessary Chart.js components
 ChartJS.register(TreemapController, TreemapElement, Tooltip, Legend)

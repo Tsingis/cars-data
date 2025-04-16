@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
-import Chart, { Chart as ChartJS, ChartConfiguration } from "chart.js/auto"
-import { Count } from "../../types"
+import { Chart, type ChartConfiguration } from "chart.js/auto"
+import { type Count } from "../../types"
 
 type LineChartProps = {
   data: Count
@@ -22,7 +22,7 @@ const LineChart: React.FC<LineChartProps> = ({
   style,
 }) => {
   const chartRef = useRef<HTMLCanvasElement | null>(null)
-  const chartInstanceRef = useRef<ChartJS | null>(null)
+  const chartInstanceRef = useRef<Chart | null>(null)
 
   useEffect(() => {
     if (chartRef.current) {

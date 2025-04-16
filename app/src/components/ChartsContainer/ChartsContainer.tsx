@@ -1,7 +1,7 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import Slider from "react-slick"
-import { Count } from "../../types"
+import { type Count } from "../../types"
 import PieChart from "../PieChart/PieChart"
 import BarChart from "../BarChart/BarChart"
 import LineChart from "../LineChart/LineChart"
