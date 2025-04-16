@@ -1,15 +1,16 @@
 import path from "path"
 import js from "@eslint/js"
 import parser from "@typescript-eslint/parser"
-import react from "eslint-plugin-react"
-import hooks from "eslint-plugin-react-hooks"
-import refresh from "eslint-plugin-react-refresh"
-import i18next from "eslint-plugin-i18next"
+import tsPlugin from "@typescript-eslint/eslint-plugin"
+import reactPlugin from "eslint-plugin-react"
+import hooksPlugin from "eslint-plugin-react-hooks"
+import refreshPlugin from "eslint-plugin-react-refresh"
+import i18nextPlugin from "eslint-plugin-i18next"
 import i18nJsonPlugin from "eslint-plugin-i18n-json"
 
 export default [
   js.configs.recommended,
-  i18next.configs["flat/recommended"],
+  i18nextPlugin.configs["flat/recommended"],
   {
     files: ["src/i18n/**/*.json"],
 
@@ -32,7 +33,7 @@ export default [
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      ...react.configs.flat.recommended.languageOptions,
+      ...reactPlugin.configs.flat.recommended.languageOptions,
       parser: parser,
       parserOptions: {
         ecmaFeatures: {
@@ -57,17 +58,19 @@ export default [
       },
     },
     plugins: {
-      react,
-      "react-hooks": hooks,
-      "react-refresh": refresh,
+      "@typescript-eslint": tsPlugin,
+      react: reactPlugin,
+      "react-hooks": hooksPlugin,
+      "react-refresh": refreshPlugin,
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...react.configs["jsx-runtime"].rules,
-      ...hooks.configs.recommended.rules,
+      ...tsPlugin.configs.recommended.rules,
+      ...reactPlugin.configs.recommended.rules,
+      ...reactPlugin.configs["jsx-runtime"].rules,
+      ...hooksPlugin.configs.recommended.rules,
       semi: ["error", "never"],
       "no-undef": "warn",
-      "no-unused-vars": "warn",
+      "no-unused-vars": "off",
     },
     settings: {
       react: {

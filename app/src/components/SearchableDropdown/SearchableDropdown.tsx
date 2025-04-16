@@ -18,7 +18,7 @@ type Option = {
 
 type SearchableDropdownProps = {
   options: Option[]
-  onSelect: (option: Option | null) => void // eslint-disable-line no-unused-vars
+  onSelect: (option: Option | null) => void
   initialValue?: Option | null
 }
 
