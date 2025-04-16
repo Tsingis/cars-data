@@ -8,6 +8,7 @@ import refreshPlugin from "eslint-plugin-react-refresh"
 import i18nextPlugin from "eslint-plugin-i18next"
 import i18nJsonPlugin from "eslint-plugin-i18n-json"
 import importPlugin from "eslint-plugin-import"
+import securityPlugin from "eslint-plugin-security"
 
 export default [
   js.configs.recommended,
@@ -64,6 +65,7 @@ export default [
       "react-hooks": hooksPlugin,
       "react-refresh": refreshPlugin,
       import: importPlugin,
+      security: securityPlugin,
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
@@ -71,12 +73,13 @@ export default [
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
       ...importPlugin.configs.recommended.rules,
+      ...securityPlugin.configs.recommended.rules,
       "@typescript-eslint/consistent-type-imports": [
         "error",
         { prefer: "type-imports" },
       ],
-
       "import/no-unresolved": "off",
+      "security/detect-object-injection": "off",
       semi: ["error", "never"],
       "no-undef": "warn",
       "no-unused-vars": "off",
