@@ -1,14 +1,14 @@
-.error-container {
+.errorContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.error-text {
+.error {
   text-align: center;
 }
 
-.error-text h1 {
+.error h1 {
   margin-bottom: 1rem;
 }

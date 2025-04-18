@@ -8,7 +8,7 @@ import { type Count, type Municipality } from "../../types"
 import { locales } from "../../constants"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import "./HomePage.modules.css"
+import styles from "./HomePage.module.css"
 
 const HomePage = () => {
   const { t, i18n } = useTranslation()
@@ -169,9 +169,13 @@ const HomePage = () => {
     : 0
 
   return (
-    <div className="home-container" aria-label="Home Page">
-      <h1 className="title">{t("Common.Title")}</h1>
-      <div className="data-date">
+    <div
+      data-testid="homepage"
+      className={styles.homeContainer}
+      aria-label="Home Page"
+    >
+      <h1 className={styles.homeTitle}>{t("Common.Title")}</h1>
+      <div data-testid="datadate" className={styles.dataDate}>
         {t("Common.DataUpdatedOn")}{" "}
         {date.toLocaleDateString(locales[i18n.language], {
           year: "numeric",
@@ -179,7 +183,7 @@ const HomePage = () => {
           day: "numeric",
         })}
       </div>
-      <div className="controls-container">
+      <div className={styles.controlsContainer}>
         <SearchableDropdown
           options={translatedSearchOptions}
           onSelect={handleSelect}

@@ -1,4 +1,4 @@
-.home-container {
+.homeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,21 +7,21 @@
   width: 100%;
 }
 
-.title {
+.homeTitle {
   display: inline-block;
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.data-date {
+.dataDate {
   font-size: 0.8em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
 }
 
-.controls-container {
+.controlsContainer {
   display: flex;
   flex-direction: row;
   align-items: center;

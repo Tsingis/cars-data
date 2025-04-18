@@ -4,7 +4,7 @@ test("Error page loads correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/error")
   await expect(page).toHaveTitle("Passenger cars in Finland")
 
-  const error = page.locator(".error-text")
+  const error = page.locator("[data-testid=error]")
   const title = error.locator("h1")
   const text = error.locator("p")
 
@@ -23,7 +23,7 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(enButton).toBeVisible()
   await expect(fiButton).toBeVisible()
 
-  const error = page.locator(".error-text")
+  const error = page.locator("[data-testid=error]")
   const title = error.locator("h1")
   const text = error.locator("p")
 
