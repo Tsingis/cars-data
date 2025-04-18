@@ -15,7 +15,7 @@ test("Error page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/error")
 
-  const languageSwitch = page.locator(".language-switch-container")
+  const languageSwitch = page.locator("[data-testid=languageswitch]")
   await expect(languageSwitch).toBeVisible()
 
   const enButton = languageSwitch.locator("button:has-text('EN')")

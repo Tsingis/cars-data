@@ -7,7 +7,7 @@ test("Home page loads correctly", async ({ page }) => {
   const heading = page.locator("h1:first-of-type")
   await expect(heading).toBeVisible()
 
-  const dropdown = page.locator(".dropdown-input")
+  const dropdown = page.locator("[data-testid=searchabledropdown]")
   await expect(dropdown).toBeVisible()
 
   const dropdownInput = dropdown.locator("input")
@@ -17,7 +17,7 @@ test("Home page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
 
-  const languageSwitch = page.locator(".language-switch-container")
+  const languageSwitch = page.locator("[data-testid=languageswitch]")
   await expect(languageSwitch).toBeVisible()
 
   const enButton = languageSwitch.locator("button:has-text('EN')")
@@ -37,7 +37,7 @@ test("Language switch works correctly", async ({ page }) => {
 test("Theme switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
 
-  const themeSwitch = page.locator(".theme-switch-container")
+  const themeSwitch = page.locator("[data-testid=themeswitch]")
   await expect(themeSwitch).toBeVisible()
 
   const lightButton = themeSwitch

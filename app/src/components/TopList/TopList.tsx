@@ -22,7 +22,11 @@ const TopList: React.FC<TopListProps> = ({
     .slice(0, topX)
 
   return (
-    <div className={`${styles.toplistContainer} ${className}`} style={style}>
+    <div
+      data-testid="toplist"
+      className={`${styles.toplistContainer} ${className}`}
+      style={style}
+    >
       {title && <div className={styles.toplistTitle}>{title}</div>}
       <ul className={styles.toplistList}>
         {sortedItems.map(([item, count]) => (

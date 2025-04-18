@@ -11,7 +11,10 @@ const LanguageSwitch: React.FC = () => {
   }
 
   return (
-    <div className={styles.languageSwitchContainer}>
+    <div
+      data-testid="languageswitch"
+      className={styles.languageSwitchContainer}
+    >
       <button
         className={`${styles.languageSwitchButton} ${i18n.language === "en" ? styles.active : ""}`}
         onClick={() => changeLanguage("en")}

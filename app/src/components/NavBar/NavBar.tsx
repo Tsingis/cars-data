@@ -5,7 +5,11 @@ import styles from "./NavBar.module.css"
 
 const NavBar = () => {
   return (
-    <nav className={styles.navbar} aria-label="Main Navigation">
+    <nav
+      data-testid="navbar"
+      className={styles.navbar}
+      aria-label="Main Navigation"
+    >
       <div className={styles.navbarItems} aria-label="Navigation Items">
         <LanguageSwitch />
         <ThemeSwitch />

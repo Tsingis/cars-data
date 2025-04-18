@@ -20,7 +20,9 @@ describe("SearchableDropdown Component", () => {
 
     fireEvent.click(screen.getByRole("textbox"))
 
-    expect(document.querySelector("#dropdown-menu")).toBeInTheDocument()
+    expect(
+      document.querySelector("[data-testid=dropdownmenulist]")
+    ).toBeInTheDocument()
     expect(screen.getByText("Option 1")).toBeInTheDocument()
     expect(screen.getByText("Option 2")).toBeInTheDocument()
     expect(screen.getByText("Option 3")).toBeInTheDocument()

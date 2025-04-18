@@ -150,7 +150,7 @@ const BarChart: React.FC<BarChartProps> = ({
   }, [data, xAxisLabelMap, xAxisText, yAxisText, title, colorMap])
 
   return (
-    <div className={`${className}`} style={style}>
+    <div data-testid="barchart" className={`${className}`} style={style}>
       <canvas ref={chartRef} />
     </div>
   )

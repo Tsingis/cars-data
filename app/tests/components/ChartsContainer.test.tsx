@@ -14,13 +14,15 @@ describe("ChartsContainer Component", () => {
   test("renders all charts", () => {
     render(<ChartsContainer selectedMunicipality={selectedMunicipality} />)
 
-    expect(document.querySelector(".piechart-container")).toBeInTheDocument()
-    expect(document.querySelector(".barchart-container")).toBeInTheDocument()
-    expect(document.querySelector(".linechart-container")).toBeInTheDocument()
+    expect(document.querySelector("[data-testid=piechart]")).toBeInTheDocument()
+    expect(document.querySelector("[data-testid=barchart]")).toBeInTheDocument()
     expect(
-      document.querySelector(".treemapchart-container")
+      document.querySelector("[data-testid=linechart]")
     ).toBeInTheDocument()
-    expect(document.querySelector(".toplist-container")).toBeInTheDocument()
+    expect(
+      document.querySelector("[data-testid=treemapchart]")
+    ).toBeInTheDocument()
+    expect(document.querySelector("[data-testid=toplist]")).toBeInTheDocument()
   })
 
   test("renders nothing when data is missing", () => {
