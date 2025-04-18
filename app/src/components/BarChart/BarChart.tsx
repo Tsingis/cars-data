@@ -56,7 +56,7 @@ const BarChart: React.FC<BarChartProps> = ({
           chartInstanceRef.current.destroy()
         }
 
-        const labels = Object.keys(data).map((key) => xAxisLabelMap[key] || key)
+        const labels = Object.keys(data).map((key) => xAxisLabelMap[key] ?? key)
         const values = Object.values(data)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
@@ -65,7 +65,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
         const defaultColor = "rgba(0, 123, 255, 0.6)"
         const backgroundColors = Object.keys(data).map(
-          (label) => colorMap[label] || defaultColor
+          (label) => colorMap[label] ?? defaultColor
         )
 
         const chartData: ChartData<"bar", number[], string> = {
@@ -99,7 +99,7 @@ const BarChart: React.FC<BarChartProps> = ({
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  const label = context.label || ""
+                  const label = context.label ?? ""
                   const value = context.raw as number
                   const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
                   return `${label}: ${value} (${percentage}%)`

@@ -43,7 +43,7 @@ const PieChart: React.FC<PieChartProps> = ({
           chartInstanceRef.current.destroy()
         }
 
-        const labels = Object.keys(data).map((key) => labelMap[key] || key)
+        const labels = Object.keys(data).map((key) => labelMap[key] ?? key)
         const values = Object.values(data)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
@@ -52,7 +52,7 @@ const PieChart: React.FC<PieChartProps> = ({
 
         const defaultColor = "rgba(0, 123, 255, 0.6)"
         const backgroundColors = Object.keys(data).map(
-          (key) => colorMap[key] || defaultColor
+          (key) => colorMap[key] ?? defaultColor
         )
 
         const chartData: ChartData<"pie", number[], string> = {
@@ -95,7 +95,7 @@ const PieChart: React.FC<PieChartProps> = ({
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  const label = context.label || ""
+                  const label = context.label ?? ""
                   const value = context.raw as number
                   const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
                   return `${label}: ${value} (${percentage}%)`

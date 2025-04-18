@@ -83,7 +83,7 @@ const LineChart: React.FC<LineChartProps> = ({
               tooltip: {
                 callbacks: {
                   label: function (context) {
-                    const label = context.label || ""
+                    const label = context.label ?? ""
                     const value = context.raw as number
                     const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
                     return `${label}: ${value} (${percentage}%)`

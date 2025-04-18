@@ -44,7 +44,7 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
           chartInstanceRef.current.destroy()
         }
 
-        const labels = Object.keys(data).map((key) => labelMap[key] || key)
+        const labels = Object.keys(data).map((key) => labelMap[key] ?? key)
         const values = Object.values(data).map((value) => value ?? 0)
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
@@ -69,8 +69,8 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
                 const raw = context.raw as TreemapDataPoint & {
                   category: string
                 }
-                const label = raw.g || ""
-                const color = colorMap[label] || "rgba(0, 123, 255, 0.6)"
+                const label = raw.g ?? ""
+                const color = colorMap[label] ?? "rgba(0, 123, 255, 0.6)"
                 return color
               },
               borderColor: "rgb(223, 220, 220)",
@@ -115,11 +115,11 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
               callbacks: {
                 title: function (context) {
                   const raw = context[0].raw as TreemapDataPoint
-                  return raw.g || ""
+                  return raw.g ?? ""
                 },
                 label: function (context) {
                   const raw = context.raw as TreemapDataPoint
-                  const label = raw.g || ""
+                  const label = raw.g ?? ""
                   const value = raw.v
                   const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
                   return `${label}: ${value} (${percentage}%)`

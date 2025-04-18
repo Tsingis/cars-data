@@ -29,7 +29,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
 }) => {
   const { t } = useTranslation()
   const [searchQuery, setSearchQuery] = useState<string>(
-    initialValue?.name || ""
+    initialValue?.name ?? ""
   )
   const [filteredOptions, setFilteredOptions] = useState<Option[]>(options)
   const [isOpen, setIsOpen] = useState<boolean>(false)
