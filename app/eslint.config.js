@@ -10,6 +10,7 @@ import i18nJsonPlugin from "eslint-plugin-i18n-json"
 import importPlugin from "eslint-plugin-import"
 import securityPlugin from "eslint-plugin-security"
 import playwrightPlugin from "eslint-plugin-playwright"
+import cssModulesPlugin from "eslint-plugin-css-modules"
 
 export default [
   js.configs.recommended,
@@ -73,6 +74,7 @@ export default [
       "react-refresh": refreshPlugin,
       import: importPlugin,
       security: securityPlugin,
+      "css-modules": cssModulesPlugin,
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
@@ -85,6 +87,8 @@ export default [
         "error",
         { prefer: "type-imports" },
       ],
+      "css-modules/no-unused-class": "error",
+      "css-modules/no-undef-class": "error",
       "import/no-unresolved": "off",
       "security/detect-object-injection": "off",
       semi: ["error", "never"],
