@@ -9,13 +9,13 @@ import i18nextPlugin from "eslint-plugin-i18next"
 import i18nJsonPlugin from "eslint-plugin-i18n-json"
 import importPlugin from "eslint-plugin-import"
 import securityPlugin from "eslint-plugin-security"
+import playwrightPlugin from "eslint-plugin-playwright"
 
 export default [
   js.configs.recommended,
   i18nextPlugin.configs["flat/recommended"],
   {
     files: ["src/i18n/**/*.json"],
-
     plugins: { "i18n-json": i18nJsonPlugin },
     processor: {
       meta: { name: ".json" },
@@ -30,6 +30,13 @@ export default [
           filePath: path.resolve("src/i18n/en.json"),
         },
       ],
+    },
+  },
+  {
+    ...playwrightPlugin.configs["flat/recommended"],
+    files: ["tests/e2e/**"],
+    rules: {
+      ...playwrightPlugin.configs["flat/recommended"].rules,
     },
   },
   {

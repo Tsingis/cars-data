@@ -61,7 +61,7 @@ test("Theme switch works correctly", async ({ page }) => {
       .getComputedStyle(document.documentElement)
       .getPropertyValue("--main-bg-color")
   })
-  await expect(darkBgColor).not.toBe(initialBgColor)
+  expect(darkBgColor).not.toBe(initialBgColor)
 
   await lightButton.click()
   const lightBgColor = await page.evaluate(() => {
@@ -69,5 +69,5 @@ test("Theme switch works correctly", async ({ page }) => {
       .getComputedStyle(document.documentElement)
       .getPropertyValue("--main-bg-color")
   })
-  await expect(lightBgColor).toBe(initialBgColor)
+  expect(lightBgColor).toBe(initialBgColor)
 })
