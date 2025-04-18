@@ -1,6 +1,6 @@
 import React from "react"
 import { type Count } from "../../types"
-import "./TopList.modules.css"
+import styles from "./TopList.module.css"
 
 type TopListProps = {
   data: Count
@@ -22,14 +22,11 @@ const TopList: React.FC<TopListProps> = ({
     .slice(0, topX)
 
   return (
-    <div
-      className={`chart-container toplist-container ${className}`}
-      style={style}
-    >
-      {title && <div className="toplist-title">{title}</div>}
-      <ul className="toplist-list">
+    <div className={`${styles.toplistContainer} ${className}`} style={style}>
+      {title && <div className={styles.toplistTitle}>{title}</div>}
+      <ul className={styles.toplistList}>
         {sortedItems.map(([item, count]) => (
-          <li key={item} className="toplist-item">
+          <li key={item} className={styles.toplistItem}>
             <strong>{item}</strong>: {count}
           </li>
         ))}

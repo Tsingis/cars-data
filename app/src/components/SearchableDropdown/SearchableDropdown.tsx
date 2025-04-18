@@ -9,7 +9,7 @@ import React, {
 import { useTranslation } from "react-i18next"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import "./SearchableDropdown.modules.css"
+import styles from "./SearchableDropdown.module.css"
 
 type Option = {
   code: string
@@ -110,8 +110,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   }, [handleClickOutside])
 
   return (
-    <div className="dropdown-container" ref={dropdownRef}>
-      <div className="dropdown-input">
+    <div className={styles.dropdownContainer} ref={dropdownRef}>
+      <div className={styles.dropdownInput}>
         <input
           type="text"
           placeholder={`${t("Dropdown.Search")}...`}
@@ -125,10 +125,13 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           ref={inputRef}
           aria-label="Dropdown search"
         />
-        <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+        <FontAwesomeIcon icon={faChevronDown} className={styles.dropdownIcon} />
       </div>
       {isOpen && (
-        <ul id="dropdown-menu" className="dropdown-menu show">
+        <ul
+          id="dropdown-menu"
+          className={`${styles.dropdownMenu} ${styles.show}`}
+        >
           {filteredOptions.length > 0 ? (
             filteredOptions.map((option, index) => (
               <li key={option.code}>
@@ -141,7 +144,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
                       handleOptionClick(option)
                     }
                   }}
-                  className={highlightedIndex === index ? "active" : ""}
+                  className={highlightedIndex === index ? styles.active : ""}
                 >
                   {option.name}
                 </button>

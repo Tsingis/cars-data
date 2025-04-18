@@ -6,7 +6,7 @@
   border-bottom: 2px solid rgba(var(--main-border-color), 1);
 }
 
-.navbar-items {
+.navbarItems {
   display: flex;
   gap: 15px;
 }

@@ -145,10 +145,7 @@ const LineChart: React.FC<LineChartProps> = ({
   }, [data, title, xAxisText, yAxisText, firstXAxisLabelText])
 
   return (
-    <div
-      className={`chart-container linechart-container ${className}`}
-      style={style}
-    >
+    <div className={`${className}`} style={style}>
       <canvas ref={chartRef}></canvas>
     </div>
   )

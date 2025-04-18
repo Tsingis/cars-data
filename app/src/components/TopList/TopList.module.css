@@ -1,10 +1,10 @@
-.toplist-container {
+.toplistContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.toplist-title {
+.toplistTitle {
   font-family: "Arial", sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -12,14 +12,14 @@
   margin-bottom: 0;
 }
 
-.toplist-list {
+.toplistList {
   list-style-type: none;
   margin-left: 15px;
   padding: 0;
   overflow-y: auto;
 }
 
-.toplist-item {
+.toplistItem {
   color: black;
   margin-bottom: 8px;
 }

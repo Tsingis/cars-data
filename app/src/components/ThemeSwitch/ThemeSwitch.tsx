@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
-import "./ThemeSwitch.modules.css"
+import styles from "./ThemeSwitch.module.css"
 
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState(
@@ -18,16 +18,16 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <div className="theme-switch-container">
+    <div className={styles.themeSwitchContainer}>
       <button
-        className={`theme-switch-button ${theme === "dark" ? "active" : ""}`}
+        className={`${styles.themeSwitchButton} ${theme === "dark" ? styles.active : ""}`}
         onClick={() => changeTheme("dark")}
         aria-label="Change theme to dark"
       >
         <FontAwesomeIcon icon={faMoon} />
       </button>
       <button
-        className={`theme-switch-button ${theme === "light" ? "active" : ""}`}
+        className={`${styles.themeSwitchButton} ${theme === "light" ? styles.active : ""}`}
         onClick={() => changeTheme("light")}
         aria-label="Change theme to light"
       >

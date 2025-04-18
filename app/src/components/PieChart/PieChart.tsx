@@ -121,10 +121,7 @@ const PieChart: React.FC<PieChartProps> = ({
   }, [data, labelMap, colorMap, title, legendPosition])
 
   return (
-    <div
-      className={`chart-container  piechart-container ${className}`}
-      style={style}
-    >
+    <div className={`${className}`} style={style}>
       <canvas ref={chartRef} />
     </div>
   )

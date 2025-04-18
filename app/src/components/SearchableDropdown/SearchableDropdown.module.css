@@ -2,18 +2,18 @@
   --background-color: rgb(216, 213, 213);
 }
 
-.dropdown-container {
+.dropdownContainer {
   position: relative;
   width: 165px;
 }
 
-.dropdown-input {
+.dropdownInput {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-input {
+.dropdownInput input {
   width: 100%;
   padding: 10px 40px 10px 10px;
   border: 1px solid #ccc;
@@ -23,14 +23,14 @@ input {
   background-color: var(--background-color);
 }
 
-.dropdown-icon {
+.dropdownIcon {
   position: absolute;
   right: 10px;
   color: #888;
   pointer-events: none;
 }
 
-.dropdown-menu {
+.dropdownMenu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -49,15 +49,15 @@ input {
   -ms-overflow-style: none;
 }
 
-.dropdown-menu.show {
+.dropdownMenu.show {
   display: block;
 }
 
-.dropdown-menu li {
+.dropdownMenu li {
   padding: 0;
 }
 
-.dropdown-menu button {
+.dropdownMenu button {
   all: unset;
   display: block;
   width: 100%;
@@ -69,11 +69,11 @@ input {
   font-size: inherit;
 }
 
-.dropdown-menu button:hover,
-.dropdown-menu button.active {
+.dropdownMenu button:hover,
+.dropdownMenu button.active {
   background-color: #f0f0f0;
 }
 
-.dropdown-menu button:focus {
+.dropdownMenu button:focus {
   outline: none;
 }

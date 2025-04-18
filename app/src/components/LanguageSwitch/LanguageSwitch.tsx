@@ -1,6 +1,6 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import "./LanguageSwitch.modules.css"
+import styles from "./LanguageSwitch.module.css"
 
 const LanguageSwitch: React.FC = () => {
   const { i18n } = useTranslation()
@@ -11,16 +11,16 @@ const LanguageSwitch: React.FC = () => {
   }
 
   return (
-    <div className="language-switch-container">
+    <div className={styles.languageSwitchContainer}>
       <button
-        className={`language-switch-button ${i18n.language === "en" ? "active" : ""}`}
+        className={`${styles.languageSwitchButton} ${i18n.language === "en" ? styles.active : ""}`}
         onClick={() => changeLanguage("en")}
         aria-label="Change language to English"
       >
         EN
       </button>
       <button
-        className={`language-switch-button ${i18n.language === "fi" ? "active" : ""}`}
+        className={`${styles.languageSwitchButton} ${i18n.language === "fi" ? styles.active : ""}`}
         onClick={() => changeLanguage("fi")}
         aria-label="Change language to Finnish"
       >

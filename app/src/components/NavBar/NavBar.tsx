@@ -1,12 +1,12 @@
 import React from "react"
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch"
-import "./NavBar.modules.css"
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch"
+import styles from "./NavBar.module.css"
 
 const NavBar = () => {
   return (
-    <nav className="navbar" aria-label="Main Navigation">
-      <div className="navbar-items" aria-label="Navigation Items">
+    <nav className={styles.navbar} aria-label="Main Navigation">
+      <div className={styles.navbarItems} aria-label="Navigation Items">
         <LanguageSwitch />
         <ThemeSwitch />
       </div>

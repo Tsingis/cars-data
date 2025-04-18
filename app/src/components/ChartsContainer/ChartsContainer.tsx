@@ -9,7 +9,7 @@ import TreeMapChart from "../TreeMapChart/TreeMapChart"
 import TopList from "../TopList/TopList"
 import { colors, drivingForceColors, drivingForceLabels } from "../../constants"
 import { formatMileageLabel } from "../../utility"
-import "./ChartsContainer.modules.css"
+import styles from "./ChartsContainer.module.css"
 
 const ChartsContainer = ({
   selectedMunicipality,
@@ -64,34 +64,42 @@ const ChartsContainer = ({
   }
 
   return (
-    <Slider {...settings}>
+    <Slider
+      {...settings}
+      className={`${styles.slickSlider} ${styles.slickSlide}`}
+    >
       <PieChart
         data={selectedMunicipality.drivingForce}
         colorMap={drivingForceColors}
         labelMap={dfLabels}
         title={t("Labels.DrivingForce")}
+        className={styles.chartContainer}
       />
       <BarChart
         data={selectedMunicipality.mileageCount}
         xAxisLabelMap={mileageLabels}
         title={t("Labels.Mileage")}
         yAxisText={t("Labels.Count")}
+        className={styles.chartContainer}
       />
       <LineChart
         data={selectedMunicipality.registrationYear}
         title={t("Labels.RegistrationYear")}
         yAxisText={t("Labels.Count")}
         firstXAxisLabelText="<1980"
+        className={styles.chartContainer}
       />
       <TreeMapChart
         data={selectedMunicipality.color}
         colorMap={colors}
         title={t("Labels.Color")}
+        className={styles.chartContainer}
       />
       <TopList
         data={selectedMunicipality.maker}
         topX={30}
         title={t("Labels.TopNMakers", { count: 30 })}
+        className={styles.chartContainer}
       />
     </Slider>
   )
