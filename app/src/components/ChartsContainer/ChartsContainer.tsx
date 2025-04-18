@@ -65,44 +65,34 @@ const ChartsContainer = ({
 
   return (
     <Slider {...settings}>
-      <div>
-        <PieChart
-          data={selectedMunicipality.drivingForce}
-          colorMap={drivingForceColors}
-          labelMap={dfLabels}
-          title={t("Labels.DrivingForce")}
-        />
-      </div>
-      <div>
-        <BarChart
-          data={selectedMunicipality.mileageCount}
-          xAxisLabelMap={mileageLabels}
-          title={t("Labels.Mileage")}
-          yAxisText={t("Labels.Count")}
-        />
-      </div>
-      <div>
-        <LineChart
-          data={selectedMunicipality.registrationYear}
-          title={t("Labels.RegistrationYear")}
-          yAxisText={t("Labels.Count")}
-          firstXAxisLabelText="<1980"
-        />
-      </div>
-      <div>
-        <TreeMapChart
-          data={selectedMunicipality.color}
-          colorMap={colors}
-          title={t("Labels.Color")}
-        />
-      </div>
-      <div>
-        <TopList
-          data={selectedMunicipality.maker}
-          topX={30}
-          title={t("Labels.TopNMakers", { count: 30 })}
-        />
-      </div>
+      <PieChart
+        data={selectedMunicipality.drivingForce}
+        colorMap={drivingForceColors}
+        labelMap={dfLabels}
+        title={t("Labels.DrivingForce")}
+      />
+      <BarChart
+        data={selectedMunicipality.mileageCount}
+        xAxisLabelMap={mileageLabels}
+        title={t("Labels.Mileage")}
+        yAxisText={t("Labels.Count")}
+      />
+      <LineChart
+        data={selectedMunicipality.registrationYear}
+        title={t("Labels.RegistrationYear")}
+        yAxisText={t("Labels.Count")}
+        firstXAxisLabelText="<1980"
+      />
+      <TreeMapChart
+        data={selectedMunicipality.color}
+        colorMap={colors}
+        title={t("Labels.Color")}
+      />
+      <TopList
+        data={selectedMunicipality.maker}
+        topX={30}
+        title={t("Labels.TopNMakers", { count: 30 })}
+      />
     </Slider>
   )
 }
