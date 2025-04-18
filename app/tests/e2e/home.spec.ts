@@ -3,9 +3,12 @@ import { test, expect } from "@playwright/test"
 test("Home page loads correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
   await expect(page).toHaveTitle("Passenger cars in Finland")
+  
+  const title = page.locator("h1:first-of-type")
+  await expect(title).toBeVisible()
 
-  const heading = page.locator("h1:first-of-type")
-  await expect(heading).toBeVisible()
+  const dataDate = page.locator("[data-testid=datadate]")
+  await expect(dataDate).toBeVisible()
 
   const dropdown = page.locator("[data-testid=searchabledropdown]")
   await expect(dropdown).toBeVisible()
@@ -25,13 +28,13 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(enButton).toBeVisible()
   await expect(fiButton).toBeVisible()
 
-  const titleElement = page.locator(".title")
+  const title = page.locator("h1:first-of-type")
 
   await fiButton.click()
-  await expect(titleElement).toHaveText("Henkilöautomäärät Suomessa")
+  await expect(title).toHaveText("Henkilöautomäärät Suomessa")
 
   await enButton.click()
-  await expect(titleElement).toHaveText("Passenger car counts in Finland")
+  await expect(title).toHaveText("Passenger car counts in Finland")
 })
 
 test("Theme switch works correctly", async ({ page }) => {
