@@ -13,7 +13,7 @@ export default defineConfig({
       command: "npm run http",
       reuseExistingServer: !process.env.CI,
       stdout: "ignore",
-      stderr: "pipe",
+      stderr: "ignore",
       timeout: 60_000,
     },
     {
