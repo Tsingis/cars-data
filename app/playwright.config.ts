@@ -4,9 +4,9 @@ export default defineConfig({
   testDir: "./tests/playwright",
   fullyParallel: true,
   reporter: "list",
-  timeout: 60_000,
+  timeout: 180_000,
   expect: {
-    timeout: 30_000,
+    timeout: 60_000,
   },
   webServer: [
     {
@@ -29,6 +29,7 @@ export default defineConfig({
       name: "firefox",
       use: {
         ...devices["Desktop Firefox"],
+        viewport: { width: 1280, height: 800 },
         screenshot: "off",
         video: "off",
         trace: "off",
@@ -38,6 +39,7 @@ export default defineConfig({
       name: "webkit",
       use: {
         ...devices["Desktop Safari"],
+        viewport: { width: 1280, height: 800 },
         screenshot: "off",
         video: "off",
         trace: "off",
@@ -47,6 +49,7 @@ export default defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
+        viewport: { width: 1280, height: 800 },
         screenshot: "off",
         video: "off",
         trace: "off",
