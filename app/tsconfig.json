@@ -15,12 +15,12 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react",
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "types": ["vitest/globals", "@testing-library/jest-dom", "cypress", "node"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.json"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.json", "tests/cypress/**/*.ts"],
   "exclude": ["node_modules", "tests/**/*"]
 }
