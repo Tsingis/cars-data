@@ -9,6 +9,7 @@ on:
       - "app/vite.config.ts"
       - "app/vitest.config.ts"
       - "app/playwright.config.ts"
+      - "app/cypress.config.ts"
       - "app/tsconfig.json"
       - "app/eslint.config.js"
       - "app/package*.json"
@@ -59,7 +60,7 @@ jobs:
       - name: Check types, linting & formatting
         run: |
           npm run typecheck
-          npm run lint
+          npm run eslint
           npm run prettier
         working-directory: ./app
   build:
@@ -111,10 +112,10 @@ jobs:
         run: npm ci
         working-directory: ./app
       - name: Setup playwright
-        run: npm run setup:playwright
+        run: npm run playwright:setup
         working-directory: ./app
       - name: Run tests
-        run: npm run test:playwright
+        run: npm run playwright
         working-directory: ./app
         env:
           CI: true
@@ -139,5 +140,5 @@ jobs:
         run: npm ci
         working-directory: ./app
       - name: Run component tests
-        run: npm run test:components
+        run: npm run vitest
         working-directory: ./app
