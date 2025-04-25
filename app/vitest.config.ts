@@ -9,6 +9,6 @@ export default defineConfig({
       "tests/components/**/*.test.tsx",
       "tests/components/**/*.test.ts",
     ],
-    exclude: ["tests/e2e/**/*"],
+    exclude: ["tests/playwright/**/*"],
   },
 })

@@ -35,7 +35,7 @@ export default [
   },
   {
     ...playwrightPlugin.configs["flat/recommended"],
-    files: ["tests/e2e/**"],
+    files: ["tests/playwright/**"],
     rules: {
       ...playwrightPlugin.configs["flat/recommended"].rules,
     },
