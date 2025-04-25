@@ -5,6 +5,7 @@ data/
 tests/
 util/
 node_modules/
+test-results/
 README.md
 .gitignore
 Dockerfile
