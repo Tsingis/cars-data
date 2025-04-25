@@ -28,9 +28,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
@@ -48,9 +46,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
@@ -76,9 +72,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
@@ -89,7 +83,7 @@ jobs:
         run: npm run build
         working-directory: ./app
   playwright:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: setup
     steps:
       - uses: actions/checkout@v4
@@ -102,9 +96,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
@@ -133,9 +125,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
@@ -158,9 +148,7 @@ jobs:
       - name: Cache Node modules
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-

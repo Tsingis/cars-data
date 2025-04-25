@@ -15,6 +15,8 @@ test("Home page loads correctly", async ({ page }) => {
 
   const dropdownInput = dropdown.locator("input")
   await expect(dropdownInput).toBeEditable()
+
+  await expect(page).toHaveScreenshot("home-page.png")
 })
 
 test("Language switch works correctly", async ({ page }) => {
@@ -30,11 +32,17 @@ test("Language switch works correctly", async ({ page }) => {
 
   const title = page.locator("h1:first-of-type")
 
+  await expect(page).toHaveScreenshot("home-page-language-en.png")
+
   await fiButton.click()
   await expect(title).toHaveText("Henkilöautomäärät Suomessa")
 
+  await expect(page).toHaveScreenshot("home-page-language-fi.png")
+
   await enButton.click()
   await expect(title).toHaveText("Passenger car counts in Finland")
+
+  await expect(page).toHaveScreenshot("home-page-language-en-back.png")
 })
 
 test("Theme switch works correctly", async ({ page }) => {
@@ -58,6 +66,8 @@ test("Theme switch works correctly", async ({ page }) => {
       .getPropertyValue("--main-bg-color")
   })
 
+  await expect(page).toHaveScreenshot("home-page-theme-light.png")
+
   await darkButton.click()
   const darkBgColor = await page.evaluate(() => {
     return window
@@ -66,6 +76,8 @@ test("Theme switch works correctly", async ({ page }) => {
   })
   expect(darkBgColor).not.toBe(initialBgColor)
 
+  await expect(page).toHaveScreenshot("home-page-theme-dark.png")
+
   await lightButton.click()
   const lightBgColor = await page.evaluate(() => {
     return window
@@ -73,4 +85,6 @@ test("Theme switch works correctly", async ({ page }) => {
       .getPropertyValue("--main-bg-color")
   })
   expect(lightBgColor).toBe(initialBgColor)
+
+  await expect(page).toHaveScreenshot("home-page-theme-light-back.png")
 })

@@ -10,6 +10,7 @@
     "http": "python ../util/http_server.py",
     "playwright:setup": "npx playwright install --with-deps",
     "playwright": "npx playwright test --config=playwright.config.ts",
+    "playwright:update": "npx playwright test --config=playwright.config.ts --update-snapshots",
     "cypress:setup": "concurrently -k \"npm run dev:testing\" \"npm run http\"",
     "cypress": "start-server-and-test 'npm run cypress:setup' \"http://localhost:3000|http://localhost:8000\" 'npx cypress run'",
     "vitest": "npx vitest --config vitest.config.ts",
