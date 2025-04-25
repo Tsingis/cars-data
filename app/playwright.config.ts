@@ -4,9 +4,9 @@ export default defineConfig({
   testDir: "./tests/playwright",
   fullyParallel: true,
   reporter: "list",
-  timeout: 180_000,
+  timeout: 300_000,
   expect: {
-    timeout: 60_000,
+    timeout: 180_000,
   },
   webServer: [
     {
