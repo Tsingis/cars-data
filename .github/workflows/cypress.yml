@@ -1,0 +1,35 @@
+name: cypress
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "app/src/**"
+      - "app/tests/cypress/**"
+      - "app/vite.config.ts"
+      - "app/cypress.config.ts"
+      - "app/tsconfig.json"
+      - "app/package*.json"
+      - "util/http_server.py"
+      - "data/data.json"
+      - ".github/workflows/cypress.yml"
+  workflow_dispatch:
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./app
+      - name: Run tests
+        run: npm run cypress
+        working-directory: ./app
+        env:
+          CI: true
