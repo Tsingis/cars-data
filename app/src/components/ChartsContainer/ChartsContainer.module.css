@@ -1,28 +1,74 @@
 .chartContainer {
   min-width: 200px;
-  max-width: 1000px;
-  min-height: 1000px;
-  max-height: 1200px;
+  max-width: 100%;
+  min-height: 50vh;
+  max-height: 75vh;
+  width: 100%;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 1000px) {
+  .chartContainer {
+    min-height: 60vh;
+    max-height: 75vh;
+  }
+}
+
+@media (min-width: 1200px) {
   .chartContainer {
     min-height: 70vh;
+    max-height: 80vh;
+  }
+}
+
+@media (min-width: 1280px) and (max-height: 800px) {
+  .chartContainer {
+    min-height: 55vh;
     max-height: 70vh;
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1600px) {
   .chartContainer {
-    min-height: 60vh;
-    max-height: 60vh;
+    min-height: 75vh;
+    max-height: 85vh;
+    width: 90%;
   }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 1920px) {
   .chartContainer {
-    min-height: 50vh;
-    max-height: 50vh;
+    max-width: 1200px;
+    max-height: 85vh;
+    width: 85%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .chartContainer {
+    max-width: 1300px;
+    max-height: 90vh;
+    width: 80%;
+  }
+}
+
+@media (min-height: 1080px) {
+  .chartContainer {
+    max-height: 90vh;
+  }
+}
+
+@media (min-height: 1280px) {
+  .chartContainer {
+    max-height: 90vh;
+  }
+}
+
+@media (min-height: 1500px) {
+  .chartContainer {
+    max-height: 95vh;
   }
 }
 
