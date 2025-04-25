@@ -12,6 +12,7 @@ on:
       - "app/vite.config.ts"
       - "app/vitest.config.ts"
       - "app/playwright.config.ts"
+      - "app/cypress.config.ts"
       - "app/tsconfig.json"
       - "app/eslint.config.js"
       - "app/package*.json"

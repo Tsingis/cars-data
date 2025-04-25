@@ -10,6 +10,7 @@ import i18nJsonPlugin from "eslint-plugin-i18n-json"
 import importPlugin from "eslint-plugin-import"
 import securityPlugin from "eslint-plugin-security"
 import playwrightPlugin from "eslint-plugin-playwright"
+import cypressPlugin from "eslint-plugin-cypress"
 import cssModulesPlugin from "eslint-plugin-css-modules"
 
 export default [
@@ -35,9 +36,33 @@ export default [
   },
   {
     ...playwrightPlugin.configs["flat/recommended"],
-    files: ["tests/e2e/**"],
+    files: ["tests/playwright/**"],
     rules: {
       ...playwrightPlugin.configs["flat/recommended"].rules,
+    },
+  },
+  {
+    ...cypressPlugin.configs["flat/recommended"],
+    files: ["tests/cypress/**/*.cy.ts"],
+    plugins: {
+      cypress: cypressPlugin,
+    },
+    languageOptions: {
+      globals: {
+        cy: "readonly",
+        Cypress: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        before: "readonly",
+        after: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        expect: "readonly",
+        getComputedStyle: "readonly",
+      },
+    },
+    rules: {
+      ...cypressPlugin.configs.recommended.rules,
     },
   },
   {

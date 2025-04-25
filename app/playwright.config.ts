@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test"
 
 export default defineConfig({
-  testDir: "./tests/e2e",
+  testDir: "./tests/playwright",
   fullyParallel: true,
   reporter: "list",
   timeout: 60_000,
@@ -17,7 +17,7 @@ export default defineConfig({
       timeout: 60_000,
     },
     {
-      command: "npm run dev",
+      command: "npm run dev:testing",
       reuseExistingServer: !process.env.CI,
       stdout: "ignore",
       stderr: "pipe",
