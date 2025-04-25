@@ -119,6 +119,7 @@ jobs:
         working-directory: ./app
         env:
           CI: true
+          NO_SCREENSHOTS: true #TODO: Cross platform capabilities
   cypress:
     runs-on: ubuntu-latest
     needs: setup
