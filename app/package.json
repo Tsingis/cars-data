@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config ./vite.config.ts --open",
+    "dev:testing": "vite --config ./vite.config.ts",
     "dev:check": "vite --config ./vite.config.ts --open -- --use-checker",
     "http": "python ../util/http_server.py",
     "playwright:setup": "npx playwright install --with-deps",
     "playwright": "npx playwright test --config=playwright.config.ts",
-    "cypress:setup": "concurrently -k \"npm run dev\" \"npm run http\"",
+    "cypress:setup": "concurrently -k \"npm run dev:testing\" \"npm run http\"",
     "cypress": "start-server-and-test 'npm run cypress:setup' \"http://localhost:3000|http://localhost:8000\" 'npx cypress run'",
     "vitest": "npx vitest --config vitest.config.ts",
     "audit": "npm audit --audit-level high",
