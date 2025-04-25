@@ -16,7 +16,10 @@ on:
   workflow_dispatch:
 jobs:
   playwright:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,4 +39,5 @@ jobs:
         working-directory: ./app
         env:
           CI: true
-          NO_SCREENSHOTS: false #TODO: Cross platform capabilities
+          # TODO: Create non-windows base screenshots
+          NO_SCREENSHOTS: ${{ matrix.os == 'ubuntu-latest' && 'true' || 'false' }}
