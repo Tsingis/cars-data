@@ -15,7 +15,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react",
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "types": ["vitest/globals", "@testing-library/jest-dom", "cypress", "node"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
