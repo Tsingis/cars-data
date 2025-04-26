@@ -89,3 +89,28 @@ test("Theme switch works correctly", async ({ page }) => {
 
   await maybeScreenshot(page, "home-page-theme-light-back.png")
 })
+
+test("Slider works", async ({ page }) => {
+  await page.goto("http://localhost:3000")
+
+  const slider = page.locator(".slick-slider")
+  await expect(slider).toBeVisible()
+
+  const dots = slider.locator(".slick-dots li button")
+  const dotCount = await dots.count()
+  expect(dotCount).toBe(5)
+
+  await dots.nth(1).click()
+
+  const barchart = slider.locator(".slick-current [data-testid='barchart']")
+  await expect(barchart).toBeVisible()
+
+  await maybeScreenshot(page, "slider-second-dot.png")
+
+  await dots.nth(dotCount - 1).click()
+
+  const toplist = slider.locator(".slick-current [data-testid='toplist']")
+  await expect(toplist).toBeVisible()
+
+  await maybeScreenshot(page, "slider-last-dot.png")
+})
