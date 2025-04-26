@@ -68,4 +68,18 @@ describe("Home Page", () => {
       })
     })
   })
+
+  it("Slider works", () => {
+    cy.visit("/")
+
+    cy.get(".slick-slider")
+      .should("be.visible")
+      .within(() => {
+        cy.get(".slick-dots li button").eq(1).click()
+        cy.get(".slick-current [data-testid='barchart']").should("exist")
+
+        cy.get(".slick-dots li button").eq(4).click()
+        cy.get(".slick-current [data-testid='toplist']").should("exist")
+      })
+  })
 })
