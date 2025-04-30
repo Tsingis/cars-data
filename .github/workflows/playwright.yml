@@ -25,10 +25,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
+          cache-dependency-path: './app/package-lock.json'
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+      - name: Cache Playwright browsers and app dependencies
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            app/node_modules
+          key: ${{ runner.os }}-playwright-${{ hashFiles('app/package*.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-${{ runner.os }}-
+            ${{ runner.os }}-playwright-
       - name: Install dependencies
+        if: steps.playwright-cache.outputs.cache-hit != 'true' || hashFiles('app/package*.json') != hashFiles('app/package*.json', 'HEAD^')
         run: npm ci
         working-directory: ./app
       - name: Setup
