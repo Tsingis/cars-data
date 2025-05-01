@@ -12,6 +12,8 @@ on:
       - "app/Dockerfile"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
+env:
+  NO_UPDATE_NOTIFIER: true
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

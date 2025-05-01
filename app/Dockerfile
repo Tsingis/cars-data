@@ -2,7 +2,10 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 
+ENV NO_UPDATE_NOTIFIER=true
+
 COPY package*.json ./
+COPY .npmrc ./
 
 RUN npm ci
 

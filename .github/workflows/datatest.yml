@@ -9,6 +9,8 @@ on:
       - "data/requirements.txt"
       - ".github/workflows/datatest.yml"
   workflow_dispatch:
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -21,7 +23,7 @@ jobs:
           cache: "pip"
           cache-dependency-path: "./data/requirements.txt"
       - name: Install python dependencies
-        run: pip install -r requirements.txt
+        run: pip install --prefer-binary -r requirements.txt
         working-directory: ./data
       - name: Run tests
         run: python -m unittest discover -s tests
