@@ -14,6 +14,8 @@ on:
       - "data/data.json"
       - ".github/workflows/playwright.yml"
   workflow_dispatch:
+env:
+  NO_UPDATE_NOTIFIER: true
 jobs:
   playwright:
     runs-on: ${{ matrix.os }}
@@ -25,8 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
-          cache-dependency-path: './app/package-lock.json'
+          cache: "npm"
+          cache-dependency-path: "./app/package-lock.json"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"

@@ -13,6 +13,8 @@ on:
       - "app/package*.json"
       - ".github/workflows/test.yml"
   workflow_dispatch:
+env:
+  NO_UPDATE_NOTIFIER: true
 jobs:
   setup:
     runs-on: ubuntu-latest
