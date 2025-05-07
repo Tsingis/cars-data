@@ -12,6 +12,7 @@ import securityPlugin from "eslint-plugin-security"
 import playwrightPlugin from "eslint-plugin-playwright"
 import cypressPlugin from "eslint-plugin-cypress"
 import cssModulesPlugin from "eslint-plugin-css-modules"
+import sonarPlugin from "eslint-plugin-sonarjs"
 
 export default [
   js.configs.recommended,
@@ -100,6 +101,7 @@ export default [
       import: importPlugin,
       security: securityPlugin,
       "css-modules": cssModulesPlugin,
+      sonarjs: sonarPlugin,
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
@@ -108,6 +110,7 @@ export default [
       ...hooksPlugin.configs.recommended.rules,
       ...importPlugin.configs.recommended.rules,
       ...securityPlugin.configs.recommended.rules,
+      ...sonarPlugin.configs.recommended.rules,
       "@typescript-eslint/consistent-type-imports": [
         "error",
         { prefer: "type-imports" },
@@ -115,6 +118,7 @@ export default [
       "css-modules/no-unused-class": "error",
       "css-modules/no-undef-class": "error",
       "import/no-unresolved": "off",
+      "sonarjs/todo-tag": "off",
       "security/detect-object-injection": "off",
       semi: ["error", "never"],
       "no-undef": "warn",
