@@ -1,6 +1,7 @@
 import React from "react"
-import { render, screen, fireEvent } from "@testing-library/react"
 import { I18nextProvider } from "react-i18next"
+import { render, screen, fireEvent } from "@testing-library/react"
+import { expect } from "vitest"
 import LanguageSwitch from "../../src/components/LanguageSwitch/LanguageSwitch"
 import i18n from "../../src/i18n"
 

@@ -1,5 +1,6 @@
 import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
+import { expect } from "vitest"
 import SearchableDropdown from "../../src/components/SearchableDropdown/SearchableDropdown" // Adjust import path
 
 const options = [

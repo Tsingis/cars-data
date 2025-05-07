@@ -1,5 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
+import { expect } from "vitest"
 import ChartsContainer from "../../src/components/ChartsContainer/ChartsContainer"
 
 describe("ChartsContainer Component", () => {

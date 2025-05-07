@@ -1,5 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
+import { expect } from "vitest"
 import TreeMapChart from "../../src/components/TreeMapChart/TreeMapChart"
 import { type Count } from "../../src/types"
 
