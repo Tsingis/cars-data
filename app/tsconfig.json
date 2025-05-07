@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.json"],
-  "exclude": ["node_modules", "tests/components/**"]
+  "exclude": ["node_modules"]
 }

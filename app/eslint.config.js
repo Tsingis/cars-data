@@ -1,3 +1,4 @@
+import globals from "globals"
 import path from "path"
 import js from "@eslint/js"
 import parser from "@typescript-eslint/parser"
@@ -79,6 +80,7 @@ export default [
         sourceType: "module",
       },
       globals: {
+        ...globals.jest,
         window: "readonly",
         document: "readonly",
         process: "readonly",
@@ -131,6 +133,6 @@ export default [
     },
   },
   {
-    ignores: ["dist", "**/*test.tsx"],
+    ignores: ["dist"],
   },
 ]

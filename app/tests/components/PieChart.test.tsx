@@ -1,7 +1,9 @@
+
+
 import React from "react"
 import { render } from "@testing-library/react"
 import PieChart from "../../src/components/PieChart/PieChart"
-import { Count } from "../../src/types"
+import { type Count } from "../../src/types"
 
 const data: Count = {
   ItemA: 30,

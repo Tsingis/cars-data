@@ -1,7 +1,7 @@
 import React from "react"
 import { render, screen } from "@testing-library/react"
 import TopList from "../../src/components/TopList/TopList"
-import { Count } from "../../src/types"
+import { type Count } from "../../src/types"
 
 const data: Count = {
   ItemA: 30,

@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import TreeMapChart from "../../src/components/TreeMapChart/TreeMapChart"
-import { Count } from "../../src/types"
+import { type Count } from "../../src/types"
 
 const data: Count = {
   ItemA: 30,
