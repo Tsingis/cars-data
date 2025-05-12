@@ -26,6 +26,10 @@ FROM nginxinc/nginx-unprivileged:1.27-alpine-slim
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY /nginx/nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 3000
+ARG PORT
+
+RUN sed -i "s|__PORT__|${PORT}|g" /etc/nginx/nginx.conf
+
+EXPOSE ${PORT}
 
 CMD ["nginx", "-g", "daemon off;"]

@@ -6,6 +6,7 @@ services:
       no_cache: false
       args:
         DATA_URL: ''
+        PORT: 3000
     depends_on:
       server:
         condition: service_started
