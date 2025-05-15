@@ -1,5 +1,5 @@
 import re
-from pydantic import BaseModel, field_validator, model_validator, ValidationError
+from pydantic import BaseModel, field_validator, model_validator
 
 
 class Municipality(BaseModel):
@@ -40,9 +40,7 @@ class Municipality(BaseModel):
     @field_validator("registrationYearCount", mode="before")
     def check_keys_are_years(cls, value):
         if not all(key.isdigit() and len(key) == 4 for key in value.keys()):
-            raise ValueError(
-                "All keys in 'registrationYearCount' must be four-digit years"
-            )
+            raise ValueError("All keys in 'registrationYearCount' must be four-digit years")
         return value
 
     @model_validator(mode="before")
@@ -89,9 +87,7 @@ class DataModel(BaseModel):
         municipalities = values["municipalities"]
         expected_length = getattr(cls, "expected_length")
         if len(municipalities) != expected_length:
-            raise ValueError(
-                f"'municipalities' list must contain exactly {expected_length} items"
-            )
+            raise ValueError(f"'municipalities' list must contain exactly {expected_length} items")
         return values
 
     @classmethod
@@ -105,6 +101,5 @@ def validate(data: dict, municipalities: dict) -> bool:
         expected_length = len(municipalities.keys()) + 1
         DataModel.create_with_expected_length(data, expected_length)
         return True
-    except ValidationError as ex:
-        print(ex)
-        return False
+    except Exception as ex:
+        raise ex
