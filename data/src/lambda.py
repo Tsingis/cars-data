@@ -72,4 +72,4 @@ def invalidate_cache(file: str):
 
 if __name__ == "__main__":
     (valid, data) = generate_data()
-    logger.info(f"Data is valid: {valid}")
+    logger.info("Data is valid")

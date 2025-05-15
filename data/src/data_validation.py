@@ -84,22 +84,21 @@ class DataModel(BaseModel):
 
     @model_validator(mode="before")
     def check_municipalities_length(cls, values):
-        municipalities = values["municipalities"]
-        expected_length = getattr(cls, "expected_length")
-        if len(municipalities) != expected_length:
-            raise ValueError(f"'municipalities' list must contain exactly {expected_length} items")
+        expected_max_length = getattr(cls, "expected_max_length")
+        expected = len(values["municipalities"]) - 1  # Minus total
+        if expected > expected_max_length:
+            raise ValueError(
+                f"'municipalities' list must contain at most {expected_max_length} items. Has {expected}"
+            )
         return values
 
     @classmethod
-    def create_with_expected_length(cls, data: dict, expected_length: int):
-        cls.expected_length = expected_length
+    def create_with_expected_max_length(cls, data: dict, expected_max_length: int):
+        cls.expected_max_length = expected_max_length
         return cls(**data)
 
 
 def validate(data: dict, municipalities: dict) -> bool:
-    try:
-        expected_length = len(municipalities.keys()) + 1
-        DataModel.create_with_expected_length(data, expected_length)
-        return True
-    except Exception as ex:
-        raise ex
+    expected_max_length = len(municipalities.keys())
+    DataModel.create_with_expected_max_length(data, expected_max_length)
+    return True
