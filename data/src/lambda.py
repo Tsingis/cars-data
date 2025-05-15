@@ -1,3 +1,4 @@
+from typing import Tuple
 import boto3
 import json
 import logging
@@ -23,11 +24,7 @@ logging.getLogger("botocore").setLevel(logging.WARNING)
 
 def handler(event: dict, context: dict):
     try:
-        municipalities = get_municipalities()
-        vehicles = get_vehicles()
-        vehicles = clean(vehicles, municipalities)
-        data = generate(vehicles, municipalities, date=get_date())
-        valid = validate(data, municipalities)
+        (valid, data) = generate_data()
         if valid:
             logger.info("Creating new data")
             s3 = boto3.client("s3")
@@ -43,6 +40,15 @@ def handler(event: dict, context: dict):
         logger.exception("Invalid data")
     except Exception:
         logger.exception("Error processing data")
+
+
+def generate_data() -> Tuple[bool, dict]:
+    municipalities = get_municipalities()
+    vehicles = get_vehicles()
+    vehicles = clean(vehicles, municipalities)
+    data = generate(vehicles, municipalities, date=get_date())
+    valid = validate(data, municipalities)
+    return valid, data
 
 
 def invalidate_cache(file: str):
@@ -62,3 +68,8 @@ def invalidate_cache(file: str):
         )
     except Exception:
         logger.exception("Error invalidating distribution cache")
+
+
+if __name__ == "__main__":
+    (valid, data) = generate_data()
+    logger.info(f"Data is valid: {valid}")
