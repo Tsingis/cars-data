@@ -62,14 +62,13 @@ def get_vehicles() -> pd.DataFrame:
 def get_municipalities() -> dict:
     url = (
         "https://data.stat.fi/api/classifications/v2/"
-        "classifications/kunta_1_20240101/"
+        "classifications/kunta_1_20250101/"
         "classificationItems?content=data&meta=max&lang=en&format=json"
     )
     response = requests.get(url)
     response.raise_for_status()
     municipalities = {
-        item["code"]: item["classificationItemNames"][0]["name"]
-        for item in response.json()
+        item["code"]: item["classificationItemNames"][0]["name"] for item in response.json()
     }
     municipalities["999"] = "Unknown"  # Add unknown
     return municipalities
