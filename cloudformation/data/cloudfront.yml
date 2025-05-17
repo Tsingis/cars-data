@@ -56,10 +56,6 @@ Resources:
           CachedMethods:
             - GET
             - HEAD
-          ForwardedValues:
-            QueryString: false
-            Cookies:
-              Forward: none
           CachePolicyId: !Ref CachePolicy
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
