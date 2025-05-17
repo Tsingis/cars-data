@@ -5,11 +5,9 @@ on:
       - main
     paths:
       - "app/src/**"
-      - "app/nginx/**"
       - "app/vite.config.ts"
       - "app/tsconfig.json"
       - "app/package*.json"
-      - "app/Dockerfile"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 env:
@@ -18,13 +16,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  scan:
-    uses: ./.github/workflows/scan.yml
-    secrets: inherit
-    with:
-      severities: critical
-  audit:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
@@ -37,13 +33,23 @@ jobs:
       - name: Audit
         run: npm run audit
         working-directory: ./app
-  deploy:
-    runs-on: ubuntu-latest
-    needs:
-      - scan
-      - audit
-    steps:
-      - name: Deploy
-        run: curl "$DEPLOY_URL"
+      - name: Build
+        run: npm run build
         env:
-          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+          VITE_DATA_URL: ${{ vars.DATA_URL }}
+        working-directory: ./app
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+      - name: Add DATA_URL
+        run: sed -i "s|__DATA_URL__|${{ vars.DATA_URL }}|g" ./dist/insert-links.js
+        working-directory: ./app
+      - name: Upload to S3
+        run: |
+          aws s3 sync dist s3://${{ secrets.APP_BUCKET }} --delete
+        working-directory: ./app
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.APP_DISTRIBUTION }} --paths "/*"

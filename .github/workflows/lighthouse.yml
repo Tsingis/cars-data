@@ -5,7 +5,7 @@ on:
       url:
         description: "URL to audit"
         required: true
-        default: "https://passenger-cars-data.onrender.com/"
+        default: "https://d1k2s1zvf9a8w8.cloudfront.net/"
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
