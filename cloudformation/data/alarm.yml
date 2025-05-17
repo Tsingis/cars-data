@@ -1,3 +1,5 @@
+Description: Alarm for data processing errors
+
 Parameters:
   AlarmName:
     Type: String

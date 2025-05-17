@@ -1,3 +1,4 @@
+Description: CloudFront distribution for data
 Parameters:
   AllowedCountries:
     Description: List of allowed distribution countries

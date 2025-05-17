@@ -1,3 +1,5 @@
+Description: Bucket for data
+
 Parameters:
   BucketName:
     Type: String

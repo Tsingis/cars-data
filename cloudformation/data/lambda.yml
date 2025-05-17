@@ -1,3 +1,5 @@
+Description: Data processing Lambda role
+
 Parameters:
   BucketName:
     Type: String
