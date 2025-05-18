@@ -8,6 +8,10 @@ export default defineConfig({
   retries: 3,
   expect: {
     timeout: 60_000,
+    toHaveScreenshot: {
+      maxDiffPixelRatio: Number(process.env.MAX_DIFF_PIXEL_RATIO) || 0.05,
+      animations: "disabled",
+    },
   },
   webServer: [
     {

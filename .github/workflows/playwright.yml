@@ -57,3 +57,4 @@ jobs:
           CI: true
           # TODO: Create non-windows base screenshots
           NO_SCREENSHOTS: ${{ matrix.os == 'ubuntu-latest' && 'true' || 'false' }}
+          MAX_DIFF_PIXEL_RATIO: ${{ vars.MAX_DIFF_PIXEL_RATIO }}
