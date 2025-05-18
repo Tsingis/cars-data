@@ -5,7 +5,7 @@ Project about passenger cars in Finland. Open source data from [Traficom](https:
 Tools used:
 
 - Python
-- Node
+- React
 - Docker
 - AWS
 - Serverless Framework
