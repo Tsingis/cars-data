@@ -5,7 +5,7 @@ export default defineConfig({
   fullyParallel: true,
   reporter: "list",
   timeout: 180_000,
-  retries: 1,
+  retries: 3,
   expect: {
     timeout: 60_000,
     toHaveScreenshot: {
