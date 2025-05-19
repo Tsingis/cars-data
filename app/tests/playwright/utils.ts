@@ -17,7 +17,8 @@ export async function maybeScreenshot(
   page: Page,
   ...args: ToHaveScreenshotArgs
 ) {
-  // await page.waitForTimeout(1000)
+  await page.waitForLoadState("load")
+
   if (process.env.NO_SCREENSHOTS !== "true") {
     if (typeof args[0] === "string") {
       return await expect(page).toHaveScreenshot(args[0], args[1])
