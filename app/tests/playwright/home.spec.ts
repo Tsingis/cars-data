@@ -9,10 +9,10 @@ test("Home page loads correctly", async ({ page }) => {
   const title = page.locator("h1:first-of-type")
   await expect(title).toBeVisible()
 
-  const dataDate = page.locator("[data-testid=datadate]")
+  const dataDate = page.getByTestId("datadate")
   await expect(dataDate).toBeVisible()
 
-  const dropdown = page.locator("[data-testid=searchabledropdown]")
+  const dropdown = page.getByTestId("searchabledropdown")
   await expect(dropdown).toBeVisible()
 
   const dropdownInput = dropdown.locator("input")
@@ -24,7 +24,7 @@ test("Home page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
 
-  const languageSwitch = page.locator("[data-testid=languageswitch]")
+  const languageSwitch = page.getByTestId("languageswitch")
   await expect(languageSwitch).toBeVisible()
 
   const enButton = languageSwitch.locator("button:has-text('EN')")
@@ -33,16 +33,23 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(fiButton).toBeVisible()
 
   const title = page.locator("h1:first-of-type")
+  const loading = page.getByTestId("loading")
+
+  await expect(loading).toHaveCount(0)
 
   await maybeScreenshot(page, "home-page-language-en.png")
 
   await fiButton.click()
   await expect(title).toHaveText("Henkilöautomäärät Suomessa")
 
+  await expect(loading).toHaveCount(0)
+
   await maybeScreenshot(page, "home-page-language-fi.png")
 
   await enButton.click()
   await expect(title).toHaveText("Passenger car counts in Finland")
+
+  await expect(loading).toHaveCount(0)
 
   await maybeScreenshot(page, "home-page-language-en-back.png")
 })
@@ -50,7 +57,7 @@ test("Language switch works correctly", async ({ page }) => {
 test("Theme switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
 
-  const themeSwitch = page.locator("[data-testid=themeswitch]")
+  const themeSwitch = page.getByTestId("themeswitch")
   await expect(themeSwitch).toBeVisible()
 
   const lightButton = themeSwitch
@@ -68,6 +75,10 @@ test("Theme switch works correctly", async ({ page }) => {
       .getPropertyValue("--main-bg-color")
   })
 
+  const loading = page.getByTestId("loading")
+
+  await expect(loading).toHaveCount(0)
+
   await maybeScreenshot(page, "home-page-theme-light.png")
 
   await darkButton.click()
@@ -78,6 +89,8 @@ test("Theme switch works correctly", async ({ page }) => {
   })
   expect(darkBgColor).not.toBe(initialBgColor)
 
+  await expect(loading).toHaveCount(0)
+
   await maybeScreenshot(page, "home-page-theme-dark.png")
 
   await lightButton.click()
@@ -87,6 +100,8 @@ test("Theme switch works correctly", async ({ page }) => {
       .getPropertyValue("--main-bg-color")
   })
   expect(lightBgColor).toBe(initialBgColor)
+
+  await expect(loading).toHaveCount(0)
 
   await maybeScreenshot(page, "home-page-theme-light-back.png")
 })
@@ -101,10 +116,14 @@ test("Slider works", async ({ page }) => {
   const dotCount = await dots.count()
   expect(dotCount).toBe(5)
 
+  const loading = page.getByTestId("loading")
+
   await dots.nth(1).click()
 
   const barchart = slider.locator(".slick-current [data-testid='barchart']")
   await expect(barchart).toBeVisible()
+
+  await expect(loading).toHaveCount(0)
 
   await maybeScreenshot(page, "slider-second-dot.png")
 
@@ -119,6 +138,8 @@ test("Slider works", async ({ page }) => {
 
   const toplist = slider.locator(".slick-current [data-testid='toplist']")
   await expect(toplist).toBeVisible()
+
+  await expect(loading).toHaveCount(0)
 
   await maybeScreenshot(page, "slider-last-dot.png")
 })

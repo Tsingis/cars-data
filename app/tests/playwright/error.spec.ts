@@ -5,7 +5,7 @@ test("Error page loads correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/error")
   await expect(page).toHaveTitle("Passenger cars in Finland")
 
-  const error = page.locator("[data-testid=error]")
+  const error = page.getByTestId("error")
   const title = error.locator("h1")
   const text = error.locator("p")
 
@@ -18,7 +18,7 @@ test("Error page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/error")
 
-  const languageSwitch = page.locator("[data-testid=languageswitch]")
+  const languageSwitch = page.getByTestId("languageswitch")
   await expect(languageSwitch).toBeVisible()
 
   const enButton = languageSwitch.locator("button:has-text('EN')")
@@ -26,7 +26,7 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(enButton).toBeVisible()
   await expect(fiButton).toBeVisible()
 
-  const error = page.locator("[data-testid=error]")
+  const error = page.getByTestId("error")
   const title = error.locator("h1")
   const text = error.locator("p")
 
