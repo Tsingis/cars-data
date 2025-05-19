@@ -7,7 +7,7 @@ export default defineConfig({
   timeout: 180_000,
   retries: 3,
   expect: {
-    timeout: 60_000,
+    timeout: 30_000,
     toHaveScreenshot: {
       maxDiffPixelRatio: Number(process.env.MAX_DIFF_PIXEL_RATIO) || 0,
       animations: "disabled",
