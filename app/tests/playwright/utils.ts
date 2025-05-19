@@ -13,12 +13,16 @@ type ToHaveScreenshotArgs =
       >[0],
     ]
 
-export function maybeScreenshot(page: Page, ...args: ToHaveScreenshotArgs) {
+export async function maybeScreenshot(
+  page: Page,
+  ...args: ToHaveScreenshotArgs
+) {
+  // await page.waitForTimeout(1000)
   if (process.env.NO_SCREENSHOTS !== "true") {
     if (typeof args[0] === "string") {
-      return expect(page).toHaveScreenshot(args[0], args[1])
+      return await expect(page).toHaveScreenshot(args[0], args[1])
     }
-    return expect(page).toHaveScreenshot(args[0])
+    return await expect(page).toHaveScreenshot(args[0])
   }
   return Promise.resolve()
 }

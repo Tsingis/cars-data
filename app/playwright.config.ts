@@ -9,7 +9,7 @@ export default defineConfig({
   expect: {
     timeout: 60_000,
     toHaveScreenshot: {
-      maxDiffPixelRatio: Number(process.env.MAX_DIFF_PIXEL_RATIO) || 0.05,
+      maxDiffPixelRatio: Number(process.env.MAX_DIFF_PIXEL_RATIO) || 0,
       animations: "disabled",
     },
   },
