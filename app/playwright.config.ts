@@ -23,7 +23,7 @@ export default defineConfig({
       url: "http://localhost:8000",
     },
     {
-      command: "npm run dev:testing",
+      command: "npm run preview",
       reuseExistingServer: !process.env.CI,
       stdout: "ignore",
       stderr: "pipe",
