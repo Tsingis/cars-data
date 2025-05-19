@@ -20,6 +20,7 @@ export default defineConfig({
       stdout: "ignore",
       stderr: "ignore",
       timeout: 60_000,
+      url: "http://localhost:8000",
     },
     {
       command: "npm run dev:testing",
@@ -27,6 +28,7 @@ export default defineConfig({
       stdout: "ignore",
       stderr: "pipe",
       timeout: 60_000,
+      url: "http://localhost:3000",
     },
   ],
   projects: [
