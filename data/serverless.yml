@@ -2,6 +2,8 @@ org: tsingis
 app: cars-data
 service: cars-data
 
+useDotenv: true
+
 provider:
   name: aws
   stage: ${opt:stage, "prod"}
@@ -13,6 +15,8 @@ provider:
   memorySize: 10240
   timeout: 180
   logRetentionInDays: 90
+  deploymentBucket:
+    name: ${env:SERVERLESS_BUCKET}
   environment:
     BUCKET: ${env:BUCKET}
     FILENAME: ${env:FILENAME}

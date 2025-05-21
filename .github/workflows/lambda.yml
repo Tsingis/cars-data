@@ -23,6 +23,7 @@ concurrency:
 env:
   NO_UPDATE_NOTIFIER: true
   SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+  SERVERLESS_BUCKET: ${{ secrets.SERVERLESS_BUCKET}}
   BUCKET: ${{ secrets.BUCKET }}
   FILENAME: ${{ secrets.FILENAME }}
   DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
