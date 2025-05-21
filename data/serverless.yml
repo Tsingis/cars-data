@@ -17,6 +17,7 @@ provider:
   logRetentionInDays: 90
   deploymentBucket:
     name: ${env:SERVERLESS_BUCKET}
+    maxPreviousDeploymentArtifacts: 3
   environment:
     BUCKET: ${env:BUCKET}
     FILENAME: ${env:FILENAME}
