@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test"
 import { maybeScreenshot } from "./utils"
-import os from "os"
 
 test("Home page loads correctly", async ({ page }) => {
   await page.goto("http://localhost:3000")
@@ -130,7 +129,7 @@ test("Slider works", async ({ page }) => {
   //TODO: Why is this not working?
   // eslint-disable-next-line playwright/no-skipped-test
   test.skip(
-    os.platform() === "linux",
+    Boolean(process.env.CI),
     "Skipping rest of the test on Linux/Ubuntu"
   )
 
