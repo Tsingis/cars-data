@@ -128,10 +128,9 @@ test("Slider works", async ({ page }) => {
 
   await dots.nth(dotCount - 1).click()
 
-  await page.waitForTimeout(1000)
-
-  const toplist = slider.locator(".slick-current [data-testid='toplist']")
-  await expect(toplist).toBeVisible()
+  await expect(
+    slider.locator(".slick-current [data-testid='toplist']")
+  ).toBeVisible()
 
   await expect(loading).toHaveCount(0)
 
