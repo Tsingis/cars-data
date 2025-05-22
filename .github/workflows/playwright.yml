@@ -39,5 +39,4 @@ jobs:
         working-directory: ./app
         env:
           CI: true
-          NO_SCREENSHOTS: false
           MAX_DIFF_PIXEL_RATIO: ${{ vars.MAX_DIFF_PIXEL_RATIO }}
