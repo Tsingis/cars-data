@@ -126,13 +126,6 @@ test("Slider works", async ({ page }) => {
 
   await maybeScreenshot(page, "slider-second-dot.png")
 
-  //TODO: Why is this not working?
-  // eslint-disable-next-line playwright/no-skipped-test
-  test.skip(
-    Boolean(process.env.CI),
-    "Skipping rest of the test on Linux/Ubuntu"
-  )
-
   await dots.nth(dotCount - 1).click()
 
   const toplist = slider.locator(".slick-current [data-testid='toplist']")
