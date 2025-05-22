@@ -42,10 +42,11 @@ services:
     container_name: cars-tests
     environment:
       - CI=true
-      - MAX_DIFF_PIXEL_RATIO=0.01
+      - MAX_DIFF_PIXEL_RATIO=0.001
     read_only: false
     privileged: true
     volumes:
     - ./app/tests/playwright:/app/tests/playwright
+    - ./app/test-results:/app/test-results
     - ./data:/data
     command: ["npm", "run", "playwright"]

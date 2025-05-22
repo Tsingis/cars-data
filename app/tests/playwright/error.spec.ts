@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test"
-import { maybeScreenshot } from "./utils"
 
 test("Error page loads correctly", async ({ page }) => {
   await page.goto("/error")
@@ -12,7 +11,7 @@ test("Error page loads correctly", async ({ page }) => {
   await expect(title).toHaveText("Error")
   await expect(text).toHaveText("An unexpected error occurred")
 
-  await maybeScreenshot(page, "error-page.png")
+  await expect(page).toHaveScreenshot("error-page.png")
 })
 
 test("Language switch works correctly", async ({ page }) => {
@@ -30,17 +29,17 @@ test("Language switch works correctly", async ({ page }) => {
   const title = error.locator("h1")
   const text = error.locator("p")
 
-  await maybeScreenshot(page, "error-page-language-en.png")
+  await expect(page).toHaveScreenshot("error-page-language-en.png")
 
   await fiButton.click()
   await expect(title).toHaveText("Virhe")
   await expect(text).toHaveText("Odottamaton virhe tapahtui")
 
-  await maybeScreenshot(page, "error-page-language-fi.png")
+  await expect(page).toHaveScreenshot("error-page-language-fi.png")
 
   await enButton.click()
   await expect(title).toHaveText("Error")
   await expect(text).toHaveText("An unexpected error occurred")
 
-  await maybeScreenshot(page, "error-page-language-en-back.png")
+  await expect(page).toHaveScreenshot("error-page-language-en-back.png")
 })

@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test"
-import { maybeScreenshot } from "./utils"
 
 test("Home page loads correctly", async ({ page }) => {
   await page.goto("/")
@@ -17,7 +16,7 @@ test("Home page loads correctly", async ({ page }) => {
   const dropdownInput = dropdown.locator("input")
   await expect(dropdownInput).toBeEditable()
 
-  await maybeScreenshot(page, "home-page.png")
+  await expect(page).toHaveScreenshot("home-page.png")
 })
 
 test("Language switch works correctly", async ({ page }) => {
@@ -36,21 +35,23 @@ test("Language switch works correctly", async ({ page }) => {
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-language-en.png")
+  await expect(page).toHaveScreenshot("home-page-language-en.png")
 
   await fiButton.click()
+
   await expect(title).toHaveText("Henkilöautomäärät Suomessa")
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-language-fi.png")
+  await expect(page).toHaveScreenshot("home-page-language-fi.png")
 
   await enButton.click()
+
   await expect(title).toHaveText("Passenger car counts in Finland")
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-language-en-back.png")
+  await expect(page).toHaveScreenshot("home-page-language-en-back.png")
 })
 
 test("Theme switch works correctly", async ({ page }) => {
@@ -78,9 +79,10 @@ test("Theme switch works correctly", async ({ page }) => {
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-theme-light.png")
+  await expect(page).toHaveScreenshot("home-page-theme-light.png")
 
   await darkButton.click()
+
   const darkBgColor = await page.evaluate(() => {
     return window
       .getComputedStyle(document.documentElement)
@@ -90,9 +92,10 @@ test("Theme switch works correctly", async ({ page }) => {
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-theme-dark.png")
+  await expect(page).toHaveScreenshot("home-page-theme-dark.png")
 
   await lightButton.click()
+
   const lightBgColor = await page.evaluate(() => {
     return window
       .getComputedStyle(document.documentElement)
@@ -102,7 +105,7 @@ test("Theme switch works correctly", async ({ page }) => {
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "home-page-theme-light-back.png")
+  await expect(page).toHaveScreenshot("home-page-theme-light-back.png")
 })
 
 test("Slider works correctly", async ({ page }) => {
@@ -122,29 +125,26 @@ test("Slider works correctly", async ({ page }) => {
   await secondDot.hover()
   await secondDot.click()
 
-  const barchart = slider.locator(".slick-current [data-testid='barchart']")
+  const secondSlide = slider.locator(`[data-index='${dotCount + 1}']`)
+  const barchart = secondSlide.getByTestId("barchart")
   await expect(barchart).toBeVisible()
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "slider-second-dot.png")
+  await expect(page).toHaveScreenshot("slider-second-dot.png")
 
-  //TODO: Why is this not working?
-  // eslint-disable-next-line playwright/no-skipped-test
-  test.skip(
-    Boolean(process.env.CI),
-    "Skipping rest of the test on Linux/Ubuntu"
-  )
+  await expect(loading).toHaveCount(0)
 
   const finalDot = dots.nth(dotCount - 1)
   await expect(finalDot).toBeVisible()
   await finalDot.hover()
   await finalDot.click()
 
-  const toplist = slider.locator(".slick-current [data-testid='toplist']")
+  const lastSlide = slider.locator(`[data-index='${dotCount + 4}']`)
+  const toplist = lastSlide.getByTestId("toplist")
   await expect(toplist).toBeVisible()
 
   await expect(loading).toHaveCount(0)
 
-  await maybeScreenshot(page, "slider-last-dot.png")
+  await expect(page).toHaveScreenshot("slider-last-dot.png")
 })
