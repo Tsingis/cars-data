@@ -2,7 +2,6 @@
 .github/
 cloudformation/
 data/
-tests/
 util/
 node_modules/
 test-results/

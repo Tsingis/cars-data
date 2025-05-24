@@ -33,3 +33,12 @@ services:
     tmpfs:
       - /tmp:rw
     command: ["python", "/scripts/http_server.py"]
+  tests:
+    build:
+      context: .
+      dockerfile: ./util/Dockerfile
+      no_cache: false
+    container_name: cars-tests
+    read_only: false
+    privileged: true
+    command: ["npm", "run", "playwright:update"]
