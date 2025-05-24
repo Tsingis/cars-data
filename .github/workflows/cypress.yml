@@ -29,19 +29,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      - name: Cache Cypress binary and dependencies
-        id: cypress-cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cache/Cypress
-            app/node_modules
-          key: ${{ runner.os }}-cypress-${{ hashFiles('app/package*.json') }}
-          restore-keys: |
-            ${{ runner.os }}-cypress-${{ runner.os }}-
-            ${{ runner.os }}-cypress-
       - name: Install dependencies
-        if: steps.cypress-cache.outputs.cache-hit != 'true' || hashFiles('app/package*.json') != hashFiles('app/package*.json', 'HEAD^')
         run: npm ci
         working-directory: ./app
       - name: Build
