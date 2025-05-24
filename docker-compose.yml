@@ -41,4 +41,6 @@ services:
     container_name: cars-tests
     read_only: false
     privileged: true
-    command: ["npm", "run", "playwright:update"]
+    volumes:
+    - ./app/tests/playwright:/testing/app/tests/playwright
+    command: ["npm", "run", "playwright"]
