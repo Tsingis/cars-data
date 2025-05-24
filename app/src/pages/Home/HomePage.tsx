@@ -54,8 +54,7 @@ const HomePage = () => {
   const navigate = useNavigate()
 
   const dataUrl =
-    import.meta.env.VITE_DATA_URL?.trim() ||
-    "http://localhost:8000/data/data.json"
+    import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json"
 
   useEffect(() => {
     fetch(dataUrl)

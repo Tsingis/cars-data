@@ -3,7 +3,7 @@
   try {
     dataUrl = new URL("__DATA_URL__")
   } catch {
-    dataUrl = new URL("http://localhost:8000/data/data.json")
+    dataUrl = new URL("http://localhost:8000/data.json")
   }
 
   const head = document.head
