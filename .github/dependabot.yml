@@ -35,7 +35,9 @@ updates:
         patterns:
           - "@typescript-eslint/*"
   - package-ecosystem: "docker"
-    directory: "/app"
+    directories:
+      - "/app"
+      - "/util"
     schedule:
       interval: "monthly"
       day: "wednesday"
