@@ -52,7 +52,7 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-          cache-dependency-path: "./data/package-lock.json"
+          cache-dependency-path: "data/package-lock.json"
       - name: Install dependencies
         run: npm ci
         working-directory: ./data
@@ -66,7 +66,7 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-          cache-dependency-path: "./data/package-lock.json"
+          cache-dependency-path: "data/package-lock.json"
       - name: Install dependencies
         run: npm ci
         working-directory: ./data
@@ -83,7 +83,7 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-          cache-dependency-path: "./data/package-lock.json"
+          cache-dependency-path: "data/package-lock.json"
       - name: Install dependencies
         run: npm ci
         working-directory: ./data
