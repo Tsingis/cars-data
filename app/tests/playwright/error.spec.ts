@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 import { maybeScreenshot } from "./utils"
 
 test("Error page loads correctly", async ({ page }) => {
-  await page.goto("http://localhost:3000/error")
+  await page.goto("/error")
   await expect(page).toHaveTitle("Passenger cars in Finland")
 
   const error = page.getByTestId("error")
@@ -16,7 +16,7 @@ test("Error page loads correctly", async ({ page }) => {
 })
 
 test("Language switch works correctly", async ({ page }) => {
-  await page.goto("http://localhost:3000/error")
+  await page.goto("/error")
 
   const languageSwitch = page.getByTestId("languageswitch")
   await expect(languageSwitch).toBeVisible()

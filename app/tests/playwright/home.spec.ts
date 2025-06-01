@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 import { maybeScreenshot } from "./utils"
 
 test("Home page loads correctly", async ({ page }) => {
-  await page.goto("http://localhost:3000")
+  await page.goto("/")
   await expect(page).toHaveTitle("Passenger cars in Finland")
 
   const title = page.locator("h1:first-of-type")
@@ -21,7 +21,7 @@ test("Home page loads correctly", async ({ page }) => {
 })
 
 test("Language switch works correctly", async ({ page }) => {
-  await page.goto("http://localhost:3000")
+  await page.goto("/")
 
   const languageSwitch = page.getByTestId("languageswitch")
   await expect(languageSwitch).toBeVisible()
@@ -54,7 +54,7 @@ test("Language switch works correctly", async ({ page }) => {
 })
 
 test("Theme switch works correctly", async ({ page }) => {
-  await page.goto("http://localhost:3000")
+  await page.goto("/")
 
   const themeSwitch = page.getByTestId("themeswitch")
   await expect(themeSwitch).toBeVisible()
@@ -106,7 +106,7 @@ test("Theme switch works correctly", async ({ page }) => {
 })
 
 test("Slider works", async ({ page }) => {
-  await page.goto("http://localhost:3000")
+  await page.goto("/")
 
   const slider = page.locator(".slick-slider")
   await expect(slider).toBeVisible()
@@ -117,7 +117,10 @@ test("Slider works", async ({ page }) => {
 
   const loading = page.getByTestId("loading")
 
-  await dots.nth(1).click()
+  const secondDot = dots.nth(1)
+  await expect(secondDot).toBeVisible()
+  await secondDot.hover()
+  await secondDot.click()
 
   const barchart = slider.locator(".slick-current [data-testid='barchart']")
   await expect(barchart).toBeVisible()
@@ -133,7 +136,10 @@ test("Slider works", async ({ page }) => {
     "Skipping rest of the test on Linux/Ubuntu"
   )
 
-  await dots.nth(dotCount - 1).click()
+  const finalDot = dots.nth(dotCount - 1)
+  await expect(finalDot).toBeVisible()
+  await finalDot.hover()
+  await finalDot.click()
 
   const toplist = slider.locator(".slick-current [data-testid='toplist']")
   await expect(toplist).toBeVisible()
