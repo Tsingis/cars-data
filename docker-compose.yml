@@ -39,6 +39,8 @@ services:
       dockerfile: ./util/Dockerfile
       no_cache: false
     container_name: cars-tests
+    environment:
+      - CI=true
     read_only: false
     privileged: true
     volumes:
