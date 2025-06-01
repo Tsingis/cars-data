@@ -17,10 +17,7 @@ env:
   NO_UPDATE_NOTIFIER: true
 jobs:
   playwright:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
