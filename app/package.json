@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node check-packages.js",
     "dev": "vite --config ./vite.config.ts --open",
     "dev:check": "vite --config ./vite.config.ts --open -- --use-checker",
     "preview": "vite preview --config ./vite.config.ts",
