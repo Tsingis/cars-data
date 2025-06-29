@@ -32,12 +32,13 @@ services:
     privileged: false
     tmpfs:
       - /tmp:rw
-    command: ["python", "/scripts/http_server.py"]
+    command: [ "python", "/scripts/http_server.py" ]
   tests:
     build:
       context: .
       dockerfile: ./util/Dockerfile
       no_cache: false
+    image: cars-tests
     container_name: cars-tests
     environment:
       - CI=true
@@ -45,6 +46,6 @@ services:
     read_only: false
     privileged: true
     volumes:
-    - ./app/tests/playwright:/app/tests/playwright
-    - ./data:/data
-    command: ["npm", "run", "playwright"]
+      - ./app/tests/playwright:/app/tests/playwright
+      - ./data:/data
+    command: [ "npm", "run", "playwright" ]
