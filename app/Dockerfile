@@ -21,7 +21,7 @@ RUN sed -i "s|__DATA_URL__|${DATA_URL}|g" src/public/insert-links.js
 
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged:1.27-alpine-slim
+FROM nginxinc/nginx-unprivileged:1.29-alpine-slim
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY /nginx/nginx.conf /etc/nginx/nginx.conf
