@@ -14,14 +14,10 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
     )
 
     vehicles["intro_year"] = (
-        pd.to_numeric(vehicles["intro_date"].str[:4], errors="coerce")
-        .fillna(0)
-        .astype("Int16")
+        pd.to_numeric(vehicles["intro_date"].str[:4], errors="coerce").fillna(0).astype("Int16")
     )
     vehicles["registration_year"] = (
-        vehicles["registration_date"]
-        .dt.year.fillna(vehicles["intro_year"])
-        .astype("Int16")
+        vehicles["registration_date"].dt.year.fillna(vehicles["intro_year"]).astype("Int16")
     )
 
     # Older than 1980 reduced to 1979
@@ -44,12 +40,8 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
         "04": "electricity",
     }
 
-    vehicles["driving_force"] = (
-        vehicles["driving_force"].map(driving_force_map).fillna("other")
-    )
-    vehicles["driving_force"] = np.where(
-        vehicles["is_hybrid"], "hybrid", vehicles["driving_force"]
-    )
+    vehicles["driving_force"] = vehicles["driving_force"].map(driving_force_map).fillna("other")
+    vehicles["driving_force"] = np.where(vehicles["is_hybrid"], "hybrid", vehicles["driving_force"])
 
     # Color grouping
     color_map = {
@@ -147,9 +139,7 @@ def clean(vehicles: pd.DataFrame, municipalities: dict) -> pd.DataFrame:
 def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     # Groupings
     bin_size = 50_000
-    bins = (
-        [-1, 0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
-    )
+    bins = [-1, 0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
     labels = (
         ["na"]
         + [f"under{bin_size // 1000}k"]
@@ -172,14 +162,10 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         .reset_index(name="count")
     )
     grouped_color = (
-        df.groupby(["color", "municipality"], observed=True)
-        .size()
-        .reset_index(name="count")
+        df.groupby(["color", "municipality"], observed=True).size().reset_index(name="count")
     )
     grouped_maker = (
-        df.groupby(["maker", "municipality"], observed=True)
-        .size()
-        .reset_index(name="count")
+        df.groupby(["maker", "municipality"], observed=True).size().reset_index(name="count")
     )
     grouped_year = (
         df.groupby(["registration_year", "municipality"], observed=True)
@@ -196,12 +182,8 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
     final = []
     for municipality_code, group in grouped_driving.groupby("municipality"):
         # Mileages
-        mileage_group = grouped_mileage[
-            grouped_mileage["municipality"] == municipality_code
-        ]
-        mileage_counts = dict(
-            zip(mileage_group["mileage_group"], mileage_group["count"])
-        )
+        mileage_group = grouped_mileage[grouped_mileage["municipality"] == municipality_code]
+        mileage_counts = dict(zip(mileage_group["mileage_group"], mileage_group["count"]))
 
         # Driving forces
         driving_force_counts = dict(zip(group["driving_force"], group["count"]))
@@ -239,10 +221,10 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
 
     # Totals
     total_mileage_counts = {}
-    total_driving_force_counts = {driving_force: 0 for driving_force in driving_forces}
-    total_color_counts = {color: 0 for color in colors}
+    total_driving_force_counts = dict.fromkeys(driving_forces, 0)
+    total_color_counts = dict.fromkeys(colors, 0)
     total_year_counts = {str(year): 0 for year in years}
-    total_maker_counts = {maker: 0 for maker in makers}
+    total_maker_counts = dict.fromkeys(makers, 0)
 
     for municipality in final:
         for mileage, count in municipality["mileageCount"].items():
@@ -282,9 +264,7 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
                 key=lambda item: _sort_mileage_keys(item[0]),
             )
         )
-        municipality["drivingForceCount"] = dict(
-            sorted(municipality["drivingForceCount"].items())
-        )
+        municipality["drivingForceCount"] = dict(sorted(municipality["drivingForceCount"].items()))
         municipality["colorCount"] = dict(sorted(municipality["colorCount"].items()))
         municipality["registrationYearCount"] = dict(
             sorted(municipality["registrationYearCount"].items())
