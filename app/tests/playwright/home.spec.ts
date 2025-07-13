@@ -105,7 +105,7 @@ test("Theme switch works correctly", async ({ page }) => {
   await maybeScreenshot(page, "home-page-theme-light-back.png")
 })
 
-test("Slider works", async ({ page }) => {
+test("Slider works correctly", async ({ page }) => {
   await page.goto("/")
 
   const slider = page.locator(".slick-slider")
