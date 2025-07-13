@@ -38,6 +38,7 @@ services:
       context: .
       dockerfile: ./util/Dockerfile
       no_cache: false
+    image: cars-tests
     container_name: cars-tests
     environment:
       - CI=true
