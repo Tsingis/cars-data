@@ -1,0 +1,29 @@
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "cars-data"
+version = "1.0.0"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+numpy = "2.2.4"
+pandas = "2.3.1"
+pydantic = "2.11.7"
+requests = "2.32.4"
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "25.1.0", extras = ["jupyter"]}
+flake8 = "7.3.0"
+notebook = "7.4.4"
+pip-audit = "2.9.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = "1.9.0"
+
+[tool.black]
+line-length = 100
+target-version = ["py313"]
+include = '\.py$'

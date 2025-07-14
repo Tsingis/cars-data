@@ -6,7 +6,8 @@ on:
     paths:
       - "data/src/**"
       - "data/tests/**"
-      - "data/requirements.txt"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
       - "app/src/**"
       - "app/tests/**"
       - "app/vite.config.ts"
