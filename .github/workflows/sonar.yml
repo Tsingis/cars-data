@@ -6,7 +6,8 @@ on:
     paths:
       - "data/src/**"
       - "data/tests/**"
-      - "data/requirements.txt"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
       - "data/package*.json"
       - "app/src/**"
       - "app/tests/**"
@@ -19,7 +20,8 @@ on:
     paths:
       - "data/src/**"
       - "data/tests/**"
-      - "data/requirements.txt"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
       - "data/package*.json"
       - "app/src/**"
       - "app/tests/**"
