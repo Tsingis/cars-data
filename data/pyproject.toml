@@ -9,7 +9,7 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.13"
-numpy = "2.2.4"
+numpy = "2.3.1"
 pandas = "2.3.1"
 pydantic = "2.11.7"
 requests = "2.32.4"
