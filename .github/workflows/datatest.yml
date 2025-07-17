@@ -34,5 +34,5 @@ jobs:
           poetry run ruff format .
         working-directory: ./data
       - name: Run tests
-        run: poetry run python -m unittest discover -s tests
+        run: poetry run pytest
         working-directory: ./data
