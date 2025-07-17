@@ -1,6 +1,4 @@
 org: tsingis
-app: cars-data
-service: cars-data
 
 useDotenv: true
 
