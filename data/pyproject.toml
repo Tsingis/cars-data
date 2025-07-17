@@ -18,7 +18,7 @@ requests = "2.32.4"
 notebook = "7.4.4"
 pip-audit = "2.9.0"
 pytest = "8.4.1"
-ruff = "0.12.3"
+ruff = "0.12.4"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = "1.9.0"
