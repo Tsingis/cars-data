@@ -30,8 +30,8 @@ jobs:
         working-directory: ./data
       - name: Check linting & formatting
         run: |
-          poetry run flake8 .
-          poetry run black --check .
+          poetry run ruff check .
+          poetry run ruff format .
         working-directory: ./data
       - name: Run tests
         run: poetry run python -m unittest discover -s tests

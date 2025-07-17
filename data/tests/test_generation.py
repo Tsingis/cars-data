@@ -4,7 +4,6 @@ from src.data_cleaning import generate
 
 
 class TestGenerateFunction(unittest.TestCase):
-
     def setUp(self):
         self.date = "2024-08-21"
         self.municipalities = {"001": "Helsinki", "002": "Espoo"}

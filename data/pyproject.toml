@@ -15,15 +15,17 @@ pydantic = "2.11.7"
 requests = "2.32.4"
 
 [tool.poetry.group.dev.dependencies]
-black = {version = "25.1.0", extras = ["jupyter"]}
-flake8 = "7.3.0"
 notebook = "7.4.4"
 pip-audit = "2.9.0"
+ruff = "0.12.3"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = "1.9.0"
 
-[tool.black]
+[tool.ruff]
 line-length = 100
-target-version = ["py313"]
-include = '\.py$'
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = ["COM812"]
+exclude = [".venv", "__pycache__"]
