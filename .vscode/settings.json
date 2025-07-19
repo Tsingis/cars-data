@@ -9,9 +9,21 @@
   "python.defaultInterpreterPath": "${workspaceFolder}/data/.venv/Scripts/python.exe",
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "[html][css][json][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "biome.enabled": true,
+  "biome.requireConfiguration": true,
+  "biome.configurationPath": "./app/biome.json",
+  "biome.lsp.bin": "./app/node_modules/@biomejs/biome/bin/biome",
   "[python]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "vitest.rootConfig": "./app/vitest.config.ts",
+  "vitest.rootConfig": "./app/vitest.config.ts"
 }

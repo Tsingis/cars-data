@@ -103,7 +103,7 @@ const HomePage = () => {
         console.error(error)
         setErrorMessage("Error.Fetch")
       })
-  }, [navigate, dataUrl])
+  }, [])
 
   useEffect(() => {
     if (errorMessage) {

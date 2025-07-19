@@ -133,8 +133,6 @@ test("Slider works correctly", async ({ page }) => {
 
   await expect(page).toHaveScreenshot("slider-second-dot.png")
 
-  //TODO: Why is this not working?
-  // eslint-disable-next-line playwright/no-skipped-test
   test.skip(
     Boolean(process.env.CI),
     "Skipping rest of the test on Linux/Ubuntu"

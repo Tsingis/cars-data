@@ -13,10 +13,6 @@ export default defineConfig({
         typescript: {
           tsconfigPath: "./tsconfig.json",
         },
-        eslint: {
-          lintCommand: "eslint . --config ./eslint.config.js",
-          useFlatConfig: true,
-        },
       }),
   ],
   root: "src",

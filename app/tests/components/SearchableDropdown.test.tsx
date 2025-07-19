@@ -14,7 +14,7 @@ describe("SearchableDropdown Component", () => {
     render(
       <SearchableDropdown
         options={options}
-        onSelect={() => {}}
+        onSelect={() => null}
         initialValue={options[0]}
       />
     )
@@ -33,7 +33,7 @@ describe("SearchableDropdown Component", () => {
     render(
       <SearchableDropdown
         options={options}
-        onSelect={() => {}}
+        onSelect={() => null}
         initialValue={options[0]}
       />
     )
@@ -50,7 +50,7 @@ describe("SearchableDropdown Component", () => {
     render(
       <SearchableDropdown
         options={options}
-        onSelect={() => {}}
+        onSelect={() => null}
         initialValue={options[0]}
       />
     )
@@ -67,7 +67,7 @@ describe("SearchableDropdown Component", () => {
     render(
       <SearchableDropdown
         options={options}
-        onSelect={() => {}}
+        onSelect={() => null}
         initialValue={options[0]}
       />
     )
@@ -82,7 +82,7 @@ describe("SearchableDropdown Component", () => {
     render(
       <SearchableDropdown
         options={options}
-        onSelect={() => {}}
+        onSelect={() => null}
         initialValue={options[0]}
       />
     )
