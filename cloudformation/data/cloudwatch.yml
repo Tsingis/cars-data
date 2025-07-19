@@ -1,0 +1,14 @@
+Description: Cloudwatch log group for lambda
+
+Parameters:
+  FunctionName:
+    Type: String
+    Default: cars-data
+    Description: Name of the lambda function
+
+Resources:
+  LambdaLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${FunctionName}
+      RetentionInDays: 90

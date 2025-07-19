@@ -7,6 +7,7 @@ Parameters:
     Description: Name of alarm
   LogGroupName:
     Type: String
+    Default: /aws/lambda/cars-data
     Description: Name of lambda log group
   MetricFilterPattern:
     Type: String

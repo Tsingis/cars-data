@@ -11,7 +11,6 @@ updates:
   - package-ecosystem: "npm"
     directories:
       - "/app"
-      - "/data"
     versioning-strategy: "increase"
     schedule:
       interval: "weekly"
@@ -37,6 +36,7 @@ updates:
   - package-ecosystem: "docker"
     directories:
       - "/app"
+      - "/data"
       - "/util"
     schedule:
       interval: "monthly"

@@ -1,6 +1,22 @@
-Description: Data processing Lambda role
+Description: Data processing Lambda
 
 Parameters:
+  FunctionName:
+    Type: String
+    Default: cars-data
+    Description: Name of the lambda function
+  FunctionMemory:
+    Type: Number
+    Default: 10240
+    Description: Memory size for lambda in MB
+  FunctionTimeout:
+    Type: Number
+    Default: 180
+    Description: Timeout for lambda in seconds
+  RepositoryName:
+    Type: String
+    Default: cars-data
+    Description: Name of the ECR repository
   BucketName:
     Type: String
     Description: Name of the S3 bucket
@@ -9,6 +25,22 @@ Parameters:
     Description: ID of the CloudFront distribution
 
 Resources:
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Ref FunctionName
+      PackageType: Image
+      Code:
+        ImageUri: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${RepositoryName}:latest
+      Role: !GetAtt LambdaFunctionRole.Arn
+      Timeout: !Ref FunctionTimeout
+      MemorySize: !Ref FunctionMemory
+      Environment:
+        Variables:
+          BUCKET: !Ref BucketName
+          FILENAME: data.json
+          DISTRIBUTION: !Ref CloudFrontDistributionId
+
   LambdaFunctionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -20,6 +52,22 @@ Resources:
             Principal:
               Service: lambda.amazonaws.com
             Action: sts:AssumeRole
+
+  LambdaFunctionECRPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: LambdaFunctionECRPolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - "ecr:GetDownloadUrlForLayer"
+              - "ecr:BatchGetImage"
+              - "ecr:BatchCheckLayerAvailability"
+            Resource: !Sub arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:repository/${RepositoryName}
+      Roles:
+        - !Ref LambdaFunctionRole
 
   LambdaFunctionS3Policy:
     Type: AWS::IAM::Policy

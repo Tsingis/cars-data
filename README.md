@@ -8,4 +8,3 @@ Tools used:
 - React
 - Docker
 - AWS
-- Serverless Framework
