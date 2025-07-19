@@ -13,5 +13,17 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "[html][css][json][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "biome.enabled": false,
+  "biome.requireConfiguration": true,
+  "biome.configurationPath": "./app/biome.json",
+  "biome.lsp.bin": "./app/node_modules/@biomejs/biome/bin/biome",
   "vitest.rootConfig": "./app/vitest.config.ts",
 }

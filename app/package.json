@@ -20,6 +20,10 @@
     "eslint:fix": "npx eslint . --config ./eslint.config.js --fix",
     "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}' --config ../.prettierrc.json",
     "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
+    "lint": "npx biome lint .",
+    "lint:fix": "npx biome lint --write .",
+    "format": "npx biome format .",
+    "format:fix": "npx biome format --write .",
     "typecheck": "tsc --noEmit -p ./tsconfig.json",
     "build": "tsc -b ./tsconfig.json && vite --config ./vite.config.ts build"
   },
@@ -36,6 +40,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
     "@eslint/js": "^9.31.0",
     "@playwright/test": "^1.54.1",
     "@testing-library/jest-dom": "^6.6.3",
