@@ -9,7 +9,7 @@ on:
       - "app/vite.config.ts"
       - "app/vitest.config.ts"
       - "app/tsconfig.json"
-      - "app/eslint.config.js"
+      - "app/biome.json"
       - "app/package*.json"
       - ".github/workflows/test.yml"
   workflow_dispatch:
@@ -44,8 +44,8 @@ jobs:
       - name: Check types, linting & formatting
         run: |
           npm run typecheck
-          npm run eslint
-          npm run prettier
+          npm run lint
+          npm run format
         working-directory: ./app
   build:
     runs-on: ubuntu-latest

@@ -24,16 +24,9 @@ updates:
         patterns:
           - "react*"
           - "@types/react*"
-      eslint:
-        patterns:
-          - "eslint"
-          - "@eslint/js"
       fontawesome:
         patterns:
           - "@fortawesome/*"
-      ts-eslint:
-        patterns:
-          - "@typescript-eslint/*"
   - package-ecosystem: "docker"
     directories:
       - "/app"

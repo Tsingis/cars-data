@@ -36,7 +36,6 @@ function updateStoredHash(hash) {
 function installDependencies() {
   console.log("Installing dependencies...")
   try {
-    // eslint-disable-next-line sonarjs/no-os-command-from-path
     execSync("npm install", { stdio: "inherit" })
     return true
   } catch (error) {

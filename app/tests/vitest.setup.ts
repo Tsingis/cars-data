@@ -5,7 +5,7 @@ globalThis.matchMedia =
   function () {
     return {
       matches: false,
-      addListener: () => {},
-      removeListener: () => {},
+      addListener: () => null,
+      removeListener: () => null,
     }
   }

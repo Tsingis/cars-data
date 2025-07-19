@@ -15,7 +15,7 @@ on:
       - "app/playwright.config.ts"
       - "app/cypress.config.ts"
       - "app/tsconfig.json"
-      - "app/eslint.config.js"
+      - "app/biome.json"
       - "app/package*.json"
       - ".github/workflows/codeql.yml"
   schedule:
