@@ -53,7 +53,7 @@ const HomePage = () => {
 
   const navigate = useNavigate()
 
-  const dataUrl =
+  let dataUrl =
     import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json"
 
   useEffect(() => {
@@ -103,7 +103,7 @@ const HomePage = () => {
         console.error(error)
         setErrorMessage("Error.Fetch")
       })
-  }, [navigate, dataUrl])
+  }, [dataUrl])
 
   useEffect(() => {
     if (errorMessage) {
