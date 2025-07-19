@@ -14,6 +14,10 @@ pandas = "2.3.1"
 pydantic = "2.11.7"
 requests = "2.32.4"
 
+[tool.poetry.group.aws.dependencies]
+boto3 = "1.39.9"
+awslambdaric = "3.1.1"
+
 [tool.poetry.group.dev.dependencies]
 notebook = "7.4.4"
 pip-audit = "2.9.0"

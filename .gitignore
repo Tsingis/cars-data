@@ -4,7 +4,6 @@ __pycache__
 .pytest_cache
 .poetry
 .env
-.serverless
 node_modules
 dist
 test-results

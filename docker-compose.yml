@@ -33,6 +33,22 @@ services:
     tmpfs:
       - /tmp:rw
     command: ["python", "/scripts/http_server.py"]
+  lambda:
+    build:
+      context: ./data
+      dockerfile: Dockerfile
+      no_cache: false
+      args:
+        POETRY_VERSION: ${POETRY_VERSION}
+    image: cars-lambda
+    container_name: cars-lambda
+    ports:
+      - 9000:8080
+    user: lambda
+    read_only: true
+    privileged: false
+    tmpfs:
+      - /tmp:rw
   tests:
     build:
       context: .

@@ -37,6 +37,7 @@ updates:
   - package-ecosystem: "docker"
     directories:
       - "/app"
+      - "/data"
       - "/util"
     schedule:
       interval: "monthly"

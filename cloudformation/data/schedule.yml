@@ -1,0 +1,30 @@
+Description: Lambda schedule trigger
+
+Parameters:
+  FunctionName:
+    Type: String
+    Default: cars-data
+    Description: Name of the lambda function
+  ScheduleExpression:
+    Type: String
+    Default: cron(0 0 ? * 1 *)
+    Description: Schedule expression
+
+Resources:
+  LambdaScheduleRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: LambdaScheduleRule
+      ScheduleExpression: !Ref ScheduleExpression
+      State: ENABLED
+      Targets:
+        - Arn: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${FunctionName}
+          Id: "LambdaTarget"
+
+  LambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref FunctionName
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt LambdaScheduleRule.Arn
