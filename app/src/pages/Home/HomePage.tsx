@@ -10,6 +10,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./HomePage.module.css";
 
+const dataUrl =
+  import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json";
+
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   const [data, setData] = useState<{
@@ -52,9 +55,6 @@ const HomePage = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   const navigate = useNavigate();
-
-  const dataUrl =
-    import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json";
 
   useEffect(() => {
     fetch(dataUrl)
@@ -103,7 +103,7 @@ const HomePage = () => {
         console.error(error);
         setErrorMessage("Error.Fetch");
       });
-  }, [dataUrl]);
+  }, []);
 
   useEffect(() => {
     if (errorMessage) {
