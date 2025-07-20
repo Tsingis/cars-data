@@ -1,7 +1,7 @@
-import { defineConfig, devices, type ViewportSize } from "@playwright/test"
+import { defineConfig, devices, type ViewportSize } from "@playwright/test";
 
-const baseUrl = "http://localhost:3000"
-const viewPort: ViewportSize = { width: 1280, height: 800 }
+const baseUrl = "http://localhost:3000";
+const viewPort: ViewportSize = { width: 1280, height: 800 };
 
 export default defineConfig({
   testDir: "./tests/playwright",
@@ -71,4 +71,4 @@ export default defineConfig({
       },
     },
   ],
-})
+});

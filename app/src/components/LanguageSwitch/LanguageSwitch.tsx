@@ -1,14 +1,14 @@
-import React from "react"
-import { useTranslation } from "react-i18next"
-import styles from "./LanguageSwitch.module.css"
+import React from "react";
+import { useTranslation } from "react-i18next";
+import styles from "./LanguageSwitch.module.css";
 
 const LanguageSwitch: React.FC = () => {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
-    localStorage.setItem("language", lng)
-  }
+    i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng);
+  };
 
   return (
     <div
@@ -30,7 +30,7 @@ const LanguageSwitch: React.FC = () => {
         FI
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default LanguageSwitch
+export default LanguageSwitch;

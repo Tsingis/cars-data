@@ -1,16 +1,16 @@
-import React from "react"
-import { useTranslation } from "react-i18next"
-import { useLocation } from "react-router-dom"
-import styles from "./ErrorPage.module.css"
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
+import styles from "./ErrorPage.module.css";
 
 type LocationState = {
-  message?: string
-}
+  message?: string;
+};
 
 const ErrorPage: React.FC = () => {
-  const { t } = useTranslation()
-  const { state } = useLocation()
-  const message = (state as LocationState)?.message
+  const { t } = useTranslation();
+  const { state } = useLocation();
+  const message = (state as LocationState)?.message;
 
   return (
     <div
@@ -23,7 +23,7 @@ const ErrorPage: React.FC = () => {
         <p>{message ?? t("Error.General")}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;

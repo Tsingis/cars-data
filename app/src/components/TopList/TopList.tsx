@@ -1,14 +1,14 @@
-import React from "react"
-import { type Count } from "../../types"
-import styles from "./TopList.module.css"
+import React from "react";
+import { type Count } from "../../types";
+import styles from "./TopList.module.css";
 
 type TopListProps = {
-  data: Count
-  topX?: number
-  title?: string
-  className?: string
-  style?: React.CSSProperties
-}
+  data: Count;
+  topX?: number;
+  title?: string;
+  className?: string;
+  style?: React.CSSProperties;
+};
 
 const TopList: React.FC<TopListProps> = ({
   data,
@@ -19,7 +19,7 @@ const TopList: React.FC<TopListProps> = ({
 }) => {
   const sortedItems = Object.entries(data)
     .sort(([, first], [, second]) => (second ?? 0) - (first ?? 0))
-    .slice(0, topX)
+    .slice(0, topX);
 
   return (
     <div
@@ -36,7 +36,7 @@ const TopList: React.FC<TopListProps> = ({
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default TopList
+export default TopList;

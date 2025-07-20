@@ -1,11 +1,11 @@
-import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSpinner } from "@fortawesome/free-solid-svg-icons"
-import styles from "./Loading.module.css"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import styles from "./Loading.module.css";
 
 type LoadingProps = {
-  size?: "xs" | "sm" | "lg" | "1x" | "2x" | "3x" | "4x" | "5x" | "6x"
-}
+  size?: "xs" | "sm" | "lg" | "1x" | "2x" | "3x" | "4x" | "5x" | "6x";
+};
 
 const Loading: React.FC<LoadingProps> = ({ size = "1x" }) => (
   <div
@@ -15,6 +15,6 @@ const Loading: React.FC<LoadingProps> = ({ size = "1x" }) => (
   >
     <FontAwesomeIcon icon={faSpinner} spin size={size} />
   </div>
-)
+);
 
-export default Loading
+export default Loading;

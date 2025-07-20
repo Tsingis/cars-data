@@ -5,109 +5,109 @@ import React, {
   type KeyboardEvent,
   useRef,
   useCallback,
-} from "react"
-import { useTranslation } from "react-i18next"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import styles from "./SearchableDropdown.module.css"
+} from "react";
+import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import styles from "./SearchableDropdown.module.css";
 
 type Option = {
-  code: string
-  name: string
-}
+  code: string;
+  name: string;
+};
 
 type SearchableDropdownProps = {
-  options: Option[]
-  onSelect: (option: Option | null) => void
-  initialValue?: Option | null
-}
+  options: Option[];
+  onSelect: (option: Option | null) => void;
+  initialValue?: Option | null;
+};
 
 const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   options,
   onSelect,
   initialValue,
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState<string>(
     initialValue?.name ?? ""
-  )
-  const [filteredOptions, setFilteredOptions] = useState<Option[]>(options)
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null)
+  );
+  const [filteredOptions, setFilteredOptions] = useState<Option[]>(options);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
 
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setFilteredOptions(
       options.filter((option) =>
         option.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    )
-    setHighlightedIndex(null)
-  }, [searchQuery, options])
+    );
+    setHighlightedIndex(null);
+  }, [searchQuery, options]);
 
   useEffect(() => {
     if (initialValue) {
-      setSearchQuery(initialValue.name)
+      setSearchQuery(initialValue.name);
     } else {
-      setSearchQuery("")
+      setSearchQuery("");
     }
-  }, [initialValue])
+  }, [initialValue]);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value)
-    setIsOpen(true)
-  }
+    setSearchQuery(event.target.value);
+    setIsOpen(true);
+  };
 
   const handleOptionClick = (option: Option) => {
-    setSearchQuery(option.name)
-    setIsOpen(false)
-    onSelect(option)
-  }
+    setSearchQuery(option.name);
+    setIsOpen(false);
+    onSelect(option);
+  };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "ArrowDown") {
-      event.preventDefault()
+      event.preventDefault();
       if (filteredOptions.length > 0) {
         setHighlightedIndex((prevIndex) =>
           prevIndex === null
             ? 0
             : Math.min(prevIndex + 1, filteredOptions.length - 1)
-        )
+        );
       }
     } else if (event.key === "ArrowUp") {
-      event.preventDefault()
+      event.preventDefault();
       if (filteredOptions.length > 0) {
         setHighlightedIndex((prevIndex) =>
           prevIndex === null
             ? filteredOptions.length - 1
             : Math.max(prevIndex - 1, 0)
-        )
+        );
       }
     } else if (event.key === "Enter") {
-      event.preventDefault()
+      event.preventDefault();
       if (highlightedIndex !== null) {
-        handleOptionClick(filteredOptions[highlightedIndex])
+        handleOptionClick(filteredOptions[highlightedIndex]);
       }
     }
-  }
+  };
 
   const handleClickOutside = useCallback((event: MouseEvent) => {
     if (
       dropdownRef.current &&
       !dropdownRef.current.contains(event.target as Node)
     ) {
-      setIsOpen(false)
+      setIsOpen(false);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [handleClickOutside])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClickOutside]);
 
   return (
     <div
@@ -123,8 +123,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           onChange={handleSearchChange}
           onKeyDown={handleKeyDown}
           onClick={() => {
-            setIsOpen(true)
-            setSearchQuery("")
+            setIsOpen(true);
+            setSearchQuery("");
           }}
           ref={inputRef}
           aria-label="Dropdown search"
@@ -144,8 +144,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
                   onClick={() => handleOptionClick(option)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter") {
-                      event.preventDefault()
-                      handleOptionClick(option)
+                      event.preventDefault();
+                      handleOptionClick(option);
                     }
                   }}
                   className={highlightedIndex === index ? styles.active : ""}
@@ -160,7 +160,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
         </ul>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SearchableDropdown
+export default SearchableDropdown;

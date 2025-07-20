@@ -1,19 +1,19 @@
-import globals from "globals"
-import path from "path"
 import js from "@eslint/js"
-import parser from "@typescript-eslint/parser"
 import tsPlugin from "@typescript-eslint/eslint-plugin"
+import parser from "@typescript-eslint/parser"
+import cssModulesPlugin from "eslint-plugin-css-modules"
+import cypressPlugin from "eslint-plugin-cypress"
+import i18nJsonPlugin from "eslint-plugin-i18n-json"
+import i18nextPlugin from "eslint-plugin-i18next"
+import importPlugin from "eslint-plugin-import"
+import playwrightPlugin from "eslint-plugin-playwright"
 import reactPlugin from "eslint-plugin-react"
 import hooksPlugin from "eslint-plugin-react-hooks"
 import refreshPlugin from "eslint-plugin-react-refresh"
-import i18nextPlugin from "eslint-plugin-i18next"
-import i18nJsonPlugin from "eslint-plugin-i18n-json"
-import importPlugin from "eslint-plugin-import"
 import securityPlugin from "eslint-plugin-security"
-import playwrightPlugin from "eslint-plugin-playwright"
-import cypressPlugin from "eslint-plugin-cypress"
-import cssModulesPlugin from "eslint-plugin-css-modules"
 import sonarPlugin from "eslint-plugin-sonarjs"
+import globals from "globals"
+import path from "path"
 
 export default [
   js.configs.recommended,
@@ -122,7 +122,7 @@ export default [
       "import/no-unresolved": "off",
       "sonarjs/todo-tag": "off",
       "security/detect-object-injection": "off",
-      semi: ["error", "never"],
+      semi: "off",
       "no-undef": "warn",
       "no-unused-vars": "off",
     },

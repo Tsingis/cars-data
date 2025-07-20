@@ -1,90 +1,90 @@
-import React, { useState, useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { useNavigate } from "react-router-dom"
-import Loading from "../../components/Loading/Loading"
-import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown"
-import ChartsContainer from "../../components/ChartsContainer/ChartsContainer"
-import { type Count, type Municipality } from "../../types"
-import { locales } from "../../constants"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import styles from "./HomePage.module.css"
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import ChartsContainer from "../../components/ChartsContainer/ChartsContainer";
+import Loading from "../../components/Loading/Loading";
+import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown";
+import { locales } from "../../constants";
+import type { Count, Municipality } from "../../types";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "./HomePage.module.css";
 
 const HomePage = () => {
-  const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation();
   const [data, setData] = useState<{
-    date: string
-    municipalities: Municipality[]
-  } | null>(null)
+    date: string;
+    municipalities: Municipality[];
+  } | null>(null);
 
   const [selectedMunicipality, setSelectedMunicipality] = useState<{
-    mileageCount: Count | null
-    drivingForce: Count | null
-    color: Count | null
-    registrationYear: Count | null
-    maker: Count | null
+    mileageCount: Count | null;
+    drivingForce: Count | null;
+    color: Count | null;
+    registrationYear: Count | null;
+    maker: Count | null;
   }>({
     mileageCount: null,
     drivingForce: null,
     color: null,
     registrationYear: null,
     maker: null,
-  })
+  });
 
   const [initialOption, setInitialOption] = useState<{
-    code: string
-    name: string
-  } | null>(null)
+    code: string;
+    name: string;
+  } | null>(null);
 
   const [translatedInitialOption, setTranslatedInitialOption] = useState<{
-    code: string
-    name: string
-  } | null>(null)
+    code: string;
+    name: string;
+  } | null>(null);
 
   const [searchOptions, setSearchOptions] = useState<
     { code: string; name: string }[]
-  >([])
+  >([]);
 
   const [translatedSearchOptions, setTranslatedSearchOptions] = useState<
     { code: string; name: string }[]
-  >([])
+  >([]);
 
-  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  let dataUrl =
-    import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json"
+  const dataUrl =
+    import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json";
 
   useEffect(() => {
     fetch(dataUrl)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("My error")
+          throw new Error("My error");
         }
-        return response.json()
+        return response.json();
       })
       .then((content) => {
-        setData(content)
-        const municipalities = content.municipalities
+        setData(content);
+        const municipalities = content.municipalities;
         municipalities.sort((a: Municipality, b: Municipality) =>
           a.code.localeCompare(b.code)
-        )
+        );
 
-        const initialMunicipality = municipalities[0]
+        const initialMunicipality = municipalities[0];
 
         if (initialMunicipality) {
           setInitialOption({
             code: initialMunicipality.code,
             name: initialMunicipality.name,
-          })
+          });
           setSelectedMunicipality({
             mileageCount: initialMunicipality.mileageCount,
             drivingForce: initialMunicipality.drivingForceCount,
             color: initialMunicipality.colorCount,
             registrationYear: initialMunicipality.registrationYearCount,
             maker: initialMunicipality.makerCount,
-          })
+          });
         }
 
         const options = [
@@ -95,32 +95,32 @@ const HomePage = () => {
               a.name.localeCompare(b.name, locales.fi)
             ),
           municipalities[municipalities.length - 1],
-        ]
+        ];
 
-        setSearchOptions(options)
+        setSearchOptions(options);
       })
       .catch((error) => {
-        console.error(error)
-        setErrorMessage("Error.Fetch")
-      })
-  }, [dataUrl])
+        console.error(error);
+        setErrorMessage("Error.Fetch");
+      });
+  }, [dataUrl]);
 
   useEffect(() => {
     if (errorMessage) {
       navigate("/error", {
         state: { message: t(errorMessage) },
-      })
+      });
     }
-  }, [errorMessage, navigate, t])
+  }, [errorMessage, navigate, t]);
 
   useEffect(() => {
     if (initialOption) {
       setTranslatedInitialOption({
         code: initialOption.code,
         name: t(`Areas.${initialOption.name}`),
-      })
+      });
     }
-  }, [t, initialOption])
+  }, [t, initialOption]);
 
   useEffect(() => {
     setTranslatedSearchOptions(
@@ -131,15 +131,15 @@ const HomePage = () => {
             ? t(`Areas.${option.name}`)
             : option.name,
       }))
-    )
-  }, [t, searchOptions])
+    );
+  }, [t, searchOptions]);
 
   if (!data) {
-    return <Loading size="6x" />
+    return <Loading size="6x" />;
   }
 
-  const date: Date = new Date(data.date)
-  const municipalities: Municipality[] = data.municipalities
+  const date: Date = new Date(data.date);
+  const municipalities: Municipality[] = data.municipalities;
 
   const handleSelect = (
     selectedOption: { code: string; name: string } | null
@@ -147,7 +147,7 @@ const HomePage = () => {
     if (selectedOption) {
       const municipality = municipalities.find(
         (m) => m.code === selectedOption.code
-      )
+      );
       if (municipality) {
         setSelectedMunicipality({
           mileageCount: municipality.mileageCount,
@@ -155,17 +155,17 @@ const HomePage = () => {
           color: municipality.colorCount,
           registrationYear: municipality.registrationYearCount,
           maker: municipality.makerCount,
-        })
+        });
       }
     }
-  }
+  };
 
   const totalCount = selectedMunicipality.drivingForce
     ? Object.values(selectedMunicipality.drivingForce).reduce(
         (sum, count) => (sum ?? 0) + (count ?? 0),
         0
       )
-    : 0
+    : 0;
 
   return (
     <div
@@ -200,7 +200,7 @@ const HomePage = () => {
           <ChartsContainer selectedMunicipality={selectedMunicipality} />
         )}
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

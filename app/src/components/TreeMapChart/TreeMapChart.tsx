@@ -1,29 +1,29 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect } from "react";
 import {
   Chart as ChartJS,
   Tooltip,
   Legend,
   type ChartData,
   type ChartOptions,
-} from "chart.js"
+} from "chart.js";
 import {
   TreemapController,
   TreemapElement,
   type TreemapDataPoint,
-} from "chartjs-chart-treemap"
-import { type Count } from "../../types"
+} from "chartjs-chart-treemap";
+import { type Count } from "../../types";
 
 // Register necessary Chart.js components
-ChartJS.register(TreemapController, TreemapElement, Tooltip, Legend)
+ChartJS.register(TreemapController, TreemapElement, Tooltip, Legend);
 
 type TreeMapChartProps = {
-  data: Count
-  labelMap?: { [key: string]: string }
-  colorMap?: { [key: string]: string }
-  title?: string
-  className?: string
-  style?: React.CSSProperties
-}
+  data: Count;
+  labelMap?: { [key: string]: string };
+  colorMap?: { [key: string]: string };
+  title?: string;
+  className?: string;
+  style?: React.CSSProperties;
+};
 
 const TreeMapChart: React.FC<TreeMapChartProps> = ({
   data,
@@ -33,28 +33,28 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
   className,
   style,
 }) => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null)
-  const chartInstanceRef = useRef<ChartJS<"treemap"> | null>(null)
+  const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const chartInstanceRef = useRef<ChartJS<"treemap"> | null>(null);
 
   useEffect(() => {
     if (chartRef.current) {
-      const ctx = chartRef.current.getContext("2d")
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         if (chartInstanceRef.current) {
-          chartInstanceRef.current.destroy()
+          chartInstanceRef.current.destroy();
         }
 
-        const labels = Object.keys(data).map((key) => labelMap[key] ?? key)
-        const values = Object.values(data).map((value) => value ?? 0)
+        const labels = Object.keys(data).map((key) => labelMap[key] ?? key);
+        const values = Object.values(data).map((value) => value ?? 0);
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
           0
-        )
+        );
 
         const treeData = labels.map((label, index) => ({
           category: label,
           value: values[index],
-        }))
+        }));
 
         const chartData: ChartData<"treemap", TreemapDataPoint[], string> = {
           datasets: [
@@ -65,22 +65,24 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
               groups: ["category"],
               data: [], // REQUIRED: Even though `tree` will generate it, Chart.js expects this field
               backgroundColor: (context) => {
-                if (context.type !== "data") return "transparent"
+                if (context.type !== "data") return "transparent";
                 const raw = context.raw as TreemapDataPoint & {
-                  category: string
-                }
-                const label = raw.g ?? ""
-                const color = colorMap[label] ?? "rgba(0, 123, 255, 0.6)"
-                return color
+                  category: string;
+                };
+                const label = raw.g ?? "";
+                const color = colorMap[label] ?? "rgba(0, 123, 255, 0.6)";
+                return color;
               },
               borderColor: "rgb(223, 220, 220)",
               borderWidth: 2,
               labels: {
                 display: true,
                 formatter: (ctx) => {
-                  const raw = ctx.raw as TreemapDataPoint & { category: string }
-                  const value = raw.v
-                  return value.toString()
+                  const raw = ctx.raw as TreemapDataPoint & {
+                    category: string;
+                  };
+                  const value = raw.v;
+                  return value.toString();
                 },
                 color: "rgb(0, 0, 0, 0.6)",
                 font: {
@@ -89,7 +91,7 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
               },
             },
           ],
-        }
+        };
 
         const chartOptions: ChartOptions<"treemap"> = {
           responsive: true,
@@ -114,41 +116,41 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
             tooltip: {
               callbacks: {
                 title: function (context) {
-                  const raw = context[0].raw as TreemapDataPoint
-                  return raw.g ?? ""
+                  const raw = context[0].raw as TreemapDataPoint;
+                  return raw.g ?? "";
                 },
                 label: function (context) {
-                  const raw = context.raw as TreemapDataPoint
-                  const label = raw.g ?? ""
-                  const value = raw.v
-                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
-                  return `${label}: ${value} (${percentage}%)`
+                  const raw = context.raw as TreemapDataPoint;
+                  const label = raw.g ?? "";
+                  const value = raw.v;
+                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2);
+                  return `${label}: ${value} (${percentage}%)`;
                 },
               },
             },
           },
-        }
+        };
 
         chartInstanceRef.current = new ChartJS(ctx, {
           type: "treemap",
           data: chartData,
           options: chartOptions,
-        })
+        });
 
-        chartInstanceRef.current?.update()
+        chartInstanceRef.current?.update();
       }
     }
 
     return () => {
-      chartInstanceRef.current?.destroy()
-    }
-  }, [data, labelMap, colorMap, title])
+      chartInstanceRef.current?.destroy();
+    };
+  }, [data, labelMap, colorMap, title]);
 
   return (
     <div data-testid="treemapchart" className={`${className}`} style={style}>
       <canvas ref={chartRef} />
     </div>
-  )
-}
+  );
+};
 
-export default TreeMapChart
+export default TreeMapChart;

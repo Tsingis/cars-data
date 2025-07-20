@@ -1,46 +1,50 @@
-import React from "react"
-import { useTranslation } from "react-i18next"
-import Slider from "react-slick"
-import { type Count } from "../../types"
-import PieChart from "../PieChart/PieChart"
-import BarChart from "../BarChart/BarChart"
-import LineChart from "../LineChart/LineChart"
-import TreeMapChart from "../TreeMapChart/TreeMapChart"
-import TopList from "../TopList/TopList"
-import { colors, drivingForceColors, drivingForceLabels } from "../../constants"
-import { formatMileageLabel } from "../../utility"
-import styles from "./ChartsContainer.module.css"
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
+import { type Count } from "../../types";
+import PieChart from "../PieChart/PieChart";
+import BarChart from "../BarChart/BarChart";
+import LineChart from "../LineChart/LineChart";
+import TreeMapChart from "../TreeMapChart/TreeMapChart";
+import TopList from "../TopList/TopList";
+import {
+  colors,
+  drivingForceColors,
+  drivingForceLabels,
+} from "../../constants";
+import { formatMileageLabel } from "../../utility";
+import styles from "./ChartsContainer.module.css";
 
 const ChartsContainer = ({
   selectedMunicipality,
 }: {
   selectedMunicipality: {
-    mileageCount: Count | null
-    drivingForce: Count | null
-    color: Count | null
-    registrationYear: Count | null
-    maker: Count | null
-  }
+    mileageCount: Count | null;
+    drivingForce: Count | null;
+    color: Count | null;
+    registrationYear: Count | null;
+    maker: Count | null;
+  };
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const dfLabels = Object.keys(drivingForceLabels).reduce(
     (acc, key) => {
-      acc[key] = t(drivingForceLabels[key])
-      return acc
+      acc[key] = t(drivingForceLabels[key]);
+      return acc;
     },
     {} as { [key: string]: string }
-  )
+  );
 
   const mileageLabels = selectedMunicipality.mileageCount
     ? Object.keys(selectedMunicipality.mileageCount).reduce(
         (acc, key) => {
-          acc[key] = formatMileageLabel(key)
-          return acc
+          acc[key] = formatMileageLabel(key);
+          return acc;
         },
         {} as { [key: string]: string }
       )
-    : {}
+    : {};
 
   const settings = {
     dots: true,
@@ -51,7 +55,7 @@ const ChartsContainer = ({
     arrows: false,
     adaptiveHeight: true,
     swipeToSlide: true,
-  }
+  };
 
   if (
     !selectedMunicipality.mileageCount ||
@@ -60,7 +64,7 @@ const ChartsContainer = ({
     !selectedMunicipality.registrationYear ||
     !selectedMunicipality.maker
   ) {
-    return null
+    return null;
   }
 
   return (
@@ -102,7 +106,7 @@ const ChartsContainer = ({
         className={styles.chartContainer}
       />
     </Slider>
-  )
-}
+  );
+};
 
-export default ChartsContainer
+export default ChartsContainer;

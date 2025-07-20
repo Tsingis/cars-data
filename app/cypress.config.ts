@@ -1,4 +1,4 @@
-import { defineConfig } from "cypress"
+import { defineConfig } from "cypress";
 
 export default defineConfig({
   e2e: {
@@ -10,4 +10,4 @@ export default defineConfig({
     viewportWidth: 1280,
     viewportHeight: 800,
   },
-})
+});

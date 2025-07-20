@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect } from "react";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -7,21 +7,21 @@ import {
   PieController,
   type ChartData,
   type ChartOptions,
-} from "chart.js"
-import { type Count } from "../../types"
+} from "chart.js";
+import { type Count } from "../../types";
 
 // Register necessary Chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend, PieController)
+ChartJS.register(ArcElement, Tooltip, Legend, PieController);
 
 type PieChartProps = {
-  data: Count
-  labelMap?: { [key: string]: string }
-  colorMap?: { [key: string]: string }
-  title?: string
-  legendPosition?: "top" | "bottom" | "left" | "right"
-  className?: string
-  style?: React.CSSProperties
-}
+  data: Count;
+  labelMap?: { [key: string]: string };
+  colorMap?: { [key: string]: string };
+  title?: string;
+  legendPosition?: "top" | "bottom" | "left" | "right";
+  className?: string;
+  style?: React.CSSProperties;
+};
 
 const PieChart: React.FC<PieChartProps> = ({
   data,
@@ -32,28 +32,28 @@ const PieChart: React.FC<PieChartProps> = ({
   className,
   style,
 }) => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null)
-  const chartInstanceRef = useRef<ChartJS<"pie"> | null>(null)
+  const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const chartInstanceRef = useRef<ChartJS<"pie"> | null>(null);
 
   useEffect(() => {
     if (chartRef.current) {
-      const ctx = chartRef.current.getContext("2d")
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         if (chartInstanceRef.current) {
-          chartInstanceRef.current.destroy()
+          chartInstanceRef.current.destroy();
         }
 
-        const labels = Object.keys(data).map((key) => labelMap[key] ?? key)
-        const values = Object.values(data)
+        const labels = Object.keys(data).map((key) => labelMap[key] ?? key);
+        const values = Object.values(data);
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
           0
-        )
+        );
 
-        const defaultColor = "rgba(0, 123, 255, 0.6)"
+        const defaultColor = "rgba(0, 123, 255, 0.6)";
         const backgroundColors = Object.keys(data).map(
           (key) => colorMap[key] ?? defaultColor
-        )
+        );
 
         const chartData: ChartData<"pie", number[], string> = {
           labels,
@@ -65,7 +65,7 @@ const PieChart: React.FC<PieChartProps> = ({
               borderWidth: 2,
             },
           ],
-        }
+        };
 
         const chartOptions: ChartOptions<"pie"> = {
           responsive: true,
@@ -95,36 +95,36 @@ const PieChart: React.FC<PieChartProps> = ({
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  const label = context.label ?? ""
-                  const value = context.raw as number
-                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
-                  return `${label}: ${value} (${percentage}%)`
+                  const label = context.label ?? "";
+                  const value = context.raw as number;
+                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2);
+                  return `${label}: ${value} (${percentage}%)`;
                 },
               },
             },
           },
-        }
+        };
 
         chartInstanceRef.current = new ChartJS(ctx, {
           type: "pie",
           data: chartData,
           options: chartOptions,
-        })
+        });
 
-        chartInstanceRef.current?.update()
+        chartInstanceRef.current?.update();
       }
     }
 
     return () => {
-      chartInstanceRef.current?.destroy()
-    }
-  }, [data, labelMap, colorMap, title, legendPosition])
+      chartInstanceRef.current?.destroy();
+    };
+  }, [data, labelMap, colorMap, title, legendPosition]);
 
   return (
     <div data-testid="piechart" className={`${className}`} style={style}>
       <canvas ref={chartRef} />
     </div>
-  )
-}
+  );
+};
 
-export default PieChart
+export default PieChart;

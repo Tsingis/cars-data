@@ -1,9 +1,9 @@
-import { type Mapping } from "./types"
+import { type Mapping } from "./types";
 
 export const locales: Mapping = {
   en: "en-FI",
   fi: "fi-FI",
-}
+};
 
 export const drivingForceColors: Mapping = {
   petrol: "rgba(0, 123, 255, 0.6)",
@@ -11,7 +11,7 @@ export const drivingForceColors: Mapping = {
   hybrid: "rgba(255, 193, 7, 0.6)",
   electricity: "rgba(40, 167, 69, 0.6)",
   other: "rgba(93, 93, 93, 0.6)",
-}
+};
 
 export const drivingForceLabels: Mapping = {
   petrol: "DrivingForces.Petrol",
@@ -19,7 +19,7 @@ export const drivingForceLabels: Mapping = {
   hybrid: "DrivingForces.Hybrid",
   electricity: "DrivingForces.Electricity",
   other: "DrivingForces.Other",
-}
+};
 
 export const colors: Mapping = {
   black: "rgba(0, 0, 0, 0.6)",
@@ -31,7 +31,7 @@ export const colors: Mapping = {
   silver: "rgba(170, 169, 173, 0.6)",
   white: "rgba(255, 255, 255, 0.9)",
   other: "rgba(255, 193, 7, 0.6)",
-}
+};
 
 export const colorLabels: Mapping = {
   black: "Colors.Black",
@@ -43,4 +43,4 @@ export const colorLabels: Mapping = {
   silver: "Colors.Silver",
   white: "Colors.White",
   other: "Colors.Other",
-}
+};

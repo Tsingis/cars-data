@@ -1,7 +1,7 @@
-import React from "react"
-import LanguageSwitch from "../LanguageSwitch/LanguageSwitch"
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch"
-import styles from "./NavBar.module.css"
+import React from "react";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import styles from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
@@ -15,7 +15,7 @@ const NavBar = () => {
         <ThemeSwitch />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

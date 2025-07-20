@@ -1,9 +1,9 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import { checker } from "vite-plugin-checker"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { checker } from "vite-plugin-checker";
 
-const args = process.argv.slice(3)
-const useChecker = args.includes("--use-checker")
+const args = process.argv.slice(3);
+const useChecker = args.includes("--use-checker");
 
 export default defineConfig({
   plugins: [
@@ -42,4 +42,4 @@ export default defineConfig({
     host: true,
     strictPort: true,
   },
-})
+});

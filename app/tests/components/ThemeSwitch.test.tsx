@@ -1,52 +1,52 @@
-import React from "react"
-import { render, fireEvent } from "@testing-library/react"
-import { expect } from "vitest"
-import ThemeSwitch from "../../src/components/ThemeSwitch/ThemeSwitch"
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { expect } from "vitest";
+import ThemeSwitch from "../../src/components/ThemeSwitch/ThemeSwitch";
 
 describe("ThemeSwitch", () => {
   beforeEach(() => {
-    localStorage.clear()
-    document.documentElement.removeAttribute("data-theme")
-  })
+    localStorage.clear();
+    document.documentElement.removeAttribute("data-theme");
+  });
 
   test("renders theme switch buttons", () => {
-    render(<ThemeSwitch />)
+    render(<ThemeSwitch />);
 
     const lightButton = document
       .querySelector("svg[data-icon='sun']")
-      ?.closest("button")
+      ?.closest("button");
     const darkButton = document
       .querySelector("svg[data-icon='moon']")
-      ?.closest("button")
+      ?.closest("button");
 
-    expect(lightButton).toBeInTheDocument()
-    expect(darkButton).toBeInTheDocument()
-  })
+    expect(lightButton).toBeInTheDocument();
+    expect(darkButton).toBeInTheDocument();
+  });
 
   test("toggles theme and updates localStorage", () => {
-    render(<ThemeSwitch />)
+    render(<ThemeSwitch />);
 
     const lightButton = document
       .querySelector("svg[data-icon='sun']")
-      ?.closest("button")
+      ?.closest("button");
     const darkButton = document
       .querySelector("svg[data-icon='moon']")
-      ?.closest("button")
+      ?.closest("button");
 
     // Set initial theme to 'light'
-    expect(document.documentElement).toHaveAttribute("data-theme", "light")
-    expect(localStorage.getItem("theme")).toBe("light")
+    expect(document.documentElement).toHaveAttribute("data-theme", "light");
+    expect(localStorage.getItem("theme")).toBe("light");
 
     if (darkButton) {
-      fireEvent.click(darkButton)
-      expect(document.documentElement).toHaveAttribute("data-theme", "dark")
-      expect(localStorage.getItem("theme")).toBe("dark")
+      fireEvent.click(darkButton);
+      expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+      expect(localStorage.getItem("theme")).toBe("dark");
     }
 
     if (lightButton) {
-      fireEvent.click(lightButton)
-      expect(document.documentElement).toHaveAttribute("data-theme", "light")
-      expect(localStorage.getItem("theme")).toBe("light")
+      fireEvent.click(lightButton);
+      expect(document.documentElement).toHaveAttribute("data-theme", "light");
+      expect(localStorage.getItem("theme")).toBe("light");
     }
-  })
-})
+  });
+});

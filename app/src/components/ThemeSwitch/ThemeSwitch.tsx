@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
-import styles from "./ThemeSwitch.module.css"
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import styles from "./ThemeSwitch.module.css";
 
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") ?? "light"
-  )
+  );
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme)
-    localStorage.setItem("theme", theme)
-  }, [theme])
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const changeTheme = (newTheme: string) => {
-    setTheme(newTheme)
-  }
+    setTheme(newTheme);
+  };
 
   return (
     <div data-testid="themeswitch" className={styles.themeSwitchContainer}>
@@ -34,7 +34,7 @@ const ThemeSwitch = () => {
         <FontAwesomeIcon icon={faSun} />
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default ThemeSwitch
+export default ThemeSwitch;

@@ -1,16 +1,16 @@
-import React, { useRef, useEffect } from "react"
-import { Chart, type ChartConfiguration } from "chart.js/auto"
-import { type Count } from "../../types"
+import React, { useRef, useEffect } from "react";
+import { Chart, type ChartConfiguration } from "chart.js/auto";
+import { type Count } from "../../types";
 
 type LineChartProps = {
-  data: Count
-  title: string
-  xAxisText?: string
-  yAxisText?: string
-  firstXAxisLabelText?: string
-  className?: string
-  style?: React.CSSProperties
-}
+  data: Count;
+  title: string;
+  xAxisText?: string;
+  yAxisText?: string;
+  firstXAxisLabelText?: string;
+  className?: string;
+  style?: React.CSSProperties;
+};
 
 const LineChart: React.FC<LineChartProps> = ({
   data,
@@ -21,20 +21,20 @@ const LineChart: React.FC<LineChartProps> = ({
   className,
   style,
 }) => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null)
-  const chartInstanceRef = useRef<Chart | null>(null)
+  const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const chartInstanceRef = useRef<Chart | null>(null);
 
   useEffect(() => {
     if (chartRef.current) {
-      const ctx = chartRef.current.getContext("2d")
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         if (chartInstanceRef.current) {
-          chartInstanceRef.current.destroy()
+          chartInstanceRef.current.destroy();
         }
         const total = Object.values(data).reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
           0
-        )
+        );
 
         const config: ChartConfiguration<"line", number[]> = {
           type: "line",
@@ -76,17 +76,19 @@ const LineChart: React.FC<LineChartProps> = ({
                       fillStyle: "transparent",
                       strokeStyle: "transparent",
                       lineWidth: 0,
-                    }))
+                    }));
                   },
                 },
               },
               tooltip: {
                 callbacks: {
                   label: function (context) {
-                    const label = context.label ?? ""
-                    const value = context.raw as number
-                    const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
-                    return `${label}: ${value} (${percentage}%)`
+                    const label = context.label ?? "";
+                    const value = context.raw as number;
+                    const percentage = ((value / (total ?? 1)) * 100).toFixed(
+                      2
+                    );
+                    return `${label}: ${value} (${percentage}%)`;
                   },
                 },
               },
@@ -102,14 +104,14 @@ const LineChart: React.FC<LineChartProps> = ({
                   autoSkip: true,
                   callback: function (value: string | number, index: number) {
                     const labels = chartInstanceRef.current?.data
-                      .labels as string[]
+                      .labels as string[];
                     if (labels && labels.length > 0) {
                       if (index === 0 && firstXAxisLabelText) {
-                        return firstXAxisLabelText
+                        return firstXAxisLabelText;
                       }
-                      return labels[index]
+                      return labels[index];
                     }
-                    return value
+                    return value;
                   },
                 },
               },
@@ -126,29 +128,29 @@ const LineChart: React.FC<LineChartProps> = ({
                       typeof tickValue === "number"
                         ? tickValue
                         : Number(tickValue)
-                    ).toString()
+                    ).toString();
                   },
                 },
               },
             },
           },
-        }
+        };
 
-        chartInstanceRef.current = new Chart(chartRef.current, config)
-        chartInstanceRef.current?.update()
+        chartInstanceRef.current = new Chart(chartRef.current, config);
+        chartInstanceRef.current?.update();
       }
 
       return () => {
-        chartInstanceRef.current?.destroy()
-      }
+        chartInstanceRef.current?.destroy();
+      };
     }
-  }, [data, title, xAxisText, yAxisText, firstXAxisLabelText])
+  }, [data, title, xAxisText, yAxisText, firstXAxisLabelText]);
 
   return (
     <div data-testid="linechart" className={`${className}`} style={style}>
       <canvas ref={chartRef}></canvas>
     </div>
-  )
-}
+  );
+};
 
-export default LineChart
+export default LineChart;

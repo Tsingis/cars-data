@@ -1,15 +1,15 @@
-import { t } from "i18next"
+import { t } from "i18next";
 
 export const formatMileageLabel = (label: string): string => {
   if (label === "na") {
-    return t("Labels.NotAvailableAbbreviation")
+    return t("Labels.NotAvailableAbbreviation");
   }
   if (label.startsWith("under")) {
-    return `<${label.replace("under", "")}`
+    return `<${label.replace("under", "")}`;
   }
   if (label.startsWith("over")) {
-    return `>${label.replace("over", "")}`
+    return `>${label.replace("over", "")}`;
   }
-  const [start, end] = label.split("to")
-  return `${start}-${end}`
-}
+  const [start, end] = label.split("to");
+  return `${start}-${end}`;
+};

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect } from "react";
 import {
   BarController,
   BarElement,
@@ -10,8 +10,8 @@ import {
   Tooltip,
   type ChartData,
   type ChartOptions,
-} from "chart.js"
-import { type Count } from "../../types"
+} from "chart.js";
+import { type Count } from "../../types";
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -22,18 +22,18 @@ ChartJS.register(
   Legend,
   Title,
   Tooltip
-)
+);
 
 type BarChartProps = {
-  data: Count
-  xAxisLabelMap?: { [key: string]: string }
-  colorMap?: { [key: string]: string }
-  xAxisText?: string
-  yAxisText?: string
-  title?: string
-  className?: string
-  style?: React.CSSProperties
-}
+  data: Count;
+  xAxisLabelMap?: { [key: string]: string };
+  colorMap?: { [key: string]: string };
+  xAxisText?: string;
+  yAxisText?: string;
+  title?: string;
+  className?: string;
+  style?: React.CSSProperties;
+};
 
 const BarChart: React.FC<BarChartProps> = ({
   data,
@@ -45,28 +45,30 @@ const BarChart: React.FC<BarChartProps> = ({
   className,
   style,
 }) => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null)
-  const chartInstanceRef = useRef<ChartJS<"bar"> | null>(null)
+  const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const chartInstanceRef = useRef<ChartJS<"bar"> | null>(null);
 
   useEffect(() => {
     if (chartRef.current) {
-      const ctx = chartRef.current.getContext("2d")
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         if (chartInstanceRef.current) {
-          chartInstanceRef.current.destroy()
+          chartInstanceRef.current.destroy();
         }
 
-        const labels = Object.keys(data).map((key) => xAxisLabelMap[key] ?? key)
-        const values = Object.values(data)
+        const labels = Object.keys(data).map(
+          (key) => xAxisLabelMap[key] ?? key
+        );
+        const values = Object.values(data);
         const total = values.reduce(
           (sum, value) => (sum ?? 0) + (value ?? 0),
           0
-        )
+        );
 
-        const defaultColor = "rgba(0, 123, 255, 0.6)"
+        const defaultColor = "rgba(0, 123, 255, 0.6)";
         const backgroundColors = Object.keys(data).map(
           (label) => colorMap[label] ?? defaultColor
-        )
+        );
 
         const chartData: ChartData<"bar", number[], string> = {
           labels,
@@ -77,7 +79,7 @@ const BarChart: React.FC<BarChartProps> = ({
               backgroundColor: backgroundColors,
             },
           ],
-        }
+        };
 
         const chartOptions: ChartOptions<"bar"> = {
           responsive: true,
@@ -99,10 +101,10 @@ const BarChart: React.FC<BarChartProps> = ({
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  const label = context.label ?? ""
-                  const value = context.raw as number
-                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2)
-                  return `${label}: ${value} (${percentage}%)`
+                  const label = context.label ?? "";
+                  const value = context.raw as number;
+                  const percentage = ((value / (total ?? 1)) * 100).toFixed(2);
+                  return `${label}: ${value} (${percentage}%)`;
                 },
               },
             },
@@ -127,33 +129,33 @@ const BarChart: React.FC<BarChartProps> = ({
               },
               ticks: {
                 callback: function (value) {
-                  return value
+                  return value;
                 },
               },
             },
           },
-        }
+        };
 
         chartInstanceRef.current = new ChartJS(ctx, {
           type: "bar",
           data: chartData,
           options: chartOptions,
-        })
+        });
 
-        chartInstanceRef.current?.update()
+        chartInstanceRef.current?.update();
       }
     }
 
     return () => {
-      chartInstanceRef.current?.destroy()
-    }
-  }, [data, xAxisLabelMap, xAxisText, yAxisText, title, colorMap])
+      chartInstanceRef.current?.destroy();
+    };
+  }, [data, xAxisLabelMap, xAxisText, yAxisText, title, colorMap]);
 
   return (
     <div data-testid="barchart" className={`${className}`} style={style}>
       <canvas ref={chartRef} />
     </div>
-  )
-}
+  );
+};
 
-export default BarChart
+export default BarChart;
