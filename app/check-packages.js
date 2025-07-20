@@ -1,7 +1,7 @@
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
-import { Buffer } from "buffer";
+import { Buffer } from "node:buffer";
+import { execSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 const packageLockPath = path.resolve("package-lock.json");
 const nodeModulesPath = path.resolve("node_modules");

@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { I18nextProvider } from "react-i18next";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
 import NavBar from "./components/NavBar/NavBar";
-import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import "./app.css";
 

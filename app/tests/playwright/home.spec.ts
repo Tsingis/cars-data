@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test("Home page loads correctly", async ({ page }) => {
   await page.goto("/");

@@ -1,17 +1,18 @@
-import React, { useRef, useEffect } from "react";
 import {
   BarController,
   BarElement,
   CategoryScale,
+  type ChartData,
   Chart as ChartJS,
+  type ChartOptions,
   Legend,
   LinearScale,
   Title,
   Tooltip,
-  type ChartData,
-  type ChartOptions,
 } from "chart.js";
-import { type Count } from "../../types";
+import type React from "react";
+import { useEffect, useRef } from "react";
+import type { Count } from "../../types";
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -100,7 +101,7 @@ const BarChart: React.FC<BarChartProps> = ({
             },
             tooltip: {
               callbacks: {
-                label: function (context) {
+                label: (context) => {
                   const label = context.label ?? "";
                   const value = context.raw as number;
                   const percentage = ((value / (total ?? 1)) * 100).toFixed(2);
@@ -128,9 +129,7 @@ const BarChart: React.FC<BarChartProps> = ({
                 text: yAxisText,
               },
               ticks: {
-                callback: function (value) {
-                  return value;
-                },
+                callback: (value) => value,
               },
             },
           },

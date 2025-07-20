@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import i18n from "./i18n";
 import App from "./App.tsx";
+import i18n from "./i18n";
 
 const storedLanguage = localStorage.getItem("language");
 if (storedLanguage) {
   i18n.changeLanguage(storedLanguage);
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+if (!rootElement) throw new Error("Failed to find the root element");
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

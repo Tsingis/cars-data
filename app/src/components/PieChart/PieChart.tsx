@@ -1,14 +1,15 @@
-import React, { useRef, useEffect } from "react";
 import {
-  Chart as ChartJS,
   ArcElement,
-  Tooltip,
+  type ChartData,
+  Chart as ChartJS,
+  type ChartOptions,
   Legend,
   PieController,
-  type ChartData,
-  type ChartOptions,
+  Tooltip,
 } from "chart.js";
-import { type Count } from "../../types";
+import type React from "react";
+import { useEffect, useRef } from "react";
+import type { Count } from "../../types";
 
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend, PieController);
@@ -94,7 +95,7 @@ const PieChart: React.FC<PieChartProps> = ({
             },
             tooltip: {
               callbacks: {
-                label: function (context) {
+                label: (context) => {
                   const label = context.label ?? "";
                   const value = context.raw as number;
                   const percentage = ((value / (total ?? 1)) * 100).toFixed(2);

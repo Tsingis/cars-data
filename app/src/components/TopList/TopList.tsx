@@ -1,5 +1,5 @@
-import React from "react";
-import { type Count } from "../../types";
+import type React from "react";
+import type { Count } from "../../types";
 import styles from "./TopList.module.css";
 
 type TopListProps = {

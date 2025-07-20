@@ -46,7 +46,6 @@ jobs:
         run: |
           npm run typecheck
           npm run eslint
-          npm run prettier
           npm run lint
           npm run format
         working-directory: ./app

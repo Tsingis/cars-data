@@ -1,5 +1,4 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { expect } from "vitest";
 import ThemeSwitch from "../../src/components/ThemeSwitch/ThemeSwitch";
 

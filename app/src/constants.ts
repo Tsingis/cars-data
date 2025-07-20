@@ -1,4 +1,4 @@
-import { type Mapping } from "./types";
+import type { Mapping } from "./types";
 
 export const locales: Mapping = {
   en: "en-FI",

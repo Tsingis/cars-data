@@ -1,7 +1,6 @@
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { expect } from "vitest";
-import SearchableDropdown from "../../src/components/SearchableDropdown/SearchableDropdown"; // Adjust import path
+import SearchableDropdown from "../../src/components/SearchableDropdown/SearchableDropdown";
 
 const options = [
   { code: "1", name: "Option 1" },

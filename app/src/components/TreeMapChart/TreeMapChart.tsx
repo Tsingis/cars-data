@@ -1,17 +1,18 @@
-import React, { useRef, useEffect } from "react";
 import {
-  Chart as ChartJS,
-  Tooltip,
-  Legend,
   type ChartData,
+  Chart as ChartJS,
   type ChartOptions,
+  Legend,
+  Tooltip,
 } from "chart.js";
 import {
   TreemapController,
-  TreemapElement,
   type TreemapDataPoint,
+  TreemapElement,
 } from "chartjs-chart-treemap";
-import { type Count } from "../../types";
+import type React from "react";
+import { useEffect, useRef } from "react";
+import type { Count } from "../../types";
 
 // Register necessary Chart.js components
 ChartJS.register(TreemapController, TreemapElement, Tooltip, Legend);
@@ -115,11 +116,11 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
             },
             tooltip: {
               callbacks: {
-                title: function (context) {
+                title: (context) => {
                   const raw = context[0].raw as TreemapDataPoint;
                   return raw.g ?? "";
                 },
-                label: function (context) {
+                label: (context) => {
                   const raw = context.raw as TreemapDataPoint;
                   const label = raw.g ?? "";
                   const value = raw.v;

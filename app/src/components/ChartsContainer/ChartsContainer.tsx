@@ -1,18 +1,17 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import { type Count } from "../../types";
-import PieChart from "../PieChart/PieChart";
-import BarChart from "../BarChart/BarChart";
-import LineChart from "../LineChart/LineChart";
-import TreeMapChart from "../TreeMapChart/TreeMapChart";
-import TopList from "../TopList/TopList";
 import {
   colors,
   drivingForceColors,
   drivingForceLabels,
 } from "../../constants";
+import type { Count } from "../../types";
 import { formatMileageLabel } from "../../utility";
+import BarChart from "../BarChart/BarChart";
+import LineChart from "../LineChart/LineChart";
+import PieChart from "../PieChart/PieChart";
+import TopList from "../TopList/TopList";
+import TreeMapChart from "../TreeMapChart/TreeMapChart";
 import styles from "./ChartsContainer.module.css";
 
 const ChartsContainer = ({

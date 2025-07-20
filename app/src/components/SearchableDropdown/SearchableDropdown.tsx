@@ -1,14 +1,14 @@
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {
-  useState,
-  useEffect,
   type ChangeEvent,
   type KeyboardEvent,
-  useRef,
   useCallback,
+  useEffect,
+  useRef,
+  useState,
 } from "react";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SearchableDropdown.module.css";
 
 type Option = {

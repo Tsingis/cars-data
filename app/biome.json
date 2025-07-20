@@ -11,7 +11,7 @@
     "bracketSameLine": false,
     "bracketSpacing": true,
     "expand": "auto",
-    "useEditorconfig": true,
+    "useEditorconfig": false,
     "includes": ["**", "!dist", "!node_modules"]
   },
   "linter": {

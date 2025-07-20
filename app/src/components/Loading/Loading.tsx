@@ -1,6 +1,6 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type React from "react";
 import styles from "./Loading.module.css";
 
 type LoadingProps = {

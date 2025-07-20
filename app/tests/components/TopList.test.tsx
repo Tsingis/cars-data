@@ -1,8 +1,7 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { expect } from "vitest";
 import TopList from "../../src/components/TopList/TopList";
-import { type Count } from "../../src/types";
+import type { Count } from "../../src/types";
 
 const data: Count = {
   ItemA: 30,

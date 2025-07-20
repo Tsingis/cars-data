@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from "react";
 import { Chart, type ChartConfiguration } from "chart.js/auto";
-import { type Count } from "../../types";
+import type React from "react";
+import { useEffect, useRef } from "react";
+import type { Count } from "../../types";
 
 type LineChartProps = {
   data: Count;
@@ -69,20 +70,19 @@ const LineChart: React.FC<LineChartProps> = ({
                 display: false,
                 labels: {
                   filter: (item) => item.text === title,
-                  generateLabels: function (chart) {
-                    return chart.data.datasets.map((dataset) => ({
+                  generateLabels: (chart) =>
+                    chart.data.datasets.map((dataset) => ({
                       text: dataset.label as string,
                       fontColor: "grey",
                       fillStyle: "transparent",
                       strokeStyle: "transparent",
                       lineWidth: 0,
-                    }));
-                  },
+                    })),
                 },
               },
               tooltip: {
                 callbacks: {
-                  label: function (context) {
+                  label: (context) => {
                     const label = context.label ?? "";
                     const value = context.raw as number;
                     const percentage = ((value / (total ?? 1)) * 100).toFixed(
@@ -102,7 +102,7 @@ const LineChart: React.FC<LineChartProps> = ({
                 },
                 ticks: {
                   autoSkip: true,
-                  callback: function (value: string | number, index: number) {
+                  callback: (value: string | number, index: number) => {
                     const labels = chartInstanceRef.current?.data
                       .labels as string[];
                     if (labels && labels.length > 0) {
@@ -123,13 +123,11 @@ const LineChart: React.FC<LineChartProps> = ({
                   text: yAxisText,
                 },
                 ticks: {
-                  callback: function (tickValue: string | number) {
-                    return (
-                      typeof tickValue === "number"
-                        ? tickValue
-                        : Number(tickValue)
-                    ).toString();
-                  },
+                  callback: (tickValue: string | number) =>
+                    (typeof tickValue === "number"
+                      ? tickValue
+                      : Number(tickValue)
+                    ).toString(),
                 },
               },
             },

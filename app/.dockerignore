@@ -8,6 +8,5 @@ test-results/
 README.md
 .gitignore
 Dockerfile
-.prettierc.json
 docker-compose.yml
 sonar-project.properties

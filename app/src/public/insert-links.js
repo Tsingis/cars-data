@@ -1,4 +1,4 @@
-(function () {
+(() => {
   let dataUrl;
   try {
     dataUrl = new URL("__DATA_URL__");
