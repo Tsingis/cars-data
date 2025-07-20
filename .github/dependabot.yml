@@ -33,6 +33,10 @@ updates:
       ts-eslint:
         patterns:
           - "@typescript-eslint/*"
+      playwright:
+        patterns:
+          - "@playwright/test"
+          - "playwright"
   - package-ecosystem: "docker"
     directories:
       - "/app"

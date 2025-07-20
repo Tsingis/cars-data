@@ -4,10 +4,14 @@ WORKDIR /app
 
 ENV NO_UPDATE_NOTIFIER=true
 
-COPY package*.json ./
 COPY .npmrc ./
 
-RUN npm ci
+RUN npm install -g pnpm 
+
+COPY package.json ./
+COPY pnpm-lock.yaml ./
+
+RUN pnpm install --frozen-lockfile
 
 ARG DATA_URL
 
@@ -19,7 +23,7 @@ COPY vite.config.ts ./vite.config.ts
 
 RUN sed -i "s|__DATA_URL__|${DATA_URL}|g" src/public/insert-links.js
 
-RUN npm run build
+RUN pnpm run build
 
 FROM nginxinc/nginx-unprivileged:1.29-alpine-slim
 

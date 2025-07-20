@@ -1,9 +1,10 @@
-import { defineConfig, devices, type ViewportSize } from "@playwright/test";
+import { type PlaywrightTestConfig, type ViewportSize } from "@playwright/test";
+import { devices } from "playwright";
 
 const baseUrl = "http://localhost:3000";
 const viewPort: ViewportSize = { width: 1280, height: 800 };
 
-export default defineConfig({
+const config: PlaywrightTestConfig = {
   testDir: "./tests/playwright",
   fullyParallel: true,
   reporter: "list",
@@ -19,7 +20,7 @@ export default defineConfig({
   },
   webServer: [
     {
-      command: "npm run http",
+      command: "pnpm run http",
       reuseExistingServer: !process.env.CI,
       stdout: "ignore",
       stderr: "ignore",
@@ -27,7 +28,7 @@ export default defineConfig({
       url: "http://localhost:8000",
     },
     {
-      command: "npm run preview",
+      command: "pnpm run preview",
       reuseExistingServer: !process.env.CI,
       stdout: "ignore",
       stderr: "pipe",
@@ -71,4 +72,6 @@ export default defineConfig({
       },
     },
   ],
-});
+};
+
+export default config;

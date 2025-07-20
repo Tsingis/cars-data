@@ -41,6 +41,6 @@
   "biome.enabled": true,
   "biome.requireConfiguration": true,
   "biome.configurationPath": "./app/biome.json",
-  "biome.lsp.bin": "./app/node_modules/@biomejs/cli-win32-x64/biome.exe",
+  "biome.lsp.bin": "./app/node_modules/.pnpm/@biomejs+cli-win32-x64@2.1.2/node_modules/@biomejs/cli-win32-x64/biome.exe",
   "vitest.rootConfig": "./app/vitest.config.ts"
 }

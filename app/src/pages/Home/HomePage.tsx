@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import ChartsContainer from "../../components/ChartsContainer/ChartsContainer";
 import Loading from "../../components/Loading/Loading";
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown";
