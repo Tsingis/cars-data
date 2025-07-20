@@ -24,7 +24,8 @@ Resources:
                 "description": "Delete all untagged images",
                 "selection": {
                   "tagStatus": "untagged",
-                  "countType": "imageCountMoreThan",
+                  "countType": "sinceImagePushed",
+                  "countUnit": "days",
                   "countNumber": 1
                 },
                 "action": {
