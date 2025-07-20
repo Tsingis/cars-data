@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
+import { fireEvent, render } from "@testing-library/react";
 import { expect } from "vitest";
 import SearchableDropdown from "../../src/components/SearchableDropdown/SearchableDropdown";
 

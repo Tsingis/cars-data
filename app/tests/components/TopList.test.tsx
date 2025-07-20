@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
+import { render } from "@testing-library/react";
 import { expect } from "vitest";
 import TopList from "../../src/components/TopList/TopList";
 import type { Count } from "../../src/types";
