@@ -168,7 +168,7 @@ const HomePage = () => {
     : 0;
 
   return (
-    <div
+    <section
       data-testid="homepage"
       className={styles.homeContainer}
       aria-label="Home Page"
@@ -199,7 +199,7 @@ const HomePage = () => {
         selectedMunicipality.maker && (
           <ChartsContainer selectedMunicipality={selectedMunicipality} />
         )}
-    </div>
+    </section>
   );
 };
 

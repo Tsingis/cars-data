@@ -22,6 +22,7 @@ const ThemeSwitch = () => {
       <button
         className={`${styles.themeSwitchButton} ${theme === "dark" ? styles.active : ""}`}
         onClick={() => changeTheme("dark")}
+        type="button"
         aria-label="Change theme to dark"
       >
         <FontAwesomeIcon icon={faMoon} />
@@ -29,6 +30,7 @@ const ThemeSwitch = () => {
       <button
         className={`${styles.themeSwitchButton} ${theme === "light" ? styles.active : ""}`}
         onClick={() => changeTheme("light")}
+        type="button"
         aria-label="Change theme to light"
       >
         <FontAwesomeIcon icon={faSun} />

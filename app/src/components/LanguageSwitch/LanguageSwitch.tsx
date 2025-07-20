@@ -18,6 +18,7 @@ const LanguageSwitch: React.FC = () => {
       <button
         className={`${styles.languageSwitchButton} ${i18n.language === "en" ? styles.active : ""}`}
         onClick={() => changeLanguage("en")}
+        type="button"
         aria-label="Change language to English"
       >
         EN
@@ -25,6 +26,7 @@ const LanguageSwitch: React.FC = () => {
       <button
         className={`${styles.languageSwitchButton} ${i18n.language === "fi" ? styles.active : ""}`}
         onClick={() => changeLanguage("fi")}
+        type="button"
         aria-label="Change language to Finnish"
       >
         FI

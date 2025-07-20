@@ -9,10 +9,10 @@ const NavBar = () => {
       className={styles.navbar}
       aria-label="Main Navigation"
     >
-      <div className={styles.navbarItems} aria-label="Navigation Items">
+      <nav className={styles.navbarItems} aria-label="Navigation Items">
         <LanguageSwitch />
         <ThemeSwitch />
-      </div>
+      </nav>
     </nav>
   );
 };

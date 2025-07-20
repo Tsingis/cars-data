@@ -13,7 +13,7 @@ const ErrorPage: React.FC = () => {
   const message = (state as LocationState)?.message;
 
   return (
-    <div
+    <section
       data-testid="errorpage"
       className={styles.errorContainer}
       aria-label="Error Page"
@@ -22,7 +22,7 @@ const ErrorPage: React.FC = () => {
         <h1>{t("Error.Title")}</h1>
         <p>{message ?? t("Error.General")}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
