@@ -17,6 +17,9 @@ export default defineConfig({
           lintCommand: "eslint . --config ./eslint.config.js",
           useFlatConfig: true,
         },
+        biome: {
+          command: "check",
+        },
       }),
   ],
   root: "src",
