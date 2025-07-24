@@ -12,7 +12,7 @@ Resources:
     Properties:
       RepositoryName: !Ref RepositoryName
       ImageScanningConfiguration:
-        scanOnPush: false
+        ScanOnPush: false
       EncryptionConfiguration:
         EncryptionType: AES256
       LifecyclePolicy:
