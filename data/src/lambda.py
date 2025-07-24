@@ -1,5 +1,5 @@
 from typing import Tuple
-import boto3
+import botocore.session
 import json
 import logging
 import os
@@ -12,14 +12,16 @@ from .data_validation import validate
 BUCKET = os.getenv("BUCKET")
 DISTRIBUTION = os.getenv("DISTRIBUTION")
 FILENAME = os.getenv("FILENAME", "data.json")
+REGION = os.getenv("AWS_REGION")
 
 logger = logging.getLogger(__name__)
 logFormat = "%(asctime)s %(levelname)s: %(message)s"
 logging.basicConfig(level=logging.INFO, format=logFormat, force=True)
 
 # Suppress some of boto logging
-logging.getLogger("boto3").setLevel(logging.WARNING)
 logging.getLogger("botocore").setLevel(logging.WARNING)
+
+session = botocore.session.get_session()
 
 
 def handler(event: dict, context: dict):
@@ -27,7 +29,7 @@ def handler(event: dict, context: dict):
         (valid, data) = generate_data()
         if valid:
             logger.info("Creating new data")
-            s3 = boto3.client("s3")
+            s3 = session.create_client("s3", region_name=REGION)
             s3.put_object(
                 Bucket=BUCKET,
                 Key=FILENAME,
@@ -54,7 +56,7 @@ def generate_data() -> Tuple[bool, dict]:
 def invalidate_cache(file: str):
     try:
         logger.info("Invalidating distribution cache")
-        cf = boto3.client("cloudfront")
+        cf = session.create_client("cloudfront", region_name=REGION)
         paths = [f"/{file}"]
         cf.create_invalidation(
             DistributionId=DISTRIBUTION,
