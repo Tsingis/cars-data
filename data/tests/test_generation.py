@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-from src.data_cleaning import generate
+from src.processors.postprocesses import generate
 
 
 @pytest.fixture

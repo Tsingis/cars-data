@@ -6,6 +6,9 @@
     "-p",
     "*test_*.py"
   ],
+  "python.analysis.extraPaths": [
+    "data/src"
+  ],
   "editor.defaultFormatter": null,
   "python.defaultInterpreterPath": "${workspaceFolder}/data/.venv/Scripts/python.exe",
   "python.testing.pytestEnabled": true,

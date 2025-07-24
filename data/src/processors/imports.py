@@ -2,7 +2,6 @@ import io
 import pandas as pd
 import requests
 import zipfile
-from datetime import datetime
 
 
 def get_vehicles() -> pd.DataFrame:
@@ -72,7 +71,3 @@ def get_municipalities() -> dict:
     }
     municipalities["999"] = "Unknown"  # Add unknown
     return municipalities
-
-
-def get_date() -> str:
-    return datetime.now().strftime("%Y-%m-%d")
