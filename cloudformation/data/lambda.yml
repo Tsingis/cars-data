@@ -38,11 +38,16 @@ Resources:
     Properties:
       FunctionName: !Ref FunctionName
       PackageType: Image
+      Architectures:
+        - x86_64
       Code:
         ImageUri: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${RepositoryName}:${ImageTag}
       Role: !GetAtt LambdaFunctionRole.Arn
       Timeout: !Ref FunctionTimeout
       MemorySize: !Ref FunctionMemory
+      EphemeralStorage: 
+        Size: 512
+      RecursiveLoop: Terminate
       Environment:
         Variables:
           BUCKET: !Ref BucketName
