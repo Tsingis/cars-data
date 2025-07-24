@@ -15,7 +15,7 @@ pydantic = "2.11.7"
 requests = "2.32.4"
 
 [tool.poetry.group.aws.dependencies]
-boto3 = "1.39.11"
+boto3 = "1.39.12"
 awslambdaric = "3.1.1"
 
 [tool.poetry.group.dev.dependencies]
