@@ -17,8 +17,16 @@ Parameters:
     Type: String
     Default: cars-data
     Description: Name of the ECR repository
+  ImageTag:
+    Type: String
+    Default: latest
+    Description: Image tag to use
   BucketName:
     Type: String
+    Description: Name of the S3 bucket
+  FileName:
+    Type: String
+    Default: data.json
     Description: Name of the S3 bucket
   CloudFrontDistributionId:
     Type: String
@@ -31,14 +39,14 @@ Resources:
       FunctionName: !Ref FunctionName
       PackageType: Image
       Code:
-        ImageUri: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${RepositoryName}:latest
+        ImageUri: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${RepositoryName}:${ImageTag}
       Role: !GetAtt LambdaFunctionRole.Arn
       Timeout: !Ref FunctionTimeout
       MemorySize: !Ref FunctionMemory
       Environment:
         Variables:
           BUCKET: !Ref BucketName
-          FILENAME: data.json
+          FILENAME: !Ref FileName
           DISTRIBUTION: !Ref CloudFrontDistributionId
 
   LambdaFunctionRole:
