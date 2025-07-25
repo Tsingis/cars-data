@@ -65,4 +65,4 @@ services:
     - ./app/tests/playwright:/app/tests/playwright
     - ./app/test-results:/app/test-results
     - ./data:/data
-    command: ["npm", "run", "playwright"]
+    command: ["pnpm", "run", "playwright"]
