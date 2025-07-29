@@ -279,14 +279,14 @@ testing = ["pytest (>=6,!=7.0.0)", "pytest-xdist (>=2)"]
 
 [[package]]
 name = "botocore"
-version = "1.39.14"
+version = "1.39.15"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.9"
 groups = ["aws"]
 files = [
-    {file = "botocore-1.39.14-py3-none-any.whl", hash = "sha256:4ed551c77194167b7e8063f33059bc2f9b2ead0ed4ee33dc7857273648ed4349"},
-    {file = "botocore-1.39.14.tar.gz", hash = "sha256:7fc44d4ad13b524e5d8a6296785776ef5898ac026ff74df9b35313831d507926"},
+    {file = "botocore-1.39.15-py3-none-any.whl", hash = "sha256:eb9cfe918ebfbfb8654e1b153b29f0c129d586d2c0d7fb4032731d49baf04cff"},
+    {file = "botocore-1.39.15.tar.gz", hash = "sha256:2aa29a717f14f8c7ca058c2e297aaed0aa10ecea24b91514eee802814d1b7600"},
 ]
 
 [package.dependencies]
@@ -3201,4 +3201,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "bad497bc555cefb713a58fbca5c1b0fefc6a7cadc6f767b2a45af7b825b51a76"
+content-hash = "38b64f9820f4beef4ce804645520efb60d72e6e1d5794d0a33bfc208f4cd24c3"
