@@ -1,0 +1,47 @@
+name: scan
+on:
+  workflow_dispatch:
+    inputs:
+      severities:
+        description: "Comma-separated list of severities to scan for: critical, high, medium, low, unspecified"
+        required: true
+        type: string
+        default: critical,high
+  schedule:
+    - cron: "0 18 * * 3"
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          logout: true
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+      - name: Scan image
+        uses: docker/scout-action@v1
+        with:
+          command: cves,recommendations
+          image: "${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}"
+          only-severities: ${{ inputs.severities || 'critical,high' }}
+          only-fixed: true
+          summary: true
+          format: json
+          exit-code: true
