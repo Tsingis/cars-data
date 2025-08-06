@@ -75,7 +75,7 @@
     "jsdom": "^26.1.0",
     "playwright": "^1.54.2",
     "start-server-and-test": "^2.0.13",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "vite": "^7.0.6",
     "vite-plugin-checker": "^0.10.2",
     "vitest": "^3.2.4"
