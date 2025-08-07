@@ -13,6 +13,8 @@ import PieChart from "../PieChart/PieChart";
 import TopList from "../TopList/TopList";
 import TreeMapChart from "../TreeMapChart/TreeMapChart";
 import styles from "./ChartsContainer.module.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ChartsContainer = ({
   selectedMunicipality,

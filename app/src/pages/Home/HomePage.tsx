@@ -6,8 +6,6 @@ import Loading from "../../components/Loading/Loading";
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown";
 import { locales } from "../../constants";
 import type { Count, Municipality } from "../../types";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import styles from "./HomePage.module.css";
 
 const dataUrl =
