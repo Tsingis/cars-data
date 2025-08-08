@@ -22,7 +22,7 @@ awslambdaric = "3.1.1"
 notebook = "7.4.5"
 pip-audit = "2.9.0"
 pytest = "8.4.1"
-ruff = "0.12.7"
+ruff = "0.12.8"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = "1.9.0"
