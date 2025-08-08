@@ -20,6 +20,8 @@ env:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -33,6 +35,8 @@ jobs:
         working-directory: ./app
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: setup
     steps:
       - uses: actions/checkout@v4
@@ -54,6 +58,8 @@ jobs:
         working-directory: ./app
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: [setup, check]
     steps:
       - uses: actions/checkout@v4
@@ -71,6 +77,8 @@ jobs:
         working-directory: ./app
   tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: setup
     steps:
       - uses: actions/checkout@v4
