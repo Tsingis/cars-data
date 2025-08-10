@@ -21,8 +21,15 @@ updates:
     groups:
       react:
         patterns:
-          - "react*"
-          - "@types/react*"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      slick:
+        patterns:
+          - "react-slick"
+          - "slick-carousel"
+          - "@types/react-slick"
       eslint:
         patterns:
           - "eslint"
