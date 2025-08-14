@@ -37,6 +37,9 @@ jobs:
       - name: Build
         run: pnpm run build
         working-directory: ./app
+      - name: Install cypress binary
+        run: pnpm exec cypress install
+        working-directory: ./app
       - name: Run tests
         run: pnpm run cypress
         working-directory: ./app
