@@ -29,14 +29,14 @@ jobs:
           node-version: 22
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
+      - name: Disable side effects cache
+        run: pnpm config set side-effects-cache false --location project
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
         working-directory: ./app
       - name: Build
         run: pnpm run build
         working-directory: ./app
-      - name: Disable side effects cache
-        run: pnpm config set side-effects-cache false --location project
       - name: Run tests
         run: pnpm run cypress
         working-directory: ./app
