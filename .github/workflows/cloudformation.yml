@@ -1,0 +1,39 @@
+name: cloudformation
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "cloudformation/**"
+      - "util/requirements.txt"
+      - ".github/workflows/cloudformation.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "cloudformation/**"
+      - "util/requirements.txt"
+      - ".github/workflows/cloudformation.yml"
+  schedule:
+    - cron: "0 21 1 * 0"
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  cloudformation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          architecture: "x64"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        working-directory: ./util
+      - name: Cloudformation linting
+        run: cfn-lint ./**/*.yml
+        working-directory: ./cloudformation
