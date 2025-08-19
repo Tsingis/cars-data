@@ -55,7 +55,9 @@ updates:
       time: "21:00"
       timezone: "Europe/Helsinki"
   - package-ecosystem: "pip"
-    directory: "/data"
+    directories:
+      - "/data"
+      - "/util"
     schedule:
       interval: "weekly"
       day: "wednesday"
