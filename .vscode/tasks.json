@@ -1,0 +1,135 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "install:data",
+            "type": "shell",
+            "command": "poetry install --all-groups",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "update:data",
+            "type": "shell",
+            "command": "poetry lock",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "sync:data",
+            "type": "shell",
+            "command": "poetry sync --all-groups",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "outdated:data",
+            "type": "shell",
+            "command": "poetry show --outdated --all",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "vulnerable:data",
+            "type": "shell",
+            "command": "poetry run pip-audit",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "format:data",
+            "type": "shell",
+            "command": "poetry run ruff format .",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "lint:data",
+            "type": "shell",
+            "command": "poetry run ruff check .",
+            "options": {
+                "cwd": "${workspaceFolder}/data"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "run:app",
+            "type": "shell",
+            "command": "pnpm run dev:check",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "run:http",
+            "type": "shell",
+            "command": "pnpm run http",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "install:app",
+            "type": "shell",
+            "command": "pnpm install",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "outdated:app",
+            "type": "shell",
+            "command": "pnpm outdated",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "vulnerable:app",
+            "type": "shell",
+            "command": "pnpm audit",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+        {
+            "label": "build:app",
+            "type": "shell",
+            "command": "pnpm run build",
+            "options": {
+                "cwd": "${workspaceFolder}/app"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build"
+        },
+    ]
+}
