@@ -4,6 +4,7 @@ import en from "./locales/en.json";
 import fi from "./locales/fi.json";
 
 const options = {
+  enableSelector: true,
   resources: {
     en: {
       translation: en,

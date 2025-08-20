@@ -77,7 +77,7 @@ const ChartsContainer = ({
         data={selectedMunicipality.drivingForce}
         colorMap={drivingForceColors}
         labelMap={dfLabels}
-        title={t("Labels.DrivingForce")}
+        title={t(($) => $.Labels.DrivingForce)}
         className={styles.chartContainer}
       />
       <BarChart
