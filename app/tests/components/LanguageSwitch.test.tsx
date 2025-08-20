@@ -3,7 +3,7 @@ import { fireEvent, render } from "@testing-library/react";
 import { I18nextProvider } from "react-i18next";
 import { expect } from "vitest";
 import LanguageSwitch from "../../src/components/LanguageSwitch/LanguageSwitch";
-import i18n from "../../src/i18n";
+import i18n from "../../src/i18n/i18n";
 
 describe("LanguageSwitch component", () => {
   beforeEach(() => {
