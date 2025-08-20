@@ -7,6 +7,13 @@ import SearchableDropdown from "../../components/SearchableDropdown/SearchableDr
 import { locales } from "../../constants";
 import type { Count, Municipality } from "../../types";
 import styles from "./HomePage.module.css";
+import en from "../../i18n/locales/en.json";
+
+type ErrorMessage = keyof typeof en.Error;
+type SearchArea = keyof typeof en.Areas;
+
+const isSearchArea = (name: string): name is SearchArea =>
+  Object.keys(en.Areas).includes(name);
 
 const dataUrl =
   import.meta.env.VITE_DATA_URL?.trim() || "http://localhost:8000/data.json";
@@ -34,7 +41,7 @@ const HomePage = () => {
 
   const [initialOption, setInitialOption] = useState<{
     code: string;
-    name: string;
+    name: SearchArea;
   } | null>(null);
 
   const [translatedInitialOption, setTranslatedInitialOption] = useState<{
@@ -50,7 +57,7 @@ const HomePage = () => {
     { code: string; name: string }[]
   >([]);
 
-  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<ErrorMessage | null>(null);
 
   const navigate = useNavigate();
 
@@ -99,14 +106,16 @@ const HomePage = () => {
       })
       .catch((error) => {
         console.error(error);
-        setErrorMessage("Error.Fetch");
+        setErrorMessage("Fetch");
       });
   }, []);
 
   useEffect(() => {
     if (errorMessage) {
       navigate("/error", {
-        state: { message: t(errorMessage) },
+        state: {
+          message: t(($) => $.Error[errorMessage as keyof typeof $.Error]),
+        },
       });
     }
   }, [errorMessage, navigate, t]);
@@ -115,19 +124,16 @@ const HomePage = () => {
     if (initialOption) {
       setTranslatedInitialOption({
         code: initialOption.code,
-        name: t(`Areas.${initialOption.name}`),
+        name: t(($) => $.Areas[initialOption.name]),
       });
     }
   }, [t, initialOption]);
 
   useEffect(() => {
     setTranslatedSearchOptions(
-      searchOptions.map((option) => ({
-        code: option.code,
-        name:
-          option.name === "Finland" || option.name === "Unknown"
-            ? t(`Areas.${option.name}`)
-            : option.name,
+      searchOptions.map(({ code, name }) => ({
+        code,
+        name: isSearchArea(name) ? t(($) => $.Areas[name]) : name,
       }))
     );
   }, [t, searchOptions]);
@@ -171,9 +177,9 @@ const HomePage = () => {
       className={styles.homeContainer}
       aria-label="Home Page"
     >
-      <h1 className={styles.homeTitle}>{t("Common.Title")}</h1>
+      <h1 className={styles.homeTitle}>{t(($) => $.Common.Title)}</h1>
       <div data-testid="datadate" className={styles.dataDate}>
-        {t("Common.DataUpdatedOn")}{" "}
+        {t(($) => $.Common.DataUpdatedOn)}{" "}
         {date.toLocaleDateString(locales[i18n.language], {
           year: "numeric",
           month: "long",
@@ -187,7 +193,7 @@ const HomePage = () => {
           initialValue={translatedInitialOption}
         />
         <div>
-          {t("Labels.Count")}: {totalCount}
+          {t(($) => $.Labels.Count)}: {totalCount}
         </div>
       </div>
       {selectedMunicipality.mileageCount &&
