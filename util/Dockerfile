@@ -2,10 +2,9 @@ FROM mcr.microsoft.com/playwright:v1.55.0-noble
 
 WORKDIR /app
 
+RUN corepack enable
+
 COPY app/.npmrc ./
-
-RUN npm install -g pnpm
-
 COPY app/package.json ./
 COPY app/pnpm-lock.yaml ./
 COPY app/src ./src
