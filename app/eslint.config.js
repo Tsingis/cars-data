@@ -31,7 +31,7 @@ export default [
       "i18n-json/identical-keys": [
         "error",
         {
-          filePath: path.resolve("src/i18n/en.json"),
+          filePath: path.resolve("src/i18n/locales/en.json"),
         },
       ],
     },

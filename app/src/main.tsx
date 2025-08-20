@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import i18n from "./i18n";
+import i18n from "./i18n/i18n.ts";
 
 const storedLanguage = localStorage.getItem("language");
 if (storedLanguage) {
