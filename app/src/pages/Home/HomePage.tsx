@@ -114,7 +114,7 @@ const HomePage = () => {
     if (errorMessage) {
       navigate("/error", {
         state: {
-          message: t(($) => $.Error[errorMessage as keyof typeof $.Error]),
+          message: t(($) => $.Error[errorMessage]),
         },
       });
     }
