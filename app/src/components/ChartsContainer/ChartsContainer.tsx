@@ -1,10 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import {
-  colors,
-  drivingForceColors,
-  drivingForceLabels,
-} from "../../constants";
+import { colors, drivingForceColors } from "../../constants";
 import type { Count, DrivingForces } from "../../types";
 import { formatMileageLabel } from "../../utility";
 import BarChart from "../BarChart/BarChart";
@@ -29,13 +25,15 @@ const ChartsContainer = ({
 }) => {
   const { t } = useTranslation();
 
-  const dfLabels = Object.keys(drivingForceLabels).reduce(
+  const dfLabels = Object.keys(selectedMunicipality.drivingForce ?? {}).reduce(
     (acc, key) => {
       acc[key] = t(($) => $.drivingForces[key as DrivingForces]);
       return acc;
     },
     {} as { [key: string]: string }
   );
+
+  console.log(dfLabels);
 
   const mileageLabels = selectedMunicipality.mileageCount
     ? Object.keys(selectedMunicipality.mileageCount).reduce(
