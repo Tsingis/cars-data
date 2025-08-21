@@ -5,7 +5,7 @@ import {
   drivingForceColors,
   drivingForceLabels,
 } from "../../constants";
-import type { Count } from "../../types";
+import type { Count, DrivingForces } from "../../types";
 import { formatMileageLabel } from "../../utility";
 import BarChart from "../BarChart/BarChart";
 import LineChart from "../LineChart/LineChart";
@@ -31,7 +31,7 @@ const ChartsContainer = ({
 
   const dfLabels = Object.keys(drivingForceLabels).reduce(
     (acc, key) => {
-      acc[key] = t(drivingForceLabels[key]);
+      acc[key] = t(($) => $.drivingForces[key as DrivingForces]);
       return acc;
     },
     {} as { [key: string]: string }
@@ -77,33 +77,33 @@ const ChartsContainer = ({
         data={selectedMunicipality.drivingForce}
         colorMap={drivingForceColors}
         labelMap={dfLabels}
-        title={t("Labels.DrivingForce")}
+        title={t(($) => $.labels.drivingForce)}
         className={styles.chartContainer}
       />
       <BarChart
         data={selectedMunicipality.mileageCount}
         xAxisLabelMap={mileageLabels}
-        title={t("Labels.Mileage")}
-        yAxisText={t("Labels.Count")}
+        title={t(($) => $.labels.mileage)}
+        yAxisText={t(($) => $.labels.count)}
         className={styles.chartContainer}
       />
       <LineChart
         data={selectedMunicipality.registrationYear}
-        title={t("Labels.RegistrationYear")}
-        yAxisText={t("Labels.Count")}
+        title={t(($) => $.labels.registrationYear)}
+        yAxisText={t(($) => $.labels.count)}
         firstXAxisLabelText="<1980"
         className={styles.chartContainer}
       />
       <TreeMapChart
         data={selectedMunicipality.color}
         colorMap={colors}
-        title={t("Labels.Color")}
+        title={t(($) => $.labels.color)}
         className={styles.chartContainer}
       />
       <TopList
         data={selectedMunicipality.maker}
         topX={30}
-        title={t("Labels.TopNMakers", { count: 30 })}
+        title={t(($) => $.labels.topNMakers, { count: 30 })}
         className={styles.chartContainer}
       />
     </Slider>

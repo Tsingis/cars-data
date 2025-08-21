@@ -1,46 +1,46 @@
 {
-  "Areas": {
-    "Finland": "Suomi",
-    "Unknown": "Tuntematon"
+  "areas": {
+    "finland": "Suomi",
+    "unknown": "Tuntematon"
   },
-  "Colors": {
-    "Black": "Musta",
-    "Blue": "Sininen",
-    "Brown": "Ruskea",
-    "Green": "Vihreä",
-    "Grey": "Harmaa",
-    "Other": "Muu",
-    "Red": "Punainen",
-    "Silver": "Hopea",
-    "White": "Valkoinen"
+  "colors": {
+    "black": "Musta",
+    "blue": "Sininen",
+    "brown": "Ruskea",
+    "green": "Vihreä",
+    "grey": "Harmaa",
+    "other": "Muu",
+    "red": "Punainen",
+    "silver": "Hopea",
+    "white": "Valkoinen"
   },
-  "Common": {
-    "DataUpdatedOn": "Data päivitetty",
-    "Title": "Henkilöautomäärät Suomessa"
+  "common": {
+    "dataUpdatedOn": "Data päivitetty",
+    "title": "Henkilöautomäärät Suomessa"
   },
-  "DrivingForces": {
-    "Diesel": "Diesel",
-    "Electricity": "Sähkö",
-    "Hybrid": "Hybridi",
-    "Other": "Muu",
-    "Petrol": "Bensiini"
+  "drivingForces": {
+    "diesel": "Diesel",
+    "electricity": "Sähkö",
+    "hybrid": "Hybridi",
+    "other": "Muu",
+    "petrol": "Bensiini"
   },
-  "Dropdown": {
-    "NoOptions": "Ei vaihtoehtoja",
-    "Search": "Hae"
+  "dropdown": {
+    "noOptions": "Ei vaihtoehtoja",
+    "search": "Hae"
   },
-  "Error": {
-    "Fetch": "Datan haussa tapahtui virhe",
-    "General": "Odottamaton virhe tapahtui",
-    "Title": "Virhe"
+  "errorMessage": {
+    "fetch": "Datan haussa tapahtui virhe",
+    "general": "Odottamaton virhe tapahtui",
+    "title": "Virhe"
   },
-  "Labels": {
-    "Color": "Väri",
-    "Count": "Määrä",
-    "DrivingForce": "Käyttövoima",
-    "Mileage": "Mittarilukema",
-    "NotAvailableAbbreviation": "N/A",
-    "RegistrationYear": "Rekisteröintivuosi",
-    "TopNMakers": "Top {{count}} valmistajat"
+  "labels": {
+    "color": "Väri",
+    "count": "Määrä",
+    "drivingForce": "Käyttövoima",
+    "mileage": "Mittarilukema",
+    "notAvailableAbbreviation": "N/A",
+    "registrationYear": "Rekisteröintivuosi",
+    "topNMakers": "Top {{count}} valmistajat"
   }
 }

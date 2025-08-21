@@ -5,7 +5,7 @@ import ChartsContainer from "../../components/ChartsContainer/ChartsContainer";
 import Loading from "../../components/Loading/Loading";
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown";
 import { locales } from "../../constants";
-import type { Count, Municipality } from "../../types";
+import type { Areas, Count, ErrorMessage, Municipality } from "../../types";
 import styles from "./HomePage.module.css";
 
 const dataUrl =
@@ -74,7 +74,7 @@ const HomePage = () => {
         if (initialMunicipality) {
           setInitialOption({
             code: initialMunicipality.code,
-            name: initialMunicipality.name,
+            name: initialMunicipality.name.toLowerCase(),
           });
           setSelectedMunicipality({
             mileageCount: initialMunicipality.mileageCount,
@@ -106,7 +106,9 @@ const HomePage = () => {
   useEffect(() => {
     if (errorMessage) {
       navigate("/error", {
-        state: { message: t(errorMessage) },
+        state: {
+          message: t(($) => $.errorMessage[errorMessage as ErrorMessage]),
+        },
       });
     }
   }, [errorMessage, navigate, t]);
@@ -115,7 +117,7 @@ const HomePage = () => {
     if (initialOption) {
       setTranslatedInitialOption({
         code: initialOption.code,
-        name: t(`Areas.${initialOption.name}`),
+        name: t(($) => $.areas[initialOption.name as Areas]),
       });
     }
   }, [t, initialOption]);
@@ -125,8 +127,8 @@ const HomePage = () => {
       searchOptions.map((option) => ({
         code: option.code,
         name:
-          option.name === "Finland" || option.name === "Unknown"
-            ? t(`Areas.${option.name}`)
+          option.code === "000" || option.code === "999"
+            ? t(($) => $.areas[option.name.toLocaleLowerCase() as Areas])
             : option.name,
       }))
     );
@@ -171,9 +173,9 @@ const HomePage = () => {
       className={styles.homeContainer}
       aria-label="Home Page"
     >
-      <h1 className={styles.homeTitle}>{t("Common.Title")}</h1>
+      <h1 className={styles.homeTitle}>{t(($) => $.common.title)}</h1>
       <div data-testid="datadate" className={styles.dataDate}>
-        {t("Common.DataUpdatedOn")}{" "}
+        {t(($) => $.common.dataUpdatedOn)}{" "}
         {date.toLocaleDateString(locales[i18n.language], {
           year: "numeric",
           month: "long",
@@ -187,7 +189,7 @@ const HomePage = () => {
           initialValue={translatedInitialOption}
         />
         <div>
-          {t("Labels.Count")}: {totalCount}
+          {t(($) => $.labels.count)}: {totalCount}
         </div>
       </div>
       {selectedMunicipality.mileageCount &&
