@@ -19,8 +19,8 @@ const ErrorPage: React.FC = () => {
       aria-label="Error Page"
     >
       <div data-testid="error" className={styles.error}>
-        <h1>{t("Error.Title")}</h1>
-        <p>{message ?? t("Error.General")}</p>
+        <h1>{t(($) => $.errorMessage.title)}</h1>
+        <p>{message ?? t(($) => $.errorMessage.general)}</p>
       </div>
     </section>
   );

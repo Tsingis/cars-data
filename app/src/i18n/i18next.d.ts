@@ -4,7 +4,9 @@ import type fi from "./locales/fi.json";
 
 declare module "i18next" {
   interface CustomTypeOptions {
-    enableSelector: false;
+    enableSelector: true;
+    defaultNS: "en";
+    s;
     resources: {
       en: typeof en;
       fi: typeof fi;

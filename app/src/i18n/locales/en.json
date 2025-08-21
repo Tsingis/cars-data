@@ -1,46 +1,46 @@
 {
-  "Areas": {
-    "Finland": "Finland",
-    "Unknown": "Unknown"
+  "areas": {
+    "finland": "Finland",
+    "unknown": "Unknown"
   },
-  "Colors": {
-    "Black": "Black",
-    "Blue": "Blue",
-    "Brown": "Brown",
-    "Green": "Green",
-    "Grey": "Grey",
-    "Other": "Other",
-    "Red": "Red",
-    "Silver": "Silver",
-    "White": "White"
+  "colors": {
+    "black": "Black",
+    "blue": "Blue",
+    "brown": "Brown",
+    "green": "Green",
+    "grey": "Grey",
+    "other": "Other",
+    "red": "Red",
+    "silver": "Silver",
+    "white": "White"
   },
-  "Common": {
-    "DataUpdatedOn": "Data updated on",
-    "Title": "Passenger car counts in Finland"
+  "common": {
+    "dataUpdatedOn": "Data updated on",
+    "title": "Passenger car counts in Finland"
   },
-  "DrivingForces": {
-    "Diesel": "Diesel",
-    "Electricity": "Electricity",
-    "Hybrid": "Hybrid",
-    "Other": "Other",
-    "Petrol": "Petrol"
+  "drivingForces": {
+    "diesel": "Diesel",
+    "electricity": "Electricity",
+    "hybrid": "Hybrid",
+    "other": "Other",
+    "petrol": "Petrol"
   },
-  "Dropdown": {
-    "NoOptions": "No options",
-    "Search": "Search"
+  "dropdown": {
+    "noOptions": "No options",
+    "search": "Search"
   },
-  "Error": {
-    "Fetch": "Error in fetching data",
-    "General": "An unexpected error occurred",
-    "Title": "Error"
+  "errorMessage": {
+    "fetch": "Error in fetching data",
+    "general": "An unexpected error occurred",
+    "title": "Error"
   },
-  "Labels": {
-    "Color": "Color",
-    "Count": "Count",
-    "DrivingForce": "Driving force",
-    "Mileage": "Mileage",
-    "NotAvailableAbbreviation": "N/A",
-    "RegistrationYear": "Registration year",
-    "TopNMakers": "Top {{count}} makers"
+  "labels": {
+    "color": "Color",
+    "count": "Count",
+    "drivingForce": "Driving force",
+    "mileage": "Mileage",
+    "notAvailableAbbreviation": "N/A",
+    "registrationYear": "Registration year",
+    "topNMakers": "Top {{count}} makers"
   }
 }

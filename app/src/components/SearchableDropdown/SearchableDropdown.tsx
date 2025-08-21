@@ -118,7 +118,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
       <div className={styles.dropdownInput}>
         <input
           type="text"
-          placeholder={`${t("Dropdown.Search")}...`}
+          placeholder={`${t(($) => $.dropdown.search)}...`}
           value={searchQuery}
           onChange={handleSearchChange}
           onKeyDown={handleKeyDown}
@@ -155,7 +155,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
               </li>
             ))
           ) : (
-            <li>{t("Dropdown.NoOptions")}</li>
+            <li>{t(($) => $.dropdown.noOptions)}</li>
           )}
         </ul>
       )}
