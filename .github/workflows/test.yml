@@ -25,6 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+          package_json_file: ./app/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -41,6 +44,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+          package_json_file: ./app/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -64,6 +70,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+          package_json_file: ./app/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -83,6 +92,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+          package_json_file: ./app/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 24
