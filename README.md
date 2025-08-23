@@ -27,6 +27,7 @@ Server
 
 App
 
+- Setup corepack `corepack enable`
 - Navigate to app directory `cd app`
 - Install dependencies `pnpm install`
 - Launch `pnpm run dev`
