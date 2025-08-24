@@ -16,7 +16,9 @@ Docker
 
 Data
 
-- Install poetry `(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -`
+- Install poetry globally
+    - Windows Powershell `(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -`
+    - Other `curl -sSL https://install.python-poetry.org | python3 -`
 - Navigate to data directory `cd data`
 - Set up environment `poetry install --all-groups`
 
@@ -27,7 +29,7 @@ Server
 
 App
 
-- Setup corepack `corepack enable`
+- Setup corepack globally `corepack enable`
 - Navigate to app directory `cd app`
 - Install dependencies `pnpm install`
 - Launch `pnpm run dev`
