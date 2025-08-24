@@ -48,7 +48,8 @@ jobs:
         working-directory: ./data
       - name: Deploy
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        run: |
-          aws lambda update-function-code \
-          --function-name ${{ vars.LAMBDA_NAME }} \
-          --image-uri ${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}
+        uses: aws-actions/aws-lambda-deploy@v1.1.0
+        with:
+          function-name: ${{ vars.LAMBDA_NAME }}
+          package-type: Image
+          image-uri: "${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}"
