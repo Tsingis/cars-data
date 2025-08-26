@@ -1,0 +1,6 @@
+cd app
+pnpm format
+if [ $? -ne 0 ]; then
+  echo "❌ Formatting issues found. Run 'pnpm format:fix' before pushing."
+  exit 1
+fi

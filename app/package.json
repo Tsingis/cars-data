@@ -24,7 +24,8 @@
     "format": "biome format --diagnostic-level=warn .",
     "format:fix": "biome format --diagnostic-level=warn --write .",
     "typecheck": "tsc --noEmit -p ./tsconfig.json",
-    "build": "tsc -b ./tsconfig.json && vite --config ./vite.config.ts build"
+    "build": "tsc -b ./tsconfig.json && vite --config ./vite.config.ts build",
+    "prepare": "cd .. && husky app/.husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
@@ -73,6 +74,7 @@
     "eslint-plugin-sonarjs": "^3.0.4",
     "globals": "^16.3.0",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "playwright": "^1.55.0",
     "start-server-and-test": "^2.0.13",
