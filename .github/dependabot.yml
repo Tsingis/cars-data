@@ -54,6 +54,15 @@ updates:
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
+    target-branch: "main"
+  - package-ecosystem: "docker-compose"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "wednesday"
+      time: "21:00"
+      timezone: "Europe/Helsinki"
+    target-branch: "main"
   - package-ecosystem: "pip"
     directories:
       - "/data"
@@ -63,3 +72,4 @@ updates:
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
+    target-branch: "main"
