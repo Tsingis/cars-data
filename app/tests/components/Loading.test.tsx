@@ -11,7 +11,7 @@ describe("Loading Component", () => {
     expect(spinner).toHaveClass("fa-spin");
     expect(spinner).toHaveAttribute("data-icon", "spinner");
     expect(spinner).toHaveAttribute("data-prefix", "fas");
-    expect(spinner).toHaveAttribute("aria-hidden", "true");
+    expect(spinner).toHaveAttribute("aria-hidden", "false");
     expect(spinner).toHaveAttribute("role", "img");
     expect(spinner).toHaveAttribute("viewBox", "0 0 512 512");
   });
