@@ -1,9 +1,7 @@
 {
-  "name": "app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "cars-data",
   "type": "module",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.15.1",
   "scripts": {
     "predev": "node check-packages.js",
     "dev": "vite --config ./vite.config.ts --open",
