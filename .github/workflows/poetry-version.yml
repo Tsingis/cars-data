@@ -1,0 +1,22 @@
+name: poetry-version
+on:
+  workflow_call:
+    outputs:
+      poetry-version:
+        description: "The extracted Poetry version from requirements.txt"
+        value: ${{ jobs.poetry-version.outputs.poetry-version }}
+jobs:
+  poetry-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      poetry-version: ${{ steps.poetry-version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get Poetry version
+        id: poetry-version
+        run: |
+          VERSION=$(sed -n 's/^poetry==\(.*\)$/\1/p' requirements.txt)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+        working-directory: ./data
