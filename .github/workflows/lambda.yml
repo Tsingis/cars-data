@@ -24,6 +24,8 @@ concurrency:
   cancel-in-progress: true
 jobs:
   extract-poetry-version:
+    permissions:
+      contents: read
     uses: ./.github/workflows/poetry-version.yml
   deploy:
     runs-on: ubuntu-latest
