@@ -46,7 +46,7 @@ jobs:
           VITE_DATA_URL: ${{ vars.DATA_URL }}
         working-directory: ./app
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: ${{ vars.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
