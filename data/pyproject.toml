@@ -24,7 +24,7 @@ awslambdaric = "3.1.1"
 [tool.poetry.group.dev.dependencies]
 notebook = "7.4.5"
 pip-audit = "2.9.0"
-pytest = "8.4.1"
+pytest = "8.4.2"
 ruff = "0.12.12"
 
 [tool.poetry.requires-plugins]
