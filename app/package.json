@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.3",
-    "@eslint/js": "^9.34.0",
+    "@eslint/js": "^9.35.0",
     "@playwright/test": "^1.55.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -58,7 +58,7 @@
     "@vitejs/plugin-react": "^5.0.2",
     "concurrently": "^9.2.1",
     "cypress": "^15.1.0",
-    "eslint": "^9.34.0",
+    "eslint": "^9.35.0",
     "eslint-plugin-css-modules": "^2.12.0",
     "eslint-plugin-cypress": "^5.1.1",
     "eslint-plugin-i18n-json": "^4.0.1",
