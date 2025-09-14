@@ -43,10 +43,11 @@ RUN --mount=type=cache,target=/root/.cache \
     pip install "poetry==${POETRY_VERSION}"
 
 COPY ./poetry.lock ./pyproject.toml ./
+COPY ./src ./src
 
 RUN --mount=type=cache,target=${POETRY_HOME}/pypoetry/cache \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    poetry install --no-interaction --only main,aws && \
+    poetry install --no-interaction --only-root && \
     poetry export -f requirements.txt --only main,aws --without-hashes > requirements.txt && \
     pip install --prefer-binary --target ${FUNCTION_DIR} -r requirements.txt 
 
@@ -57,7 +58,7 @@ ARG FUNCTION_DIR
 WORKDIR ${FUNCTION_DIR}
 
 COPY --from=build ${FUNCTION_DIR} ${FUNCTION_DIR}
-COPY ./src ${FUNCTION_DIR}
+COPY --from=build ${SETUP_PATH}/src ${FUNCTION_DIR}
 
 RUN rm -r /usr/local/lib/python*/site-packages/pip* && \
     addgroup -S app && \
