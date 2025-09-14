@@ -28,6 +28,14 @@ Parameters:
     Type: String
     Default: data.json
     Description: Name of the S3 bucket
+  VehiclesUrl:
+    Type: String
+    Default: https://opendata.traficom.fi/Content/Ajoneuvorekisteri.zip
+    Description: Url for vehicles data
+  MunicipalitiesUrl:
+    Type: String
+    Default: https://data.stat.fi/api/classifications/v2/classifications/kunta_1_20250101/classificationItems?content=data&meta=max&lang=en&format=json
+    Description: Url for municipalities data
   CloudFrontDistributionId:
     Type: String
     Description: ID of the CloudFront distribution
@@ -45,7 +53,7 @@ Resources:
       Role: !GetAtt LambdaFunctionRole.Arn
       Timeout: !Ref FunctionTimeout
       MemorySize: !Ref FunctionMemory
-      EphemeralStorage: 
+      EphemeralStorage:
         Size: 512
       RecursiveLoop: Terminate
       Environment:
@@ -53,6 +61,8 @@ Resources:
           BUCKET: !Ref BucketName
           FILENAME: !Ref FileName
           DISTRIBUTION: !Ref CloudFrontDistributionId
+          VEHICLES_URL: !Ref VehiclesUrl
+          MUNICIPALITIES_URL: !Ref MunicipalitiesUrl
 
   LambdaFunctionRole:
     Type: AWS::IAM::Role

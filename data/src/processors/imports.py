@@ -1,12 +1,15 @@
 import io
+import os
 import pandas as pd
 import requests
 import zipfile
 
+VEHICLES_URL = os.getenv("VEHICLES_URL")
+MUNICIPALITIES_URL = os.getenv("MUNICIPALITIES_URL")
+
 
 def get_vehicles() -> pd.DataFrame:
-    url = "https://opendata.traficom.fi/Content/Ajoneuvorekisteri.zip"
-    response = requests.get(url)
+    response = requests.get(VEHICLES_URL)
     response.raise_for_status()
     zip_bytes = io.BytesIO(response.content)
     with zipfile.ZipFile(zip_bytes) as z:
@@ -59,12 +62,7 @@ def get_vehicles() -> pd.DataFrame:
 
 
 def get_municipalities() -> dict:
-    url = (
-        "https://data.stat.fi/api/classifications/v2/"
-        "classifications/kunta_1_20250101/"
-        "classificationItems?content=data&meta=max&lang=en&format=json"
-    )
-    response = requests.get(url)
+    response = requests.get(MUNICIPALITIES_URL)
     response.raise_for_status()
     municipalities = {
         item["code"]: item["classificationItemNames"][0]["name"] for item in response.json()
