@@ -7,7 +7,7 @@ Parameters:
     Description: Name of the lambda function
   ScheduleExpression:
     Type: String
-    Default: cron(0 0 ? * 1 *)
+    Default: cron(0 18 * * ? *)
     Description: Schedule expression
 
 Resources:
