@@ -12,12 +12,11 @@ name = "pypi"
 
 [tool.poetry.dependencies]
 python = "^3.13"
+
+[tool.poetry.group.main.dependencies]
 numpy = "2.3.3"
 pandas = "2.3.2"
 pydantic = "2.11.9"
-
-[tool.poetry.group.main]
-include-groups = ["common"]
 
 [tool.poetry.group.common.dependencies]
 requests = "2.32.5"
@@ -31,6 +30,9 @@ notebook = "7.4.5"
 pip-audit = "2.9.0"
 pytest = "8.4.2"
 ruff = "0.13.0"
+
+[tool.poetry.group.main]
+include-groups = ["common"]
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = "1.9.0"

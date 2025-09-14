@@ -46,8 +46,8 @@ COPY ./poetry.lock ./pyproject.toml ./
 
 RUN --mount=type=cache,target=${POETRY_HOME}/pypoetry/cache \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    poetry install --no-interaction --no-root --without dev,aws && \
-    poetry export -f requirements.txt --with aws --without-hashes > requirements.txt && \
+    poetry install --no-interaction --only main,aws && \
+    poetry export -f requirements.txt --only main,aws --without-hashes > requirements.txt && \
     pip install --prefer-binary --target ${FUNCTION_DIR} -r requirements.txt 
 
 FROM base AS final
