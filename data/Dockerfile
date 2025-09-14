@@ -13,12 +13,12 @@ ENV PYTHONUNBUFFERED=1 \
 
 RUN apk update && \
     apk add --no-cache \
-    libstdc++ \
-    nghttp2-libs \
+    brotli-libs \
     libidn2 \
     libpsl \
-    zstd-libs \
-    brotli-libs
+    libstdc++ \
+    nghttp2-libs \
+    zstd-libs
 
 FROM base AS build
 
@@ -28,16 +28,16 @@ ARG POETRY_VERSION
 WORKDIR ${SETUP_PATH}
 
 RUN apk add --no-cache \
-    cmake \
     autoconf \
     automake \
-    libtool \
     binutils \
+    cmake \
+    elfutils-dev \
+    g++ \
     gcc \
     libc-dev \
-    make \
-    elfutils-dev \
-    g++
+    libtool \
+    make
 
 RUN --mount=type=cache,target=/root/.cache \
     pip install "poetry==${POETRY_VERSION}"
@@ -46,8 +46,8 @@ COPY ./poetry.lock ./pyproject.toml ./
 
 RUN --mount=type=cache,target=${POETRY_HOME}/pypoetry/cache \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    poetry install --no-interaction --no-root --without main,dev,aws && \
-    poetry export -f requirements.txt --with main,aws --without-hashes > requirements.txt && \
+    poetry install --no-interaction --no-root --without dev,aws && \
+    poetry export -f requirements.txt --with aws --without-hashes > requirements.txt && \
     pip install --prefer-binary --target ${FUNCTION_DIR} -r requirements.txt 
 
 FROM base AS final
