@@ -1,14 +1,24 @@
-Description: Cloudwatch log group for lambda
+Description: Cloudwatch log groups for lambdas
 
 Parameters:
-  FunctionName:
+  DataFunctionName:
     Type: String
     Default: cars-data
-    Description: Name of the lambda function
+    Description: Name of the data lambda function
+  TriggerFunctionName:
+    Type: String
+    Default: cars-data-trigger
+    Description: Name of the trigger lambda function
 
 Resources:
-  LambdaLogGroup:
+  DataLambdaLogGroup:
     Type: AWS::Logs::LogGroup
     Properties:
-      LogGroupName: !Sub /aws/lambda/${FunctionName}
+      LogGroupName: !Sub /aws/lambda/${DataFunctionName}
+      RetentionInDays: 90
+
+  TriggerLambdaLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${TriggerFunctionName}
       RetentionInDays: 90

@@ -69,6 +69,6 @@ jobs:
       - name: Deploy
         uses: aws-actions/aws-lambda-deploy@v1.1.0
         with:
-          function-name: ${{ vars.LAMBDA_NAME }}
+          function-name: ${{ vars.DATA_LAMBDA_NAME }}
           package-type: Image
           image-uri: "${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}"

@@ -1,0 +1,120 @@
+Description: Data trigger Lambda
+
+Parameters:
+  FunctionName:
+    Type: String
+    Default: cars-data-trigger
+    Description: Name of the lambda function
+  FunctionRuntime:
+    Type: String
+    Default: python3.13
+    Description: Function runtime (Python only)
+  FunctionMemory:
+    Type: Number
+    Default: 512
+    Description: Memory size for lambda in MB
+  FunctionTimeout:
+    Type: Number
+    Default: 30
+    Description: Timeout for lambda in seconds
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket
+  DataLambdaName:
+    Type: String
+    Default: cars-data
+    Description: Name of the data processing lambda
+  VehiclesUrl:
+    Type: String
+    Default: https://opendata.traficom.fi/Content/Ajoneuvorekisteri.zip
+    Description: Url for vehicles dataa
+
+Resources:
+  TriggerLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Ref FunctionName
+      PackageType: Zip
+      Runtime: !Ref FunctionRuntime
+      Architectures:
+        - x86_64
+      Handler: handler.handler
+      Code:
+        ZipFile: |
+          def handler(event, context):
+              return "placeholder"
+      Role: !GetAtt TriggerLambdaFunctionRole.Arn
+      Timeout: !Ref FunctionTimeout
+      MemorySize: !Ref FunctionMemory
+      EphemeralStorage:
+        Size: 512
+      RecursiveLoop: Terminate
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: Auto
+      Environment:
+        Variables:
+          BUCKET: !Ref BucketName
+          DATA_LAMBDA: !Ref DataLambdaName
+          VEHICLES_URL: !Ref VehiclesUrl
+
+  TriggerLambdaFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CarsDataTriggerLambdaRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+
+  TriggerLambdaFunctionS3Policy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: TriggerLambdaFunctionS3Policy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:PutObject
+              - s3:PutObjectTagging
+            Resource: !Sub arn:aws:s3:::${BucketName}/*
+          - Effect: Allow
+            Action:
+              - s3:ListBucket
+            Resource: !Sub arn:aws:s3:::${BucketName}
+      Roles:
+        - !Ref TriggerLambdaFunctionRole
+
+  TriggerLambdaFunctionCloudWatchPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: TriggerLambdaFunctionCloudWatchPolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: "*"
+      Roles:
+        - !Ref TriggerLambdaFunctionRole
+
+  TriggerLambdaFunctionInvokePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: TriggerLambdaInvokePolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - lambda:InvokeFunction
+            Resource: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${DataLambdaName}
+      Roles:
+        - !Ref TriggerLambdaFunctionRole

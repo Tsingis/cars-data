@@ -15,6 +15,11 @@ python = "^3.13"
 numpy = "2.3.3"
 pandas = "2.3.2"
 pydantic = "2.11.9"
+
+[tool.poetry.group.main]
+include-groups = ["common"]
+
+[tool.poetry.group.common.dependencies]
 requests = "2.32.5"
 
 [tool.poetry.group.aws.dependencies]
