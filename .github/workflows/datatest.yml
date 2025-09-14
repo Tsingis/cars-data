@@ -6,6 +6,7 @@ on:
     paths:
       - "data/src/**"
       - "data/tests/**"
+      - "data/trigger/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "data/requirements.txt"
