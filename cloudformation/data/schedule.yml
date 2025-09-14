@@ -3,7 +3,7 @@ Description: Lambda schedule trigger
 Parameters:
   FunctionName:
     Type: String
-    Default: cars-data
+    Default: cars-data-trigger
     Description: Name of the lambda function
   ScheduleExpression:
     Type: String
