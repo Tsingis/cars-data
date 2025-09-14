@@ -1,0 +1,91 @@
+name: trigger
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/trigger/**"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/trigger/**"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
+      - "data/requirements.txt"
+      - ".github/workflows/trigger.yml"
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  extract-poetry-version:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/poetry-version.yml
+  package:
+    runs-on: ubuntu-latest
+    needs: extract-poetry-version
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Poetry
+        run: |
+          curl --proto "=https" -sSL https://install.python-poetry.org | python3 - \
+          --version ${{ needs.extract-poetry-version.outputs.poetry-version }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          architecture: "x64"
+          cache: "poetry"
+          cache-dependency-path: "data/poetry.lock"
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root --without aws,dev
+        working-directory: ./data
+      - name: Create requirements file
+        run: poetry export -f requirements.txt --only common --without-hashes > requirements.txt
+        working-directory: ./data
+      - name: Create package
+        run: |
+          pip install --prefer-binary -r ../requirements.txt --target ${{ github.workspace }}/package
+          cp trigger.py ${{ github.workspace }}/package
+        working-directory: ./data/trigger
+      - name: Upload package
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: trigger-package
+          path: ${{ github.workspace}}/package
+          overwrite: true
+          retention-days: 1
+          if-no-files-found: error
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    needs: package
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Download package
+        uses: actions/download-artifact@v5
+        with:
+          path: ${{ github.workspace }}/package
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+      - name: Deploy
+        uses: aws-actions/aws-lambda-deploy@v1.1.0
+        with:
+          function-name: ${{ vars.TRIGGER_LAMBDA_NAME }}
+          package-type: Zip
+          runtime: python3.13
+          handler: trigger.handler
+          publish: false
+          code-artifacts-dir: ${{ github.workspace }}/package
