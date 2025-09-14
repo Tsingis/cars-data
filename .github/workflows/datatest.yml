@@ -35,7 +35,7 @@ jobs:
           cache: "poetry"
           cache-dependency-path: "data/poetry.lock"
       - name: Install dependencies
-        run: poetry install --no-interaction --with dev
+        run: poetry install --no-interaction --only main,dev
         working-directory: ./data
       - name: Check linting & formatting
         run: |

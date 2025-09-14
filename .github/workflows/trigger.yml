@@ -43,7 +43,7 @@ jobs:
           cache: "poetry"
           cache-dependency-path: "data/poetry.lock"
       - name: Install dependencies
-        run: poetry install --no-interaction --no-root --without aws,dev
+        run: poetry install --no-interaction --only common
         working-directory: ./data
       - name: Create requirements file
         run: poetry export -f requirements.txt --only common --without-hashes > requirements.txt
