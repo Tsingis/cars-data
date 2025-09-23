@@ -14,7 +14,7 @@ on:
       - "app/tests/**"
       - "app/package.json"
       - "app/pnpm-lock.yaml"
-      - "app/Dockerfile"
+      - "**/Dockerfile"
       - ".github/workflows/sonar.yml"
   pull_request:
     branches:
@@ -30,7 +30,7 @@ on:
       - "app/tests/**"
       - "app/package.json"
       - "app/pnpm-lock.yaml"
-      - "app/Dockerfile"
+      - "**/Dockerfile"
       - ".github/workflows/sonar.yml"
   schedule:
     - cron: "0 21 * * 0"
