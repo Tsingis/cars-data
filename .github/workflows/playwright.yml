@@ -12,6 +12,7 @@ on:
       - "app/package.json"
       - "app/pnpm-lock.yaml"
       - "data/data.json"
+      - "util/Dockerfile"
       - ".github/workflows/playwright.yml"
   workflow_dispatch:
 env:
