@@ -23,5 +23,7 @@ jobs:
           temporaryPublicStorage: true
       - name: Report
         run: |
-          LINKS=$(echo '${{ steps.lighthouse.outputs.links }}' | jq -r --arg url "${{ inputs.URL }}" '.[$url]')
+          LINKS=$(echo '${{ steps.lighthouse.outputs.links }}' | jq -r --arg url "$URL" '.[$url]')
           echo "[Results]($LINKS)" >> $GITHUB_STEP_SUMMARY
+        env:
+          URL: ${{ inputs.URL }}
