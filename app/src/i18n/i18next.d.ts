@@ -6,7 +6,6 @@ declare module "i18next" {
   interface CustomTypeOptions {
     enableSelector: true;
     defaultNS: "en";
-    s;
     resources: {
       en: typeof en;
       fi: typeof fi;
