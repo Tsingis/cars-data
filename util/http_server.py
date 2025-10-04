@@ -8,8 +8,8 @@ socketserver.ThreadingTCPServer.allow_reuse_address = True
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        if not self.path.startswith("/data/"):
-            self.path = "/data" + self.path
+        if not self.path.startswith("/data/misc/"):
+            self.path = "/data/misc" + self.path
         return super().do_GET()
 
     def end_headers(self):

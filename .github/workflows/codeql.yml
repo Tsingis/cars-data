@@ -5,8 +5,8 @@ on:
       - main
     paths:
       - "data/src/**"
+      - "data/lambdas/**"
       - "data/tests/**"
-      - "data/trigger/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "app/src/**"

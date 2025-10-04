@@ -7,7 +7,7 @@
     "dev": "vite --config ./vite.config.ts --open",
     "dev:check": "vite --config ./vite.config.ts --open -- --use-checker",
     "preview": "vite preview --config ./vite.config.ts",
-    "http": "http-server ../data --cors -p 8000",
+    "http": "http-server ../data/misc --cors -p 8000",
     "playwright:setup": "playwright install --with-deps",
     "playwright": "playwright test --config=playwright.config.ts",
     "playwright:update": "playwright test --config=playwright.config.ts --update-snapshots",

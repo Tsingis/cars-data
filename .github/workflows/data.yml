@@ -1,9 +1,10 @@
-name: lambda
+name: data
 on:
   push:
     branches:
       - main
     paths:
+      - "data/lambdas/data.py"
       - "data/src/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
@@ -12,12 +13,13 @@ on:
     branches:
       - main
     paths:
+      - "data/lambdas/data.py"
       - "data/src/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "data/requirements.txt"
       - "data/Dockerfile"
-      - ".github/workflows/lambda.yml"
+      - ".github/workflows/data.yml"
   workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

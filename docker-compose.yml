@@ -33,7 +33,7 @@ services:
     tmpfs:
       - /tmp:rw
     command: ["python", "/scripts/http_server.py"]
-  lambda:
+  data:
     build:
       context: ./data
       dockerfile: Dockerfile

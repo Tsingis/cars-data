@@ -44,6 +44,7 @@ RUN --mount=type=cache,target=/root/.cache \
 
 COPY ./poetry.lock ./pyproject.toml ./
 COPY ./src ./src
+COPY ./lambdas/data.py ./src
 
 RUN --mount=type=cache,target=${POETRY_HOME}/pypoetry/cache \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
@@ -67,4 +68,4 @@ RUN rm -r /usr/local/lib/python*/site-packages/pip* && \
 USER lambda
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
-CMD ["lambda.handler"]
+CMD ["data.handler"]
