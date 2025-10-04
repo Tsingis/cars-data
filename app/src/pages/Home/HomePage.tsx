@@ -5,7 +5,7 @@ import ChartsContainer from "../../components/ChartsContainer/ChartsContainer";
 import Loading from "../../components/Loading/Loading";
 import SearchableDropdown from "../../components/SearchableDropdown/SearchableDropdown";
 import { locales } from "../../constants";
-import type { Areas, Count, ErrorMessage, Municipality } from "../../types";
+import type { Areas, Count, Municipality } from "../../types";
 import styles from "./HomePage.module.css";
 
 const dataUrl =
@@ -99,19 +99,19 @@ const HomePage = () => {
       })
       .catch((error) => {
         console.error(error);
-        setErrorMessage("Error.Fetch");
+        setErrorMessage(t(($) => $.errorMessage.fetch));
       });
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (errorMessage) {
       navigate("/error", {
         state: {
-          message: t(($) => $.errorMessage[errorMessage as ErrorMessage]),
+          message: errorMessage,
         },
       });
     }
-  }, [errorMessage, navigate, t]);
+  }, [errorMessage, navigate]);
 
   useEffect(() => {
     if (initialOption) {
