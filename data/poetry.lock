@@ -105,7 +105,7 @@ description = "Low-level CFFI bindings for Argon2"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
-markers = "python_version == \"3.13\""
+markers = "python_version == \"3.14\""
 files = [
     {file = "argon2_cffi_bindings-25.1.0-cp314-cp314t-macosx_10_13_universal2.whl", hash = "sha256:3d3f05610594151994ca9ccb3c771115bdb4daef161976a266f0dd8aa9996b8f"},
     {file = "argon2_cffi_bindings-25.1.0-cp314-cp314t-macosx_10_13_x86_64.whl", hash = "sha256:8b8efee945193e667a396cbc7b4fb7d357297d6234d30a489905d96caabde56b"},
@@ -3292,5 +3292,5 @@ test = ["websockets"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = "^3.13"
+python-versions = "^3.14"
 content-hash = "438aecbb5b47fdc9a88ea5b849137b568eb002347ba2836d3617b7fa91a24f72"
