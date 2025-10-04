@@ -38,7 +38,7 @@ jobs:
           --version ${{ needs.extract-poetry-version.outputs.poetry-version }}
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.13"
+          python-version: "3.14"
           architecture: "x64"
           cache: "poetry"
           cache-dependency-path: "data/poetry.lock"
@@ -84,7 +84,7 @@ jobs:
         with:
           function-name: ${{ vars.TRIGGER_LAMBDA_NAME }}
           package-type: Zip
-          runtime: python3.13
+          runtime: python3.14
           handler: trigger.handler
           publish: false
           code-artifacts-dir: ${{ github.workspace }}/package
