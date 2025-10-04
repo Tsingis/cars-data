@@ -5,11 +5,11 @@ import logging
 import os
 import time
 from pydantic import ValidationError
-from processors.preprocesses import clean
-from processors.postprocesses import generate
-from processors.imports import get_municipalities, get_vehicles
-from processors.utils import get_date
-from processors.validations import validate
+from src.processors.preprocesses import clean
+from src.processors.postprocesses import generate
+from src.processors.imports import get_municipalities, get_vehicles
+from src.processors.utils import get_date
+from src.processors.validations import validate
 
 BUCKET = os.getenv("BUCKET")
 DISTRIBUTION = os.getenv("DISTRIBUTION")

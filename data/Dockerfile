@@ -58,7 +58,8 @@ ARG FUNCTION_DIR
 WORKDIR ${FUNCTION_DIR}
 
 COPY --from=build ${FUNCTION_DIR} ${FUNCTION_DIR}
-COPY --from=build ${SETUP_PATH}/src ${FUNCTION_DIR}
+COPY ./src ${FUNCTION_DIR}/src
+COPY ./lambdas/data.py ${FUNCTION_DIR}/data.py
 
 RUN rm -r /usr/local/lib/python*/site-packages/pip* && \
     addgroup -S app && \
@@ -67,4 +68,4 @@ RUN rm -r /usr/local/lib/python*/site-packages/pip* && \
 USER lambda
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
-CMD ["lambda.handler"]
+CMD ["data.handler"]
