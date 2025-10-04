@@ -2,16 +2,12 @@ FROM node:24-alpine AS build
 
 WORKDIR /app
 
-ENV NO_UPDATE_NOTIFIER=true
-
 COPY .npmrc ./
-
-RUN npm install -g pnpm 
-
 COPY package.json ./
 COPY pnpm-lock.yaml ./
 
-RUN pnpm install --frozen-lockfile
+RUN corepack enable && \
+    pnpm install --frozen-lockfile
 
 ARG DATA_URL
 
