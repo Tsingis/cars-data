@@ -21,7 +21,7 @@ services:
     tmpfs:
       - /tmp:rw
   server:
-    image: python:3.13-alpine
+    image: python:3.14-alpine
     container_name: cars-server
     volumes:
       - ./util:/scripts
