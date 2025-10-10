@@ -51,6 +51,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
     if (selectedCode) {
       const opt = options.find((o) => o.code === selectedCode);
       if (opt) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setSearchQuery(opt.name);
       }
     }
