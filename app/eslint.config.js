@@ -84,6 +84,7 @@ export default [
         window: "readonly",
         document: "readonly",
         process: "readonly",
+        HTMLButtonElement: "readonly",
         HTMLCanvasElement: "readonly",
         HTMLDivElement: "readonly",
         HTMLInputElement: "readonly",
