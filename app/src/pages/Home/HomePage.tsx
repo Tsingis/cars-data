@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import ChartsContainer from "../../components/ChartsContainer/ChartsContainer";
@@ -37,16 +37,7 @@ const HomePage = () => {
     name: string;
   } | null>(null);
 
-  const [translatedInitialOption, setTranslatedInitialOption] = useState<{
-    code: string;
-    name: string;
-  } | null>(null);
-
   const [searchOptions, setSearchOptions] = useState<
-    { code: string; name: string }[]
-  >([]);
-
-  const [translatedSearchOptions, setTranslatedSearchOptions] = useState<
     { code: string; name: string }[]
   >([]);
 
@@ -113,26 +104,25 @@ const HomePage = () => {
     }
   }, [errorMessage, navigate]);
 
-  useEffect(() => {
-    if (initialOption) {
-      setTranslatedInitialOption({
-        code: initialOption.code,
-        name: t(($) => $.areas[initialOption.name as Areas]),
-      });
-    }
+  const translatedInitialOption = useMemo(() => {
+    if (!initialOption) return null;
+    return {
+      code: initialOption.code,
+      name: t(($) => $.areas[initialOption.name as Areas]),
+    };
   }, [t, initialOption]);
 
-  useEffect(() => {
-    setTranslatedSearchOptions(
+  const translatedSearchOptions = useMemo(
+    () =>
       searchOptions.map((option) => ({
         code: option.code,
         name:
           option.code === "000" || option.code === "999"
             ? t(($) => $.areas[option.name.toLocaleLowerCase() as Areas])
             : option.name,
-      }))
-    );
-  }, [t, searchOptions]);
+      })),
+    [t, searchOptions]
+  );
 
   if (!data) {
     return <Loading size="6x" />;

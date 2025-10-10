@@ -5,6 +5,7 @@ import React, {
   type KeyboardEvent,
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -28,45 +29,46 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
   initialValue,
 }) => {
   const { t } = useTranslation();
-  const [searchQuery, setSearchQuery] = useState<string>(
-    initialValue?.name ?? ""
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedCode, setSelectedCode] = useState<string | null>(
+    initialValue?.code ?? null
   );
-  const [filteredOptions, setFilteredOptions] = useState<Option[]>(options);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    setFilteredOptions(
+  const filteredOptions = useMemo(
+    () =>
       options.filter((option) =>
         option.name.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    );
-    setHighlightedIndex(null);
-  }, [searchQuery, options]);
+      ),
+    [options, searchQuery]
+  );
 
   useEffect(() => {
-    if (initialValue) {
-      setSearchQuery(initialValue.name);
-    } else {
-      setSearchQuery("");
+    if (selectedCode) {
+      const opt = options.find((o) => o.code === selectedCode);
+      if (opt) {
+        setSearchQuery(opt.name);
+      }
     }
-  }, [initialValue]);
+  }, [selectedCode, options]);
+
+  const handleSearchClick = () => {
+    setIsOpen(true);
+    setSearchQuery("");
+    setSelectedCode(null);
+  };
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
+    setSelectedCode(null);
     setIsOpen(true);
   };
 
-  const handleOptionClick = (option: Option) => {
-    setSearchQuery(option.name);
-    setIsOpen(false);
-    onSelect(option);
-  };
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+  const handleSearchKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "ArrowDown") {
       event.preventDefault();
       if (filteredOptions.length > 0) {
@@ -90,6 +92,23 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
       if (highlightedIndex !== null) {
         handleOptionClick(filteredOptions[highlightedIndex]);
       }
+    }
+  };
+
+  const handleOptionClick = (option: Option) => {
+    setSelectedCode(option.code);
+    setSearchQuery(option.name);
+    setIsOpen(false);
+    onSelect(option);
+  };
+
+  const handleOptionKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    option: Option
+  ) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleOptionClick(option);
     }
   };
 
@@ -121,11 +140,8 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           placeholder={`${t(($) => $.dropdown.search)}...`}
           value={searchQuery}
           onChange={handleSearchChange}
-          onKeyDown={handleKeyDown}
-          onClick={() => {
-            setIsOpen(true);
-            setSearchQuery("");
-          }}
+          onKeyDown={handleSearchKeyDown}
+          onClick={handleSearchClick}
           ref={inputRef}
           aria-label="Dropdown search"
         />
@@ -142,13 +158,12 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
                 <button
                   type="button"
                   onClick={() => handleOptionClick(option)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter") {
-                      event.preventDefault();
-                      handleOptionClick(option);
-                    }
-                  }}
-                  className={highlightedIndex === index ? styles.active : ""}
+                  onKeyDown={(event) => handleOptionKeyDown(event, option)}
+                  className={
+                    selectedCode === option.code || highlightedIndex === index
+                      ? styles.active
+                      : ""
+                  }
                 >
                   {option.name}
                 </button>
