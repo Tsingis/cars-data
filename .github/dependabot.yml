@@ -41,7 +41,7 @@ updates:
         patterns:
           - "@typescript-eslint/*"
       playwright:
-        patterns:
+        exclude-patterns:
           - "@playwright/test"
           - "playwright"
   - package-ecosystem: "docker"
@@ -49,6 +49,8 @@ updates:
       - "/app"
       - "/data"
       - "/util"
+    ignore:
+      - dependency-name: "mcr.microsoft.com/playwright"
     schedule:
       interval: "monthly"
       day: "wednesday"

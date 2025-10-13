@@ -4,7 +4,7 @@
   "timezone": "Europe/Helsinki",
   "schedule": ["* 21-22 * * 3"],
   "rebaseWhen": "conflicted",
-  "enabledManagers": ["npm"],
+  "enabledManagers": ["npm", "docker"],
   "packageRules": [
     {
       "matchDepTypes": ["packageManager"],
@@ -13,6 +13,21 @@
     {
       "matchDepTypes": ["dependencies", "devDependencies"],
       "enabled": false
+    },
+    {
+      "matchDatasources": ["docker"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["npm", "docker"],
+      "matchPackageNames": [
+        "playwright",
+        "@playwright/test",
+        "mcr.microsoft.com/playwright"
+      ],
+      "groupName": "playwright (npm + docker)",
+      "groupSlug": "playwright",
+      "enabled": true
     }
   ]
 }
