@@ -4,15 +4,35 @@
   "timezone": "Europe/Helsinki",
   "schedule": ["* 21-22 * * 3"],
   "rebaseWhen": "conflicted",
-  "enabledManagers": ["npm"],
+  "enabledManagers": ["npm", "dockerfile"],
   "packageRules": [
     {
       "matchDepTypes": ["packageManager"],
       "enabled": true
     },
     {
-      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchManagers": ["npm"],
       "enabled": false
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["npm", "dockerfile"],
+      "matchPackageNames": [
+        "playwright",
+        "@playwright/test",
+        "mcr.microsoft.com/playwright"
+      ],
+      "rangeStrategy": "bump",
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "playwright",
+      "commitMessageExtra": "to {{{prettyNewVersion}}}",
+      "commitMessagePrefix": null,
+      "commitMessageSuffix": null,
+      "groupName": "playwright",
+      "enabled": true
     }
   ]
 }

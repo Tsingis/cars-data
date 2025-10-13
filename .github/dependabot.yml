@@ -18,6 +18,9 @@ updates:
       timezone: "Europe/Helsinki"
     cooldown:
       default-days: 1
+    ignore:
+      - dependency-name: "playwright"
+      - dependency-name: "@playwright/test"
     groups:
       react:
         patterns:
@@ -40,15 +43,13 @@ updates:
       ts-eslint:
         patterns:
           - "@typescript-eslint/*"
-      playwright:
-        patterns:
-          - "@playwright/test"
-          - "playwright"
   - package-ecosystem: "docker"
     directories:
       - "/app"
       - "/data"
       - "/util"
+    ignore:
+      - dependency-name: "mcr.microsoft.com/playwright"
     schedule:
       interval: "monthly"
       day: "wednesday"
