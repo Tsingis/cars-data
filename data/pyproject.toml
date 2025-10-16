@@ -11,7 +11,7 @@ packages = [{include = "src"}]
 name = "pypi"
 
 [tool.poetry.dependencies]
-python = "^3.14"
+python = "^3.13"
 
 [tool.poetry.group.main.dependencies]
 numpy = "2.3.3"
