@@ -49,7 +49,7 @@ updates:
       - "/data"
       - "/util"
     ignore:
-      - dependency-name: "mcr.microsoft.com/playwright"
+      - dependency-name: "*playwright"
     schedule:
       interval: "monthly"
       day: "wednesday"
