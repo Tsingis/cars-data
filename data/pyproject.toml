@@ -29,7 +29,7 @@ awslambdaric = "3.1.1"
 notebook = "7.4.7"
 pip-audit = "2.9.0"
 pytest = "8.4.2"
-ruff = "0.14.0"
+ruff = "0.14.1"
 
 [tool.poetry.group.main]
 include-groups = ["common"]
