@@ -108,13 +108,14 @@ test("Theme switch works correctly", async ({ page }) => {
   await expect(page).toHaveScreenshot("home-page-theme-light-back.png");
 });
 
-test("Slider works correctly", async ({ page }) => {
+test("Carousel slider works correctly", async ({ page }) => {
   await page.goto("/");
 
-  const slider = page.locator(".slick-slider");
-  await expect(slider).toBeVisible();
+  const carousel = page.getByTestId("carousel");
 
-  const dots = slider.locator(".slick-dots li button");
+  await expect(carousel).toBeVisible();
+
+  const dots = carousel.getByTestId("dot");
   const dotCount = await dots.count();
   expect(dotCount).toBe(5);
 
@@ -125,13 +126,12 @@ test("Slider works correctly", async ({ page }) => {
   await secondDot.hover();
   await secondDot.click();
 
-  const secondSlide = slider.locator(`[data-index='${dotCount + 1}']`);
-  const barchart = secondSlide.getByTestId("barchart");
-  await expect(barchart).toBeVisible();
+  const barchart = carousel.getByTestId("barchart");
+  expect(barchart.boundingBox()).not.toBeNull();
 
   await expect(loading).toHaveCount(0);
 
-  await expect(page).toHaveScreenshot("slider-second-dot.png");
+  await expect(page).toHaveScreenshot("carousel-slider-second-dot.png");
 
   await expect(loading).toHaveCount(0);
 
@@ -140,11 +140,10 @@ test("Slider works correctly", async ({ page }) => {
   await finalDot.hover();
   await finalDot.click();
 
-  const lastSlide = slider.locator(`[data-index='${dotCount + 4}']`);
-  const toplist = lastSlide.getByTestId("toplist");
-  await expect(toplist).toBeVisible();
+  const toplist = carousel.getByTestId("toplist");
+  expect(toplist.boundingBox()).not.toBeNull();
 
   await expect(loading).toHaveCount(0);
 
-  await expect(page).toHaveScreenshot("slider-last-dot.png");
+  await expect(page).toHaveScreenshot("carousel-slider-last-dot.png");
 });

@@ -240,8 +240,9 @@ const Carousel: React.FC<CarouselProps> = ({
         {React.Children.map(children, (child, index) => (
           <div
             data-testid={`slide-${index}`}
+            data-active={index === currentIndex}
             key={childKeys[index]}
-            className={`${styles.slide} ${index === currentIndex ? styles.active : ""}`}
+            className={styles.slide}
             style={{ width: `${100 / totalSlides}%` }}
           >
             <div className={styles.slideInner}>{child}</div>
