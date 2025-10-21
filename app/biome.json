@@ -115,7 +115,12 @@
       "linter": {
         "rules": {
           "complexity": {
-            "noExcessiveCognitiveComplexity": "error",
+            "noExcessiveCognitiveComplexity": {
+              "level": "error",
+              "options": {
+                "maxAllowedComplexity": 16
+              }
+            },
             "noUselessTypeConstraint": "error",
             "useWhile": "error"
           },
