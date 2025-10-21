@@ -1,10 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
-/* eslint-disable css-modules/no-unused-class */
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, test, expect, beforeEach, vi } from "vitest";
 import Carousel from "../../src/components/Carousel/Carousel";
-import styles from "../../src/components/Carousel/Carousel.module.css";
-
 
 describe("Carousel component", () => {
   const slides = [
@@ -40,13 +37,22 @@ describe("Carousel component", () => {
     const nextButton = screen.getByText("›");
     const prevButton = screen.getByText("‹");
 
-    expect(screen.getByTestId("slide-0")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-0")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
 
     fireEvent.click(nextButton);
-    expect(screen.getByTestId("slide-1")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-1")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
 
     fireEvent.click(prevButton);
-    expect(screen.getByTestId("slide-0")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-0")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
   });
 
   test("clicking on a dot changes the slide", () => {
@@ -54,10 +60,16 @@ describe("Carousel component", () => {
 
     const dots = screen.getAllByTestId("dot");
 
-    expect(screen.getByTestId("slide-0")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-0")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
 
     fireEvent.click(dots[1]);
-    expect(screen.getByTestId("slide-1")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-1")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
   });
 
   test("navigates with keyboard arrows", () => {
@@ -65,12 +77,21 @@ describe("Carousel component", () => {
 
     const carousel = screen.getByTestId("carousel");
 
-    expect(screen.getByTestId("slide-0")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-0")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
 
     fireEvent.keyDown(carousel, { key: "ArrowRight" });
-    expect(screen.getByTestId("slide-1")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-1")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
 
     fireEvent.keyDown(carousel, { key: "ArrowLeft" });
-    expect(screen.getByTestId("slide-0")).toHaveClass(styles.active);
+    expect(screen.getByTestId("slide-0")).toHaveAttribute(
+      "data-active",
+      "true"
+    );
   });
 });

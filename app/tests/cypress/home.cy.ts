@@ -69,17 +69,25 @@ describe("Home Page", () => {
     });
   });
 
-  it("Slider works", () => {
+  it("Carousel slider works", () => {
     cy.visit("/");
 
-    cy.get(".slick-slider")
-      .should("be.visible")
-      .within(() => {
-        cy.get(".slick-dots li button").eq(1).click();
-        cy.get(".slick-current [data-testid='barchart']").should("exist");
+    cy.get('[data-testid="carousel"]').should("be.visible");
 
-        cy.get(".slick-dots li button").eq(4).click();
-        cy.get(".slick-current [data-testid='toplist']").should("exist");
+    cy.get('[data-testid="dot"]').eq(1).click();
+
+    cy.get('[data-testid^="slide-"][data-active="true"]')
+      .should("have.attr", "data-testid", "slide-1")
+      .within(() => {
+        cy.get('[data-testid="barchart"]').should("exist").and("be.visible");
+      });
+
+    cy.get('[data-testid="dot"]').eq(4).click();
+
+    cy.get('[data-testid^="slide-"][data-active="true"]')
+      .should("have.attr", "data-testid", "slide-4")
+      .within(() => {
+        cy.get('[data-testid="toplist"]').should("exist").and("be.visible");
       });
   });
 });
