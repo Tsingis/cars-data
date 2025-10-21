@@ -1,16 +1,14 @@
 import { useTranslation } from "react-i18next";
-import Slider from "react-slick";
 import { colors, drivingForceColors } from "../../constants";
 import type { Count, DrivingForces } from "../../types";
 import { formatMileageLabel } from "../../utility";
 import BarChart from "../BarChart/BarChart";
+import Carousel from "../Carousel/Carousel";
 import LineChart from "../LineChart/LineChart";
 import PieChart from "../PieChart/PieChart";
 import TopList from "../TopList/TopList";
 import TreeMapChart from "../TreeMapChart/TreeMapChart";
 import styles from "./ChartsContainer.module.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const ChartsContainer = ({
   selectedMunicipality,
@@ -43,17 +41,6 @@ const ChartsContainer = ({
       )
     : {};
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    adaptiveHeight: true,
-    swipeToSlide: true,
-  };
-
   if (
     !selectedMunicipality.mileageCount ||
     !selectedMunicipality.drivingForce ||
@@ -65,9 +52,12 @@ const ChartsContainer = ({
   }
 
   return (
-    <Slider
-      {...settings}
-      className={`${styles.slickSlider} ${styles.slickSlide}`}
+    <Carousel
+      infinite={true}
+      dots={true}
+      speed={500}
+      swipeToSlide={true}
+      adaptiveHeight={true}
     >
       <PieChart
         data={selectedMunicipality.drivingForce}
@@ -102,7 +92,7 @@ const ChartsContainer = ({
         title={t(($) => $.labels.topNMakers, { count: 30 })}
         className={styles.chartContainer}
       />
-    </Slider>
+    </Carousel>
   );
 };
 

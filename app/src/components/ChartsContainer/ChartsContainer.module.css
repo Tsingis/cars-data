@@ -71,15 +71,3 @@
     max-height: 95vh;
   }
 }
-
-.slickSlider {
-  width: 100%;
-  max-width: 800px;
-}
-
-.slickSlide div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
