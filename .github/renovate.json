@@ -11,14 +11,6 @@
       "enabled": true
     },
     {
-      "matchManagers": ["npm"],
-      "enabled": false
-    },
-    {
-      "matchManagers": ["dockerfile"],
-      "enabled": false
-    },
-    {
       "matchManagers": ["npm", "dockerfile"],
       "matchPackageNames": [
         "playwright",
@@ -33,6 +25,17 @@
       "commitMessageSuffix": null,
       "groupName": "playwright",
       "enabled": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
+      "enabled": false
+    },
+  {
+      "matchManagers": ["dockerfile"],
+      "matchPackageNames": ["mcr.microsoft.com/playwright"],
+      "excludePackageNames": ["mcr.microsoft.com/playwright"],
+      "enabled": false
     }
   ]
 }
