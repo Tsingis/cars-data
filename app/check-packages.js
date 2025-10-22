@@ -57,13 +57,13 @@ function checkPackages() {
   const currentHash = getPackageLockHash();
   const storedHash = getStoredHash();
 
-  if (currentHash !== storedHash) {
+  if (currentHash === storedHash) {
+    console.log("node_modules is in sync with package-lock.json");
+  } else {
     console.log("node_modules is out of sync with package-lock.json");
     if (installDependencies()) {
       updateStoredHash(currentHash);
     }
-  } else {
-    console.log("node_modules is in sync with package-lock.json");
   }
 }
 

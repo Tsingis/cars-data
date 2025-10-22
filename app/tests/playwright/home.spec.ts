@@ -70,7 +70,7 @@ test("Theme switch works correctly", async ({ page }) => {
   await expect(darkButton).toBeVisible();
 
   const initialBgColor = await page.evaluate(() => {
-    return window
+    return globalThis
       .getComputedStyle(document.documentElement)
       .getPropertyValue("--main-bg-color");
   });
@@ -84,7 +84,7 @@ test("Theme switch works correctly", async ({ page }) => {
   await darkButton.click();
 
   const darkBgColor = await page.evaluate(() => {
-    return window
+    return globalThis
       .getComputedStyle(document.documentElement)
       .getPropertyValue("--main-bg-color");
   });
@@ -97,7 +97,7 @@ test("Theme switch works correctly", async ({ page }) => {
   await lightButton.click();
 
   const lightBgColor = await page.evaluate(() => {
-    return window
+    return globalThis
       .getComputedStyle(document.documentElement)
       .getPropertyValue("--main-bg-color");
   });

@@ -83,7 +83,7 @@ const HomePage = () => {
             .sort((a: Municipality, b: Municipality) =>
               a.name.localeCompare(b.name, locales.fi)
             ),
-          municipalities[municipalities.length - 1],
+          municipalities.at(-1),
         ];
 
         setSearchOptions(options);

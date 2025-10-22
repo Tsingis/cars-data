@@ -5,7 +5,7 @@ import ThemeSwitch from "../../src/components/ThemeSwitch/ThemeSwitch";
 describe("ThemeSwitch", () => {
   beforeEach(() => {
     localStorage.clear();
-    document.documentElement.removeAttribute("data-theme");
+    delete document.documentElement.dataset.theme;
   });
 
   test("renders theme switch buttons", () => {

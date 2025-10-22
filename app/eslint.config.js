@@ -13,7 +13,7 @@ import refreshPlugin from "eslint-plugin-react-refresh";
 import securityPlugin from "eslint-plugin-security";
 import sonarPlugin from "eslint-plugin-sonarjs";
 import globals from "globals";
-import path from "path";
+import path from "node:path";
 
 export default [
   js.configs.recommended,
