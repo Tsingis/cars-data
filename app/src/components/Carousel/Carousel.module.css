@@ -34,12 +34,11 @@
 }
 
 .slideInner {
-  width: 100%;
-  max-width: 800px;
+  width: min(90vw, 600px);
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
   box-sizing: border-box;
 }
 
