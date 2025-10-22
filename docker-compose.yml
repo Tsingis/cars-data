@@ -58,7 +58,7 @@ services:
     container_name: cars-tests
     environment:
       - CI=true
-      - MAX_DIFF_PIXEL_RATIO=0.001
+      - MAX_DIFF_PIXEL_RATIO=0
     read_only: false
     privileged: true
     volumes:
