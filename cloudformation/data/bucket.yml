@@ -29,6 +29,9 @@ Resources:
             Status: Enabled
             NoncurrentVersionExpiration:
               NoncurrentDays: !Ref NonCurrentExpirationDays
+            TagFilters:
+              - Key: "AllowExpiration"
+                Value: "true"
           - Id: "DeleteOld"
             Status: Enabled
             ExpirationInDays: !Ref CurrentExpirationDays
