@@ -7,7 +7,7 @@ Parameters:
     Description: Name of the lambda function
   FunctionRuntime:
     Type: String
-    Default: python3.13
+    Default: python3.14
     Description: Function runtime (Python only)
   FunctionMemory:
     Type: Number
