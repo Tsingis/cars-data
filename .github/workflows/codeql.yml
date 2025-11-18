@@ -20,6 +20,26 @@ on:
       - "app/package.json"
       - "app/pnpm-lock.yaml"
       - ".github/workflows/**/*.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/src/**"
+      - "data/lambdas/**"
+      - "data/tests/**"
+      - "data/pyproject.toml"
+      - "data/poetry.lock"
+      - "app/src/**"
+      - "app/tests/**"
+      - "app/vite.config.ts"
+      - "app/vitest.config.ts"
+      - "app/playwright.config.ts"
+      - "app/cypress.config.ts"
+      - "app/tsconfig.json"
+      - "app/eslint.config.js"
+      - "app/package.json"
+      - "app/pnpm-lock.yaml"
+      - ".github/workflows/**/*.yml"
   schedule:
     - cron: "0 21 * * 0"
   workflow_dispatch:
