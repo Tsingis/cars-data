@@ -1,0 +1,5 @@
+.git/
+.ruff_cache/
+.poetry/
+.venv/
+__pycache__/
