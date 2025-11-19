@@ -33,8 +33,6 @@
     },
   {
       "matchManagers": ["dockerfile"],
-      "matchPackageNames": ["mcr.microsoft.com/playwright"],
-      "excludePackageNames": ["mcr.microsoft.com/playwright"],
       "enabled": false
     }
   ]
