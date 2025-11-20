@@ -13,7 +13,7 @@ jobs:
     outputs:
       poetry-version: ${{ steps.poetry-version.outputs.version }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Get Poetry version
         id: poetry-version
         run: |

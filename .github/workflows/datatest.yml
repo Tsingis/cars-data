@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Install Poetry
         run: |
           curl --proto "=https" -sSL https://install.python-poetry.org | python3 - \
