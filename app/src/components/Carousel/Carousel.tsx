@@ -220,13 +220,12 @@ const Carousel: React.FC<CarouselProps> = ({
       data-testid="carousel"
       ref={carouselRef}
       className={`${styles.carousel} ${className} ${dragging ? styles.dragging : ""}`}
-      tabIndex={0}
       aria-label="Carousel"
       onKeyDown={handleKeyDown}
+      onPointerDown={handlePointerDown}
       style={{
         height: adaptiveHeight && slideHeight ? `${slideHeight}px` : "auto",
       }}
-      onPointerDown={handlePointerDown}
     >
       <div
         className={styles.track}
