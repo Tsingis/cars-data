@@ -11,6 +11,16 @@
       "enabled": true
     },
     {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "excludePackageNames": ["mcr.microsoft.com/playwright"],
+      "enabled": false
+    },
+    {
       "matchManagers": ["npm", "dockerfile"],
       "matchPackageNames": [
         "playwright",
@@ -21,19 +31,8 @@
       "commitMessageAction": "Update",
       "commitMessageTopic": "playwright",
       "commitMessageExtra": "to {{{prettyNewVersion}}}",
-      "commitMessagePrefix": null,
-      "commitMessageSuffix": null,
       "groupName": "playwright",
       "enabled": true
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies", "devDependencies"],
-      "enabled": false
-    },
-  {
-      "matchManagers": ["dockerfile"],
-      "enabled": false
     }
   ]
 }
