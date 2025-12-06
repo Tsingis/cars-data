@@ -18,16 +18,23 @@ jobs:
       contents: read
     uses: ./.github/workflows/poetry-version.yml
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     needs: extract-poetry-version
     permissions:
       contents: read
     steps:
       - uses: actions/checkout@v6
       - name: Install Poetry
+        shell: bash
         run: |
           curl --proto "=https" -sSL https://install.python-poetry.org | python3 - \
           --version ${{ needs.extract-poetry-version.outputs.poetry-version }}
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          poetry --version
       - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
@@ -35,7 +42,7 @@ jobs:
           cache: "poetry"
           cache-dependency-path: "data/poetry.lock"
       - name: Install dependencies
-        run: poetry install --no-interaction --only main,dev
+        run: poetry install --no-interaction --all-groups
         working-directory: ./data
       - name: Check linting & formatting
         run: |
