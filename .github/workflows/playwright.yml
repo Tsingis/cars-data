@@ -61,4 +61,5 @@ jobs:
         working-directory: ./app
         env:
           CI: true
+          WORKERS: ${{ vars.WORKERS }}
           MAX_DIFF_PIXEL_RATIO: ${{ vars.MAX_DIFF_PIXEL_RATIO }}
