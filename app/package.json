@@ -58,7 +58,7 @@
     "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^8.48.1",
     "@typescript-eslint/parser": "^8.48.1",
-    "@vitejs/plugin-react": "^5.1.1",
+    "@vitejs/plugin-react": "^5.1.2",
     "concurrently": "^9.2.1",
     "cypress": "^15.7.1",
     "eslint": "^9.39.1",
