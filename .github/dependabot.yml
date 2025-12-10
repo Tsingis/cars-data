@@ -79,3 +79,5 @@ updates:
       timezone: "Europe/Helsinki"
     cooldown:
       default-days: 1
+      exclude:
+        - "poetry"
