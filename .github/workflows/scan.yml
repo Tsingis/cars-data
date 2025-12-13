@@ -12,6 +12,13 @@ on:
 jobs:
   scan:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image:
+          - repository: ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}
+            tag: ${{ vars.DATA_LAMBDA_IMAGE_TAG }}
+          - repository: ${{ vars.LAMBDA_IMAGE_REPOSITORY }}
+            tag: ${{ vars.LAMBDA_IMAGE_TAG }}
     permissions:
       id-token: write
       contents: read
@@ -39,7 +46,7 @@ jobs:
         uses: docker/scout-action@f8c776824083494ab0d56b8105ba2ca85c86e4de # v1.18.2
         with:
           command: cves,recommendations
-          image: "${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}"
+          image: "${{ matrix.image.repository }}:${{ matrix.image.tag }}"
           only-severities: ${{ inputs.severities || 'critical,high' }}
           only-fixed: true
           summary: true
