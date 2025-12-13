@@ -52,11 +52,9 @@ services:
       - /tmp:rw
   lambda:
     build:
-      context: ./data/lambda
+      context: ./lambda
       dockerfile: Dockerfile
       no_cache: false
-      tags:
-        - latest
     image: python-lambda
   tests:
     build:
