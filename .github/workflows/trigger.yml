@@ -64,6 +64,7 @@ jobs:
           if-no-files-found: error
   deploy:
     runs-on: ubuntu-latest
+    environment: AWS-trigger-lambda
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     needs: package
     permissions:
