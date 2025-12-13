@@ -1,4 +1,4 @@
-name: deploy
+name: app-deploy
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
       - "app/tsconfig.json"
       - "app/package.json"
       - "app/pnpm-lock.yaml"
-      - ".github/workflows/deploy.yml"
+      - ".github/workflows/app-deploy.yml"
   workflow_dispatch:
 env:
   NO_UPDATE_NOTIFIER: true
@@ -19,6 +19,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: AWS-app
     permissions:
       id-token: write
       contents: read
