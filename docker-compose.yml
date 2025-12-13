@@ -40,6 +40,7 @@ services:
       no_cache: false
       args:
         POETRY_VERSION: ${POETRY_VERSION}
+        BASE_IMAGE: python-lambda
     image: cars-lambda
     container_name: cars-lambda
     ports:
@@ -49,6 +50,14 @@ services:
     privileged: false
     tmpfs:
       - /tmp:rw
+  lambda:
+    build:
+      context: ./data/lambda
+      dockerfile: Dockerfile
+      no_cache: false
+      tags:
+        - latest
+    image: python-lambda
   tests:
     build:
       context: .

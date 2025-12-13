@@ -49,12 +49,13 @@ jobs:
       - name: Build image
         run: |
           docker build --build-arg POETRY_VERSION=${{ needs.extract-poetry-version.outputs.poetry-version }} \
-          -t ${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }} .
+          --build-arg BASE_IMAGE=${{ vars.LAMBDA_IMAGE_REPOSITORY}}:${{ vars.LAMBDA_IMAGE_TAG }} \
+          -t ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}:${{ vars.DATA_LAMBDA_IMAGE_TAG }} .
         working-directory: ./data
       - name: Push image
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
-          docker push ${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}
+          docker push ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}:${{ vars.DATA_LAMBDA_IMAGE_TAG }}
   deploy:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
@@ -73,4 +74,4 @@ jobs:
         with:
           function-name: ${{ vars.DATA_LAMBDA_NAME }}
           package-type: Image
-          image-uri: "${{ vars.IMAGE_REPOSITORY }}:${{ vars.IMAGE_TAG }}"
+          image-uri: "${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}:${{ vars.DATA_LAMBDA_IMAGE_TAG }}"

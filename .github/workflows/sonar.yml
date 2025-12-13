@@ -5,11 +5,12 @@ on:
       - main
     paths:
       - "data/src/**"
-      - "data/lambdas/**"
+      - "data/handlers/**"
       - "data/tests/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "data/Dockerfile"
+      - "data/lambda/Dockerfile"
       - "app/src/**"
       - "app/tests/**"
       - "app/package.json"
@@ -21,11 +22,12 @@ on:
       - main
     paths:
       - "data/src/**"
-      - "data/lambdas/**"
+      - "data/handlers/**"
       - "data/tests/**"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "data/Dockerfile"
+      - "data/lambda/Dockerfile"
       - "app/src/**"
       - "app/tests/**"
       - "app/package.json"

@@ -21,10 +21,6 @@ pydantic = "2.12.5"
 [tool.poetry.group.common.dependencies]
 requests = "2.32.5"
 
-[tool.poetry.group.aws.dependencies]
-botocore = "1.42.8"
-awslambdaric = "3.1.1"
-
 [tool.poetry.group.dev.dependencies]
 notebook = "7.5.0"
 pip-audit = "2.10.0"
