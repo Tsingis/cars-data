@@ -46,7 +46,7 @@ updates:
   - package-ecosystem: "docker"
     directories:
       - "/app"
-      - "/data"
+      - "/data/lambda"
       - "/util"
     ignore:
       - dependency-name: "*playwright"
@@ -71,6 +71,7 @@ updates:
   - package-ecosystem: "pip"
     directories:
       - "/data"
+      - "/data/lambda"
       - "/util"
     schedule:
       interval: "weekly"

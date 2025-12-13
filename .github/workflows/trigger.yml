@@ -4,14 +4,14 @@ on:
     branches:
       - main
     paths:
-      - "data/lambdas/trigger.py"
+      - "data/handlers/trigger.py"
       - "data/pyproject.toml"
       - "data/poetry.lock"
   pull_request:
     branches:
       - main
     paths:
-      - "data/lambdas/trigger.py"
+      - "data/handlers/trigger.py"
       - "data/pyproject.toml"
       - "data/poetry.lock"
       - "data/requirements.txt"
@@ -52,7 +52,7 @@ jobs:
         run: |
           pip install --prefer-binary -r ../requirements.txt --target ${{ github.workspace }}/package
           cp trigger.py ${{ github.workspace }}/package
-        working-directory: ./data/lambdas
+        working-directory: ./data/handlers
       - name: Upload package
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0

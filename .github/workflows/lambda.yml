@@ -1,0 +1,46 @@
+name: lambda
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/lambda/Dockerfile"
+      - "data/lambda/requirements.txt"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/lambda/Dockerfile"
+      - "data/lambda/requirements.txt"
+      - ".github/workflows/lambda.yml"
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3.7.0
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
+      - name: Login to Docker Hub
+        uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # v3.6.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          logout: true
+      - name: Build image
+        run: |
+          docker build -t ${{ vars.LAMBDA_IMAGE_REPOSITORY }}:${{ vars.LAMBDA_IMAGE_TAG }} .
+        working-directory: ./data/lambda
+      - name: Push image
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          docker push ${{ vars.LAMBDA_IMAGE_REPOSITORY }}:${{ vars.LAMBDA_IMAGE_TAG }}
