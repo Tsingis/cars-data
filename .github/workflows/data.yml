@@ -58,6 +58,7 @@ jobs:
           docker push ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}:${{ vars.DATA_LAMBDA_IMAGE_TAG }}
   deploy:
     runs-on: ubuntu-latest
+    environment: AWS-data-lambda
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     needs: build
     permissions:
