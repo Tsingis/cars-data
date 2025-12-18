@@ -26,7 +26,7 @@
     "format": "biome format --diagnostic-level=warn .",
     "format:fix": "biome format --diagnostic-level=warn --write .",
     "typecheck": "tsc --noEmit -p ./tsconfig.json",
-    "build": "tsc -b ./tsconfig.json && vite --config ./vite.config.ts build",
+    "build": "vite --config ./vite.config.ts build",
     "prepare": "cd .. && husky app/.husky"
   },
   "minimumReleaseAge": 60,
