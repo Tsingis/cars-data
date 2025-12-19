@@ -94,8 +94,8 @@ importers:
         specifier: ^9.2.1
         version: 9.2.1
       cypress:
-        specifier: ^15.8.0
-        version: 15.8.0
+        specifier: ^15.8.1
+        version: 15.8.1
       eslint:
         specifier: ^9.39.2
         version: 9.39.2
@@ -1608,8 +1608,8 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  cypress@15.8.0:
-    resolution: {integrity: sha512-/k/KT8IIvcxarRSNb5AIhT1Yxx1pXsNIrL96Ht/c0pBOO/XcsjgjD4ZlG16V/08dRmvU/gT7PW8FBz5YV+ahsA==}
+  cypress@15.8.1:
+    resolution: {integrity: sha512-ogc62stTQGh1395ipKxfCE5hQuSApTzeH5e0d9U6m7wYO9HQeCpgnkYtBtd0MbkN2Fnch5Od2mX9u4hoTlrH4Q==}
     engines: {node: ^20.1.0 || ^22.0.0 || >=24.0.0}
     hasBin: true
 
@@ -5006,7 +5006,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  cypress@15.8.0:
+  cypress@15.8.1:
     dependencies:
       '@cypress/request': 3.0.9
       '@cypress/xvfb': 1.2.4(supports-color@8.1.1)
