@@ -1,4 +1,4 @@
-name: scan
+name: scout
 on:
   workflow_dispatch:
     inputs:
@@ -42,7 +42,7 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE }}
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2.0.1
-      - name: Scan image
+      - name: Scan image CVEs and recommendations
         uses: docker/scout-action@f8c776824083494ab0d56b8105ba2ca85c86e4de # v1.18.2
         with:
           command: cves,recommendations
