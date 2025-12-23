@@ -1,4 +1,4 @@
-ARG BASE_IMAGE
+ARG BASE_IMAGE="python-lambda:latest"
 ARG FUNCTION_DIR="/function"
 
 FROM ${BASE_IMAGE} AS base
