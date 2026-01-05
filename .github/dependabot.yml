@@ -72,7 +72,7 @@ updates:
     directories:
       - "/data"
       - "/lambda"
-      - "/util"
+      - "/cloudformation"
     schedule:
       interval: "weekly"
       day: "wednesday"
@@ -82,3 +82,4 @@ updates:
       default-days: 1
       exclude:
         - "poetry"
+        - "cfn-lint"
