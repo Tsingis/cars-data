@@ -5,14 +5,12 @@ on:
       - main
     paths:
       - "cloudformation/**"
-      - "util/requirements.txt"
       - ".github/workflows/cloudformation.yml"
   pull_request:
     branches:
       - main
     paths:
       - "cloudformation/**"
-      - "util/requirements.txt"
       - ".github/workflows/cloudformation.yml"
   schedule:
     - cron: "0 21 1 * 0"
@@ -33,7 +31,7 @@ jobs:
           architecture: "x64"
       - name: Install dependencies
         run: pip install -r requirements.txt
-        working-directory: ./util
+        working-directory: ./cloudformation
       - name: Cloudformation linting
         run: cfn-lint ./**/*.yml
         working-directory: ./cloudformation
