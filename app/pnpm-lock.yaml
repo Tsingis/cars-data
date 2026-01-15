@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  diff: ^8.0.3
   systeminformation: ^5.27.14
   qs: ^6.14.1
 
@@ -1712,8 +1713,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  diff@3.5.0:
-    resolution: {integrity: sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==}
+  diff@8.0.3:
+    resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
     engines: {node: '>=0.3.1'}
 
   doctrine@2.1.0:
@@ -5162,7 +5163,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  diff@3.5.0: {}
+  diff@8.0.3: {}
 
   doctrine@2.1.0:
     dependencies:
@@ -6086,7 +6087,7 @@ snapshots:
   jest-diff@22.4.3:
     dependencies:
       chalk: 2.4.2
-      diff: 3.5.0
+      diff: 8.0.3
       jest-get-type: 22.4.3
       pretty-format: 22.4.3
 
