@@ -13,6 +13,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         image:
           - repository: ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}
