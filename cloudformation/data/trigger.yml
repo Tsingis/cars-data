@@ -17,6 +17,10 @@ Parameters:
     Type: Number
     Default: 30
     Description: Timeout for lambda in seconds
+  FunctionReservedConcurrency:
+    Type: Number
+    Default: 1
+    Description: The number of simultaneous executions to reserve for the function
   BucketName:
     Type: String
     Description: Name of the S3 bucket
@@ -49,6 +53,7 @@ Resources:
       EphemeralStorage:
         Size: 512
       RecursiveLoop: Terminate
+      ReservedConcurrentExecutions: !Ref FunctionReservedConcurrency
       RuntimeManagementConfig:
         UpdateRuntimeOn: Auto
       Environment:

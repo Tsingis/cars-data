@@ -13,6 +13,10 @@ Parameters:
     Type: Number
     Default: 180
     Description: Timeout for lambda in seconds
+  FunctionReservedConcurrency:
+    Type: Number
+    Default: 1
+    Description: The number of simultaneous executions to reserve for the function
   RepositoryName:
     Type: String
     Default: cars-data
@@ -56,6 +60,7 @@ Resources:
       EphemeralStorage:
         Size: 512
       RecursiveLoop: Terminate
+      ReservedConcurrentExecutions: !Ref FunctionReservedConcurrency
       Environment:
         Variables:
           BUCKET: !Ref BucketName
