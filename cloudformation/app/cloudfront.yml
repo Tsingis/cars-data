@@ -60,6 +60,7 @@ Resources:
           CachePolicyId: !Ref CachePolicy
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
+          MinimumProtocolVersion: TLSv1.2_2021
         DefaultRootObject: "index.html"
         Restrictions:
           GeoRestriction:

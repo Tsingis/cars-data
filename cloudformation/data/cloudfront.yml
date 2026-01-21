@@ -59,6 +59,7 @@ Resources:
           CachePolicyId: !Ref CachePolicy
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
+          MinimumProtocolVersion: TLSv1.2_2021
         DefaultRootObject: "data.json"
         Restrictions:
           GeoRestriction:
