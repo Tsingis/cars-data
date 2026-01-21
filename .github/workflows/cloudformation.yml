@@ -35,3 +35,6 @@ jobs:
       - name: Cloudformation linting
         run: cfn-lint ./**/*.yml
         working-directory: ./cloudformation
+      - name: Cloudformation analysis
+        run: checkov --quiet --compact
+        working-directory: ./cloudformation
