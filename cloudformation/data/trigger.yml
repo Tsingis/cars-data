@@ -42,7 +42,7 @@ Resources:
       Runtime: !Ref FunctionRuntime
       Architectures:
         - x86_64
-      Handler: handler.handler
+      Handler: trigger.handler
       Code:
         ZipFile: |
           def handler(event, context):
@@ -106,7 +106,8 @@ Resources:
               - logs:CreateLogGroup
               - logs:CreateLogStream
               - logs:PutLogEvents
-            Resource: "*"
+            Resource:
+              - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${FunctionName}:*
       Roles:
         - !Ref TriggerLambdaFunctionRole
 
