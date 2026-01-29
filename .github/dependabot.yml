@@ -28,11 +28,6 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
-      slick:
-        patterns:
-          - "react-slick"
-          - "slick-carousel"
-          - "@types/react-slick"
       eslint:
         patterns:
           - "eslint"
