@@ -28,13 +28,23 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/plugin-react"
+          - "vite-plugin-checker"
       eslint:
         patterns:
           - "eslint"
           - "@eslint/js"
+          - "eslint-plugin-*"
       fontawesome:
         patterns:
           - "@fortawesome/*"
+      jsdom:
+        patterns:
+          - "jsdom"
+          - "@types/jsdom"
       ts-eslint:
         patterns:
           - "@typescript-eslint/*"
