@@ -35,6 +35,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+      packages: read
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Configure AWS Credentials
@@ -46,6 +47,13 @@ jobs:
       - name: Login to Amazon ECR
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2.0.1
+      - name: Login to GHCR
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3.7.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          logout: true
       - name: Build image
         run: |
           docker build --build-arg POETRY_VERSION=${{ needs.extract-poetry-version.outputs.poetry-version }} \
