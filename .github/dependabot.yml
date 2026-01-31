@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
@@ -12,10 +12,8 @@ updates:
       - "/app"
     versioning-strategy: "increase"
     schedule:
-      interval: "weekly"
-      day: "wednesday"
-      time: "21:00"
-      timezone: "Europe/Helsinki"
+      interval: "cron"
+      cronjob: "0 21 * * 2,5"
     cooldown:
       default-days: 1
     ignore:
@@ -48,11 +46,24 @@ updates:
       ts-eslint:
         patterns:
           - "@typescript-eslint/*"
+  - package-ecosystem: "pip"
+    directories:
+      - "/data"
+      - "/lambda"
+      - "/cloudformation"
+    schedule:
+      interval: "cron"
+      cronjob: "0 21 * * 2,5"
+    cooldown:
+      default-days: 1
+      exclude:
+        - "poetry"
+        - "cfn-lint"
+        - "checkov"
   - package-ecosystem: "docker"
     directories:
       - "/app"
       - "/lambda"
-      - "/util"
     ignore:
       - dependency-name: "*playwright"
       - dependency-name: "node"
@@ -62,7 +73,7 @@ updates:
         update-types:
           - "version-update:semver-minor"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
@@ -73,18 +84,3 @@ updates:
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
-  - package-ecosystem: "pip"
-    directories:
-      - "/data"
-      - "/lambda"
-      - "/cloudformation"
-    schedule:
-      interval: "weekly"
-      day: "wednesday"
-      time: "21:00"
-      timezone: "Europe/Helsinki"
-    cooldown:
-      default-days: 1
-      exclude:
-        - "poetry"
-        - "cfn-lint"
