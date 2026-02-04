@@ -35,6 +35,30 @@ Resources:
           EnableAcceptEncodingBrotli: true
           EnableAcceptEncodingGzip: true
 
+  SecurityResponseHeadersPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: security-headers-policy
+        Comment: Security headers
+        SecurityHeadersConfig:
+          FrameOptions:
+            FrameOption: DENY
+            Override: true
+          ContentTypeOptions:
+            Override: true
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 31536000
+            IncludeSubdomains: true
+            Preload: false
+            Override: true
+          ContentSecurityPolicy:
+            ContentSecurityPolicy: "script-src 'self' data:; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+            Override: true
+          ReferrerPolicy:
+            ReferrerPolicy: no-referrer-when-downgrade
+            Override: true
+
   CloudFrontDistribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
@@ -58,6 +82,7 @@ Resources:
             - GET
             - HEAD
           CachePolicyId: !Ref CachePolicy
+          ResponseHeadersPolicyId: !Ref SecurityResponseHeadersPolicy
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
           MinimumProtocolVersion: TLSv1.2_2021

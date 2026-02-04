@@ -34,6 +34,24 @@ Resources:
           EnableAcceptEncodingBrotli: true
           EnableAcceptEncodingGzip: true
 
+  SecurityResponseHeadersPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: data-security-headers-policy
+        Comment: Security headers
+        SecurityHeadersConfig:
+          ContentTypeOptions:
+            Override: true
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 31536000
+            IncludeSubdomains: true
+            Preload: false
+            Override: true
+          ReferrerPolicy:
+            ReferrerPolicy: no-referrer
+            Override: true
+
   CloudFrontDistribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
@@ -57,6 +75,7 @@ Resources:
             - GET
             - HEAD
           CachePolicyId: !Ref CachePolicy
+          ResponseHeadersPolicyId: !Ref SecurityResponseHeadersPolicy
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
           MinimumProtocolVersion: TLSv1.2_2021
