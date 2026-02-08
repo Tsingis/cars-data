@@ -146,7 +146,7 @@ const LineChart: React.FC<LineChartProps> = ({
   }, [data, title, xAxisText, yAxisText, firstXAxisLabelText]);
 
   return (
-    <div data-testid="linechart" className={`${className}`} style={style}>
+    <div data-testid="line-chart" className={`${className}`} style={style}>
       <canvas ref={chartRef}></canvas>
     </div>
   );

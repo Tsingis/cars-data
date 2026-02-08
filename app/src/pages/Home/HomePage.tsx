@@ -159,12 +159,12 @@ const HomePage = () => {
 
   return (
     <section
-      data-testid="homepage"
+      data-testid="home-page"
       className={styles.homeContainer}
       aria-label="Home Page"
     >
       <h1 className={styles.homeTitle}>{t(($) => $.common.title)}</h1>
-      <div data-testid="datadate" className={styles.dataDate}>
+      <div data-testid="data-date" className={styles.dataDate}>
         {t(($) => $.common.dataUpdatedOn)}{" "}
         {date.toLocaleDateString(locales[i18n.language], {
           year: "numeric",

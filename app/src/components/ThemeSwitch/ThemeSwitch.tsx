@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
   };
 
   return (
-    <div data-testid="themeswitch" className={styles.themeSwitchContainer}>
+    <div data-testid="theme-switch" className={styles.themeSwitchContainer}>
       <button
         className={`${styles.themeSwitchButton} ${theme === "dark" ? styles.active : ""}`}
         onClick={() => changeTheme("dark")}

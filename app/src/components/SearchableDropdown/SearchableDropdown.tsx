@@ -131,7 +131,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
 
   return (
     <div
-      data-testid="searchabledropdown"
+      data-testid="searchable-dropdown"
       className={styles.dropdownContainer}
       ref={dropdownRef}
     >
@@ -150,7 +150,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
       </div>
       {isOpen && (
         <ul
-          data-testid="dropdownmenulist"
+          data-testid="dropdown-menu-list"
           className={`${styles.dropdownMenu} ${styles.show}`}
         >
           {filteredOptions.length > 0 ? (

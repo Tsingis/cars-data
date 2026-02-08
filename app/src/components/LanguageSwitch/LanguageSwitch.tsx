@@ -12,7 +12,7 @@ const LanguageSwitch: React.FC = () => {
 
   return (
     <div
-      data-testid="languageswitch"
+      data-testid="language-switch"
       className={styles.languageSwitchContainer}
     >
       <button

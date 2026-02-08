@@ -15,16 +15,16 @@ describe("ChartsContainer Component", () => {
     render(<ChartsContainer selectedMunicipality={selectedMunicipality} />);
 
     expect(
-      document.querySelector("[data-testid=piechart]")
+      document.querySelector("[data-testid=pie-chart]")
     ).toBeInTheDocument();
     expect(
-      document.querySelector("[data-testid=barchart]")
+      document.querySelector("[data-testid=bar-chart]")
     ).toBeInTheDocument();
     expect(
-      document.querySelector("[data-testid=linechart]")
+      document.querySelector("[data-testid=line-chart]")
     ).toBeInTheDocument();
     expect(
-      document.querySelector("[data-testid=treemapchart]")
+      document.querySelector("[data-testid=treemap-chart]")
     ).toBeInTheDocument();
     expect(document.querySelector("[data-testid=toplist]")).toBeInTheDocument();
   });

@@ -7,10 +7,10 @@ test("Home page loads correctly", async ({ page }) => {
   const title = page.locator("h1:first-of-type");
   await expect(title).toBeVisible();
 
-  const dataDate = page.getByTestId("datadate");
+  const dataDate = page.getByTestId("data-date");
   await expect(dataDate).toBeVisible();
 
-  const dropdown = page.getByTestId("searchabledropdown");
+  const dropdown = page.getByTestId("searchable-dropdown");
   await expect(dropdown).toBeVisible();
 
   const dropdownInput = dropdown.locator("input");
@@ -22,7 +22,7 @@ test("Home page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("/");
 
-  const languageSwitch = page.getByTestId("languageswitch");
+  const languageSwitch = page.getByTestId("language-switch");
   await expect(languageSwitch).toBeVisible();
 
   const enButton = languageSwitch.locator("button:has-text('EN')");
@@ -57,7 +57,7 @@ test("Language switch works correctly", async ({ page }) => {
 test("Theme switch works correctly", async ({ page }) => {
   await page.goto("/");
 
-  const themeSwitch = page.getByTestId("themeswitch");
+  const themeSwitch = page.getByTestId("theme-switch");
   await expect(themeSwitch).toBeVisible();
 
   const lightButton = themeSwitch
@@ -126,7 +126,7 @@ test("Carousel slider works correctly", async ({ page }) => {
   await secondDot.hover();
   await secondDot.click();
 
-  const barchart = carousel.getByTestId("barchart");
+  const barchart = carousel.getByTestId("bar-chart");
   expect(barchart.boundingBox()).not.toBeNull();
 
   await expect(loading).toHaveCount(0);

@@ -14,7 +14,7 @@ const ErrorPage: React.FC = () => {
 
   return (
     <section
-      data-testid="errorpage"
+      data-testid="error-page"
       className={styles.errorContainer}
       aria-label="Error Page"
     >
