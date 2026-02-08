@@ -25,9 +25,13 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(enButton).toBeVisible();
   await expect(fiButton).toBeVisible();
 
+  const loading = page.getByTestId("loading");
+
   const error = page.getByTestId("error");
   const title = error.locator("h1");
   const text = error.locator("p");
+
+  await expect(loading).toHaveCount(0);
 
   await expect(page).toHaveScreenshot("error-page-language-en.png");
 
@@ -35,11 +39,15 @@ test("Language switch works correctly", async ({ page }) => {
   await expect(title).toHaveText("Virhe");
   await expect(text).toHaveText("Odottamaton virhe tapahtui");
 
+  await expect(loading).toHaveCount(0);
+
   await expect(page).toHaveScreenshot("error-page-language-fi.png");
 
   await enButton.click();
   await expect(title).toHaveText("Error");
   await expect(text).toHaveText("An unexpected error occurred");
+
+  await expect(loading).toHaveCount(0);
 
   await expect(page).toHaveScreenshot("error-page-language-en-back.png");
 });
