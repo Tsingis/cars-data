@@ -85,6 +85,7 @@ const BarChart: React.FC<BarChartProps> = ({
         const chartOptions: ChartOptions<"bar"> = {
           responsive: true,
           maintainAspectRatio: false,
+          devicePixelRatio: 1,
           plugins: {
             title: {
               display: !!title,

@@ -97,6 +97,7 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
         const chartOptions: ChartOptions<"treemap"> = {
           responsive: true,
           maintainAspectRatio: false,
+          devicePixelRatio: 1,
           plugins: {
             title: {
               display: !!title,

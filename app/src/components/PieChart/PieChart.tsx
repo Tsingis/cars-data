@@ -71,6 +71,7 @@ const PieChart: React.FC<PieChartProps> = ({
         const chartOptions: ChartOptions<"pie"> = {
           responsive: true,
           maintainAspectRatio: false,
+          devicePixelRatio: 1,
           plugins: {
             title: {
               display: !!title,

@@ -55,6 +55,7 @@ const LineChart: React.FC<LineChartProps> = ({
           options: {
             responsive: true,
             maintainAspectRatio: false,
+            devicePixelRatio: 1,
             plugins: {
               title: {
                 display: !!title,
