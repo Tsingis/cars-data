@@ -17,7 +17,7 @@ test("Error page loads correctly", async ({ page }) => {
 test("Language switch works correctly", async ({ page }) => {
   await page.goto("/error");
 
-  const languageSwitch = page.getByTestId("languageswitch");
+  const languageSwitch = page.getByTestId("language-switch");
   await expect(languageSwitch).toBeVisible();
 
   const enButton = languageSwitch.locator("button:has-text('EN')");

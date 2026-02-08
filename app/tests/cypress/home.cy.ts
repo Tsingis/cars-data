@@ -6,37 +6,37 @@ describe("Home Page", () => {
     cy.title().should("eq", "Passenger cars in Finland");
 
     cy.get("h1").first().should("be.visible");
-    cy.get("[data-testid=datadate]").should("be.visible");
-    cy.get("[data-testid=searchabledropdown]").should("be.visible");
-    cy.get("[data-testid=searchabledropdown] input").should("be.enabled");
+    cy.get("[data-testid=data-date]").should("be.visible");
+    cy.get("[data-testid=searchable-dropdown]").should("be.visible");
+    cy.get("[data-testid=searchable-dropdown] input").should("be.enabled");
   });
 
   it("Language switch works correctly", () => {
     cy.visit("/");
 
-    cy.get("[data-testid=languageswitch]").should("be.visible");
-    cy.get("[data-testid=languageswitch] button")
+    cy.get("[data-testid=language-switch]").should("be.visible");
+    cy.get("[data-testid=language-switch] button")
       .contains("FI")
       .should("be.visible");
-    cy.get("[data-testid=languageswitch] button")
+    cy.get("[data-testid=language-switch] button")
       .contains("EN")
       .should("be.visible");
 
-    cy.get("[data-testid=languageswitch] button").contains("FI").click();
+    cy.get("[data-testid=language-switch] button").contains("FI").click();
     cy.get("h1").first().should("have.text", "Henkilöautomäärät Suomessa");
 
-    cy.get("[data-testid=languageswitch] button").contains("EN").click();
+    cy.get("[data-testid=language-switch] button").contains("EN").click();
     cy.get("h1").first().should("have.text", "Passenger car counts in Finland");
   });
 
   it("Theme switch works correctly", () => {
     cy.visit("/");
 
-    cy.get("[data-testid=themeswitch]").should("be.visible");
-    cy.get('[data-testid=themeswitch] button svg[data-icon="sun"]')
+    cy.get("[data-testid=theme-switch]").should("be.visible");
+    cy.get('[data-testid=theme-switch] button svg[data-icon="sun"]')
       .parent()
       .should("be.visible");
-    cy.get('[data-testid=themeswitch] button svg[data-icon="moon"]')
+    cy.get('[data-testid=theme-switch] button svg[data-icon="moon"]')
       .parent()
       .should("be.visible");
 
@@ -45,7 +45,7 @@ describe("Home Page", () => {
         "--main-bg-color"
       );
 
-      cy.get('[data-testid=themeswitch] button svg[data-icon="moon"]')
+      cy.get('[data-testid=theme-switch] button svg[data-icon="moon"]')
         .parent()
         .click();
       cy.get("html").should(($htmlAfterDark) => {
@@ -56,7 +56,7 @@ describe("Home Page", () => {
         ).not.to.eq(initialColor);
       });
 
-      cy.get('[data-testid=themeswitch] button svg[data-icon="sun"]')
+      cy.get('[data-testid=theme-switch] button svg[data-icon="sun"]')
         .parent()
         .click();
       cy.get("html").should(($htmlAfterLight) => {
@@ -79,7 +79,7 @@ describe("Home Page", () => {
     cy.get('[data-testid^="slide-"][data-active="true"]')
       .should("have.attr", "data-testid", "slide-1")
       .within(() => {
-        cy.get('[data-testid="barchart"]').should("exist").and("be.visible");
+        cy.get('[data-testid="bar-chart"]').should("exist").and("be.visible");
       });
 
     cy.get('[data-testid="dot"]').eq(4).click();
