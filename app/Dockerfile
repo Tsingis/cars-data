@@ -7,7 +7,7 @@ COPY package.json ./
 COPY pnpm-lock.yaml ./
 
 RUN corepack enable && \
-    pnpm install --frozen-lockfile
+    pnpm install --ignore-scripts ---ignore-scripts --frozen-lockfile
 
 ARG DATA_URL
 

@@ -35,7 +35,7 @@ jobs:
       - name: Disable side effects cache
         run: pnpm config set side-effects-cache false --location project
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
       - name: Build
         run: pnpm run build
