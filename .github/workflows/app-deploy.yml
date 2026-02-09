@@ -36,7 +36,7 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
       - name: Audit
         run: pnpm run audit

@@ -34,7 +34,7 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
   check:
     runs-on: ubuntu-latest
@@ -53,7 +53,7 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
       - name: Check types, linting & formatting
         run: |
@@ -79,7 +79,7 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
       - name: Build
         run: npm run build
@@ -101,7 +101,7 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "app/pnpm-lock.yaml"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
         working-directory: ./app
       - name: Run tests
         run: pnpm run vitest
