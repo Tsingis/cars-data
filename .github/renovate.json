@@ -1,27 +1,48 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended"
+  ],
   "timezone": "Europe/Helsinki",
-  "schedule": ["* 21-22 * * 3"],
+  "schedule": [
+    "* 21-22 * * 3"
+  ],
   "rebaseWhen": "conflicted",
-  "enabledManagers": ["npm", "dockerfile"],
+  "enabledManagers": [
+    "npm",
+    "dockerfile"
+  ],
   "packageRules": [
     {
-      "matchDepTypes": ["packageManager"],
+      "matchDepTypes": [
+        "packageManager"
+      ],
       "enabled": true
     },
     {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ],
       "enabled": false
     },
     {
-      "matchManagers": ["dockerfile"],
-      "excludePackageNames": ["mcr.microsoft.com/playwright"],
-      "enabled": false
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "enabled": false,
+      "matchPackageNames": [
+        "!mcr.microsoft.com/playwright"
+      ]
     },
     {
-      "matchManagers": ["npm", "dockerfile"],
+      "matchManagers": [
+        "npm",
+        "dockerfile"
+      ],
       "matchPackageNames": [
         "playwright",
         "@playwright/test",
