@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "dependencyDashboard": false,
   "timezone": "Europe/Helsinki",
   "schedule": [
     "* 21-22 * * 3"
