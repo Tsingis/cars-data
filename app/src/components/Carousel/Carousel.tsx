@@ -221,6 +221,7 @@ const Carousel: React.FC<CarouselProps> = ({
       ref={carouselRef}
       className={`${styles.carousel} ${className} ${dragging ? styles.dragging : ""}`}
       aria-label="Carousel"
+      tabIndex={0}
       onKeyDown={handleKeyDown}
       onPointerDown={handlePointerDown}
       style={{
