@@ -56,7 +56,8 @@ jobs:
           logout: true
       - name: Build image
         run: |
-          docker build --build-arg POETRY_VERSION=${{ needs.extract-poetry-version.outputs.poetry-version }} \
+          docker buildx build --provenance=false \
+          --build-arg POETRY_VERSION=${{ needs.extract-poetry-version.outputs.poetry-version }} \
           --build-arg BASE_IMAGE=${{ vars.LAMBDA_IMAGE_REPOSITORY}}:${{ vars.LAMBDA_IMAGE_TAG }} \
           -t ${{ vars.DATA_LAMBDA_IMAGE_REPOSITORY }}:${{ vars.DATA_LAMBDA_IMAGE_TAG }} .
         working-directory: ./data
