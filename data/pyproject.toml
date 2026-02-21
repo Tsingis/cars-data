@@ -15,7 +15,7 @@ python = "^3.13"
 
 [tool.poetry.group.main.dependencies]
 numpy = "2.4.2"
-pandas = "3.0.0"
+pandas = "3.0.1"
 pydantic = "2.12.5"
 
 [tool.poetry.group.common.dependencies]
