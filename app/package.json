@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@10.30.0",
+  "packageManager": "pnpm@10.30.2",
   "scripts": {
     "predev": "node check-packages.js",
     "dev": "vite --config ./vite.config.ts --open",
