@@ -33,8 +33,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(chart.js@4.5.1)
       i18next:
-        specifier: ^25.8.14
-        version: 25.8.14(typescript@6.0.0-dev.20260310)
+        specifier: ^25.8.18
+        version: 25.8.18(typescript@6.0.0-dev.20260310)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -43,7 +43,7 @@ importers:
         version: 19.2.4(react@19.2.4)
       react-i18next:
         specifier: ^16.5.8
-        version: 16.5.8(i18next@25.8.14(typescript@6.0.0-dev.20260310))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.0-dev.20260310)
+        version: 16.5.8(i18next@25.8.18(typescript@6.0.0-dev.20260310))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.0-dev.20260310)
       react-router:
         specifier: ^7.13.1
         version: 7.13.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -2020,8 +2020,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  i18next@25.8.14:
-    resolution: {integrity: sha512-paMUYkfWJMsWPeE/Hejcw+XLhHrQPehem+4wMo+uELnvIwvCG019L9sAIljwjCmEMtFQQO3YeitJY8Kctei3iA==}
+  i18next@25.8.18:
+    resolution: {integrity: sha512-lzY5X83BiL5AP77+9DydbrqkQHFN9hUzWGjqjLpPcp5ZOzuu1aSoKaU3xbBLSjWx9dAzW431y+d+aogxOZaKRA==}
     peerDependencies:
       typescript: ^5
     peerDependenciesMeta:
@@ -5552,7 +5552,7 @@ snapshots:
 
   husky@9.1.7: {}
 
-  i18next@25.8.14(typescript@6.0.0-dev.20260310):
+  i18next@25.8.18(typescript@6.0.0-dev.20260310):
     dependencies:
       '@babel/runtime': 7.28.6
     optionalDependencies:
@@ -6247,11 +6247,11 @@ snapshots:
       react: 19.2.4
       scheduler: 0.27.0
 
-  react-i18next@16.5.8(i18next@25.8.14(typescript@6.0.0-dev.20260310))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.0-dev.20260310):
+  react-i18next@16.5.8(i18next@25.8.18(typescript@6.0.0-dev.20260310))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.0-dev.20260310):
     dependencies:
       '@babel/runtime': 7.28.6
       html-parse-stringify: 3.0.1
-      i18next: 25.8.14(typescript@6.0.0-dev.20260310)
+      i18next: 25.8.18(typescript@6.0.0-dev.20260310)
       react: 19.2.4
       use-sync-external-store: 1.6.0(react@19.2.4)
     optionalDependencies:
