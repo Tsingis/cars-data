@@ -92,7 +92,8 @@
       "minimatch": "^10.2.3",
       "qs": "^6.14.2",
       "systeminformation": "^5.31.0",
-      "undici": "^7.24.0"
+      "undici": "^7.24.0",
+      "yauzl": "^3.2.1"
     }
   }
 }
