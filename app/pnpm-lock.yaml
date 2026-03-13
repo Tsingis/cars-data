@@ -106,8 +106,8 @@ importers:
         specifier: ^2.12.0
         version: 2.12.0(eslint@9.39.4)
       eslint-plugin-cypress:
-        specifier: ^6.1.0
-        version: 6.1.0(eslint@9.39.4)
+        specifier: ^6.2.0
+        version: 6.2.0(eslint@9.39.4)
       eslint-plugin-i18n-json:
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.39.4)
@@ -133,8 +133,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       eslint-plugin-sonarjs:
-        specifier: ^4.0.1
-        version: 4.0.1(eslint@9.39.4)
+        specifier: ^4.0.2
+        version: 4.0.2(eslint@9.39.4)
       globals:
         specifier: ^17.4.0
         version: 17.4.0
@@ -1760,8 +1760,8 @@ packages:
     peerDependencies:
       eslint: '>=2.0.0'
 
-  eslint-plugin-cypress@6.1.0:
-    resolution: {integrity: sha512-B8sxtNpINDxFkmsu1qKYjg70VsP8SGneEXgLcZMk1bUZcW08S+JyaiMdof1x6dmt02FgOD7YkT4wOaOD5HotJw==}
+  eslint-plugin-cypress@6.2.0:
+    resolution: {integrity: sha512-G/8XT9Si0GaqGRVM0sgnRACCI9mbzsC4CisvaaiuJlQoCseKz6C51kq5fcC/yKmwO4dTsWCdhbgaiQtZFGSONg==}
     peerDependencies:
       eslint: '>=9'
 
@@ -1812,8 +1812,8 @@ packages:
     resolution: {integrity: sha512-tfuQT8K/Li1ZxhFzyD8wPIKtlzZxqBcPr9q0jFMQ77wWAbKBVEhaMPVQRTMTvCMUDhwBe5vPVqQPwAGk/ASfxQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  eslint-plugin-sonarjs@4.0.1:
-    resolution: {integrity: sha512-lmqzFTrw0/zpHQMRmwdgdEEw50s3md0c8RE23JqNom9ovsGQxC/azZ9H00aGKVDkxIXywfcxwzyFJ9Sm3bp2ng==}
+  eslint-plugin-sonarjs@4.0.2:
+    resolution: {integrity: sha512-BTcT1zr1iTbmJtVlcesISwnXzh+9uhf9LEOr+RRNf4kR8xA0HQTPft4oiyOCzCOGKkpSJxjR8ZYF6H7VPyplyw==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -5298,7 +5298,7 @@ snapshots:
       gonzales-pe: 4.3.0
       lodash: 4.17.23
 
-  eslint-plugin-cypress@6.1.0(eslint@9.39.4):
+  eslint-plugin-cypress@6.2.0(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4
       globals: 17.4.0
@@ -5396,7 +5396,7 @@ snapshots:
     dependencies:
       safe-regex: 2.1.1
 
-  eslint-plugin-sonarjs@4.0.1(eslint@9.39.4):
+  eslint-plugin-sonarjs@4.0.2(eslint@9.39.4):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       builtin-modules: 3.3.0
