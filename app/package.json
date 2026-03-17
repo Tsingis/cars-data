@@ -75,7 +75,7 @@
     "globals": "^17.4.0",
     "http-server": "^14.1.1",
     "husky": "^9.1.7",
-    "jsdom": "^28.1.0",
+    "jsdom": "^29.0.0",
     "playwright": "^1.58.2",
     "start-server-and-test": "^2.1.5",
     "typescript": "^6.0.0-dev.20260312",
