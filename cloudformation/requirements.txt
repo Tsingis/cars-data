@@ -1,2 +1,2 @@
-cfn-lint==1.47.0
+cfn-lint==1.47.1
 checkov==3.2.510
