@@ -109,8 +109,8 @@ importers:
         specifier: ^2.12.0
         version: 2.12.0(eslint@9.39.4)
       eslint-plugin-cypress:
-        specifier: ^6.2.1
-        version: 6.2.1(eslint@9.39.4)
+        specifier: ^6.2.2
+        version: 6.2.2(eslint@9.39.4)
       eslint-plugin-i18n-json:
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.39.4)
@@ -1550,8 +1550,8 @@ packages:
     peerDependencies:
       eslint: '>=2.0.0'
 
-  eslint-plugin-cypress@6.2.1:
-    resolution: {integrity: sha512-pbjvNE2GKG3hlerT3SIQcRnsMfzFnpAyg0V17D+Gm/a18cxBOVLUxWWANAs7LzykdTPn+SKgzczhF0+IODFs7w==}
+  eslint-plugin-cypress@6.2.2:
+    resolution: {integrity: sha512-lOhmMWb5/+zv28EaDOT7C3lgGgWL8DMZglTUNUaaGfleK89joDBRXX8LV01ygx3dK1RbvG54b8t025/5QEUKgg==}
     peerDependencies:
       eslint: '>=9'
 
@@ -4800,7 +4800,7 @@ snapshots:
       gonzales-pe: 4.3.0
       lodash: 4.18.1
 
-  eslint-plugin-cypress@6.2.1(eslint@9.39.4):
+  eslint-plugin-cypress@6.2.2(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4
       globals: 17.4.0
