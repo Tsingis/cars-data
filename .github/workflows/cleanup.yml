@@ -1,0 +1,48 @@
+name: cleanup
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      packages: write
+    steps:
+      - name: Cleanup old package versions
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const packageName = "python-lambda";
+            const keep = 4;
+
+            const versions = await github.paginate(
+              "GET /users/{username}/packages/container/{package_name}/versions",
+              { username: owner, package_name: packageName, per_page: 100 }
+            );
+
+            // Sort newest → oldest
+            versions.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+            // Keep first N
+            const keepIds = new Set(versions.slice(0, keep).map(v => v.id));
+
+            for (const v of versions) {
+              if (!keepIds.has(v.id)) {
+                console.log(`Deleting ${v.id}`);
+                await github.request(
+                  "DELETE /users/{username}/packages/container/{package_name}/versions/{package_version_id}",
+                  {
+                    username: owner,
+                    package_name: packageName,
+                    package_version_id: v.id
+                  }
+                );
+              }
+            }
