@@ -24,7 +24,7 @@ requests = "2.33.1"
 [tool.poetry.group.dev.dependencies]
 notebook = "7.5.5"
 pip-audit = "2.10.0"
-pytest = "9.0.2"
+pytest = "9.0.3"
 ruff = "0.15.10"
 
 [tool.poetry.group.main]
