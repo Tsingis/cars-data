@@ -139,8 +139,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2(eslint@9.39.4)
       globals:
-        specifier: ^17.4.0
-        version: 17.4.0
+        specifier: ^17.5.0
+        version: 17.5.0
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -1832,8 +1832,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.4.0:
-    resolution: {integrity: sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==}
+  globals@17.5.0:
+    resolution: {integrity: sha512-qoV+HK2yFl/366t2/Cb3+xxPUo5BuMynomoDmiaZBIdbs+0pYbjfZU+twLhGKp4uCZ/+NbtpVepH5bGCxRyy2g==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -4816,7 +4816,7 @@ snapshots:
   eslint-plugin-cypress@6.3.0(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4
-      globals: 17.4.0
+      globals: 17.5.0
 
   eslint-plugin-i18n-json@4.0.1(eslint@9.39.4):
     dependencies:
@@ -4868,7 +4868,7 @@ snapshots:
   eslint-plugin-playwright@2.10.1(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4
-      globals: 17.4.0
+      globals: 17.5.0
 
   eslint-plugin-react-hooks@7.0.1(eslint@9.39.4):
     dependencies:
@@ -4918,7 +4918,7 @@ snapshots:
       bytes: 3.1.2
       eslint: 9.39.4
       functional-red-black-tree: 1.0.1
-      globals: 17.4.0
+      globals: 17.5.0
       jsx-ast-utils-x: 0.1.0
       lodash.merge: 4.6.2
       minimatch: 10.2.4
@@ -5186,7 +5186,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.4.0: {}
+  globals@17.5.0: {}
 
   globalthis@1.0.4:
     dependencies:
