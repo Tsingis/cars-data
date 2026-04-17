@@ -109,14 +109,14 @@ importers:
         specifier: ^2.12.0
         version: 2.12.0(eslint@9.39.4)
       eslint-plugin-cypress:
-        specifier: ^6.3.0
-        version: 6.3.0(eslint@9.39.4)
+        specifier: ^6.3.1
+        version: 6.3.1(eslint@9.39.4)
       eslint-plugin-i18n-json:
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.39.4)
       eslint-plugin-i18next:
-        specifier: ^6.1.3
-        version: 6.1.3
+        specifier: ^6.1.4
+        version: 6.1.4
       eslint-plugin-import:
         specifier: ^2.32.0
         version: 2.32.0(@typescript-eslint/parser@8.58.2(eslint@9.39.4)(typescript@6.0.2))(eslint@9.39.4)
@@ -136,8 +136,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       eslint-plugin-sonarjs:
-        specifier: ^4.0.2
-        version: 4.0.2(eslint@9.39.4)
+        specifier: ^4.0.3
+        version: 4.0.3(eslint@9.39.4)
       globals:
         specifier: ^17.5.0
         version: 17.5.0
@@ -1553,8 +1553,8 @@ packages:
     peerDependencies:
       eslint: '>=2.0.0'
 
-  eslint-plugin-cypress@6.3.0:
-    resolution: {integrity: sha512-4M3vgcMYgStgrYJn2uRtyWlAAJsY88//ctDJfBoQE2VtUWuBQ90W1Uiyar8MLQN2Ii52ZsEuzA3OBrnEW8Me/g==}
+  eslint-plugin-cypress@6.3.1:
+    resolution: {integrity: sha512-iTJtdIZbyCUlagEI4YlVcwgPFV7X379Qi/upujaD4kvOaQkMvzmpt90vfSnaqgqprp/HPIvhnzv3fdI7mYV4QQ==}
     peerDependencies:
       eslint: '>=9'
 
@@ -1564,8 +1564,8 @@ packages:
     peerDependencies:
       eslint: '>=4.0.0'
 
-  eslint-plugin-i18next@6.1.3:
-    resolution: {integrity: sha512-z/h4oBRd9wI1ET60HqcLSU6XPeAh/EPOrBBTyCdkWeMoYrWAaUVA+DOQkWTiNIyCltG4NTmy62SQisVXxoXurw==}
+  eslint-plugin-i18next@6.1.4:
+    resolution: {integrity: sha512-BekXQu1VaVFkREepQGsntBYoKuPsf89V16n/s2xpKMtsw0/lDseds1wBhj3RtO1dKnHsfTPaG+xul1vF0R7LEQ==}
     engines: {node: '>=18.10.0'}
 
   eslint-plugin-import@2.32.0:
@@ -1605,8 +1605,8 @@ packages:
     resolution: {integrity: sha512-tfuQT8K/Li1ZxhFzyD8wPIKtlzZxqBcPr9q0jFMQ77wWAbKBVEhaMPVQRTMTvCMUDhwBe5vPVqQPwAGk/ASfxQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  eslint-plugin-sonarjs@4.0.2:
-    resolution: {integrity: sha512-BTcT1zr1iTbmJtVlcesISwnXzh+9uhf9LEOr+RRNf4kR8xA0HQTPft4oiyOCzCOGKkpSJxjR8ZYF6H7VPyplyw==}
+  eslint-plugin-sonarjs@4.0.3:
+    resolution: {integrity: sha512-5drkJKLC9qQddIiaATV0e8+ygbUc7b0Ti6VB7M2d3jmKNh3X0RaiIJYTs3dr9xnlhlrxo+/s1FoO3Jgv6O/c7g==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -3014,12 +3014,6 @@ packages:
   tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
-
-  ts-api-utils@2.4.0:
-    resolution: {integrity: sha512-3TaVTaAv2gTiMB35i3FiGJaRfwb3Pyn/j3m/bfAvGe8FB7CF6u+LMYqYlDh7reQf7UNvoTvdfAqHGmPGOSsPmA==}
-    engines: {node: '>=18.12'}
-    peerDependencies:
-      typescript: '>=4.8.4'
 
   ts-api-utils@2.5.0:
     resolution: {integrity: sha512-OJ/ibxhPlqrMM0UiNHJ/0CKQkoKF243/AEmplt3qpRgkW8VG7IfOS41h7V8TjITqdByHzrjcS/2si+y4lIh8NA==}
@@ -4813,7 +4807,7 @@ snapshots:
       gonzales-pe: 4.3.0
       lodash: 4.18.1
 
-  eslint-plugin-cypress@6.3.0(eslint@9.39.4):
+  eslint-plugin-cypress@6.3.1(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4
       globals: 17.5.0
@@ -4831,7 +4825,7 @@ snapshots:
       plur: 2.1.2
       pretty-format: 22.4.3
 
-  eslint-plugin-i18next@6.1.3:
+  eslint-plugin-i18next@6.1.4:
     dependencies:
       lodash: 4.18.1
       requireindex: 1.1.0
@@ -4911,7 +4905,7 @@ snapshots:
     dependencies:
       safe-regex: 2.1.1
 
-  eslint-plugin-sonarjs@4.0.2(eslint@9.39.4):
+  eslint-plugin-sonarjs@4.0.3(eslint@9.39.4):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       builtin-modules: 3.3.0
@@ -4921,10 +4915,10 @@ snapshots:
       globals: 17.5.0
       jsx-ast-utils-x: 0.1.0
       lodash.merge: 4.6.2
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       scslre: 0.3.0
       semver: 7.7.4
-      ts-api-utils: 2.4.0(typescript@6.0.2)
+      ts-api-utils: 2.5.0(typescript@6.0.2)
       typescript: 6.0.2
 
   eslint-scope@8.4.0:
@@ -6400,10 +6394,6 @@ snapshots:
       punycode: 2.3.1
 
   tree-kill@1.2.2: {}
-
-  ts-api-utils@2.4.0(typescript@6.0.2):
-    dependencies:
-      typescript: 6.0.2
 
   ts-api-utils@2.5.0(typescript@6.0.2):
     dependencies:
