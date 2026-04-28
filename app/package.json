@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.0.0+sha512.5bd187500e49cc6c3d891d973b432c02b844a5eb7209172c90a517a3ef4f579ed5c23d409b699e6a9dc418ff7b2b1890e63f6d74f1d3fc49848f37779c89c84c",
   "scripts": {
     "predev": "node check-packages.js",
     "dev": "vite --config ./vite.config.ts --open",
@@ -82,19 +82,5 @@
     "vite": "^8.0.10",
     "vite-plugin-checker": "^0.13.0",
     "vitest": "^4.1.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "@isaacs/brace-expansion": "^5.0.1",
-      "axios": "^1.15.0",
-      "diff": "^8.0.3",
-      "lodash": "^4.18.1",
-      "minimatch": "^10.2.3",
-      "picomatch": "^4.0.4",
-      "qs": "^6.14.2",
-      "systeminformation": "^5.31.0",
-      "undici": "^7.24.0",
-      "yauzl": "^3.2.1"
-    }
   }
 }

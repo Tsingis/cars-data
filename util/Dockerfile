@@ -12,4 +12,4 @@ COPY app/tsconfig.json ./
 COPY app/vite.config.ts ./
 COPY app/playwright.config.ts ./
 
-RUN pnpm install --ignore-scripts ---ignore-scripts --frozen-lockfile && pnpm run build
+RUN pnpm ci --ignore-scripts ---ignore-scripts --frozen-lockfile && pnpm run build

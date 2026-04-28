@@ -1,2 +1,4 @@
+allowBuilds:
+  cypress: false
 onlyBuiltDependencies:
   - cypress
