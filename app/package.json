@@ -29,7 +29,7 @@
     "build": "vite --config ./vite.config.ts build",
     "prepare": "cd .. && husky app/.husky"
   },
-  "minimumReleaseAge": 60,
+  "minimumReleaseAge": 1440,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
