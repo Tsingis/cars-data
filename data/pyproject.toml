@@ -13,6 +13,9 @@ name = "pypi"
 [tool.poetry.dependencies]
 python = "^3.13"
 
+[solver]
+min-release-age = 1
+
 [tool.poetry.group.main.dependencies]
 numpy = "2.4.6"
 pandas = "3.0.3"
