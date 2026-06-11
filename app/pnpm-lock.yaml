@@ -67,8 +67,8 @@ importers:
         specifier: ^28.0.3
         version: 28.0.3
       '@types/node':
-        specifier: ^25.9.1
-        version: 25.9.1
+        specifier: ^25.9.2
+        version: 25.9.2
       '@types/react':
         specifier: ^19.2.17
         version: 19.2.17
@@ -83,7 +83,7 @@ importers:
         version: 8.60.1(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       '@vitejs/plugin-react':
         specifier: ^6.0.2
-        version: 6.0.2(vite@8.0.16(@types/node@25.9.1))
+        version: 6.0.2(vite@8.0.16(@types/node@25.9.2))
       concurrently:
         specifier: ^10.0.3
         version: 10.0.3
@@ -149,13 +149,13 @@ importers:
         version: 6.0.3
       vite:
         specifier: ^8.0.16
-        version: 8.0.16(@types/node@25.9.1)
+        version: 8.0.16(@types/node@25.9.2)
       vite-plugin-checker:
         specifier: ^0.14.1
-        version: 0.14.1(@biomejs/biome@2.4.16)(eslint@9.39.4(supports-color@8.1.1))(optionator@0.9.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.1))
+        version: 0.14.1(@biomejs/biome@2.4.16)(eslint@9.39.4(supports-color@8.1.1))(optionator@0.9.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.2))
       vitest:
         specifier: ^4.1.8
-        version: 4.1.8(@types/node@25.9.1)(jsdom@29.1.1)(vite@8.0.16(@types/node@25.9.1))
+        version: 4.1.8(@types/node@25.9.2)(jsdom@29.1.1)(vite@8.0.16(@types/node@25.9.2))
 
 packages:
 
@@ -735,8 +735,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@25.9.1':
-    resolution: {integrity: sha512-xfrlY7UD5rMJk3ZVJP8BNzS28J36YJg+xp+LPXV1TdWxr8uMH5A860QNxYDGQe/ylDSgjxE52Q9VnO7p75tJxg==}
+  '@types/node@25.9.2':
+    resolution: {integrity: sha512-G05zqtJhcDLb8uslf5EjCxXg9G1KQxiV8OS0R26IC//Eoyitzqe8z37I7cqvnZlrlSfgocQRfSn/AHBZJJFyGw==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -3595,7 +3595,7 @@ snapshots:
 
   '@jest/pattern@30.0.1':
     dependencies:
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       jest-regex-util: 30.0.1
 
   '@jest/schemas@30.0.5':
@@ -3608,7 +3608,7 @@ snapshots:
       '@jest/schemas': 30.0.5
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -3772,7 +3772,7 @@ snapshots:
 
   '@types/jsdom@28.0.3':
     dependencies:
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       '@types/tough-cookie': 4.0.5
       parse5: 8.0.1
       undici-types: 7.25.0
@@ -3781,7 +3781,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@25.9.1':
+  '@types/node@25.9.2':
     dependencies:
       undici-types: 7.24.6
 
@@ -3900,10 +3900,10 @@ snapshots:
       '@typescript-eslint/types': 8.60.1
       eslint-visitor-keys: 5.0.1
 
-  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.1))':
+  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.0.16(@types/node@25.9.1)
+      vite: 8.0.16(@types/node@25.9.2)
 
   '@vitest/expect@4.1.8':
     dependencies:
@@ -3914,13 +3914,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.8(vite@8.0.16(@types/node@25.9.1))':
+  '@vitest/mocker@4.1.8(vite@8.0.16(@types/node@25.9.2))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.0.16(@types/node@25.9.1)
+      vite: 8.0.16(@types/node@25.9.2)
 
   '@vitest/pretty-format@4.1.8':
     dependencies:
@@ -5273,7 +5273,7 @@ snapshots:
   jest-mock@30.2.0:
     dependencies:
       '@jest/types': 30.2.0
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       jest-util: 30.2.0
 
   jest-regex-util@30.0.1: {}
@@ -5281,7 +5281,7 @@ snapshots:
   jest-util@30.2.0:
     dependencies:
       '@jest/types': 30.2.0
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       chalk: 4.1.2
       ci-info: 4.4.0
       graceful-fs: 4.2.11
@@ -6283,7 +6283,7 @@ snapshots:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  vite-plugin-checker@0.14.1(@biomejs/biome@2.4.16)(eslint@9.39.4(supports-color@8.1.1))(optionator@0.9.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.1)):
+  vite-plugin-checker@0.14.1(@biomejs/biome@2.4.16)(eslint@9.39.4(supports-color@8.1.1))(optionator@0.9.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.2)):
     dependencies:
       '@babel/code-frame': 7.29.7
       chokidar: 5.0.0
@@ -6292,14 +6292,14 @@ snapshots:
       picomatch: 4.0.4
       proper-lockfile: 4.1.2
       tiny-invariant: 1.3.3
-      vite: 8.0.16(@types/node@25.9.1)
+      vite: 8.0.16(@types/node@25.9.2)
     optionalDependencies:
       '@biomejs/biome': 2.4.16
       eslint: 9.39.4(supports-color@8.1.1)
       optionator: 0.9.4
       typescript: 6.0.3
 
-  vite@8.0.16(@types/node@25.9.1):
+  vite@8.0.16(@types/node@25.9.2):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -6307,13 +6307,13 @@ snapshots:
       rolldown: 1.0.3
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       fsevents: 2.3.3
 
-  vitest@4.1.8(@types/node@25.9.1)(jsdom@29.1.1)(vite@8.0.16(@types/node@25.9.1)):
+  vitest@4.1.8(@types/node@25.9.2)(jsdom@29.1.1)(vite@8.0.16(@types/node@25.9.2)):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@8.0.16(@types/node@25.9.1))
+      '@vitest/mocker': 4.1.8(vite@8.0.16(@types/node@25.9.2))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -6330,10 +6330,10 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.0.16(@types/node@25.9.1)
+      vite: 8.0.16(@types/node@25.9.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 25.9.1
+      '@types/node': 25.9.2
       jsdom: 29.1.1
     transitivePeerDependencies:
       - msw
