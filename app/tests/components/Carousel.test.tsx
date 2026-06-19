@@ -21,7 +21,7 @@ describe("Carousel component", () => {
     expect(carousel).toBeInTheDocument();
 
     const dots = screen.getAllByTestId("dot");
-    expect(dots.length).toBe(slides.length);
+    expect(dots.length).toHaveLength(slides.length);
   });
 
   test("renders arrows when enabled", () => {
