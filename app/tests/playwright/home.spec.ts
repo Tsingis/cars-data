@@ -116,8 +116,8 @@ test("Carousel slider works correctly", async ({ page }) => {
   await expect(carousel).toBeVisible();
 
   const dots = carousel.getByTestId("dot");
+  await expect(dots).toHaveCount(5);
   const dotCount = await dots.count();
-  expect(dotCount).toBe(5);
 
   const loading = page.getByTestId("loading");
 
