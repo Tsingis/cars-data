@@ -8,6 +8,7 @@ node_modules
 dist
 test-results
 tsconfig.tsbuildinfo
+.eslintcache
 vite.config.*.timestamp-*
 vitest.config.*.timestamp-*
 *.csv

@@ -19,7 +19,7 @@
     "cypress": "start-server-and-test 'pnpm run cypress:setup' \"http://localhost:3000|http://localhost:8000\" 'cypress run'",
     "vitest": "vitest --config vitest.config.ts",
     "audit": "pnpm audit --audit-level high --prod",
-    "eslint": "eslint . --config ./eslint.config.js",
+    "eslint": "eslint . --config ./eslint.config.js --cache",
     "eslint:fix": "eslint . --config ./eslint.config.js --fix",
     "lint": "biome lint --diagnostic-level=warn .",
     "lint:fix": "biome lint --diagnostic-level=warn --write .",
