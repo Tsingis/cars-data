@@ -25,7 +25,7 @@
     "lint:fix": "biome lint --diagnostic-level=warn --write .",
     "format": "biome format --diagnostic-level=warn .",
     "format:fix": "biome format --diagnostic-level=warn --write .",
-    "typecheck": "tsc --noEmit -p ./tsconfig.json",
+    "typecheck": "tsc -p ./tsconfig.json",
     "build": "vite --config ./vite.config.ts build",
     "prepare": "cd .. && husky app/.husky"
   },
