@@ -97,8 +97,8 @@ importers:
         specifier: ^2.12.0
         version: 2.12.0(eslint@9.39.4(supports-color@8.1.1))
       eslint-plugin-cypress:
-        specifier: ^6.4.1
-        version: 6.4.1(@typescript-eslint/parser@8.62.0(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.4(supports-color@8.1.1))
+        specifier: ^6.4.2
+        version: 6.4.2(@typescript-eslint/parser@8.62.0(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.4(supports-color@8.1.1))
       eslint-plugin-i18n-json:
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.39.4(supports-color@8.1.1))
@@ -1416,8 +1416,8 @@ packages:
     peerDependencies:
       eslint: '>=2.0.0'
 
-  eslint-plugin-cypress@6.4.1:
-    resolution: {integrity: sha512-8mnfR3q0Lr41Fu9SYZGeZ5nbSBgtS44+bbtSs7k0KvfoQ2pPmK43IvaTP6FGTfwBTN6S7w027CpqjrLAd65AYA==}
+  eslint-plugin-cypress@6.4.2:
+    resolution: {integrity: sha512-OIGJP5y6/cyMxBtMASP/iBM7Pv4ZHccE9uI8MhtAZDrdNDYDwHgKa/3Khrr+FGRr9hSIfNYstGRhSmbcLURWYA==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=9'
@@ -4603,7 +4603,7 @@ snapshots:
       gonzales-pe: 4.3.0
       lodash: 4.18.1
 
-  eslint-plugin-cypress@6.4.1(@typescript-eslint/parser@8.62.0(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.4(supports-color@8.1.1)):
+  eslint-plugin-cypress@6.4.2(@typescript-eslint/parser@8.62.0(eslint@9.39.4(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.4(supports-color@8.1.1)):
     dependencies:
       eslint: 9.39.4(supports-color@8.1.1)
       globals: 17.7.0
