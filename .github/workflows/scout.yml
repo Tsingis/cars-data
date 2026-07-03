@@ -44,7 +44,7 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@d539f0932e70871a027e9d5a9d8fc38589180a64 # v2.1.6
       - name: Scan image CVEs and recommendations
-        uses: docker/scout-action@7520205ff60037fdc436b40b6a1d1e55a839ec2d # v1.22.0
+        uses: docker/scout-action@ce97ec1bb85613e8eb35d086fad0c77a6cedf983 # v1.23.0
         with:
           command: cves,recommendations
           image: "${{ matrix.image.repository }}:${{ matrix.image.tag }}"
