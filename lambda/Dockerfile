@@ -22,12 +22,8 @@ ARG FUNCTION_DIR
 RUN apk add --no-cache \
     autoconf \
     automake \
-    binutils \
     cmake \
-    elfutils-dev \
     g++ \
-    gcc \
-    libc-dev \
     libtool \
     make
 
