@@ -133,7 +133,29 @@ test("Carousel slider works correctly", async ({ page }) => {
 
   await expect(page).toHaveScreenshot("carousel-slider-second-dot.png");
 
+  const thirdDot = dots.nth(2);
+  await expect(thirdDot).toBeVisible();
+  await thirdDot.hover();
+  await thirdDot.click();
+
+  const linechart = carousel.getByTestId("line-chart");
+  expect(linechart.boundingBox()).not.toBeNull();
+
   await expect(loading).toHaveCount(0);
+
+  await expect(page).toHaveScreenshot("carousel-slider-third-dot.png");
+
+  const fourthDot = dots.nth(3);
+  await expect(fourthDot).toBeVisible();
+  await fourthDot.hover();
+  await fourthDot.click();
+
+  const treemapchart = carousel.getByTestId("treemap-chart");
+  expect(treemapchart.boundingBox()).not.toBeNull();
+
+  await expect(loading).toHaveCount(0);
+
+  await expect(page).toHaveScreenshot("carousel-slider-fourth-dot.png");
 
   const finalDot = dots.nth(dotCount - 1);
   await expect(finalDot).toBeVisible();
