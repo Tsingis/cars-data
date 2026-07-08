@@ -66,6 +66,7 @@ services:
     environment:
       - CI=true
       - MAX_DIFF_PIXEL_RATIO=0
+      - HUSKY=0
     read_only: false
     privileged: true
     volumes:
