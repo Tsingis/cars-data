@@ -14,7 +14,7 @@ export default defineConfig({
           tsconfigPath: "./tsconfig.json",
         },
         eslint: {
-          lintCommand: "eslint . --config ./eslint.config.js",
+          lintCommand: "eslint . --cache",
           useFlatConfig: true,
         },
         biome: {
@@ -29,7 +29,7 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      input: "src/index.html",
+      input: "index.html",
     },
   },
   server: {
