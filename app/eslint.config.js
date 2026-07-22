@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import parser from "@typescript-eslint/parser";
-import cssModulesPlugin from "eslint-plugin-css-modules";
 import cypressPlugin from "eslint-plugin-cypress";
 import i18nJsonPlugin from "eslint-plugin-i18n-json";
 import i18nextPlugin from "eslint-plugin-i18next";
@@ -106,7 +105,6 @@ export default [
       "react-refresh": refreshPlugin,
       "import-x": importXPlugin,
       security: securityPlugin,
-      "css-modules": cssModulesPlugin,
       sonarjs: sonarPlugin,
     },
     rules: {
@@ -121,8 +119,6 @@ export default [
         "error",
         { prefer: "type-imports" },
       ],
-      "css-modules/no-unused-class": "error",
-      "css-modules/no-undef-class": "error",
       "import-x/no-unresolved": "off",
       "sonarjs/todo-tag": "off",
       "security/detect-object-injection": "off",
