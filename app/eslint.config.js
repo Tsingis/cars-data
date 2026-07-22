@@ -5,7 +5,7 @@ import cssModulesPlugin from "eslint-plugin-css-modules";
 import cypressPlugin from "eslint-plugin-cypress";
 import i18nJsonPlugin from "eslint-plugin-i18n-json";
 import i18nextPlugin from "eslint-plugin-i18next";
-import importPlugin from "eslint-plugin-import";
+import { importX as importXPlugin } from "eslint-plugin-import-x";
 import playwrightPlugin from "eslint-plugin-playwright";
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
@@ -104,7 +104,7 @@ export default [
       react: reactPlugin,
       "react-hooks": hooksPlugin,
       "react-refresh": refreshPlugin,
-      import: importPlugin,
+      "import-x": importXPlugin,
       security: securityPlugin,
       "css-modules": cssModulesPlugin,
       sonarjs: sonarPlugin,
@@ -114,7 +114,7 @@ export default [
       ...reactPlugin.configs.recommended.rules,
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
-      ...importPlugin.configs.recommended.rules,
+      ...importXPlugin.configs.recommended.rules,
       ...securityPlugin.configs.recommended.rules,
       ...sonarPlugin.configs.recommended.rules,
       "@typescript-eslint/consistent-type-imports": [
@@ -123,7 +123,7 @@ export default [
       ],
       "css-modules/no-unused-class": "error",
       "css-modules/no-undef-class": "error",
-      "import/no-unresolved": "off",
+      "import-x/no-unresolved": "off",
       "sonarjs/todo-tag": "off",
       "security/detect-object-injection": "off",
       semi: "off",
