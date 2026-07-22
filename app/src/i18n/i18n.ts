@@ -22,7 +22,7 @@ const options = {
   },
 };
 
-// eslint-disable-next-line import/no-named-as-default-member
+// eslint-disable-next-line import-x/no-named-as-default-member
 i18n.use(initReactI18next).init(options);
 
 export { default } from "i18next";
