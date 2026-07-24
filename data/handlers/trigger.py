@@ -1,11 +1,11 @@
-from typing import Tuple
-import botocore.session
 import io
 import json
 import logging
 import os
-import requests
 import zipfile
+
+import botocore.session
+import requests
 
 BUCKET = os.getenv("BUCKET")
 REGION = os.getenv("AWS_REGION")
@@ -43,7 +43,7 @@ def handler(event: dict, context: dict):
         logger.exception("Error processing trigger")
 
 
-def get_raw_data_file_metadata() -> Tuple[str, int]:
+def get_raw_data_file_metadata() -> tuple[str, int]:
     response = requests.get(VEHICLES_URL)
     response.raise_for_status()
     zip_bytes = io.BytesIO(response.content)
@@ -54,7 +54,7 @@ def get_raw_data_file_metadata() -> Tuple[str, int]:
         return csv_info.filename, csv_info.file_size
 
 
-def get_stored_metadata(key: str) -> Tuple[str, int]:
+def get_stored_metadata(key: str) -> tuple[str, int]:
     s3_client = session.create_client("s3", region_name=REGION)
     try:
         obj = s3_client.get_object(Bucket=BUCKET, Key=key)
@@ -68,7 +68,7 @@ def get_stored_metadata(key: str) -> Tuple[str, int]:
         logger.exception(f"Error getting object {key}")
 
 
-def set_stored_metadata(filename: str, filesize: int, key: str) -> Tuple[str, int]:
+def set_stored_metadata(filename: str, filesize: int, key: str) -> tuple[str, int]:
     try:
         s3_client = session.create_client("s3", region_name=REGION)
         metadata = {"filename": filename, "filesize": filesize}
