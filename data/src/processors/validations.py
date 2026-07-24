@@ -1,4 +1,5 @@
 import re
+
 from pydantic import BaseModel, field_validator, model_validator
 
 
@@ -39,14 +40,14 @@ class Municipality(BaseModel):
 
     @field_validator("registrationYearCount", mode="before")
     def check_keys_are_years(cls, value):
-        if not all(key.isdigit() and len(key) == 4 for key in value.keys()):
+        if not all(key.isdigit() and len(key) == 4 for key in value):
             raise ValueError("All keys in 'registrationYearCount' must be four-digit years")
         return value
 
     @model_validator(mode="before")
     def check_keys_are_strings(cls, values):
         for field in ["makerCount", "mileageCount"]:
-            if not all(isinstance(key, str) for key in values[field].keys()):
+            if not all(isinstance(key, str) for key in values[field]):
                 raise ValueError(f"All keys in '{field}' must be strings")
         return values
 
@@ -84,7 +85,7 @@ class DataModel(BaseModel):
 
     @model_validator(mode="before")
     def check_municipalities_length(cls, values):
-        expected_max_length = getattr(cls, "expected_max_length")
+        expected_max_length = cls.expected_max_length
         expected = len(values["municipalities"]) - 1  # Minus total
         if expected > expected_max_length:
             raise ValueError(

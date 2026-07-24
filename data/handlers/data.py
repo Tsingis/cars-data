@@ -1,13 +1,14 @@
-from typing import Tuple
-import botocore.session
 import json
 import logging
 import os
 import time
+
+import botocore.session
 from pydantic import ValidationError
-from src.processors.preprocesses import clean
-from src.processors.postprocesses import generate
+
 from src.processors.imports import get_municipalities, get_vehicles
+from src.processors.postprocesses import generate
+from src.processors.preprocesses import clean
 from src.processors.utils import get_date
 from src.processors.validations import validate
 
@@ -46,7 +47,7 @@ def handler(event: dict, context: dict):
         logger.exception("Error processing data")
 
 
-def generate_data() -> Tuple[bool, dict]:
+def generate_data() -> tuple[bool, dict]:
     municipalities = get_municipalities()
     vehicles = get_vehicles()
     vehicles = clean(vehicles, municipalities)

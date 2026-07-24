@@ -1,14 +1,15 @@
+from itertools import pairwise
+
 import pandas as pd
 
 
 def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
-    # Groupings
     bin_size = 50_000
     bins = [-1, 0] + list(range(bin_size, 600_001, bin_size)) + [df["mileage"].max() + 1]
     labels = (
         ["na"]
         + [f"under{bin_size // 1000}k"]
-        + [f"{i // 1000}kto{j // 1000}k" for i, j in zip(bins[2:-2], bins[3:-1])]
+        + [f"{i // 1000}kto{j // 1000}k" for i, j in pairwise(bins[2:-1])]
         + [f"over{bins[-2] // 1000}k"]
     )
     df["mileage_group"] = pd.cut(
@@ -38,7 +39,6 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
         .reset_index(name="count")
     )
 
-    # Count for municipalities
     driving_forces = set(grouped_driving["driving_force"])
     colors = set(grouped_color["color"])
     years = set(grouped_year["registration_year"])
@@ -46,29 +46,23 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
 
     final = []
     for municipality_code, group in grouped_driving.groupby("municipality"):
-        # Mileages
         mileage_group = grouped_mileage[grouped_mileage["municipality"] == municipality_code]
         mileage_counts = dict(zip(mileage_group["mileage_group"], mileage_group["count"]))
 
-        # Driving forces
         driving_force_counts = dict(zip(group["driving_force"], group["count"]))
         for driving_force in driving_forces:
             if driving_force not in driving_force_counts:
                 driving_force_counts[driving_force] = 0
-
-        # Colors
         color_group = grouped_color[grouped_color["municipality"] == municipality_code]
         color_counts = dict(zip(color_group["color"], color_group["count"]))
         for color in colors:
             if color not in color_counts:
                 color_counts[color] = 0
 
-        # Registration years
         year_group = grouped_year[grouped_year["municipality"] == municipality_code]
         year_counts = dict(zip(year_group["registration_year"], year_group["count"]))
         year_counts_str = {str(year): count for year, count in year_counts.items()}
 
-        # Makers
         maker_group = grouped_maker[grouped_maker["municipality"] == municipality_code]
         maker_counts = dict(zip(maker_group["maker"], maker_group["count"]))
 
@@ -84,7 +78,6 @@ def generate(df: pd.DataFrame, municipalities: dict, date: str) -> dict:
             }
         )
 
-    # Totals
     total_mileage_counts = {}
     total_driving_force_counts = dict.fromkeys(driving_forces, 0)
     total_color_counts = dict.fromkeys(colors, 0)

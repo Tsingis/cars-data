@@ -1,8 +1,9 @@
 import io
 import os
+import zipfile
+
 import pandas as pd
 import requests
-import zipfile
 
 VEHICLES_URL = os.getenv("VEHICLES_URL")
 MUNICIPALITIES_URL = os.getenv("MUNICIPALITIES_URL")
