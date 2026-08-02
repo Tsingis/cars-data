@@ -39,7 +39,6 @@ updates:
         patterns:
           - "eslint"
           - "@eslint/js"
-          - "eslint-plugin-*"
       fontawesome:
         patterns:
           - "@fortawesome/*"
