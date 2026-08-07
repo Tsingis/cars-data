@@ -94,8 +94,8 @@ importers:
         specifier: ^9.39.5
         version: 9.39.5(supports-color@8.1.1)
       eslint-plugin-cypress:
-        specifier: ^6.4.3
-        version: 6.4.3(@typescript-eslint/parser@8.66.0(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1))
+        specifier: ^6.4.4
+        version: 6.4.4(@typescript-eslint/parser@8.66.0(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1))
       eslint-plugin-i18n-json:
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.39.5(supports-color@8.1.1))
@@ -1519,8 +1519,8 @@ packages:
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
-  eslint-plugin-cypress@6.4.3:
-    resolution: {integrity: sha512-2/ulKNnCn+0vbaDI/6KovgGKsR/Y/bA+KMAkxRbHl2IAMd/UzU24ZOXpncR+QPBlaXqfAJ9NMCzdwX9Gjhm9AQ==}
+  eslint-plugin-cypress@6.4.4:
+    resolution: {integrity: sha512-ez6i14V0xYrq0DMKQmKPeWpi9XP8RI8GK6YT657yOnVlg72PUyR2psgVmC3jXjpTAXVdyB5VDoQPN/ytaw9+Pg==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=9'
@@ -4784,7 +4784,7 @@ snapshots:
       - supports-color
     optional: true
 
-  eslint-plugin-cypress@6.4.3(@typescript-eslint/parser@8.66.0(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1)):
+  eslint-plugin-cypress@6.4.4(@typescript-eslint/parser@8.66.0(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1)):
     dependencies:
       eslint: 9.39.5(supports-color@8.1.1)
       globals: 17.9.0
