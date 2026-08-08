@@ -1,6 +1,6 @@
 ARG FUNCTION_DIR="/function"
 
-FROM python:3.14.6-alpine3.24 AS base
+FROM python:3.14.7-alpine3.24 AS base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
