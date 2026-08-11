@@ -17,7 +17,7 @@ python = "^3.13"
 min-release-age = 1
 
 [tool.poetry.group.main.dependencies]
-numpy = "2.5.1"
+numpy = "2.5.2"
 pandas = "3.0.5"
 pydantic = "2.13.4"
 
