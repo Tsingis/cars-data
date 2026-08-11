@@ -67,6 +67,8 @@ updates:
     directories:
       - "/app"
       - "/lambda"
+    cooldown:
+      default-days: 0
     ignore:
       - dependency-name: "*playwright"
       - dependency-name: "node"
