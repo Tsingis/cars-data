@@ -1,5 +1,9 @@
-from datetime import datetime
+from datetime import UTC, datetime
 
 
 def get_date() -> str:
-    return datetime.now(tz=datetime.UTC).strftime("%Y-%m-%d")
+    return datetime.now(tz=UTC).strftime("%Y-%m-%d")
+
+
+def get_data() -> str:
+    return get_date()
