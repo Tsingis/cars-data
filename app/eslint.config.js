@@ -1,8 +1,10 @@
+import fs from "node:fs";
+import path from "node:path";
 import js from "@eslint/js";
+import json from "@eslint/json";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import parser from "@typescript-eslint/parser";
 import cypressPlugin from "eslint-plugin-cypress";
-import i18nJsonPlugin from "eslint-plugin-i18n-json";
 import i18nextPlugin from "eslint-plugin-i18next";
 import { importX as importXPlugin } from "eslint-plugin-import-x";
 import playwrightPlugin from "eslint-plugin-playwright";
@@ -12,27 +14,96 @@ import refreshPlugin from "eslint-plugin-react-refresh";
 import securityPlugin from "eslint-plugin-security";
 import sonarPlugin from "eslint-plugin-sonarjs";
 import globals from "globals";
-import path from "node:path";
+
+const localeKeyConsistency = {
+  rules: {
+    "match-english-keys": {
+      meta: {
+        type: "problem",
+        schema: [],
+      },
+      create(context) {
+        const englishFile = path.resolve(
+          process.cwd(),
+          "src/i18n/locales/en.json"
+        );
+        const currentFile = context.filename;
+
+        if (currentFile === englishFile || !currentFile.endsWith(".json")) {
+          return {};
+        }
+
+        return {
+          Document(node) {
+            try {
+              const currentJson = JSON.parse(context.sourceCode.text);
+              const englishJson = JSON.parse(
+                fs.readFileSync(englishFile, "utf8")
+              );
+
+              const flattenKeys = (value, prefix = "") => {
+                if (
+                  !value ||
+                  typeof value !== "object" ||
+                  Array.isArray(value)
+                ) {
+                  return prefix ? [prefix] : [];
+                }
+
+                return Object.entries(value).flatMap(([key, nestedValue]) => {
+                  const nextPrefix = prefix ? `${prefix}.${key}` : key;
+
+                  if (
+                    nestedValue &&
+                    typeof nestedValue === "object" &&
+                    !Array.isArray(nestedValue)
+                  ) {
+                    return flattenKeys(nestedValue, nextPrefix);
+                  }
+
+                  return [nextPrefix];
+                });
+              };
+
+              const englishKeys = new Set(flattenKeys(englishJson));
+
+              for (const key of flattenKeys(currentJson)) {
+                if (!englishKeys.has(key)) {
+                  context.report({
+                    node,
+                    message: `Translation key "${key}" is not present in en.json.`,
+                  });
+                }
+              }
+            } catch {
+              // Let the JSON parser report syntax issues.
+            }
+          },
+        };
+      },
+    },
+  },
+};
 
 export default [
-  js.configs.recommended,
-  i18nextPlugin.configs["flat/recommended"],
+  {
+    ...js.configs.recommended,
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+  },
+  {
+    ...i18nextPlugin.configs["flat/recommended"],
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+  },
   {
     files: ["src/i18n/**/*.json"],
-    plugins: { "i18n-json": i18nJsonPlugin },
-    processor: {
-      meta: { name: ".json" },
-      ...i18nJsonPlugin.processors[".json"],
-    },
+    ...json.configs.recommended,
+    plugins: { json, "locale-key-consistency": localeKeyConsistency },
+    language: "json/json",
     rules: {
-      ...i18nJsonPlugin.configs.recommended.rules,
-      "i18n-json/valid-message-syntax": "off",
-      "i18n-json/identical-keys": [
-        "error",
-        {
-          filePath: path.resolve("src/i18n/locales/en.json"),
-        },
-      ],
+      ...json.configs.recommended.rules,
+      "json/no-duplicate-keys": "error",
+      "json/no-empty-keys": "error",
+      "locale-key-consistency/match-english-keys": "error",
     },
   },
   {
