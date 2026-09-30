@@ -279,8 +279,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       eslint-plugin-sonarjs:
-        specifier: ^4.2.1
-        version: 4.2.1(eslint@10.11.0(supports-color@8.1.1))
+        specifier: ^4.2.2
+        version: 4.2.2(eslint@10.11.0(supports-color@8.1.1))
       globals:
         specifier: ^17.12.0
         version: 17.12.0
@@ -1717,8 +1717,8 @@ packages:
     resolution: {integrity: sha512-cB4H72o/w8C0cm4uHJOnXMJz7MYTTuOwhn2X7PMuzZwfwqUoHK/ASHT6WKP+95lFk5Hkf3xfpiXB8a1+cef4rg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  eslint-plugin-sonarjs@4.2.1:
-    resolution: {integrity: sha512-WGsnVkUxmHyBOytShcIeE+vhQaS8e+gYgbHNNi4y2e5Zj+DpE2DLTvarqDUhNwjceTZHGLgevSgfBSEVkt4EaA==}
+  eslint-plugin-sonarjs@4.2.2:
+    resolution: {integrity: sha512-usNF9GfP89ibwhfxpZaCMW40sC7UEOusDgDCk7lyqAhh4AYdbBaAgLVL5Y/QS0jSed8eJ2ACGH6zzE8ezd/yZQ==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -3399,6 +3399,11 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
+  yaml@2.9.1:
+    resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yargs-parser@22.0.0:
     resolution: {integrity: sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=23}
@@ -4909,7 +4914,7 @@ snapshots:
     dependencies:
       safe-regex: 2.1.1
 
-  eslint-plugin-sonarjs@4.2.1(eslint@10.11.0(supports-color@8.1.1)):
+  eslint-plugin-sonarjs@4.2.2(eslint@10.11.0(supports-color@8.1.1)):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       '@sonarsource/analyzer-commons-configurations': 2.31.0-5284
@@ -4925,7 +4930,7 @@ snapshots:
       semver: 7.8.5
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
-      yaml: 2.9.0
+      yaml: 2.9.1
 
   eslint-scope@9.1.2:
     dependencies:
@@ -6639,7 +6644,10 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yaml@2.9.0: {}
+  yaml@2.9.0:
+    optional: true
+
+  yaml@2.9.1: {}
 
   yargs-parser@22.0.0: {}
 
