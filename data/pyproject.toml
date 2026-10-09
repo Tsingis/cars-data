@@ -19,7 +19,7 @@ min-release-age = 1
 [tool.poetry.group.main.dependencies]
 numpy = "2.5.3"
 pandas = "3.0.6"
-pydantic = "2.13.5"
+pydantic = "2.14.0"
 
 [tool.poetry.group.common.dependencies]
 requests = "2.34.2"
