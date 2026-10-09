@@ -45,7 +45,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
     "@eslint/js": "^10.0.1",
-    "@eslint/json": "^2.1.0",
+    "@eslint/json": "^2.1.1",
     "@playwright/test": "^1.63.0",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
