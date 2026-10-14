@@ -1,5 +1,6 @@
 allowBuilds:
   cypress: false
   unrs-resolver: false
+minimumReleaseAge: 1440
 onlyBuiltDependencies:
   - cypress
