@@ -16,7 +16,7 @@
 }
 
 .dragging {
-  cursor: grabbing !important;
+  cursor: grabbing;
 }
 
 .track {
