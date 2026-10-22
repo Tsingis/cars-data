@@ -50,9 +50,21 @@ updates:
         patterns:
           - "@typescript-eslint/*"
   - package-ecosystem: "pip"
+    directory: "/data"
+    schedule:
+      interval: "cron"
+      cronjob: "0 21 * * 2,5"
+    cooldown:
+      default-days: 1
+  - package-ecosystem: "pip"
+    directory: "/lambda"
+    schedule:
+      interval: "cron"
+      cronjob: "0 21 * * 2,5"
+    cooldown:
+      default-days: 1
+  - package-ecosystem: "pip"
     directories:
-      - "/data"
-      - "/lambda"
       - "/cloudformation"
     schedule:
       interval: "cron"
@@ -60,7 +72,6 @@ updates:
     cooldown:
       default-days: 1
       exclude:
-        - "poetry"
         - "cfn-lint"
         - "checkov"
   - package-ecosystem: "docker"
