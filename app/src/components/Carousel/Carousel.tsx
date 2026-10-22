@@ -27,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({
   const [dragging, setDragging] = useState(false);
   const [dragAmount, setDragAmount] = useState(0);
 
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLElement>(null);
   const dragStartX = useRef<number | null>(null);
   const dragCurrentX = useRef<number | null>(null);
   const animationFrameId = useRef<number>(0);
@@ -216,11 +216,12 @@ const Carousel: React.FC<CarouselProps> = ({
   };
 
   return (
-    <div
+    <section
       data-testid="carousel"
       ref={carouselRef}
       className={`${styles.carousel} ${className} ${dragging ? styles.dragging : ""}`}
       aria-label="Carousel"
+      aria-roledescription="carousel"
       tabIndex={0}
       onKeyDown={handleKeyDown}
       onPointerDown={handlePointerDown}
@@ -252,10 +253,10 @@ const Carousel: React.FC<CarouselProps> = ({
 
       {arrows && (
         <>
-          <button className={styles.prev} onClick={prevSlide}>
+          <button type="button" className={styles.prev} onClick={prevSlide}>
             ‹
           </button>
-          <button className={styles.next} onClick={nextSlide}>
+          <button type="button" className={styles.next} onClick={nextSlide}>
             ›
           </button>
         </>
@@ -265,6 +266,7 @@ const Carousel: React.FC<CarouselProps> = ({
         <div data-testid="dots" className={styles.dots}>
           {children.map((_, index) => (
             <button
+              type="button"
               data-testid="dot"
               key={childKeys[index]}
               onClick={() => {
@@ -284,7 +286,7 @@ const Carousel: React.FC<CarouselProps> = ({
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

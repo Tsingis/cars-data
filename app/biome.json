@@ -12,11 +12,14 @@
     "bracketSpacing": true,
     "expand": "auto",
     "useEditorconfig": false,
-    "includes": ["**", "!dist", "!node_modules"]
+    "includes": ["**", "!dist", "!node_modules", "!pnpm-lock.yaml"]
   },
   "linter": {
     "rules": {
-      "recommended": false,
+      "preset": "recommended",
+      "a11y": {
+        "noNoninteractiveTabindex": "off"
+      },
       "complexity": {
         "noAdjacentSpacesInRegex": "error",
         "noExtraBooleanCast": "error",
