@@ -1,4 +1,4 @@
-import { type PlaywrightTestConfig, type ViewportSize } from "@playwright/test";
+import type { PlaywrightTestConfig, ViewportSize } from "@playwright/test";
 import { devices } from "playwright";
 
 const baseUrl = "http://localhost:3000";
