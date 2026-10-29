@@ -1,2 +1,2 @@
 cfn-lint==1.59.0
-checkov==3.3.30
+checkov==3.4.0
