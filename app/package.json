@@ -59,7 +59,7 @@
     "@typescript-eslint/parser": "^8.72.1",
     "@vitejs/plugin-react": "^6.1.2",
     "concurrently": "^10.0.6",
-    "cypress": "^16.2.0",
+    "cypress": "^16.2.1",
     "eslint": "^10.13.0",
     "eslint-plugin-cypress": "^7.0.2",
     "eslint-plugin-i18next": "^6.1.5",
