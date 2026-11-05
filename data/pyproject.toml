@@ -18,7 +18,7 @@ min-release-age = 1
 
 [tool.poetry.group.main.dependencies]
 numpy = "2.5.4"
-pandas = "3.1.0"
+pandas = "3.1.1"
 pydantic = "2.14.2"
 
 [tool.poetry.group.common.dependencies]
