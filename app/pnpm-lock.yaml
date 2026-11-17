@@ -230,7 +230,7 @@ importers:
         version: 10.4.2
       '@testing-library/jest-dom':
         specifier: ^7.0.1
-        version: 7.0.1(@testing-library/dom@10.4.2)(vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.0)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)))
+        version: 7.0.1(@testing-library/dom@10.4.2)(vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.1)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)))
       '@testing-library/react':
         specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -307,8 +307,8 @@ importers:
         specifier: ^9.1.7
         version: 9.1.7
       jsdom:
-        specifier: ^31.0.0
-        version: 31.0.0
+        specifier: ^31.0.1
+        version: 31.0.1
       playwright:
         specifier: ^1.65.1
         version: 1.65.1
@@ -326,7 +326,7 @@ importers:
         version: 1.0.0(@biomejs/biome@2.6.6)(eslint@10.14.0(supports-color@8.1.1))(optionator@0.9.4)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
       vitest:
         specifier: ^5.1.0
-        version: 5.1.0(@types/node@26.6.5)(jsdom@31.0.0)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
+        version: 5.1.0(@types/node@26.6.5)(jsdom@31.0.1)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
 
 packages:
 
@@ -2232,8 +2232,8 @@ packages:
   jsbn@0.1.1:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
 
-  jsdom@31.0.0:
-    resolution: {integrity: sha512-xAkhD9z1eyFC5+QUi9K24CaZJgdCQ2GOGLW1GdVDoQvkp/AxEH9TQ0pAplPOlIiV92hfcgnFOADZypbjgbBT6Q==}
+  jsdom@31.0.1:
+    resolution: {integrity: sha512-CbhJL8ZQg3eKswxSZth4QO9tW0jPIhmR0vtSXQSbKSfWbwIT6hoRc17wdHIVTQ43KI0mdV5iTJr3281IDgVZ5g==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
     peerDependencies:
       '@napi-rs/canvas': ^1.0.13
@@ -3807,7 +3807,7 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.2)(vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.0)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)))':
+  '@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.2)(vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.1)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)))':
     dependencies:
       '@adobe/css-tools': 4.5.0
       '@testing-library/dom': 10.4.2
@@ -3817,7 +3817,7 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
     optionalDependencies:
-      vitest: 5.1.0(@types/node@26.6.5)(jsdom@31.0.0)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
+      vitest: 5.1.0(@types/node@26.6.5)(jsdom@31.0.1)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
 
   '@testing-library/react@16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
@@ -5381,7 +5381,7 @@ snapshots:
 
   jsbn@0.1.1: {}
 
-  jsdom@31.0.0:
+  jsdom@31.0.1:
     dependencies:
       '@exodus/bytes': 1.16.0
       bcp-47: 2.1.2
@@ -6342,7 +6342,7 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.9.1
 
-  vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.0)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)):
+  vitest@5.1.0(@types/node@26.6.5)(jsdom@31.0.1)(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1)):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/mocker': 5.1.0(vite@8.3.8(@types/node@26.6.5)(yaml@2.9.1))
@@ -6360,7 +6360,7 @@ snapshots:
       why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 26.6.5
-      jsdom: 31.0.0
+      jsdom: 31.0.1
     transitivePeerDependencies:
       - msw
 
