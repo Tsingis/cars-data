@@ -57,14 +57,13 @@ const TreeMapChart: React.FC<TreeMapChartProps> = ({
           value: values[index],
         }));
 
-        const chartData: ChartData<"treemap", TreemapDataPoint[], string> = {
+        const chartData: ChartData<"treemap"> = {
           datasets: [
             {
               label: "Count",
-              tree: treeData,
+              data: treeData,
               key: "value",
               groups: ["category"],
-              data: [], // REQUIRED: Even though `tree` will generate it, Chart.js expects this field
               backgroundColor: (context) => {
                 if (context.type !== "data") return "transparent";
                 const raw = context.raw as TreemapDataPoint & {
