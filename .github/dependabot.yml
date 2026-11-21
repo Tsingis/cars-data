@@ -56,6 +56,8 @@ updates:
       cronjob: "0 21 * * 2,5"
     cooldown:
       default-days: 1
+      exclude:
+        - "poetry"
   - package-ecosystem: "pip"
     directory: "/lambda"
     schedule:
